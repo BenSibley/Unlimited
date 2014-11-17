@@ -5,7 +5,7 @@
     </div>
     <div class='post-header'>
         <h1 class='post-title'><?php the_title(); ?></h1>
-	    <p class="post-categories">Posted in Marketing, and Design</p>
+		<?php get_template_part('content/post-categories'); ?>
     </div>
     <div class="post-content">
         <article>
