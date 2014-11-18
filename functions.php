@@ -261,11 +261,49 @@ if ( function_exists( 'dsq_options' ) ) {
     add_filter( 'comments_template', 'dsq_comments_template', 99 ); // You can use any priority higher than '10'
 }
 
-// array of social media site names
+// list social media sites
 function ct_unlimited_social_site_list(){
 
     $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam', 'vk', 'weibo', 'tencent-weibo', 'email' );
     return $social_sites;
+}
+
+// associative array of social media sites
+function ct_unlimited_social_array(){
+
+	$social_sites = array(
+		'twitter' => 'unlimited_twitter_profile',
+		'facebook' => 'unlimited_facebook_profile',
+		'googleplus' => 'unlimited_googleplus_profile',
+		'pinterest' => 'unlimited_pinterest_profile',
+		'linkedin' => 'unlimited_linkedin_profile',
+		'youtube' => 'unlimited_youtube_profile',
+		'vimeo' => 'unlimited_vimeo_profile',
+		'tumblr' => 'unlimited_tumblr_profile',
+		'instagram' => 'unlimited_instagram_profile',
+		'flickr' => 'unlimited_flickr_profile',
+		'dribbble' => 'unlimited_dribbble_profile',
+		'rss' => 'unlimited_rss_profile',
+		'reddit' => 'unlimited_reddit_profile',
+		'soundcloud' => 'unlimited_soundcloud_profile',
+		'spotify' => 'unlimited_spotify_profile',
+		'vine' => 'unlimited_vine_profile',
+		'yahoo' => 'unlimited_yahoo_profile',
+		'behance' => 'unlimited_behance_profile',
+		'codepen' => 'unlimited_codepen_profile',
+		'delicious' => 'unlimited_delicious_profile',
+		'stumbleupon' => 'unlimited_stumbleupon_profile',
+		'deviantart' => 'unlimited_deviantart_profile',
+		'digg' => 'unlimited_digg_profile',
+		'git' => 'unlimited_git_profile',
+		'hacker-news' => 'unlimited_hacker-news_profile',
+		'steam' => 'unlimited_steam_profile',
+		'vk' => 'unlimited_vk_profile',
+		'weibo' => 'unlimited_weibo_profile',
+		'tencent-weibo' => 'unlimited_tencent_weibo_profile',
+		'email' => 'unlimited_email_profile'
+	);
+	return $social_sites;
 }
 
 // retrieves the attachment ID from the file URL
