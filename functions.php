@@ -22,6 +22,12 @@ function ct_unlimited_theme_setup() {
 	// load theme options page
 	require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
 
+	// add inc folder files
+	foreach (glob(trailingslashit( get_template_directory() ) . 'inc/*') as $filename)
+	{
+		include $filename;
+	}
+
 	// load text domain
 	load_theme_textdomain('unlimited', get_template_directory() . '/languages');
 
