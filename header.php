@@ -29,5 +29,4 @@
 	</button>
 
 </header>
-<div id="overflow-container" class="overflow-container">
-    <div id="main" class="main" role="main">
+<section id="main" class="main" role="main">

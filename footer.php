@@ -1,8 +1,7 @@
-</div> <!-- .main -->
+</section> <!-- .main -->
 
 <?php get_sidebar( 'primary' ); ?>
 
-</div> <!-- .overflow-container -->
 
 <footer class="site-footer" role="contentinfo">
     <h4><a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo('title'); ?></a> <?php bloginfo('description'); ?></h4>
