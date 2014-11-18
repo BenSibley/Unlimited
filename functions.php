@@ -290,10 +290,10 @@ function ct_unlimited_get_image_id($url) {
 function ct_unlimited_profile_image_output(){
 
     // use User's profile image, else default to their Gravatar
-    if(get_the_author_meta('user_profile_image')){
+    if(get_the_author_meta('unlimited_user_profile_image')){
 
         // get the id based on the image's URL
-        $image_id = ct_unlimited_get_image_id(get_the_author_meta('user_profile_image'));
+        $image_id = ct_unlimited_get_image_id(get_the_author_meta('unlimited_user_profile_image'));
 
         // retrieve the thumbnail size of profile image
         $image_thumb = wp_get_attachment_image($image_id, 'thumbnail');
