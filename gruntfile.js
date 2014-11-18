@@ -8,6 +8,7 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     'js/*.js',
+                    '!js/profile-uploader.js'
                 ],
                 dest: 'js/build/production.js'
             }
@@ -15,7 +16,8 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 files: {
-                    'js/build/production.min.js': 'js/build/production.js'
+                    'js/build/production.min.js' : 'js/build/production.js',
+                    'js/build/profile-image-uploader.min.js' : 'js/profile-image-uploader.js'
                 }
             }
         },
