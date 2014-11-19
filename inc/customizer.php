@@ -5,6 +5,10 @@ add_action( 'customize_register', 'ct_unlimited_add_customizer_content' );
 
 function ct_unlimited_add_customizer_content( $wp_customize ) {
 
+	// Add postMessage support for site title and description.
+	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+
 	/***** Logo Upload *****/
 
 	// section
