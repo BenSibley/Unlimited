@@ -11,7 +11,7 @@ function ct_unlimited_load_scripts_styles() {
 	if( ! is_admin() ) {
 
 		// main JS file
-//		wp_enqueue_script('ct-unlimited-js', get_template_directory_uri() . '/js/build/production.min.js#ct_unlimited_asyncload', array('jquery'),'', true);
+		wp_enqueue_script('ct-unlimited-js', get_template_directory_uri() . '/js/build/production.min.js#ct_unlimited_asyncload', array('jquery'),'', true);
 
 		// Google Fonts
 		wp_enqueue_style('ct-unlimited-google-fonts');

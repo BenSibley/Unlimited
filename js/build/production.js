@@ -83,8 +83,22 @@
 })( window.jQuery || window.Zepto );
 jQuery(document).ready(function($){
 
+    $('#search-icon').on('click', openSearchBar);
 
+    function openSearchBar(){
+
+        if( $(this).hasClass('open') ) {
+            $(this).removeClass('open');
+            $('#site-header').find('.social-media-icons').removeClass('fade');
+        } else {
+            $(this).addClass('open');
+
+            if( $(window).width())
+            $('#site-header').find('.social-media-icons').addClass('fade');
+        }
+    }
 });
+
 /*
  * Adapted from: http://mikejolley.com/2012/12/using-the-new-wordpress-3-5-media-uploader-in-plugins/
  */

@@ -1,1 +1,88 @@
 /* Styles for the social icons, search bar, title, and general header layout */
+.site-header {
+  background: $gray-23;
+  padding: $baseline-height / 2 $column 0;
+  color: white;
+
+  .social-media-icons {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+    margin: 0;
+    transition: opacity 0.15s ease-in-out;
+
+    &.fade {
+      opacity: 0;
+    }
+    li {
+      display: inline-block;
+    }
+    a {
+      @extend %gray-link;
+      display: block;
+      padding: 6px 9px;
+      transition: background 0.15s ease-in-out;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: $gray-17;
+      }
+    }
+  }
+  .search-form-container {
+    position: relative;
+    float: right;
+
+    button {
+      position: relative;
+      z-index: 9;
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 6px 10px;
+      font-size: 1em;
+      line-height: 1.5;
+
+      &:focus {
+        outline: none;
+      }
+      &.open {
+
+        + form {
+          left: -200px;
+          opacity: 1;
+        }
+      }
+    }
+    i {
+      color: $gray-85;
+      z-index: -1; // so that the button is clicked, not this icon
+    }
+    form {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.15s ease-in-out, left 0.15s ease-in-out;
+    }
+  }
+}
+.title-container {
+  margin: $baseline-height / 2 0 $baseline-height * 1.5;
+  text-align: center;
+}
+.site-title {
+  @extend %twenty-eight-pixels; // so the size is the same even when an h2
+
+  a {
+    @extend %light-link;
+  }
+}
+.site-description {
+  @extend %thirteen-pixels;
+  font-weight: 400;
+  margin: 0;
+  color: $gray-85;
+}
