@@ -46,6 +46,17 @@ function ct_unlimited_enqueue_admin_styles($hook){
 }
 add_action('admin_enqueue_scripts',	'ct_unlimited_enqueue_admin_styles' );
 
+/*
+ * Customizer scripts
+ */
+function ct_unlimited_enqueue_customizer_scripts(){
+
+	// JS for hiding/showing Customizer options
+	wp_enqueue_script('ct-unlimited-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js',array('jquery'),'',true);
+
+}
+add_action('customize_controls_enqueue_scripts','ct_unlimited_enqueue_customizer_scripts');
+
 // load scripts asynchronously
 function ct_unlimited_add_async_script($url) {
 
