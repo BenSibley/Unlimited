@@ -102,9 +102,54 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		// increment the priority for next site
 		$priority = $priority + 5;
 	}
+
+	/***** Search Bar *****/
+
+	// section
+	$wp_customize->add_section( 'ct_unlimited_search_bar', array(
+		'title'      => __( 'Search Bar', 'unlimited' ),
+		'priority'   => 40,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'search_bar', array(
+		'default'           => 'show',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'ct_unlimited_sanitize_all_show_hide_settings'
+	) );
+	// control
+	$wp_customize->add_control( 'search_bar', array(
+		'type' => 'radio',
+		'label' => __('Show search bar at top of site?', 'unlimited'),
+		'section' => 'ct_unlimited_search_bar',
+		'setting' => 'search_bar',
+		'choices' => array(
+			'show' => __('Show', 'unlimited'),
+			'hide' => __('Hide', 'unlimited')
+		),
+	) );
 }
 
 /***** Custom Sanitization Functions *****/
+
+/*
+ * Sanitize settings with show/hide as options
+ * Used in: search bar
+ */
+function ct_unlimited_sanitize_all_show_hide_settings($input){
+	// create array of valid values
+	$valid = array(
+		'show' => __('Show', 'unlimited'),
+		'hide' => __('Hide', 'unlimited')
+	);
+	// if returned data is in array use it, else return nothing
+	if ( array_key_exists( $input, $valid ) ) {
+		return $input;
+	} else {
+		return '';
+	}
+}
 
 /*
  * sanitize email address

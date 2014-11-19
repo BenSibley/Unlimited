@@ -18,6 +18,7 @@
 <header class="site-header" id="site-header" role="banner">
 
 	<?php get_template_part('content/social-icons'); ?>
+	<?php get_template_part('content/search-bar'); ?>
 
 	<div id="title-container" class="title-container">
 		<?php get_template_part('logo')  ?>
