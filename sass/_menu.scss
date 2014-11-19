@@ -1,1 +1,23 @@
 /* Styles for the primary menu */
+
+.menu-primary {
+  max-height: 0px;
+  text-align: center;
+  transition: max-height 0.15s ease-in-out;
+}
+.menu-primary-items {
+  list-style: none;
+  margin: 0;
+  padding-bottom: $baseline-height * 1.5;
+
+  a {
+    @extend %light-link;
+    @extend %uppercase;
+    @extend %thirteen-pixels;
+    display: block;
+    padding: 6px 0;
+  }
+  ul {
+    list-style: none;
+  }
+}

@@ -1,1 +1,66 @@
 /* Styles for the post */
+
+.featured-image {
+  position: relative;
+  height: 0;
+  padding-bottom: 50%;
+  background-size: cover;
+  background-position: 50%;
+
+  a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+  }
+}
+.post {
+  margin-top: $baseline-height;
+  background: white;
+}
+.post-header,
+.post-content {
+  padding: 0 $column * 1.067;
+}
+.post-header {
+  text-align: center;
+}
+.post-meta {
+  position: relative;
+  background: $gray-23;
+  text-align: center;
+
+  a {
+    @extend %light-link;
+    @extend %thirteen-pixels;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  i {
+    color: white;
+    padding: 16px 36px;
+  }
+  div {
+    position: relative;
+    display: inline-block;
+  }
+}
+.post-date,
+.post-author {
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 1px;
+    height: 24px;
+    background: $gray-40;
+  }
+}

@@ -7,7 +7,7 @@ $categories = get_the_category($post->ID);
 $separator = ', ';
 
 // create output variable
-$output = '';
+$output = 'Posted in ';
 
 // if there are categories for the post
 if($categories){
