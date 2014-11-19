@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+( function( $ ) {
 
     /*
      * Following functions are for utilizing the postMessage transport setting
@@ -7,7 +7,7 @@ jQuery(document).ready(function($){
     wp.customize( 'logo_upload', function( value ) {
         value.bind( function( newval ) {
             // get the <a> holding the logo/site title
-            var logoContainer = $('#customize-preview iframe').contents().find('#site-title').find('a');
+            var logoContainer = $('#site-title').find('a');
             // get the name of the site from the <a>
             var siteTitle = logoContainer.attr('title');
             // if there is an image, add the image markup
@@ -24,4 +24,4 @@ jQuery(document).ready(function($){
             logoContainer.append(logo);
         } );
     } );
-});
+} )( jQuery );

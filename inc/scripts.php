@@ -55,7 +55,7 @@ function ct_unlimited_enqueue_customizer_scripts(){
 	wp_enqueue_script('ct-unlimited-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js',array('jquery'),'',true);
 
 }
-add_action('customize_controls_enqueue_scripts','ct_unlimited_enqueue_customizer_scripts');
+add_action('customize_preview_init','ct_unlimited_enqueue_customizer_scripts');
 
 // load scripts asynchronously
 function ct_unlimited_add_async_script($url) {
