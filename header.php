@@ -17,6 +17,8 @@
 
 <header class="site-header" id="site-header" role="banner">
 
+	<?php get_template_part('content/social-icons'); ?>
+
 	<div id="title-container" class="title-container">
 		<?php get_template_part('logo')  ?>
 		<p class="site-description"><?php bloginfo('description'); ?></p>
