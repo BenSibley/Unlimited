@@ -34,5 +34,25 @@
                 $( '.site-description' ).text( to );
             } );
         } );
+        // $social_sites = ct_unlimited_social_site_list();
+        //$('html', window.parent.document).find('#accordion-section-ct_unlimited_social_media_icons').find('input').each(function(){
+        //
+        //    var setting = $(this).attr('data-customize-setting-link');
+        //
+        //    wp.customize( setting, function( value ) {
+        //        value.bind( function( to ) {
+        //            // if the icon is there, update the href
+        //            if( $('.social-media-icons').find('.' + setting) ) {
+        //                $('.' + setting).attr('hreft', to);
+        //            }
+        //            // otherwise add the icon
+        //            else {
+        //                var icon =
+        //                $('.social-media-icons').append();
+        //            }
+        //        } );
+        //    } );
+        //});
+
     } );
 } )( jQuery );

@@ -75,7 +75,8 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 			$wp_customize->add_setting( "$social_site", array(
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'ct_unlimited_sanitize_email'
+				'sanitize_callback' => 'ct_unlimited_sanitize_email',
+				'transport'         => 'postMessage'
 			) );
 			// control
 			$wp_customize->add_control( $social_site, array(
@@ -88,7 +89,8 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 			$wp_customize->add_setting( "$social_site", array(
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'esc_url_raw'
+				'sanitize_callback' => 'esc_url_raw',
+				'transport'         => 'postMessage'
 			) );
 			// control
 			$wp_customize->add_control( new ct_unlimited_url_input_control(

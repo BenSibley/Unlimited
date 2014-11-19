@@ -15,9 +15,9 @@ if(!empty($active_sites)) {
 	foreach ($active_sites as $active_site) {?>
 		<li>
 		<?php if( $active_site == 'email' ) : ?>
-		<a target="_blank" href="mailto:<?php echo antispambot( is_email( get_theme_mod( $active_site ) ) ); ?>">
+		<a class="email" target="_blank" href="mailto:<?php echo antispambot( is_email( get_theme_mod( $active_site ) ) ); ?>">
 		<?php else : ?>
-		<a target="_blank" href="<?php echo esc_url(get_theme_mod( $active_site )); ?>">
+		<a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url(get_theme_mod( $active_site )); ?>">
 		<?php endif; ?>
 
 		<?php if( $active_site ==  "flickr" || $active_site ==  "dribbble" || $active_site ==  "instagram" || $active_site ==  "soundcloud" || $active_site ==  "spotify" || $active_site ==  "vine" || $active_site ==  "yahoo" || $active_site ==  "codepen" || $active_site ==  "delicious" || $active_site ==  "stumbleupon" || $active_site ==  "deviantart" || $active_site ==  "digg" || $active_site ==  "hacker-news" || $active_site == "vk" || $active_site == 'weibo' || $active_site == 'tencent-weibo') { ?>
