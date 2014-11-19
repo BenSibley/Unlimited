@@ -31,7 +31,6 @@ if ( have_posts() ) :
         else {
             get_template_part( 'content' );
         }
-
     endwhile;
 endif; ?>
 
