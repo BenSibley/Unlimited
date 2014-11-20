@@ -75,19 +75,17 @@ function ct_unlimited_customize_comments( $comment, $args, $depth ) {
                     echo get_avatar( get_comment_author_email(), 48 );
                 }
                 ?>
-                <div>
-                    <div class="author-name"><?php comment_author_link(); ?></div>
-                    <div class="comment-date"><?php comment_date('n/j/Y'); ?></div>
-                    <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'unlimited' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-                    <?php edit_comment_link( 'edit' ); ?>
-                </div>    
+                <div class="author-name"><span><?php comment_author_link(); ?></span> said:</div>
             </div>
             <div class="comment-content">
-                <?php if ($comment->comment_approved == '0') : ?>
-                    <em><?php _e('Your comment is awaiting moderation.', 'unlimited') ?></em>
-                    <br />
-                <?php endif; ?>
-                <?php comment_text(); ?>
+                <?php
+                if ($comment->comment_approved == '0') :
+                    echo "<em>" . __('Your comment is awaiting moderation.', 'unlimited') . "</em><br />";
+                endif;
+                comment_text(); ?>
+	            <div class="comment-date"><?php comment_date('n/j/Y'); ?></div>
+	            <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'unlimited' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+	            <?php edit_comment_link( 'edit' ); ?>
             </div>
         </article>
     </li>

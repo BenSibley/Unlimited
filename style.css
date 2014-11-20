@@ -35,7 +35,7 @@ h2, .footer-content h4 {
 
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .site-description, .menu-primary-items a, .post-meta a, .post-categories, .further-reading span, .post-author p,
-.post-author > a, .post-tags a, .comment-notes, .footer-content p, .design-credit {
+.post-author > a, .post-tags a, .comment-content, .comment-notes, .footer-content p, .design-credit {
   font-size: 0.8125em;
   /* 13px / 16px */
   line-height: 1.385;
@@ -58,23 +58,23 @@ a:visited, a:hover, a:active, a:focus {
   color: #3a3a3a;
 }
 
-.site-title a, .menu-primary-items a, .post-meta a, .post-tags a, .footer-content a, .design-credit a {
+.site-title a, .menu-primary-items a, .post-meta a, .post-tags a, .footer-content a {
   color: white;
 }
-.site-title a:link, .menu-primary-items a:link, .post-meta a:link, .post-tags a:link, .footer-content a:link, .design-credit a:link, .site-title a:visited, .menu-primary-items a:visited, .post-meta a:visited, .post-tags a:visited, .footer-content a:visited, .design-credit a:visited {
+.site-title a:link, .menu-primary-items a:link, .post-meta a:link, .post-tags a:link, .footer-content a:link, .site-title a:visited, .menu-primary-items a:visited, .post-meta a:visited, .post-tags a:visited, .footer-content a:visited {
   color: white;
 }
-.site-title a:visited, .menu-primary-items a:visited, .post-meta a:visited, .post-tags a:visited, .footer-content a:visited, .design-credit a:visited, .site-title a:hover, .menu-primary-items a:hover, .post-meta a:hover, .post-tags a:hover, .footer-content a:hover, .design-credit a:hover, .site-title a:active, .menu-primary-items a:active, .post-meta a:active, .post-tags a:active, .footer-content a:active, .design-credit a:active, .site-title a:focus, .menu-primary-items a:focus, .post-meta a:focus, .post-tags a:focus, .footer-content a:focus, .design-credit a:focus {
+.site-title a:visited, .menu-primary-items a:visited, .post-meta a:visited, .post-tags a:visited, .footer-content a:visited, .site-title a:hover, .menu-primary-items a:hover, .post-meta a:hover, .post-tags a:hover, .footer-content a:hover, .site-title a:active, .menu-primary-items a:active, .post-meta a:active, .post-tags a:active, .footer-content a:active, .site-title a:focus, .menu-primary-items a:focus, .post-meta a:focus, .post-tags a:focus, .footer-content a:focus {
   color: white;
 }
 
-.site-header .social-media-icons a {
+.site-header .social-media-icons a, .design-credit a {
   color: #d9d9d9;
 }
-.site-header .social-media-icons a:link, .site-header .social-media-icons a:visited {
+.site-header .social-media-icons a:link, .design-credit a:link, .site-header .social-media-icons a:visited, .design-credit a:visited {
   color: #d9d9d9;
 }
-.site-header .social-media-icons a:visited, .site-header .social-media-icons a:hover, .site-header .social-media-icons a:active, .site-header .social-media-icons a:focus {
+.site-header .social-media-icons a:visited, .design-credit a:visited, .site-header .social-media-icons a:hover, .design-credit a:hover, .site-header .social-media-icons a:active, .design-credit a:active, .site-header .social-media-icons a:focus, .design-credit a:focus {
   color: white;
 }
 
@@ -453,8 +453,8 @@ a img {
 .menu-primary {
   max-height: 0px;
   text-align: center;
-  -webkit-transition: max-height 0.15s ease-in-out;
-  transition: max-height 0.15s ease-in-out;
+  -webkit-transition: max-height 0.25s ease-in-out;
+  transition: max-height 0.25s ease-in-out;
 }
 
 .menu-primary-items {
@@ -611,8 +611,53 @@ a img {
   margin: 3em 0;
 }
 
+.comment-list {
+  list-style: none;
+  margin: 1.5em 0 3em;
+}
+.comment-list ul {
+  list-style: none;
+}
+
+li.comment,
+li.pingback {
+  border: solid 1px #d9d9d9;
+  margin: 0.75em 0;
+  padding: 0.75em 1.5em;
+}
+
+.comment-author img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-bottom: 0.75em;
+  line-height: 0;
+}
+
+.comment-date {
+  display: inline-block;
+  margin-right: 2px;
+}
+.comment-date:after {
+  content: '|';
+  padding-left: 6px;
+}
+
+.children {
+  position: relative;
+  background: white;
+  border: solid 1px #d9d9d9;
+  border-top: none;
+  margin: -13px 0 1.5em;
+  padding: 1px 1.5em 1.5em;
+}
+
 .comment-form {
   text-align: left;
+}
+
+.comment-respond {
+  margin-top: 1.5em;
 }
 
 /* Footer Styles */

@@ -8,8 +8,55 @@
 .comment-reply-title {
   @extend %twenty-eight-pixels;
 }
+.comment-list {
+  list-style: none;
+  margin: $baseline-height 0 $baseline-height * 2;
+
+  ul {
+    list-style: none;
+  }
+}
+li.comment,
+li.pingback {
+  border: solid 1px $gray-85;
+  margin: $baseline-height / 2 0;
+  padding: $baseline-height / 2 $baseline-height;
+}
+.comment-author {
+
+  img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-bottom: $baseline-height / 2;
+    line-height: 0;
+  }
+}
+.comment-content {
+  @extend %thirteen-pixels;
+}
+.comment-date {
+  display: inline-block;
+  margin-right: 2px;
+
+  &:after {
+    content: '|';
+    padding-left: 6px;
+  }
+}
+.children {
+  position: relative;
+  background: white;
+  border: solid 1px $gray-85;
+  border-top: none;
+  margin: -13px 0 $baseline-height;
+  padding: 1px $baseline-height $baseline-height;
+}
 .comment-form {
   text-align: left;
+}
+.comment-respond {
+  margin-top: $baseline-height;
 }
 .comment-notes {
   @extend %thirteen-pixels;

@@ -12,7 +12,7 @@ if ( comments_open() ) { ?>
             </h3>
         </div>
             <ol class="comment-list">
-                    <?php wp_list_comments(array( 'callback'=>'ct_unlimited_customize_comments', 'max_depth'=>'7') ); ?>
+                    <?php wp_list_comments(array( 'callback'=>'ct_unlimited_customize_comments', 'max_depth'=>'3') ); ?>
             </ol><!-- .comment-list -->
             <?php    
             if( (get_option('page_comments') == 1) && (get_comment_pages_count() > 1) ) { ?>
