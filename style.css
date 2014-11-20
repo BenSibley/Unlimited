@@ -33,7 +33,8 @@ h2 {
 }
 
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
-textarea, input[type="submit"], .site-description, .menu-primary-items a, .post-meta a {
+textarea, input[type="submit"], .site-description, .menu-primary-items a, .post-meta a, .post-categories, .further-reading span, .post-author p,
+.post-author > a {
   font-size: 0.8125em;
   /* 13px / 16px */
   line-height: 1.385;
@@ -133,6 +134,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   font-weight: 400;
+  color: #3a3a3a;
 }
 
 h3,
@@ -479,10 +481,10 @@ a img {
 .post {
   margin-top: 1.5em;
   background: white;
+  border: solid 1px #d9d9d9;
 }
 
-.post-header,
-.post-content {
+.post-padding-container {
   padding: 0 3.33437%;
 }
 
@@ -512,8 +514,8 @@ a img {
   display: inline-block;
 }
 
-.post-date:after,
-.post-author:after {
+.date-meta:after,
+.author-meta:after {
   content: '';
   position: absolute;
   right: 0;
@@ -521,4 +523,42 @@ a img {
   width: 1px;
   height: 24px;
   background: #666666;
+}
+
+.post-title {
+  margin: 0.649em 0 0.324em;
+}
+
+.post-categories {
+  margin: 0;
+}
+
+.post-content {
+  margin-top: 2.25em;
+}
+
+.further-reading {
+  text-align: center;
+}
+.further-reading div {
+  margin-bottom: 1.5em;
+}
+.further-reading span {
+  display: block;
+}
+
+.post-author {
+  text-align: center;
+  margin: 1.5em 0;
+  padding: 0.75em 1.5em 2.25em;
+  border: solid 1px #d9d9d9;
+}
+.post-author img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 0.75em;
+}
+.post-author a {
+  text-decoration: underline;
 }
