@@ -307,14 +307,20 @@ function ct_unlimited_social_array(){
 }
 
 if( ! function_exists('ct_unlimited_social_icons_output') ) {
-	function ct_unlimited_social_icons_output() {
+	function ct_unlimited_social_icons_output($source) {
 
 		$social_sites = ct_unlimited_social_site_list();
 
 		// any inputs that aren't empty are stored in $active_sites array
 		foreach ( $social_sites as $social_site ) {
-			if ( strlen( get_theme_mod( $social_site ) ) > 0 ) {
-				$active_sites[] = $social_site;
+			if( $source == 'header' ) {
+				if ( strlen( get_theme_mod( $social_site ) ) > 0 ) {
+					$active_sites[] = $social_site;
+				}
+			} elseif( $source == 'author' ) {
+				if ( strlen( get_the_author_meta( $social_site ) ) > 0 ) {
+					$active_sites[] = $social_site;
+				}
 			}
 		}
 
