@@ -115,22 +115,22 @@ function ct_unlimited_update_fields($fields) {
 
     $fields['author'] =
         '<p class="comment-form-author">
-            <label class="screen-reader-text">' . __("Your Name", "unlimited") . '</label>
-            <input placeholder="' . __("Your Name", "unlimited") . $label . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+            <label>' . __("Name", "unlimited") . $label . '</label>
+            <input placeholder="' . __("John Doe", "unlimited") . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
         '" size="30" ' . $aria_req . ' />
     	</p>';
 
     $fields['email'] =
         '<p class="comment-form-email">
-            <label class="screen-reader-text">' . __("Your Email", "unlimited") . '</label>
-            <input placeholder="' . __("Your Email", "unlimited") . $label . '" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+            <label>' . __("Email", "unlimited") . $label . '</label>
+            <input placeholder="' . __("name@email.com", "unlimited") . '" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
         '" size="30" ' . $aria_req . ' />
     	</p>';
 
     $fields['url'] =
         '<p class="comment-form-url">
-            <label class="screen-reader-text">' . __("Your Website URL", "unlimited") . '</label>
-            <input placeholder="' . __("Your URL", "unlimited") . ' (optional)" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
+            <label>' . __("Website", "unlimited") . '</label>
+            <input placeholder="' . __("http://example.com", "unlimited") . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
         '" size="30" />
             </p>';
 
@@ -142,7 +142,7 @@ function ct_unlimited_update_comment_field($comment_field) {
 	
 	$comment_field =
         '<p class="comment-form-comment">
-            <label class="screen-reader-text">' . __("Your Comment", "unlimited") . '</label>
+            <label>' . __("Comment", "unlimited") . '</label>
             <textarea required placeholder="' . __("Enter Your Comment", "unlimited") . '&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
         </p>';
 	
@@ -309,17 +309,20 @@ function ct_unlimited_social_array(){
 if( ! function_exists('ct_unlimited_social_icons_output') ) {
 	function ct_unlimited_social_icons_output($source) {
 
-		$social_sites = ct_unlimited_social_site_list();
+		if( $source == 'header' ) {
+			$social_sites = ct_unlimited_social_site_list();
+			foreach ( $social_sites as $social_site ) {
 
-		// any inputs that aren't empty are stored in $active_sites array
-		foreach ( $social_sites as $social_site ) {
-			if( $source == 'header' ) {
 				if ( strlen( get_theme_mod( $social_site ) ) > 0 ) {
 					$active_sites[] = $social_site;
 				}
-			} elseif( $source == 'author' ) {
+			}
+		} elseif( $source == 'author' ) {
+			$social_sites = ct_unlimited_social_array();
+			foreach ( $social_sites as $key => $social_site ) {
+
 				if ( strlen( get_the_author_meta( $social_site ) ) > 0 ) {
-					$active_sites[] = $social_site;
+					$active_sites[] = $key;
 				}
 			}
 		}
@@ -333,21 +336,14 @@ if( ! function_exists('ct_unlimited_social_icons_output') ) {
 
 				if ( $active_site == 'email' ) {
 					?>
-					<li><a class="email" target="_blank"
-					       href="mailto:<?php echo antispambot( is_email( get_theme_mod( $active_site ) ) ); ?>"><i
-								class="fa fa-envelope"></i></a></li>
+					<li><a class="email" target="_blank" href="mailto:<?php echo antispambot( is_email( get_theme_mod( $active_site ) ) ); ?>"><i class="fa fa-envelope"></i></a></li>
 				<?php } elseif ( $active_site == "flickr" || $active_site == "dribbble" || $active_site == "instagram" || $active_site == "soundcloud" || $active_site == "spotify" || $active_site == "vine" || $active_site == "yahoo" || $active_site == "codepen" || $active_site == "delicious" || $active_site == "stumbleupon" || $active_site == "deviantart" || $active_site == "digg" || $active_site == "hacker-news" || $active_site == "vk" || $active_site == 'weibo' || $active_site == 'tencent-weibo' ) { ?>
-					<li><a class="<?php echo $active_site; ?>" target="_blank"
-					       href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>"><i
-								class="fa fa-<?php echo esc_attr( $active_site ); ?>"></i></a></li>
+					<li><a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>"><i class="fa fa-<?php echo esc_attr( $active_site ); ?>"></i></a></li>
 				<?php } else { ?>
-					<li><a class="<?php echo $active_site; ?>" target="_blank"
-					       href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>"><i
-								class="fa fa-<?php echo esc_attr( $active_site ); ?>-square"></i></a></li>
+					<li><a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>"><i class="fa fa-<?php echo esc_attr( $active_site ); ?>-square"></i></a></li>
 				<?php
 				}
 			}
-
 			echo "</ul>";
 		}
 	}

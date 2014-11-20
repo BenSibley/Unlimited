@@ -18,14 +18,15 @@ Unlimited is distributed under the terms of the GNU GPL
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /***** Silent Classes *****/
-h1, .site-title {
+h1, .site-title, .comments-number h3,
+.comment-reply-title {
   font-size: 1.75em;
   /* 28px / 16px */
   line-height: 1.321;
   /* 37px */
 }
 
-h2 {
+h2, .footer-content h4 {
   font-size: 1.3125em;
   /* 21px / 16px */
   line-height: 1.143;
@@ -34,7 +35,7 @@ h2 {
 
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .site-description, .menu-primary-items a, .post-meta a, .post-categories, .further-reading span, .post-author p,
-.post-author > a {
+.post-author > a, .post-tags a, .comment-notes, .footer-content p, .design-credit {
   font-size: 0.8125em;
   /* 13px / 16px */
   line-height: 1.385;
@@ -57,13 +58,13 @@ a:visited, a:hover, a:active, a:focus {
   color: #3a3a3a;
 }
 
-.site-title a, .menu-primary-items a, .post-meta a {
+.site-title a, .menu-primary-items a, .post-meta a, .post-tags a, .footer-content a, .design-credit a {
   color: white;
 }
-.site-title a:link, .menu-primary-items a:link, .post-meta a:link, .site-title a:visited, .menu-primary-items a:visited, .post-meta a:visited {
+.site-title a:link, .menu-primary-items a:link, .post-meta a:link, .post-tags a:link, .footer-content a:link, .design-credit a:link, .site-title a:visited, .menu-primary-items a:visited, .post-meta a:visited, .post-tags a:visited, .footer-content a:visited, .design-credit a:visited {
   color: white;
 }
-.site-title a:visited, .menu-primary-items a:visited, .post-meta a:visited, .site-title a:hover, .menu-primary-items a:hover, .post-meta a:hover, .site-title a:active, .menu-primary-items a:active, .post-meta a:active, .site-title a:focus, .menu-primary-items a:focus, .post-meta a:focus {
+.site-title a:visited, .menu-primary-items a:visited, .post-meta a:visited, .post-tags a:visited, .footer-content a:visited, .design-credit a:visited, .site-title a:hover, .menu-primary-items a:hover, .post-meta a:hover, .post-tags a:hover, .footer-content a:hover, .design-credit a:hover, .site-title a:active, .menu-primary-items a:active, .post-meta a:active, .post-tags a:active, .footer-content a:active, .design-credit a:active, .site-title a:focus, .menu-primary-items a:focus, .post-meta a:focus, .post-tags a:focus, .footer-content a:focus, .design-credit a:focus {
   color: white;
 }
 
@@ -260,6 +261,8 @@ textarea {
   font-family: "Open Sans", sans-serif;
   border-radius: 0px;
   -webkit-appearance: none;
+  -webkit-transition: outline-offset 0.15s ease-in-out;
+  transition: outline-offset 0.15s ease-in-out;
 }
 
 input[type="submit"] {
@@ -283,22 +286,28 @@ textarea {
   overflow: auto;
   /* to hide scrollbar in IE */
   border-radius: 0px;
+  -webkit-transition: outline-offset 0.15s ease-in-out;
+  transition: outline-offset 0.15s ease-in-out;
 }
 
 ::-webkit-input-placeholder {
   color: #ababab;
+  font-weight: 300;
 }
 
 :-moz-placeholder {
   color: #ababab;
+  font-weight: 300;
 }
 
 ::-moz-placeholder {
   color: #ababab;
+  font-weight: 300;
 }
 
 :-ms-input-placeholder {
   color: #ababab;
+  font-weight: 300;
 }
 
 /* ie image border fix */
@@ -559,6 +568,71 @@ a img {
   border-radius: 50%;
   margin-bottom: 0.75em;
 }
+.post-author p {
+  margin: 0.75em 0 1.5em;
+}
 .post-author a {
   text-decoration: underline;
+}
+.post-author .social-media-icons {
+  list-style: none;
+  margin: 0.75em 0;
+}
+.post-author .social-media-icons li {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.post-tags {
+  text-align: center;
+}
+.post-tags ul {
+  list-style: none;
+  margin: 0;
+}
+.post-tags li {
+  display: inline-block;
+  margin: 0 6px 0.75em 0;
+}
+.post-tags a {
+  background: #3a3a3a;
+  padding: 4px 8px;
+  -webkit-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
+}
+.post-tags a:hover, .post-tags a:active, .post-tags a:focus {
+  text-decoration: none;
+  background: #666666;
+}
+
+/* Comments styles */
+.comments {
+  text-align: center;
+  margin: 3em 0;
+}
+
+.comment-form {
+  text-align: left;
+}
+
+/* Footer Styles */
+.site-footer {
+  margin-top: 3em;
+  background: #3a3a3a;
+  color: #d9d9d9;
+  text-align: center;
+}
+
+.footer-content {
+  padding: 2.25em 3.125% 0;
+}
+.footer-content p {
+  margin: 0;
+  display: inline-block;
+}
+
+.design-credit {
+  margin-top: 3em;
+  padding: 0.75em;
+  background: #2b2b2b;
 }

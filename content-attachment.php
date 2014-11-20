@@ -8,7 +8,7 @@
 				<?php the_content(); ?>
 			</div>
 			<?php get_template_part('content/post-nav-attachment'); ?>
-			<?php comments_template(); ?>
+			<?php comments_template(); ?>w
 		</div>
 	</article>
 </div>

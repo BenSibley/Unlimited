@@ -175,6 +175,7 @@ textarea {
   font-family: $primary-font-stack;
   border-radius: 0px;
   -webkit-appearance: none;
+  transition: outline-offset 0.15s ease-in-out;
 }
 input[type="submit"] {
   @extend %thirteen-pixels;
@@ -197,18 +198,23 @@ textarea {
   max-width: $baseline-height * 15 * 1.85;
   overflow: auto; /* to hide scrollbar in IE */
   border-radius: 0px;
+  transition: outline-offset 0.15s ease-in-out;
 }
 ::-webkit-input-placeholder {
   color: $gray-67;
+  font-weight: 300;
 }
 :-moz-placeholder /* Firefox 18- */ {
   color: $gray-67;
+  font-weight: 300;
 }
 ::-moz-placeholder /* Firefox 19+ */ {
   color: $gray-67;
+  font-weight: 300;
 }
 :-ms-input-placeholder {
   color: $gray-67;
+  font-weight: 300;
 }
 
 ///* sticky */

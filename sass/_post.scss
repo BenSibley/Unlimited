@@ -102,7 +102,45 @@
   > a {
     @extend %thirteen-pixels;
   }
+  p {
+    margin: $baseline-height / 2 0 $baseline-height;
+  }
   a {
     text-decoration: underline;
+  }
+  .social-media-icons {
+    list-style: none;
+    margin: $baseline-height / 2 0;
+
+    li {
+      display: inline-block;
+      margin: 0 4px; // accounting for 4px from being inline-block
+    }
+  }
+}
+.post-tags {
+  text-align: center;
+
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 6px $baseline-height / 2 0;
+  }
+  a {
+    @extend  %light-link;
+    @extend %thirteen-pixels;
+    background: $gray-23;
+    padding: 4px 8px;
+    transition: background 0.15s ease-in-out;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      background: $gray-40;
+    }
   }
 }
