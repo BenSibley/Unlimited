@@ -11,7 +11,6 @@
 .site-header {
 
   .search-form-container {
-    position: relative;
     float: right;
     margin: 0;
 
@@ -31,7 +30,7 @@
       &.open {
 
         + form {
-          left: -200px;
+          left: $column;
           opacity: 1;
         }
       }
@@ -42,11 +41,14 @@
     }
     form {
       position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
+      top: $baseline-height / 2;
+      right: $column;
+      left: 100%;
       opacity: 0;
       transition: opacity 0.15s ease-in-out, left 0.15s ease-in-out;
+    }
+    .search-field {
+      max-width: none !important;
     }
   }
 }
