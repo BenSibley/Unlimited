@@ -31,7 +31,7 @@
   margin: $baseline-height 0;
   padding: $baseline-height / 2;
   background: white;
-  border: solid 1px $gray-85;
+  border: solid 1px $gray-87;
   text-align: center;
 
   a {
@@ -56,5 +56,23 @@
   }
   .page-numbers {
     padding: 0 4px;
+  }
+}
+.archive-header {
+  margin: $baseline-height 0;
+  padding: $baseline-height;
+  background: white;
+  border: solid 1px $gray-87;
+  text-align: center;
+
+  h2 {
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  i {
+    display: inline-block;
+    color: $gray-23;
+    margin-right: 2px;
   }
 }

@@ -19,7 +19,7 @@
 .post {
   margin-top: $baseline-height;
   background: white;
-  border: solid 1px $gray-85;
+  border: solid 1px $gray-87;
 }
 .post-padding-container {
   padding: 0 $column * 1.067;
@@ -131,17 +131,16 @@
     margin: 0 6px $baseline-height / 2 0;
   }
   a {
-    @extend  %light-link;
     @extend %thirteen-pixels;
-    background: $gray-23;
+    outline: solid 1px $gray-85;
     padding: 4px 8px;
-    transition: background 0.15s ease-in-out;
+    transition: outline-color 0.15s ease-in-out;
 
     &:hover,
     &:active,
     &:focus {
+      outline-color: $gray-23;
       text-decoration: none;
-      background: $gray-40;
     }
   }
 }
