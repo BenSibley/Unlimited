@@ -749,11 +749,13 @@ li.pingback {
 
 /* Blog and archive styles */
 .blog .entry,
-.archive .entry {
+.archive .entry,
+.search .entry {
   padding-bottom: 1.5em;
 }
 .blog .post-content,
-.archive .post-content {
+.archive .post-content,
+.search .post-content {
   margin-top: 1.5em;
   text-align: center;
 }
@@ -820,4 +822,21 @@ li.pingback {
   display: inline-block;
   color: #3a3a3a;
   margin-right: 2px;
+}
+
+.search-header {
+  background: white;
+  border: solid 1px #dedede;
+  padding: 1.5em 3.33344%;
+}
+.search-header .search-form-container {
+  margin-top: 1.5em;
+}
+.search-header .search-submit {
+  margin-top: 0.75em;
+  max-width: none;
+}
+
+.search-header.bottom {
+  padding-top: 0;
 }

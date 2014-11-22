@@ -1,7 +1,8 @@
 /* Blog and archive styles */
 
 .blog,
-.archive {
+.archive,
+.search {
 
   .entry {
     padding-bottom: $baseline-height;
@@ -75,4 +76,20 @@
     color: $gray-23;
     margin-right: 2px;
   }
+}
+.search-header {
+  background: white;
+  border: solid 1px $gray-87;
+  padding: $baseline-height $column * 1.0667;
+
+  .search-form-container {
+    margin-top: $baseline-height;
+  }
+  .search-submit {
+    margin-top: $baseline-height / 2;
+    max-width: none;
+  }
+}
+.search-header.bottom {
+  padding-top: 0;
 }

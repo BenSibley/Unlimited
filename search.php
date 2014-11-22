@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <div class="post-header">
+    <div class="post-header search-header">
         <h1 class="post-title">
             <?php
             global $wp_query;
@@ -33,9 +33,10 @@
     $total_results = $wp_query->found_posts;
     if($total_results) {
         ?>
-        <div class="search-bottom">
+        <div class="post-header search-header bottom">
             <p><?php _e("Can't find what you're looking for?  Try refining your search:", "unlimited"); ?></p>
             <?php get_search_form(); ?>
         </div>
     <?php } ?>
+</div>
 <?php get_footer(); ?>
