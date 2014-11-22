@@ -18,19 +18,34 @@ elseif( is_tag() ){ ?>
 	<div class='archive-header'>
 		<i class="fa fa-tag"></i>
 		<h2>
-			<?php _e('Tag:', 'unlimited'); ?>
+			<?php _e('Tag archive for:', 'unlimited'); ?>
 			<?php single_tag_title(); ?>
 		</h2>
 	</div>
 <?php
 }
 /* Author header */
-elseif( is_author() ){ ?>
-	<div class='archive-header'>
-	<p><?php _e('These Posts are by:', 'unlimited'); ?></p><?php
+elseif( is_author() ){
 	$author = get_userdata(get_query_var('author')); ?>
-	<h2><?php echo $author->nickname; ?></h2>
-	</div><?php
+	<div class='archive-header'>
+		<i class="fa fa-user"></i>
+		<h2>
+			<?php _e('Author archive for:', 'unlimited'); ?>
+			<?php echo $author->nickname; ?>
+		</h2>
+	</div>
+<?php
+}
+/* Date header */
+elseif( is_date() ){ ?>
+	<div class='archive-header'>
+		<i class="fa fa-calendar"></i>
+		<h2>
+			<?php _e('Date archive for:', 'unlimited'); ?>
+			<?php single_month_title(' '); ?>
+		</h2>
+	</div>
+<?php
 }
 
 // The loop
