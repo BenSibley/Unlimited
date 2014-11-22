@@ -84,8 +84,8 @@ function ct_unlimited_customize_comments( $comment, $args, $depth ) {
                 endif;
                 comment_text(); ?>
 	            <div class="comment-date"><?php comment_date('n/j/Y'); ?></div>
-	            <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'unlimited' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-	            <?php edit_comment_link( 'edit' ); ?>
+	            <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'unlimited' ), 'depth' => $depth, 'max_depth' => $args['max_depth'], 'before' => '|' ) ) ); ?>
+	            <?php edit_comment_link( 'Edit', '|' ); ?>
             </div>
         </article>
     </li>

@@ -48,11 +48,11 @@ li.pingback {
 .comment-date {
   display: inline-block;
   margin-right: 2px;
-
-  &:after {
-    content: '|';
-    padding-left: 6px;
-  }
+}
+.comment-reply-link,
+.comment-edit-link {
+  display: inline-block;
+  margin: 0 2px 0 6px; // already 4px on the right from inline-block
 }
 .comment-form {
   text-align: left;
@@ -62,4 +62,10 @@ li.pingback {
 }
 .comment-notes {
   @extend %thirteen-pixels;
+}
+.previous-comment {
+  margin-bottom: $baseline-height / 2;
+}
+.next-comment {
+  margin-top: $baseline-height / 2;
 }

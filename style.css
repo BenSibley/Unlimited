@@ -698,9 +698,11 @@ li.pingback .children {
   display: inline-block;
   margin-right: 2px;
 }
-.comment-date:after {
-  content: '|';
-  padding-left: 6px;
+
+.comment-reply-link,
+.comment-edit-link {
+  display: inline-block;
+  margin: 0 2px 0 6px;
 }
 
 .comment-form {
@@ -709,6 +711,14 @@ li.pingback .children {
 
 .comment-respond {
   margin-top: 1.5em;
+}
+
+.previous-comment {
+  margin-bottom: 0.75em;
+}
+
+.next-comment {
+  margin-top: 0.75em;
 }
 
 /* Footer Styles */
