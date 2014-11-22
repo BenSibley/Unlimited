@@ -742,3 +742,36 @@ li.pingback .children {
   padding: 0.75em;
   background: #2b2b2b;
 }
+
+/* Blog and archive styles */
+.loop-pagination {
+  position: relative;
+  margin: 1.5em 0;
+  padding: 0.75em;
+  background: white;
+  border: solid 1px #d9d9d9;
+  text-align: center;
+}
+.loop-pagination a {
+  text-decoration: underline;
+}
+.loop-pagination .prev,
+.loop-pagination .next {
+  position: absolute;
+  text-decoration: none;
+}
+.loop-pagination .prev:hover, .loop-pagination .prev:active, .loop-pagination .prev:focus,
+.loop-pagination .next:hover,
+.loop-pagination .next:active,
+.loop-pagination .next:focus {
+  text-decoration: underline;
+}
+.loop-pagination .prev {
+  left: 3.33344%;
+}
+.loop-pagination .next {
+  right: 3.33344%;
+}
+.loop-pagination .page-numbers {
+  padding: 0 4px;
+}

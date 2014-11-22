@@ -1,0 +1,34 @@
+/* Blog and archive styles */
+
+.loop-pagination {
+  position: relative;
+  margin: $baseline-height 0;
+  padding: $baseline-height / 2;
+  background: white;
+  border: solid 1px $gray-85;
+  text-align: center;
+
+  a {
+    text-decoration: underline;
+  }
+  .prev,
+  .next {
+    position: absolute;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+  .prev {
+    left: $column * 1.0667;
+  }
+  .next {
+    right: $column * 1.0667;
+  }
+  .page-numbers {
+    padding: 0 4px;
+  }
+}
