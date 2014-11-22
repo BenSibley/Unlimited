@@ -585,7 +585,7 @@ a img {
 }
 
 .post-title {
-  margin: 0.649em 0 0.324em;
+  margin: 0.649em 0 0;
 }
 
 .post-categories {
@@ -669,21 +669,20 @@ a img {
 .comment-list ul {
   list-style: none;
 }
-
-li.comment,
-li.pingback {
-  border: solid 1px #d9d9d9;
-  margin: 0.75em 0;
-  padding: 0.75em 1.5em;
-}
-li.comment .children,
-li.pingback .children {
+.comment-list .children {
   position: relative;
   background: white;
   border: solid 1px #d9d9d9;
   border-top: none;
   margin: -13px 0 1.5em;
   padding: 1px 1.5em 1.5em;
+}
+
+li.comment,
+li.pingback {
+  border: solid 1px #d9d9d9;
+  margin: 0.75em 0;
+  padding: 0.75em 1.5em;
 }
 
 .comment-author img {
@@ -744,6 +743,30 @@ li.pingback .children {
 }
 
 /* Blog and archive styles */
+.blog .post,
+.archive .post {
+  padding-bottom: 1.5em;
+}
+.blog .post-content,
+.archive .post-content {
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.more-link {
+  margin-top: 0.75em;
+  font-weight: 300;
+  display: inline-block;
+  padding: 6px 1.5em;
+  outline: solid 1px #d9d9d9;
+  -webkit-transition: outline-color 0.15s ease-in-out;
+  transition: outline-color 0.15s ease-in-out;
+}
+.more-link:hover, .more-link:active, .more-link:focus {
+  text-decoration: none;
+  outline-color: #3a3a3a;
+}
+
 .loop-pagination {
   position: relative;
   margin: 1.5em 0;

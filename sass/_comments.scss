@@ -15,13 +15,6 @@
   ul {
     list-style: none;
   }
-}
-li.comment,
-li.pingback {
-  border: solid 1px $gray-85;
-  margin: $baseline-height / 2 0;
-  padding: $baseline-height / 2 $baseline-height;
-
   // nesting so it doesn't affect .menu-unset submenus
   .children {
     position: relative;
@@ -31,6 +24,12 @@ li.pingback {
     margin: -13px 0 $baseline-height;
     padding: 1px $baseline-height $baseline-height;
   }
+}
+li.comment,
+li.pingback {
+  border: solid 1px $gray-85;
+  margin: $baseline-height / 2 0;
+  padding: $baseline-height / 2 $baseline-height;
 }
 .comment-author {
 

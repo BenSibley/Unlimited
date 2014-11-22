@@ -1,5 +1,31 @@
 /* Blog and archive styles */
 
+.blog,
+.archive {
+
+  .post {
+    padding-bottom: $baseline-height;
+  }
+  .post-content {
+    margin-top: $baseline-height;
+    text-align: center; // center excerpts
+  }
+}
+.more-link {
+  margin-top: $baseline-height * 0.5;
+  font-weight: 300;
+  display: inline-block;
+  padding: 6px $baseline-height;
+  outline: solid 1px $gray-85;
+  transition: outline-color 0.15s ease-in-out;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    outline-color: $gray-23;
+  }
+}
 .loop-pagination {
   position: relative;
   margin: $baseline-height 0;
