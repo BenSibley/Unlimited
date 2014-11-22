@@ -1,0 +1,20 @@
+/* Attachment styles */
+
+.singular-attachment {
+
+  .post-content {
+    text-align: center;
+  }
+  .further-reading {
+
+    &:after {
+      @include clearfix;
+    }
+    .previous {
+      float: left;
+    }
+    .next {
+      float: right;
+    }
+  }
+}

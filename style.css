@@ -846,3 +846,22 @@ li.pingback {
 .site-header .search-form-container .search-field {
   max-width: none !important;
 }
+
+/* Attachment styles */
+.singular-attachment .post-content {
+  text-align: center;
+}
+.singular-attachment .further-reading:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.singular-attachment .further-reading .previous {
+  float: left;
+}
+.singular-attachment .further-reading .next {
+  float: right;
+}
