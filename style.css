@@ -394,40 +394,6 @@ a img {
 .site-header .social-media-icons a:hover, .site-header .social-media-icons a:active, .site-header .social-media-icons a:focus {
   background: #2b2b2b;
 }
-.site-header .search-form-container {
-  position: relative;
-  float: right;
-}
-.site-header .search-form-container button {
-  position: relative;
-  z-index: 9;
-  background: none;
-  border: none;
-  margin: 0;
-  padding: 6px 10px;
-  font-size: 1em;
-  line-height: 1.5;
-}
-.site-header .search-form-container button:focus {
-  outline: none;
-}
-.site-header .search-form-container button.open + form {
-  left: -200px;
-  opacity: 1;
-}
-.site-header .search-form-container i {
-  color: #d9d9d9;
-  z-index: -1;
-}
-.site-header .search-form-container form {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  opacity: 0;
-  -webkit-transition: opacity 0.15s ease-in-out, left 0.15s ease-in-out;
-  transition: opacity 0.15s ease-in-out, left 0.15s ease-in-out;
-}
 
 .title-container {
   margin: 0.75em 0 2.25em;
@@ -827,16 +793,54 @@ li.pingback {
 .search-header {
   background: white;
   border: solid 1px #dedede;
-  padding: 1.5em 3.33344%;
-}
-.search-header .search-form-container {
-  margin-top: 1.5em;
-}
-.search-header .search-submit {
-  margin-top: 0.75em;
-  max-width: none;
+  padding: 1.5em 3.33344% 0;
 }
 
 .search-header.bottom {
   padding-top: 0;
+}
+
+/* search form styles */
+.search-form-container {
+  margin: 1.5em 0;
+}
+.search-form-container .search-submit {
+  margin-top: 0.75em;
+  max-width: none;
+}
+
+.site-header .search-form-container {
+  position: relative;
+  float: right;
+  margin: 0;
+}
+.site-header .search-form-container button {
+  position: relative;
+  z-index: 9;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 6px 10px;
+  font-size: 1em;
+  line-height: 1.5;
+}
+.site-header .search-form-container button:focus {
+  outline: none;
+}
+.site-header .search-form-container button.open + form {
+  left: -200px;
+  opacity: 1;
+}
+.site-header .search-form-container i {
+  color: #d9d9d9;
+  z-index: -1;
+}
+.site-header .search-form-container form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.15s ease-in-out, left 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out, left 0.15s ease-in-out;
 }

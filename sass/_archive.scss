@@ -80,15 +80,7 @@
 .search-header {
   background: white;
   border: solid 1px $gray-87;
-  padding: $baseline-height $column * 1.0667;
-
-  .search-form-container {
-    margin-top: $baseline-height;
-  }
-  .search-submit {
-    margin-top: $baseline-height / 2;
-    max-width: none;
-  }
+  padding: $baseline-height $column * 1.0667 0;
 }
 .search-header.bottom {
   padding-top: 0;
