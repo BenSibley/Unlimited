@@ -538,7 +538,7 @@ a img {
   opacity: 0;
 }
 
-.post {
+.entry {
   margin-top: 1.5em;
   background: white;
   border: solid 1px #dedede;
@@ -549,6 +549,7 @@ a img {
 }
 
 .post-header {
+  margin: 1.5em 0;
   text-align: center;
 }
 
@@ -557,7 +558,8 @@ a img {
   background: #3a3a3a;
   text-align: center;
 }
-.post-meta a {
+.post-meta a,
+.post-meta span {
   opacity: 0;
   position: absolute;
   top: 0;
@@ -583,10 +585,6 @@ a img {
   width: 1px;
   height: 24px;
   background: #666666;
-}
-
-.post-title {
-  margin: 0.649em 0 0;
 }
 
 .post-categories {
@@ -705,6 +703,12 @@ li.pingback {
   margin: 0 2px 0 6px;
 }
 
+#cancel-comment-reply-link {
+  font-size: 16px;
+  line-height: 1.5;
+  display: block;
+}
+
 .comment-form {
   text-align: left;
 }
@@ -744,8 +748,8 @@ li.pingback {
 }
 
 /* Blog and archive styles */
-.blog .post,
-.archive .post {
+.blog .entry,
+.archive .entry {
   padding-bottom: 1.5em;
 }
 .blog .post-content,

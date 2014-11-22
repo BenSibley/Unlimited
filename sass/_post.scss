@@ -16,7 +16,7 @@
     opacity: 0;
   }
 }
-.post {
+.entry {
   margin-top: $baseline-height;
   background: white;
   border: solid 1px $gray-87;
@@ -25,6 +25,7 @@
   padding: 0 $column * 1.067;
 }
 .post-header {
+  margin: $baseline-height 0;
   text-align: center;
 }
 .post-meta {
@@ -35,6 +36,9 @@
   a {
     @extend %light-link;
     @extend %thirteen-pixels;
+  }
+  a,
+  span {
     opacity: 0;
     position: absolute;
     top: 0;
@@ -63,9 +67,6 @@
     height: 24px;
     background: $gray-40;
   }
-}
-.post-title {
-  margin: 0.649em 0 0; // 24px
 }
 .post-categories {
   @extend %thirteen-pixels;

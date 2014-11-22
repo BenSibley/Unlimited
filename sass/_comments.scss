@@ -53,6 +53,11 @@ li.pingback {
   display: inline-block;
   margin: 0 2px 0 6px; // already 4px on the right from inline-block
 }
+#cancel-comment-reply-link {
+  font-size: 16px;
+  line-height: 1.5;
+  display: block;
+}
 .comment-form {
   text-align: left;
 }
