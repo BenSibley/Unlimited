@@ -416,3 +416,16 @@ function ct_unlimited_set_date_format() {
 	}
 }
 add_action( 'init', 'ct_unlimited_set_date_format' );
+
+/*
+ * WP will apply the ".menu-primary-items" class & id to the containing <div> instead of <ul>
+ * making styling extremely difficult and confusing. Using this wrapper to add a unique class,
+ * so I can sleep at night.
+ */
+function ct_unlimited_wp_page_menu() {
+	wp_page_menu(array(
+			"menu_class" => "menu-unset"
+		)
+	);
+}
+
