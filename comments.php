@@ -63,7 +63,7 @@ if ( comments_open() ) { ?>
             </p><!-- .comments-closed -->
 <?php 
 } else { ?>
-
+    <section id="comments" class="comments">
     <p class="comments-closed">
             <?php _e( 'Comments are closed.', 'unlimited' ); ?>
     </p><!-- .comments-closed -->

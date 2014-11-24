@@ -2,7 +2,6 @@
 
 <?php get_sidebar( 'primary' ); ?>
 
-
 <footer class="site-footer" role="contentinfo">
 	<div class="footer-content">
 	    <h4><a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo('title'); ?></a></h4>
