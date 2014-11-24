@@ -1129,11 +1129,11 @@ li.pingback {
     left: -266px;
   }
 
-  .search-form-container .search-submit {
+  .main .search-form-container .search-submit {
     width: 120px;
     margin-top: 0;
   }
-  .search-form-container .search-field {
+  .main .search-form-container .search-field {
     width: calc(100% - 129px) !important;
     margin-right: 4px;
   }
