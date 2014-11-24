@@ -68,3 +68,10 @@
     font-size: 24px;
   }
 }
+/* 800px */
+@media all and (min-width: 50em) {
+
+  .site-header {
+    overflow: visible; // to allow for dropdown menus
+  }
+}

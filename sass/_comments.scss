@@ -60,6 +60,10 @@ li.pingback {
 }
 .comment-form {
   text-align: left;
+
+  label {
+    display: block;
+  }
 }
 .comment-respond {
   margin-top: $baseline-height;

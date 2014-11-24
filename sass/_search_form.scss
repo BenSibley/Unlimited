@@ -52,3 +52,42 @@
     }
   }
 }
+
+/* 600px */
+@media all and (min-width: 37.5em) {
+
+  .site-header {
+
+    .search-form-container {
+      position: relative;
+
+      form {
+        top: 0;
+      }
+      button {
+
+        &.open {
+
+          + form {
+            left: -266px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+/* 800px */
+@media all and (min-width: 50em) {
+
+  .search-form-container {
+
+    i {
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
         if( $(this).hasClass('open') ) {
             $(this).removeClass('open');
             // close menu and all submenus
-            $('#menu-primary, #menu-primary-items ul, .menu-unset ul').css('max-height', 0);
+            $('#menu-primary, #menu-primary-items ul, .menu-unset ul').removeAttr('style');
             $('.menu-item-has-children').each(function(){
                 if( $(this).hasClass('open') ) {
                     $(this).removeClass('open');
