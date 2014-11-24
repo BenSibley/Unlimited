@@ -32,7 +32,8 @@
   margin: $baseline-height 0;
   padding: $baseline-height / 2;
   background: white;
-  border: solid 1px $gray-87;
+  outline: solid 1px $gray-87; // needs to be outline or border-top is angled
+  border-top: solid 4px $gray-23;
   text-align: center;
 
   a {

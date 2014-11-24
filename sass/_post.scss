@@ -145,3 +145,35 @@
     }
   }
 }
+
+/* 1000px */
+@media all and (min-width: 62.5em) {
+
+  .post-meta {
+    padding: $baseline-height / 2;
+
+    a,
+    span {
+      font-weight: 300;
+      opacity: 1;
+      position: static;
+    }
+    i {
+      padding: 0;
+      margin-right: 2px; // 4px from inline-block already
+    }
+  }
+  .date-meta,
+  .author-meta {
+    margin-right: $baseline-height;
+    padding-right: $baseline-height;
+
+    &:after {
+      top: 0;
+    }
+  }
+  .further-reading {
+
+  }
+
+}

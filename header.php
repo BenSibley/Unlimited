@@ -11,6 +11,7 @@
 </head>
 
 <body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
+<div class="overflow-container">
 
 <!--skip to content link-->
 <a class="skip-content" href="#main"><?php _e('Skip to content', 'unlimited'); ?></a>
@@ -32,4 +33,5 @@
 	</button>
 
 </header>
+
 <section id="main" class="main" role="main">

@@ -1,0 +1,61 @@
+/* Primary Sidebar & Widget styles */
+
+.sidebar-primary {
+  padding: 0 $column;
+}
+.widget {
+  @extend %thirteen-pixels;
+  font-weight: 300;
+  background: white;
+  padding: $baseline-height * 1.231 $baseline-height * 1.231 $baseline-height * 1.231;
+  outline: solid 1px $gray-87; // needs to be outline or border-top is angled
+  border-top: solid 4px $gray-23;
+  text-align: center;
+  margin: $baseline-height * 1.231 0;
+
+  .widget-title {
+    font-size: 1.231em;
+    line-height: 1.5;
+    font-weight: 400;
+    color: $gray-23;
+    margin-bottom: $baseline-height;
+  }
+  ul {
+    list-style: none;
+  }
+  select {
+    margin-bottom: $baseline-height * 1.231;
+  }
+}
+.widget_search {
+
+  .search-field {
+    max-width: 100% !important;
+  }
+}
+
+/* 800px */
+@media all and (min-width: 50em) {
+
+  .sidebar-primary {
+    float: right;
+    width: $column * 10;
+    padding: 0;
+    margin: 0 $column 0 0;
+  }
+}
+
+/* 1200px */
+@media all and (min-width: 75em) {
+
+  .widget_search {
+
+    .search-submit {
+      width: 120px;
+      margin-top: 0;
+    }
+    .search-field {
+      width: calc(100% - 124px) !important;
+    }
+  }
+}
