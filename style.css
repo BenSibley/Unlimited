@@ -370,7 +370,7 @@ a img {
     width: 59.375%;
     float: left;
     padding: 0;
-    margin: 0 3.125%;
+    margin: 1.5em 3.125% 0;
   }
 }
 /* Styles for the social icons, search bar, title, and general header layout */
@@ -438,6 +438,10 @@ a img {
 @media all and (min-width: 50em) {
   .site-header {
     overflow: visible;
+  }
+
+  .title-container {
+    margin: 0 0 3em;
   }
 }
 /* Styles for the primary menu */
@@ -788,6 +792,38 @@ a img {
   text-decoration: none;
 }
 
+/* 600px */
+@media all and (min-width: 37.5em) {
+  .further-reading:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+  .further-reading div {
+    width: 49%;
+  }
+  .further-reading .previous {
+    float: left;
+    text-align: left;
+  }
+  .further-reading .next {
+    float: right;
+    text-align: right;
+  }
+}
+/* 800px */
+@media all and (min-width: 50em) {
+  .entry {
+    margin-bottom: 3em;
+  }
+
+  .post-padding-container {
+    padding: 0 5.2625%;
+  }
+}
 /* 1000px */
 @media all and (min-width: 62.5em) {
   .post-meta {
@@ -812,6 +848,12 @@ a img {
   .date-meta:after,
   .author-meta:after {
     top: 0;
+  }
+}
+/* 1200px */
+@media all and (min-width: 75em) {
+  .post-padding-container {
+    padding: 0 10.525%;
   }
 }
 /* Comments styles */
@@ -1125,7 +1167,7 @@ li.pingback {
     float: right;
     width: 31.25%;
     padding: 0;
-    margin: 0 3.125% 0 0;
+    margin: 1.5em 3.125% 1.5em 0;
   }
 }
 /* 1200px */

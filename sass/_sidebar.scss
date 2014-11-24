@@ -41,7 +41,7 @@
     float: right;
     width: $column * 10;
     padding: 0;
-    margin: 0 $column 0 0;
+    margin: $baseline-height $column $baseline-height 0;
   }
 }
 

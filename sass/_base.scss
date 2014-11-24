@@ -285,6 +285,6 @@ a img {
     width: $column * 19;
     float: left;
     padding: 0;
-    margin: 0 $column;
+    margin: $baseline-height $column 0;
   }
 }

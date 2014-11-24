@@ -146,6 +146,37 @@
   }
 }
 
+/* 600px */
+@media all and (min-width: 37.5em) {
+
+  .further-reading {
+
+    &:after {
+      @include clearfix;
+    }
+    div {
+      width: 49%;
+    }
+    .previous {
+      float: left;
+      text-align: left;
+    }
+    .next {
+      float: right;
+      text-align: right;
+    }
+  }
+}
+/* 800px */
+@media all and (min-width: 50em) {
+
+  .entry {
+    margin-bottom: $baseline-height * 2;
+  }
+  .post-padding-container {
+    padding: 0 $column * 1.684;
+  }
+}
 /* 1000px */
 @media all and (min-width: 62.5em) {
 
@@ -172,8 +203,12 @@
       top: 0;
     }
   }
-  .further-reading {
+}
 
+/* 1200px */
+@media all and (min-width: 75em) {
+
+  .post-padding-container {
+    padding: 0 $column * 1.684 * 2;
   }
-
 }
