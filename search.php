@@ -37,6 +37,5 @@
             <p><?php _e("Can't find what you're looking for?  Try refining your search:", "unlimited"); ?></p>
             <?php get_search_form(); ?>
         </div>
-    <?php } ?>
-</div>
-<?php get_footer(); ?>
+    <?php }
+get_footer(); ?>

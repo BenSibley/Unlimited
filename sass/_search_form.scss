@@ -7,6 +7,9 @@
     margin-top: $baseline-height / 2;
     max-width: none; // needs to be nested to overwrite base styles
   }
+  .search-field {
+    max-width: none !important;
+  }
 }
 .site-header {
 
@@ -74,7 +77,26 @@
         }
       }
     }
+  }
+  .search-form-container {
 
+    .search-submit {
+      width: 120px;
+      margin-top: 0;
+    }
+    .search-field {
+      width: calc(100% - 129px) !important;
+      margin-right: 4px;
+    }
+  }
+  .widget_search {
+
+    .search-submit {
+      width: 80px;
+    }
+    .search-field {
+      width: calc(100% - 89px) !important;
+    }
   }
 }
 

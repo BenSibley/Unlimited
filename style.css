@@ -35,7 +35,7 @@ h2, .footer-content h4 {
 
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .site-description, .menu-primary-items a,
-.menu-unset > ul a, .post-meta a, .post-categories, .further-reading span, .post-author p,
+.menu-unset > ul a, .post-meta a, .post-meta div > span, .post-categories, .further-reading span, .post-author p,
 .post-author > a, .post-tags a, .comment-content, .comment-notes, .footer-content p, .design-credit, .widget {
   font-size: 0.8125em;
   /* 13px / 16px */
@@ -704,6 +704,9 @@ a img {
   bottom: 0;
   left: 0;
 }
+.post-meta div > span {
+  color: white;
+}
 .post-meta i {
   color: white;
   padding: 16px 36px;
@@ -929,6 +932,13 @@ li.pingback {
   margin-top: 0.75em;
 }
 
+/* 800px */
+@media all and (min-width: 50em) {
+  #cancel-comment-reply-link {
+    display: inline-block;
+    margin-left: 4px;
+  }
+}
 /* Footer Styles */
 .site-footer {
   margin-top: 3em;
@@ -1045,6 +1055,18 @@ li.pingback {
   padding-top: 0;
 }
 
+/* 800px */
+@media all and (min-width: 50em) {
+  .blog .entry,
+  .archive .entry,
+  .search .entry {
+    margin-bottom: 1.5em;
+  }
+
+  .loop-pagination {
+    margin-bottom: 3em;
+  }
+}
 /* search form styles */
 .search-form-container {
   margin: 1.5em 0;
@@ -1052,6 +1074,9 @@ li.pingback {
 .search-form-container .search-submit {
   margin-top: 0.75em;
   max-width: none;
+}
+.search-form-container .search-field {
+  max-width: none !important;
 }
 
 .site-header .search-form-container {
@@ -1102,6 +1127,22 @@ li.pingback {
   }
   .site-header .search-form-container button.open + form {
     left: -266px;
+  }
+
+  .search-form-container .search-submit {
+    width: 120px;
+    margin-top: 0;
+  }
+  .search-form-container .search-field {
+    width: calc(100% - 129px) !important;
+    margin-right: 4px;
+  }
+
+  .widget_search .search-submit {
+    width: 80px;
+  }
+  .widget_search .search-field {
+    width: calc(100% - 89px) !important;
   }
 }
 /* 800px */
@@ -1168,16 +1209,6 @@ li.pingback {
     width: 31.25%;
     padding: 0;
     margin: 1.5em 3.125% 1.5em 0;
-  }
-}
-/* 1200px */
-@media all and (min-width: 75em) {
-  .widget_search .search-submit {
-    width: 120px;
-    margin-top: 0;
-  }
-  .widget_search .search-field {
-    width: calc(100% - 124px) !important;
   }
 }
 /* gallery styles copied from Hybrid Core */

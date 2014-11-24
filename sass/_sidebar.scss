@@ -44,18 +44,3 @@
     margin: $baseline-height $column $baseline-height 0;
   }
 }
-
-/* 1200px */
-@media all and (min-width: 75em) {
-
-  .widget_search {
-
-    .search-submit {
-      width: 120px;
-      margin-top: 0;
-    }
-    .search-field {
-      width: calc(100% - 124px) !important;
-    }
-  }
-}

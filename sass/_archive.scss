@@ -86,3 +86,19 @@
 .search-header.bottom {
   padding-top: 0;
 }
+
+/* 800px */
+@media all and (min-width: 50em) {
+
+  .blog,
+  .archive,
+  .search {
+
+    .entry {
+      margin-bottom: $baseline-height;
+    }
+  }
+  .loop-pagination {
+    margin-bottom: $baseline-height * 2;
+  }
+}

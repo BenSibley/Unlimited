@@ -77,3 +77,12 @@ li.pingback {
 .next-comment {
   margin-top: $baseline-height / 2;
 }
+
+/* 800px */
+@media all and (min-width: 50em) {
+
+  #cancel-comment-reply-link {
+    display: inline-block;
+    margin-left: 4px;
+  }
+}
