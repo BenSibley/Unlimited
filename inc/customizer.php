@@ -159,6 +159,33 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 			'left'  => __('Left sidebar', 'unlimited'),
 		)
 	) );
+
+	/***** Blog *****/
+
+	// section
+	$wp_customize->add_section( 'ct_unlimited_blog', array(
+		'title'      => __( 'Blog', 'unlimited' ),
+		'priority'   => 60,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'full_post', array(
+		'default'           => 'no',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'ct_unlimited_sanitize_yes_no_settings',
+	) );
+	// control
+	$wp_customize->add_control( 'full_post', array(
+		'label'          => __( 'Show full posts on blog?', 'unlimited' ),
+		'section'        => 'ct_unlimited_blog',
+		'settings'       => 'full_post',
+		'type'           => 'radio',
+		'choices'        => array(
+			'yes'   => __('Yes', 'unlimited'),
+			'no'  => __('No', 'unlimited'),
+		)
+	) );
 }
 
 /***** Custom Sanitization Functions *****/
@@ -195,6 +222,21 @@ function ct_unlimited_sanitize_layout_settings($input){
 	$valid = array(
 		'right'   => __('Right sidebar', 'unlimited'),
 		'left'  => __('Left sidebar', 'unlimited'),
+	);
+
+	if ( array_key_exists( $input, $valid ) ) {
+		return $input;
+	} else {
+		return '';
+	}
+}
+
+// sanitize yes/no settings
+function ct_unlimited_sanitize_yes_no_settings($input){
+
+	$valid = array(
+		'yes'   => __('Yes', 'unlimited'),
+		'no'  => __('No', 'unlimited'),
 	);
 
 	if ( array_key_exists( $input, $valid ) ) {
