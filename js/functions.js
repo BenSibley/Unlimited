@@ -36,7 +36,7 @@ jQuery(document).ready(function($){
                     $(this).removeClass('open');
                     $(this).addClass('closed');
                 }
-            })
+            });
         } else {
             $(this).addClass('open');
             // open to show whole menu plus 48px of padding for style
@@ -53,7 +53,7 @@ jQuery(document).ready(function($){
         return menuHeight;
     }
     // enable double-click menu parent items right away
-    if( $(window).width() < 900 ) {
+    if( $(window).width() < 800 ) {
         enableTouchDropdown();
     } else {
         // wait to see if a touch event is fired
@@ -68,7 +68,7 @@ jQuery(document).ready(function($){
         $(window).off('touchstart', enableTouchDropdown);
 
         // get all the parent menu items
-        var menuParents = $('.menu-item-has-children');
+        var menuParents = $('.menu-item-has-children, .page_item_has_children');
 
         // add a 'closed' class to each and add an event listener to them
         menuParents.addClass('closed');
@@ -116,7 +116,6 @@ jQuery(document).ready(function($){
 
                 // adjust to the height
                 $('#menu-primary').css('max-height', menuHeight + 48);
-
 
             }, 200)
         }
