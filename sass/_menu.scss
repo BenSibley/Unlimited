@@ -113,7 +113,7 @@
   }
   /* 2nd tier */
   .menu-item-has-children,
-  .page_item_has_children {
+  .menu-unset .page_item_has_children {
 
     &:hover {
 
