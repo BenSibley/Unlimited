@@ -202,7 +202,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	) );
 	// setting
 	$wp_customize->add_setting( 'excerpt_length', array(
-		'default'           => '30',
+		'default'           => '25',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'absint',
