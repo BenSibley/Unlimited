@@ -80,6 +80,6 @@ if ( have_posts() ) :
     endwhile;
 endif; ?>
 
-<?php ct_unlimited_post_navigation(); ?>
+<?php if ( current_theme_supports( 'loop-pagination' ) ) loop_pagination(); ?>
 
 <?php get_footer(); ?>

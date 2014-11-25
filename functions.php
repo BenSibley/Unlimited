@@ -226,11 +226,6 @@ function ct_unlimited_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'ct_unlimited_custom_excerpt_length', 999 );
 
-// Adds navigation through pages in the loop
-function ct_unlimited_post_navigation() {
-    if ( current_theme_supports( 'loop-pagination' ) ) loop_pagination();
-}
-
 // for displaying featured images
 function ct_unlimited_featured_image() {
 
