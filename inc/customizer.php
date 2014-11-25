@@ -28,6 +28,20 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		}
 	}
 
+	// number input control
+	class ct_unlimited_number_input_control extends WP_Customize_Control {
+		public $type = 'number';
+
+		public function render_content() {
+			?>
+			<label>
+				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+				<input type="number" <?php $this->link(); ?> value="<?php echo $this->value(); ?>" />
+			</label>
+		<?php
+		}
+	}
+
 	/***** Logo Upload *****/
 
 	// section
@@ -188,20 +202,18 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	) );
 	// setting
 	$wp_customize->add_setting( 'excerpt_length', array(
-		'default'           => 'n30',
+		'default'           => '30',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'absint',
 	) );
 	// control
-	$wp_customize->add_control( 'excerpt_length', array(
-		'label'          => __( 'Excerpt length', 'unlimited' ),
-		'section'        => 'ct_unlimited_blog',
-		'settings'       => 'excerpt_length',
-		'type'           => 'radio',
-		'choices'        => array(
-			'yes'   => __('Yes', 'unlimited'),
-			'no'  => __('No', 'unlimited'),
+	$wp_customize->add_control( new ct_unlimited_number_input_control(
+		$wp_customize, 'excerpt_length', array(
+			'label'          => __( 'Excerpt length', 'unlimited' ),
+			'section'        => 'ct_unlimited_blog',
+			'settings'       => 'excerpt_length',
+			'type'           => 'number',
 		)
 	) );
 }
