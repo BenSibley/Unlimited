@@ -27,7 +27,6 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		<?php
 		}
 	}
-
 	// number input control
 	class ct_unlimited_number_input_control extends WP_Customize_Control {
 		public $type = 'number';
@@ -37,6 +36,19 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 			<label>
 				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 				<input type="number" <?php $this->link(); ?> value="<?php echo $this->value(); ?>" />
+			</label>
+		<?php
+		}
+	}
+	// create textarea control
+	class ct_unlimited_Textarea_Control extends WP_Customize_Control {
+		public $type = 'textarea';
+
+		public function render_content() {
+			?>
+			<label>
+				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+				<textarea rows="8" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
 			</label>
 		<?php
 		}
@@ -214,6 +226,29 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 			'section'        => 'ct_unlimited_blog',
 			'settings'       => 'excerpt_length',
 			'type'           => 'number',
+		)
+	) );
+
+	/***** Custom CSS *****/
+
+	// section
+	$wp_customize->add_section( 'ct_unlimited_custom_css', array(
+		'title'      => __( 'Custom CSS', 'unlimited' ),
+		'priority'   => 90,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'custom_css', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'esc_textarea',
+	) );
+	// control
+	$wp_customize->add_control( new ct_unlimited_Textarea_Control(
+		$wp_customize, 'custom_css', array(
+			'label'          => __( 'Add Custom CSS Here:', 'unlimited' ),
+			'section'        => 'ct_unlimited_custom_css',
+			'settings'       => 'custom_css',
 		)
 	) );
 }

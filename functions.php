@@ -467,3 +467,15 @@ function ct_unlimited_body_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'ct_unlimited_body_class' );
+
+// custom css output
+function ct_unlimited_custom_css_output(){
+
+	$custom_css = get_theme_mod('custom_css');
+
+	/* output custom css */
+	if( $custom_css ) {
+		wp_add_inline_style( 'style', $custom_css );
+	}
+}
+add_action('wp_enqueue_scripts', 'ct_unlimited_custom_css_output');
