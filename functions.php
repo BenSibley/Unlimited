@@ -297,7 +297,7 @@ if ( function_exists( 'dsq_options' ) ) {
 // list social media sites
 function ct_unlimited_social_site_list(){
 
-    $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam', 'vk', 'weibo', 'tencent-weibo', 'email' );
+    $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'github', 'hacker-news', 'steam', 'vk', 'weibo', 'tencent-weibo', 'email' );
     return $social_sites;
 }
 
@@ -328,7 +328,7 @@ function ct_unlimited_social_array(){
 		'stumbleupon' => 'unlimited_stumbleupon_profile',
 		'deviantart' => 'unlimited_deviantart_profile',
 		'digg' => 'unlimited_digg_profile',
-		'git' => 'unlimited_git_profile',
+		'github' => 'unlimited_github_profile',
 		'hacker-news' => 'unlimited_hacker-news_profile',
 		'steam' => 'unlimited_steam_profile',
 		'vk' => 'unlimited_vk_profile',

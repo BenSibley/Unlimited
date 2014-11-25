@@ -110,15 +110,6 @@
   a {
     text-decoration: underline;
   }
-  .social-media-icons {
-    list-style: none;
-    margin: $baseline-height / 2 0;
-
-    li {
-      display: inline-block;
-      margin: 0 4px; // accounting for 4px from being inline-block
-    }
-  }
 }
 .post-tags {
   text-align: center;

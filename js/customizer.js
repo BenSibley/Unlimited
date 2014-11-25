@@ -58,9 +58,9 @@
                             $('.social-media-icons').append( '<li><a target="_blank" href="mailto:' + $(this).val() + '"><i class="fa fa-envelope"></i></a></li>' );
                         }
                         if( siteName == "flickr" || siteName == "dribbble" || siteName == "instagram" || siteName == "soundcloud" || siteName == "spotify" || siteName == "vine" || siteName == "yahoo" || siteName == "codepen" || siteName == "delicious" || siteName == "stumbleupon" || siteName == "deviantart" || siteName == "digg" || siteName == "hacker-news" || siteName == "vk" || siteName == 'weibo' || siteName == 'tencent-weibo' ) {
-                            $('.social-media-icons').append('<li><a target="_blank" href="' + $(this).val() + '"><i class="fa fa-' + siteName + '"></i></a></li>');
+                            $('.social-media-icons').append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="fa fa-' + siteName + '"></i></a></li>');
                         } else {
-                            $('.social-media-icons').append('<li><a target="_blank" href="' + $(this).val() + '"><i class="fa fa-' + siteName + '-square"></i></a></li>');
+                            $('.social-media-icons').append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="fa fa-' + siteName + '-square"></i></a></li>');
                         }
                     }
                 });

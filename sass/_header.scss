@@ -4,33 +4,6 @@
   padding: $baseline-height / 2 $column 0;
   color: white;
   overflow: hidden;
-
-  .social-media-icons {
-    list-style: none;
-    text-align: left;
-    display: inline-block;
-    margin: 0;
-    transition: opacity 0.15s ease-in-out;
-
-    &.fade {
-      opacity: 0;
-    }
-    li {
-      display: inline-block;
-    }
-    a {
-      @extend %gray-link;
-      display: block;
-      padding: 6px 9px;
-      transition: background 0.15s ease-in-out;
-
-      &:hover,
-      &:active,
-      &:focus {
-        background: $gray-17;
-      }
-    }
-  }
 }
 .title-container {
   margin: $baseline-height / 2 0 $baseline-height * 1.5;
