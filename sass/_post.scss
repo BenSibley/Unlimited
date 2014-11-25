@@ -46,11 +46,6 @@
     bottom: 0;
     left: 0;
   }
-  // "comments closed"
-  div > span {
-    @extend %thirteen-pixels;
-    color: white;
-  }
   i {
     color: white;
     padding: 16px 36px;

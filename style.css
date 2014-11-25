@@ -35,7 +35,7 @@ h2, .footer-content h4 {
 
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .site-description, .menu-primary-items a,
-.menu-unset > ul a, .post-meta a, .post-meta div > span, .post-categories, .further-reading span, .post-author p,
+.menu-unset > ul a, .post-meta a, .post-categories, .further-reading span, .post-author p,
 .post-author > a, .post-tags a, .comment-content, .comment-notes, .footer-content p, .design-credit, .widget {
   font-size: 0.8125em;
   /* 13px / 16px */
@@ -741,9 +741,6 @@ a img {
   right: 0;
   bottom: 0;
   left: 0;
-}
-.post-meta div > span {
-  color: white;
 }
 .post-meta i {
   color: white;
