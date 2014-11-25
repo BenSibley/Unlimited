@@ -372,6 +372,10 @@ a img {
     padding: 0;
     margin: 1.5em 3.125% 0;
   }
+
+  .left-sidebar .main {
+    float: right;
+  }
 }
 /* Styles for the social icons, search bar, title, and general header layout */
 .site-header {
@@ -1209,6 +1213,11 @@ li.pingback {
     width: 31.25%;
     padding: 0;
     margin: 1.5em 3.125% 1.5em 0;
+  }
+
+  .left-sidebar .sidebar-primary {
+    float: left;
+    margin: 1.5em 0 1.5em 3.125%;
   }
 }
 /* gallery styles copied from Hybrid Core */

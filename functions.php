@@ -429,3 +429,15 @@ function ct_unlimited_wp_page_menu() {
 	);
 }
 
+function ct_unlimited_body_class( $classes ) {
+
+	/* get layout chosen by user */
+	$layout = get_theme_mod('layout');
+
+	/* if sidebar left layout */
+	if($layout == 'left') {
+		$classes[] = 'left-sidebar';
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'ct_unlimited_body_class' );

@@ -118,7 +118,8 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		'default'           => 'show',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_unlimited_sanitize_all_show_hide_settings'
+		'sanitize_callback' => 'ct_unlimited_sanitize_all_show_hide_settings',
+		'transport'         => 'postMessage'
 	) );
 	// control
 	$wp_customize->add_control( 'search_bar', array(
@@ -130,6 +131,33 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 			'show' => __('Show', 'unlimited'),
 			'hide' => __('Hide', 'unlimited')
 		),
+	) );
+
+	/***** Layout *****/
+
+	// section
+	$wp_customize->add_section( 'ct_unlimited_layout', array(
+		'title'      => __( 'Layout', 'unlimited' ),
+		'priority'   => 50,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'layout', array(
+		'default'           => 'right',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'ct_unlimited_sanitize_layout_settings',
+	) );
+	// control
+	$wp_customize->add_control( 'layout', array(
+		'label'          => __( 'Choose Your Layout:', 'unlimited' ),
+		'section'        => 'ct_unlimited_layout',
+		'settings'       => 'layout',
+		'type'           => 'radio',
+		'choices'        => array(
+			'right'   => __('Right sidebar', 'unlimited'),
+			'left'  => __('Left sidebar', 'unlimited'),
+		)
 	) );
 }
 
@@ -160,4 +188,18 @@ function ct_unlimited_sanitize_all_show_hide_settings($input){
 function ct_unlimited_sanitize_email( $input ) {
 
 	return sanitize_email( $input );
+}
+
+// sanitize layout selection
+function ct_unlimited_sanitize_layout_settings($input){
+	$valid = array(
+		'right'   => __('Right sidebar', 'unlimited'),
+		'left'  => __('Left sidebar', 'unlimited'),
+	);
+
+	if ( array_key_exists( $input, $valid ) ) {
+		return $input;
+	} else {
+		return '';
+	}
 }

@@ -43,4 +43,8 @@
     padding: 0;
     margin: $baseline-height $column $baseline-height 0;
   }
+  .left-sidebar .sidebar-primary {
+    float: left;
+    margin: $baseline-height 0 $baseline-height $column;
+  }
 }
