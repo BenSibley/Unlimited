@@ -89,14 +89,18 @@ jQuery(document).ready(function($){
 
     function openSearchBar(){
 
+        var socialIcons = $('#site-header').find('.social-media-icons');
+
         if( $(this).hasClass('open') ) {
             $(this).removeClass('open');
-            $('#site-header').find('.social-media-icons').removeClass('fade');
+            if( socialIcons.hasClass('fade') ) {
+                socialIcons.removeClass('fade');
+            }
         } else {
             $(this).addClass('open');
-
-            if( $(window).width())
-            $('#site-header').find('.social-media-icons').addClass('fade');
+            if( $(window).width() < 600 ) {
+                socialIcons.addClass('fade');
+            }
         }
     }
 

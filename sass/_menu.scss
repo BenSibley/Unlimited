@@ -32,10 +32,12 @@
   > a {
 
     &:after {
-      content: '\25BE';
-      font-family: $primary-font-stack; // so that if users change fonts this stays consistent
+      content: '\f107';
+      font-family: 'FontAwesome';
       position: absolute;
       margin-left: 4px;
+      backface-visibility: hidden;
+      transition: all 0.1s ease-in-out;
     }
   }
   &.open {
@@ -113,6 +115,12 @@
   .menu-item-has-children,
   .page_item_has_children {
 
+    &:hover {
+
+      > a:after {
+        transform: translateY(3px);
+      }
+    }
     > a {
       padding-right: 24px; // to make room for the dropdown icon
 
@@ -120,6 +128,9 @@
       &:active,
       &:focus {
 
+        &:after {
+          transform: translateY(3px);
+        }
         + ul {
           opacity: 1;
           visibility: visible;
@@ -139,11 +150,19 @@
       margin: 0;
       min-width: 100%;
       border: solid 1px $gray-87;
+      transition: all 0.15s ease-in-out;
 
       li {
         display: block;
         white-space: nowrap;
         margin-right: 0;
+
+        &:hover {
+
+          > a:after {
+            transform: translateX(3px);
+          }
+        }
       }
       a {
         color: $gray-40;
@@ -156,9 +175,10 @@
         &:hover,
         &:focus {
           color: $gray-23;
-        }
-        &:after {
-          transform: rotate(-90deg);
+
+          &:after {
+            transform: translateX(3px);
+          }
         }
       }
       &:hover {
@@ -167,9 +187,22 @@
       }
     }
     /* tier 3 */
-    ul ul {
-      top: -1px; // b/c of the border
-      left: 100%;
+    ul {
+
+      ul {
+        top: -1px; // b/c of the border
+        left: 100%;
+      }
+      .menu-item-has-children,
+      .page_item_has_children {
+
+        > a {
+
+          &:after {
+            content: '\f105';
+          }
+        }
+      }
     }
   }
   /* Current Menu item */
