@@ -46,7 +46,8 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    'style.css': 'sass/style.scss'
+                    'style.css': 'sass/style.scss',
+                    'styles/admin.css': 'sass/admin.scss'
                 }
             }
         },
@@ -56,14 +57,16 @@ module.exports = function(grunt) {
                     browsers: ['last 1 version', '> 1%', 'ie 8']
                 },
                 files: {
-                    'style.css': 'style.css'
+                    'style.css': 'style.css',
+                    'styles/admin.css': 'styles/admin.css'
                 }
             }
         },
         cssmin: {
             combine: {
                 files: {
-                    'style.min.css': ['style.css']
+                    'style.min.css': ['style.css'],
+                    'styles/admin.min.css': ['styles/admin.css']
                 }
             }
         },
