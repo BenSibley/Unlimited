@@ -259,16 +259,6 @@ function ct_unlimited_featured_image() {
 	}
 }
 
-// puts site title & description in the title tag on front page
-function ct_unlimited_add_homepage_title( $title )
-{
-    if( empty( $title ) && ( is_home() || is_front_page() ) ) {
-        return get_bloginfo( 'title' ) . ' | ' . get_bloginfo( 'description' );
-    }
-    return $title;
-}
-add_filter( 'wp_title', 'ct_unlimited_add_homepage_title' );
-
 function ct_unlimited_add_editor_styles() {
     add_editor_style( 'styles/custom-editor-style.css' );
 }
