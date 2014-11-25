@@ -186,6 +186,24 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 			'no'  => __('No', 'unlimited'),
 		)
 	) );
+	// setting
+	$wp_customize->add_setting( 'excerpt_length', array(
+		'default'           => 'n30',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( 'excerpt_length', array(
+		'label'          => __( 'Excerpt length', 'unlimited' ),
+		'section'        => 'ct_unlimited_blog',
+		'settings'       => 'excerpt_length',
+		'type'           => 'radio',
+		'choices'        => array(
+			'yes'   => __('Yes', 'unlimited'),
+			'no'  => __('No', 'unlimited'),
+		)
+	) );
 }
 
 /***** Custom Sanitization Functions *****/

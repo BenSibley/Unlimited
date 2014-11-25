@@ -212,6 +212,20 @@ function ct_unlimited_remove_more_link_scroll( $link ) {
 }
 add_filter( 'the_content_more_link', 'ct_unlimited_remove_more_link_scroll' );
 
+// change the length of the excerpts
+function ct_unlimited_custom_excerpt_length( $length ) {
+
+	$new_excerpt_length = get_theme_mod('ct_unlimited_excerpt_length_settings');
+
+	// if there is a new length set and it's not 15, change it
+	if(!empty($new_excerpt_length) && $new_excerpt_length != 30){
+		return $new_excerpt_length;
+	} else {
+		return 30;
+	}
+}
+//add_filter( 'excerpt_length', 'ct_unlimited_custom_excerpt_length', 999 );
+
 // Adds navigation through pages in the loop
 function ct_unlimited_post_navigation() {
     if ( current_theme_supports( 'loop-pagination' ) ) loop_pagination();
