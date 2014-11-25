@@ -43,6 +43,12 @@ function ct_unlimited_enqueue_admin_styles($hook){
 		// enqueue the JS needed to utilize media uploader on profile image upload
 		wp_enqueue_script('ct-unlimited-profile-image-uploader', get_template_directory_uri() . '/js/build/profile-image-uploader.min.js');
 	}
+	// if theme options page
+	if( 'appearance_page_unlimited-options' == $hook ) {
+
+		// Admin styles
+		wp_enqueue_style('ct-unlimited-admin-styles', get_template_directory_uri() . '/styles/admin.min.css');
+	}
 }
 add_action('admin_enqueue_scripts',	'ct_unlimited_enqueue_admin_styles' );
 
