@@ -1,0 +1,451 @@
+# Copyright (C) 2014 Compete Themes
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Unlimited 0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2014-11-26 16:01:46+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+
+#: comments.php:26 comments.php:45 comments.php:66
+msgid "Be First to Comment"
+msgstr ""
+
+#: comments.php:26 comments.php:45 comments.php:66 content/post-meta.php:17
+#: content/post-meta.php:19
+msgid "One Comment"
+msgstr ""
+
+#: comments.php:26 comments.php:45 comments.php:66 content/post-meta.php:17
+#: content/post-meta.php:19
+msgid "% Comments"
+msgstr ""
+
+#: comments.php:58
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this "
+"post\">trackbacks</a> and pingbacks are open."
+msgstr ""
+
+#: comments.php:79 comments.php:85
+msgid "Comments are closed."
+msgstr ""
+
+#: content/archive-header.php:7
+msgid "Category archive for:"
+msgstr ""
+
+#: content/archive-header.php:18
+msgid "Tag archive for:"
+msgstr ""
+
+#: content/archive-header.php:30
+msgid "Author archive for:"
+msgstr ""
+
+#: content/archive-header.php:41
+msgid "Date archive for:"
+msgstr ""
+
+#: content/post-author.php:6
+msgid "View more posts"
+msgstr ""
+
+#: content/post-categories.php:10
+msgid "Posted in"
+msgstr ""
+
+#: content/post-categories.php:19
+msgid "and"
+msgstr ""
+
+#: content/post-categories.php:22
+msgid "View all posts in %s"
+msgstr ""
+
+#: content/post-meta.php:17
+msgid "Comments closed"
+msgstr ""
+
+#: content/post-meta.php:19
+msgid "Leave a Comment"
+msgstr ""
+
+#: content/post-nav-attachment.php:3
+msgid "Previous Image"
+msgstr ""
+
+#: content/post-nav-attachment.php:6
+msgid "Next Image"
+msgstr ""
+
+#: content/post-nav.php:11
+msgid "Previous Post"
+msgstr ""
+
+#: content/post-nav.php:13
+msgid "The Previous Post"
+msgstr ""
+
+#: content/post-nav.php:20
+msgid "No Older Posts"
+msgstr ""
+
+#: content/post-nav.php:22 content/post-nav.php:44
+msgid "Return to Blog"
+msgstr ""
+
+#: content/post-nav.php:33
+msgid "Next Post"
+msgstr ""
+
+#: content/post-nav.php:35
+msgid "The Next Post"
+msgstr ""
+
+#: content/post-nav.php:42
+msgid "No Newer Posts"
+msgstr ""
+
+#: content/post-tags.php:6
+msgid "View all posts tagged %s"
+msgstr ""
+
+#: content/search-bar.php:7 searchform.php:3
+msgid "Search"
+msgstr ""
+
+#: content/search-bar.php:8 searchform.php:4
+msgid "Search..."
+msgstr ""
+
+#: content/search-bar.php:8 searchform.php:4
+msgid "Search for:"
+msgstr ""
+
+#: content-404.php:5
+msgid "404: Page Not Found"
+msgstr ""
+
+#: content-404.php:8
+msgid ""
+"Looks like nothing was found on this url.  Double-check that the url is "
+"correct or try the search form below to find what you were looking for."
+msgstr ""
+
+#: content-page.php:10 content.php:12
+msgid "Pages:"
+msgstr ""
+
+#: footer.php:14
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Unlimited WordPress Theme</a> by Compete "
+"Themes"
+msgstr ""
+
+#: functions.php:36
+msgid "Primary"
+msgstr ""
+
+#: functions.php:56
+msgid "Primary Sidebar"
+msgstr ""
+
+#: functions.php:58
+msgid ""
+"Widgets in this area will be shown in the sidebar next to the main post "
+"content"
+msgstr ""
+
+#: functions.php:85
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:90
+msgid "Reply"
+msgstr ""
+
+#: functions.php:117
+msgid "optional"
+msgstr ""
+
+#: functions.php:125
+msgid "Name"
+msgstr ""
+
+#: functions.php:126
+msgid "John Doe"
+msgstr ""
+
+#: functions.php:132
+msgid "Email"
+msgstr ""
+
+#: functions.php:133
+msgid "name@email.com"
+msgstr ""
+
+#: functions.php:139
+msgid "Website"
+msgstr ""
+
+#: functions.php:140
+msgid "http://example.com"
+msgstr ""
+
+#: functions.php:154
+msgid "Comment"
+msgstr ""
+
+#: functions.php:155
+msgid "Enter Your Comment"
+msgstr ""
+
+#: functions.php:201 functions.php:214
+msgid "Read More"
+msgstr ""
+
+#: header.php:17
+msgid "Skip to content"
+msgstr ""
+
+#: inc/customizer.php:84
+msgid "Logo Upload"
+msgstr ""
+
+#: inc/customizer.php:99
+msgid "Upload custom logo."
+msgstr ""
+
+#: inc/customizer.php:115
+msgid "Social Media Icons"
+msgstr ""
+
+#: inc/customizer.php:132
+msgid "address:"
+msgstr ""
+
+#: inc/customizer.php:147
+msgid "url:"
+msgstr ""
+
+#: inc/customizer.php:161
+msgid "Search Bar"
+msgstr ""
+
+#: inc/customizer.php:176
+msgid "Show search bar at top of site?"
+msgstr ""
+
+#: inc/customizer.php:180 inc/customizer.php:319
+msgid "Show"
+msgstr ""
+
+#: inc/customizer.php:181 inc/customizer.php:320
+msgid "Hide"
+msgstr ""
+
+#: inc/customizer.php:189
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer.php:202
+msgid "Choose Your Layout:"
+msgstr ""
+
+#: inc/customizer.php:207 inc/customizer.php:342
+msgid "Right sidebar"
+msgstr ""
+
+#: inc/customizer.php:208 inc/customizer.php:343
+msgid "Left sidebar"
+msgstr ""
+
+#: inc/customizer.php:216
+msgid "Blog"
+msgstr ""
+
+#: inc/customizer.php:229
+msgid "Show full posts on blog?"
+msgstr ""
+
+#: inc/customizer.php:234 inc/customizer.php:357
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer.php:235 inc/customizer.php:358
+msgid "No"
+msgstr ""
+
+#: inc/customizer.php:248
+msgid "Excerpt length"
+msgstr ""
+
+#: inc/customizer.php:259
+msgid "Comments"
+msgstr ""
+
+#: inc/customizer.php:273
+msgid "Show comments on:"
+msgstr ""
+
+#: inc/customizer.php:278 inc/customizer.php:373
+msgid "Posts"
+msgstr ""
+
+#: inc/customizer.php:279 inc/customizer.php:374
+msgid "Pages"
+msgstr ""
+
+#: inc/customizer.php:280 inc/customizer.php:375
+msgid "Attachments"
+msgstr ""
+
+#: inc/customizer.php:281 inc/customizer.php:376
+msgid "Do not show"
+msgstr ""
+
+#: inc/customizer.php:290
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/customizer.php:303
+msgid "Add Custom CSS Here:"
+msgstr ""
+
+#: inc/user-profile.php:15
+msgid "Profile image"
+msgstr ""
+
+#: inc/user-profile.php:22
+msgid "Upload Image"
+msgstr ""
+
+#: inc/user-profile.php:23
+msgid "Upload an image here to use instead of your Gravatar."
+msgstr ""
+
+#: inc/user-profile.php:60
+msgid "Social Profiles"
+msgstr ""
+
+#: inc/user-profile.php:67
+msgid "Address:"
+msgstr ""
+
+#: inc/user-profile.php:69
+msgid "Profile:"
+msgstr ""
+
+#: search.php:9
+msgid "%d search results for"
+msgstr ""
+
+#: search.php:11
+msgid "No search results for "
+msgstr ""
+
+#: search.php:37
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr ""
+
+#: searchform.php:5
+msgid "Go"
+msgstr ""
+
+#: theme-options.php:13
+msgid "unlimited Dashboard"
+msgstr ""
+
+#: theme-options.php:15
+msgid "Customization"
+msgstr ""
+
+#: theme-options.php:16
+msgid ""
+"Click the \"Customize\" link in your menu, or use the button below to get "
+"started customizing Unlimited"
+msgstr ""
+
+#: theme-options.php:18
+msgid "Use Customizer"
+msgstr ""
+
+#: theme-options.php:22
+msgid "Support"
+msgstr ""
+
+#: theme-options.php:23
+msgid ""
+"You can find the knowledgebase, changelog, support forum, and more in the "
+"Unlimited Support Center"
+msgstr ""
+
+#: theme-options.php:25
+msgid "Visit Support Center"
+msgstr ""
+
+#: theme-options.php:29
+msgid "Unlimited Pro ($49)"
+msgstr ""
+
+#: theme-options.php:30
+msgid "Unlimited Pro is the premium version of Unlimited. By upgrading, you get:"
+msgstr ""
+
+#: theme-options.php:32
+msgid "Custom colors"
+msgstr ""
+
+#: theme-options.php:33
+msgid "Background images & textures"
+msgstr ""
+
+#: theme-options.php:34
+msgid "New layouts"
+msgstr ""
+
+#: theme-options.php:35
+msgid "and much more&#8230;"
+msgstr ""
+
+#: theme-options.php:38
+msgid "See Full Feature List"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Unlimited"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://competethemes.com/unlimited/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Fast, responsive, and accessible. What does this mean? It means your "
+"content will reach more people, on more devices, around the world. It means "
+"your site will look beautiful, load quickly, and perform professionally. As "
+"one of just 16 accessibility-ready themes on wordpress.org, you can rest "
+"assured that anyone and everyone will be able to appreciate your content. "
+"This is the product of experience and ambition. We call it, Unlimited."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Compete Themes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://competethemes.com/"
+msgstr ""
+
+#: functions.php:80
+msgctxt "unlimited"
+msgid "said:"
+msgstr ""
