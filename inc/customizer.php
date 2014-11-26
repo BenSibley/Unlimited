@@ -275,9 +275,9 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 			'settings'       => 'comments_display',
 			'type'           => 'multi-checkbox',
 			'choices'        => array(
-				'posts'   => __('Posts', 'unlimited'),
-				'pages'  => __('Pages', 'unlimited'),
-				'attachments'  => __('Attachments', 'unlimited'),
+				'post'   => __('Posts', 'unlimited'),
+				'page'  => __('Pages', 'unlimited'),
+				'attachment'  => __('Attachments', 'unlimited'),
 				'none'  => __('Do not show', 'unlimited')
 			)
 		)
@@ -370,9 +370,9 @@ function ct_unlimited_sanitize_comments_setting($input){
 
 	// valid data
 	$valid = array(
-		'posts'   => __('Posts', 'unlimited'),
-		'pages'  => __('Pages', 'unlimited'),
-		'attachments'  => __('Attachments', 'unlimited'),
+		'post'   => __('Posts', 'unlimited'),
+		'page'  => __('Pages', 'unlimited'),
+		'attachment'  => __('Attachments', 'unlimited'),
 		'none'  => __('Do not show', 'unlimited')
 	);
 
@@ -414,7 +414,7 @@ function ct_unlimited_set_customizer_values() {
 	}
 	// comments display
 	if( ! get_theme_mod( 'comments_display' ) ) {
-		set_theme_mod( 'comments_display', array( 'posts', 'pages', 'attachments', 'none' ) );
+		set_theme_mod( 'comments_display', array( 'post', 'page', 'attachment', 'none' ) );
 	}
 }
 add_action( 'init', 'ct_unlimited_set_customizer_values' );

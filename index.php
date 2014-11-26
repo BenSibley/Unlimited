@@ -1,8 +1,7 @@
-<?php get_header(); ?>
+<?php get_header();
 
-<?php get_template_part('content/archive-header'); ?>
+get_template_part('content/archive-header');
 
-<?php
 // The loop
 if ( have_posts() ) :
     while (have_posts() ) :
