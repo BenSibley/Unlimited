@@ -353,6 +353,7 @@ a img {
 }
 .skip-content:focus {
   top: 0;
+  outline: none;
 }
 
 /* 800px */
@@ -1116,6 +1117,8 @@ li.pingback {
 }
 .site-header .search-form-container .search-field {
   max-width: none !important;
+  outline: none !important;
+  padding: 9px 12px !important;
 }
 
 /* 600px */
@@ -1148,8 +1151,12 @@ li.pingback {
 }
 /* 800px */
 @media all and (min-width: 50em) {
-  .search-form-container i:hover {
+  .search-form-container button:hover {
     cursor: pointer;
+  }
+  .search-form-container button:focus {
+    background: white;
+    outline: none;
   }
 }
 /* Attachment styles */

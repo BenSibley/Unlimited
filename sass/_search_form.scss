@@ -49,6 +49,8 @@
     }
     .search-field {
       max-width: none !important;
+      outline: none !important;
+      padding: 9px 12px !important;
     }
   }
 }
@@ -102,10 +104,14 @@
 
   .search-form-container {
 
-    i {
+    button {
 
       &:hover {
         cursor: pointer;
+      }
+      &:focus {
+        background: white;
+        outline: none;
       }
     }
   }
