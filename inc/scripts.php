@@ -74,3 +74,9 @@ function ct_unlimited_add_async_script($url) {
 	return str_replace('#ct_unlimited_asyncload', '', $url)."' async='async";
 }
 add_filter('clean_url', 'ct_unlimited_add_async_script', 11, 1);
+
+// add custom editor styles
+function ct_unlimited_add_editor_styles() {
+	add_editor_style( 'styles/custom-editor-style.min.css' );
+}
+add_action( 'init', 'ct_unlimited_add_editor_styles' );

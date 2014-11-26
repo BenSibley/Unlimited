@@ -283,11 +283,6 @@ if( ! function_exists( 'ct_unlimited_featured_image' ) ) {
 	}
 }
 
-function ct_unlimited_add_editor_styles() {
-    add_editor_style( 'styles/custom-editor-style.css' );
-}
-add_action( 'init', 'ct_unlimited_add_editor_styles' );
-
 // fix for bug with Disqus saying comments are closed
 if ( function_exists( 'dsq_options' ) ) {
     remove_filter( 'comments_template', 'dsq_comments_template' );

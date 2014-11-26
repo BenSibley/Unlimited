@@ -1,0 +1,36 @@
+/* Custom Editor Styles */
+
+@import "variables";
+
+body#tinymce.wp-editor {
+  font-family: $primary-font-stack;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5;
+  color: $gray-40;
+  margin: 0 24px 24px 24px;
+
+  h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    color: $gray-23;
+  }
+  h1 {
+    @extend %twenty-eight-pixels;
+  }
+  h2 {
+    @extend %twenty-one-pixels;
+  }
+  h3,
+  h4,
+  h5,
+  h6{
+    font-size: 1em;
+    line-height: 1.5;
+  }
+}
+body#tinymce.wp-editor a {
+  @extend %dark-link;
+  font-weight: 400;
+}
