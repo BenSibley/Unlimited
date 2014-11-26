@@ -8,6 +8,7 @@ function ct_unlimited_user_profile_image_setting( $user ) {
 
 	// abort if user not contributor or higher
 	if ( ! current_user_can( 'edit_posts', $user_id ) ) return false;
+
 	?>
 	<table id="profile-image-table" class="form-table">
 		<tr>
@@ -44,14 +45,14 @@ add_action( 'edit_user_profile_update', 'ct_unlimited_save_user_profile_image' )
 // add the social profile boxes to the user screen.
 function ct_unlimited_add_social_profile_settings($user) {
 
-	// get social sites
-	$social_sites = ct_unlimited_social_array();
-
 	// get current user ID
 	$user_id = get_current_user_id();
 
 	// only added for contributors and above
 	if ( ! current_user_can( 'edit_posts', $user_id ) ) return false;
+
+	// get social sites
+	$social_sites = ct_unlimited_social_array();
 
 	?>
 	<table class="form-table">
@@ -86,7 +87,7 @@ add_action( 'edit_user_profile', 'ct_unlimited_add_social_profile_settings' );
 
 function ct_unlimited_save_social_profiles($user_id) {
 
-	if ( !current_user_can( 'edit_user', $user_id ) ) { return false; }
+	if ( ! current_user_can( 'edit_user', $user_id ) ) { return false; }
 
 	$social_sites = ct_unlimited_social_array();
 

@@ -77,7 +77,7 @@ if( ! function_exists( 'ct_unlimited_customize_comments' ) ) {
 						echo get_avatar( get_comment_author_email(), 48 );
 					}
 					?>
-					<div class="author-name"><span><?php comment_author_link(); ?></span> said:</div>
+					<div class="author-name"><span><?php comment_author_link(); ?></span> <?php _x('said:', 'unlimited', 'the commenter said the following:'); ?></div>
 				</div>
 				<div class="comment-content">
 					<?php
@@ -114,7 +114,7 @@ if( ! function_exists( 'ct_unlimited_update_fields' ) ) {
 		if ( $req == 1 ) {
 			$label = '*';
 		} else {
-			$label = ' (optional)';
+			$label = ' ' . __("optional", "unlimited");
 		}
 
 		// adds aria required tag if required
@@ -214,7 +214,6 @@ if( ! function_exists( 'ct_unlimited_excerpt_read_more_link' ) ) {
 		return $output . "<p><a class='more-link' href='" . get_permalink() . "'>" . __( 'Read More', 'unlimited' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
 	}
 }
-
 add_filter('the_excerpt', 'ct_unlimited_excerpt_read_more_link');
 
 // switch [...] to ellipsis on automatic excerpt

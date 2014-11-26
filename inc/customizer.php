@@ -129,13 +129,13 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 			) );
 			// control
 			$wp_customize->add_control( $social_site, array(
-				'label'   => $social_site . " " . __("address:", 'unlimited' ),
+				'label'   => $social_site . ' ' . __('address:', 'unlimited' ),
 				'section' => 'ct_unlimited_social_media_icons',
 				'priority'=> $priority,
 			) );
 		} else {
 			// setting
-			$wp_customize->add_setting( "$social_site", array(
+			$wp_customize->add_setting( $social_site, array(
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
 				'sanitize_callback' => 'esc_url_raw',
@@ -144,7 +144,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 			// control
 			$wp_customize->add_control( new ct_unlimited_url_input_control(
 				$wp_customize, $social_site, array(
-					'label'   => $social_site . " " . __("url:", 'unlimited' ),
+					'label'   => $social_site . ' ' . __('url:', 'unlimited' ),
 					'section' => 'ct_unlimited_social_media_icons',
 					'priority'=> $priority,
 				)
