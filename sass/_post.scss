@@ -73,7 +73,7 @@
   margin: 0;
 }
 .post-content {
-  margin-top: $baseline-height * 1.5; // 36px
+  margin: $baseline-height * 1.5 0 $baseline-height * 2;
 }
 .further-reading {
   text-align: center;

@@ -745,7 +745,7 @@ a img {
 }
 
 .post-content {
-  margin-top: 2.25em;
+  margin: 2.25em 0 3em;
 }
 
 .further-reading {
@@ -973,11 +973,6 @@ li.pingback {
   }
 }
 /* Blog and archive styles */
-.blog .entry,
-.archive .entry,
-.search .entry {
-  padding-bottom: 1.5em;
-}
 .blog .post-content,
 .archive .post-content,
 .search .post-content {
