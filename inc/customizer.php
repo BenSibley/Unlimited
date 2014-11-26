@@ -54,6 +54,29 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		}
 	}
 
+	// create multi-checkbox/select control
+	class ct_unlimited_Multi_Checkbox_Control extends WP_Customize_Control {
+		public $type = 'multi-checkbox';
+
+		public function render_content() {
+
+			if ( empty( $this->choices ) )
+				return;
+			?>
+			<label>
+				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+				<select id="comment-display-control" <?php $this->link(); ?> multiple="multiple" style="height: 100%;">
+					<?php
+					foreach ( $this->choices as $value => $label ) {
+						$selected = ( in_array( $value, $this->value() ) ) ? selected( 1, 1, false ) : '';
+						echo '<option value="' . esc_attr( $value ) . '"' . $selected . '>' . $label . '</option>';
+					}
+					?>
+				</select>
+			</label>
+		<?php }
+	}
+
 	/***** Logo Upload *****/
 
 	// section
@@ -229,6 +252,37 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		)
 	) );
 
+	/***** Comment Display *****/
+
+	// section
+	$wp_customize->add_section( 'ct_unlimited_comments_display', array(
+		'title'      => __( 'Comments', 'unlimited' ),
+		'priority'   => 70,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'comments_display', array(
+		'default'           => 'none',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'ct_unlimited_sanitize_comments_setting',
+	) );
+	// control
+	$wp_customize->add_control( new ct_unlimited_Multi_Checkbox_Control(
+		$wp_customize, 'comments_display', array(
+			'label'          => __( 'Show comments on:', 'unlimited' ),
+			'section'        => 'ct_unlimited_comments_display',
+			'settings'       => 'comments_display',
+			'type'           => 'multi-checkbox',
+			'choices'        => array(
+				'posts'   => __('Posts', 'unlimited'),
+				'pages'  => __('Pages', 'unlimited'),
+				'attachments'  => __('Attachments', 'unlimited'),
+				'none'  => __('Do not show', 'unlimited')
+			)
+		)
+	) );
+
 	/***** Custom CSS *****/
 
 	// section
@@ -311,6 +365,29 @@ function ct_unlimited_sanitize_yes_no_settings($input){
 	}
 }
 
+// sanitize comment display multi-check
+function ct_unlimited_sanitize_comments_setting($input){
+
+	// valid data
+	$valid = array(
+		'posts'   => __('Posts', 'unlimited'),
+		'pages'  => __('Pages', 'unlimited'),
+		'attachments'  => __('Attachments', 'unlimited'),
+		'none'  => __('Do not show', 'unlimited')
+	);
+
+	// loop through array
+	foreach( $input as $selection ) {
+
+		// if it's in the valid data, return it
+		if ( array_key_exists( $selection, $valid ) ) {
+			return $input;
+		} else {
+			return '';
+		}
+	}
+}
+
 /***** Helper Functions *****/
 
 /*
@@ -334,6 +411,10 @@ function ct_unlimited_set_customizer_values() {
 	// excerpt length
 	if( ! get_theme_mod('excerpt_length') ) {
 		set_theme_mod( 'excerpt_length', '25' );
+	}
+	// comments display
+	if( ! get_theme_mod( 'comments_display' ) ) {
+		set_theme_mod( 'comments_display', array( 'posts', 'pages', 'attachments', 'none' ) );
 	}
 }
 add_action( 'init', 'ct_unlimited_set_customizer_values' );
