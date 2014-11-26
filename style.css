@@ -780,6 +780,7 @@ a img {
 
 .post-tags {
   text-align: center;
+  margin-bottom: 3em;
 }
 .post-tags ul {
   list-style: none;
