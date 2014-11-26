@@ -67,7 +67,8 @@ module.exports = function(grunt) {
             combine: {
                 files: {
                     'style.min.css': ['style.css'],
-                    'styles/custom-editor-style.min.css': ['styles/custom-editor-style.css']
+                    'styles/custom-editor-style.min.css': ['styles/custom-editor-style.css'],
+                    'styles/multiple-select.min.css': ['styles/multiple-select.css']
                 }
             }
         },

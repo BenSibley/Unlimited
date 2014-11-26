@@ -58,7 +58,7 @@ add_action('admin_enqueue_scripts',	'ct_unlimited_enqueue_admin_styles' );
 function ct_unlimited_enqueue_customizer_scripts(){
 
 	// stylesheet for Comment display option
-	wp_enqueue_style('ct-unlimited-multiple-select-styles', get_template_directory_uri() . '/styles/multiple-select.css');
+	wp_enqueue_style('ct-unlimited-multiple-select-styles', get_template_directory_uri() . '/styles/multiple-select.min.css');
 
 	// JS for all customizer screen modifications
 	wp_enqueue_script('ct-unlimited-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js',array('jquery'),'',true);
