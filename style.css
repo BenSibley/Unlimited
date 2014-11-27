@@ -1505,3 +1505,11 @@ li.pingback {
 .social-media-icons .tencent-weibo:hover, .social-media-icons .tencent-weibo:active, .social-media-icons .tencent-weibo:focus {
   color: #20b8e5;
 }
+
+/* Other stuff */
+@media all and (min-width: 50em) {
+  .page-template-full-width .main {
+    width: 93.75%;
+    margin: 1.5em 3.125% 0;
+  }
+}
