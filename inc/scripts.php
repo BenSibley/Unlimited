@@ -17,12 +17,10 @@ function ct_unlimited_load_scripts_styles() {
 
 	// load stylesheet
 	if( is_rtl() ) {
-		wp_enqueue_style('style', get_template_directory_uri() . 'styles/rtl.min.css');
+		wp_enqueue_style('style-rtl', get_template_directory_uri() . '/styles/rtl.min.css');
 	} else {
 		wp_enqueue_style('style', get_template_directory_uri() . 'style.min.css');
 	}
-
-
 
 	// enqueue comment-reply script only on posts & pages with comments open ( included in WP core )
 	if( is_singular() && comments_open() && get_option('thread_comments') ) {
