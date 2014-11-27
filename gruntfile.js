@@ -32,7 +32,7 @@ module.exports = function(grunt) {
             },
             css: {
                 files: ['sass/*.scss'],
-                tasks: ['sass', 'autoprefixer', 'cssmin'],
+                tasks: ['sass', 'autoprefixer', 'cssjanus', 'cssmin'],
                 options: {
                     livereload: true,
                     spawn: false
@@ -63,12 +63,22 @@ module.exports = function(grunt) {
                 }
             }
         },
+        cssjanus: {
+            dev: {
+                options: {
+                    swapLtrRtlInUrl: false // replace 'ltr' with 'rtl'
+                },
+                src: ['style.css'],
+                dest: 'styles/rtl.css'
+            }
+        },
         cssmin: {
             combine: {
                 files: {
                     'style.min.css': ['style.css'],
                     'styles/custom-editor-style.min.css': ['styles/custom-editor-style.css'],
-                    'styles/multiple-select.min.css': ['styles/multiple-select.css']
+                    'styles/multiple-select.min.css': ['styles/multiple-select.css'],
+                    'styles/rtl.min.css': ['styles/rtl.css']
                 }
             }
         },
@@ -126,8 +136,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-wp-i18n');
     grunt.loadNpmTasks('grunt-phpcs');
     grunt.loadNpmTasks('grunt-phpunit');
+    grunt.loadNpmTasks('grunt-cssjanus');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify', 'watch', 'sass', 'autoprefixer', 'cssmin', 'compress', 'makepot', 'phpcs', 'phpunit']);
+    grunt.registerTask('default', ['concat', 'uglify', 'watch', 'sass', 'autoprefixer', 'cssmin', 'compress', 'makepot', 'phpcs', 'phpunit', 'cssjanus']);
 
 };
