@@ -418,3 +418,12 @@ function ct_unlimited_set_customizer_values() {
 	}
 }
 add_action( 'init', 'ct_unlimited_set_customizer_values' );
+
+// add the ad for Unlimited Pro
+function ct_unlimited_customize_preview_js() { ?>
+	<script>
+		jQuery('#customize-info').append('<div class="upgrades-ad"><a href="<?php echo esc_url('https://www.competethemes.com/unlimited-pro/');?>" target="_blank"><?php _e('Premium Upgrade Available!','unlimited');?> <span>&rarr;</span></a></div>');
+	</script>
+<?php }
+
+add_action('customize_controls_print_footer_scripts', 'ct_unlimited_customize_preview_js');

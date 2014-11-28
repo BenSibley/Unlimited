@@ -47,7 +47,8 @@ module.exports = function(grunt) {
                 files: {
                     'style.css': 'sass/style.scss',
                     'styles/admin.css': 'sass/admin.scss',
-                    'styles/custom-editor-style.css': 'sass/custom-editor-style.scss'
+                    'styles/custom-editor-style.css': 'sass/custom-editor-style.scss',
+                    'styles/customizer.css': 'sass/customizer.scss'
                 }
             }
         },
@@ -59,7 +60,8 @@ module.exports = function(grunt) {
                 files: {
                     'style.css': 'style.css',
                     'styles/admin.css': 'styles/admin.css',
-                    'styles/custom-editor-style.css': 'styles/custom-editor-style.css'
+                    'styles/custom-editor-style.css': 'styles/custom-editor-style.css',
+                    'styles/customizer.css': 'styles/customizer.css'
                 }
             }
         },
@@ -78,7 +80,8 @@ module.exports = function(grunt) {
                     'style.min.css': ['style.css'],
                     'styles/custom-editor-style.min.css': ['styles/custom-editor-style.css'],
                     'styles/multiple-select.min.css': ['styles/multiple-select.css'],
-                    'styles/rtl.min.css': ['styles/rtl.css']
+                    'styles/rtl.min.css': ['styles/rtl.css'],
+                    'styles/customizer.min.css': ['styles/customizer.css']
                 }
             }
         },
