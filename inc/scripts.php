@@ -41,7 +41,7 @@ function ct_unlimited_enqueue_admin_styles($hook){
 		wp_enqueue_media();
 
 		// enqueue the JS needed to utilize media uploader on profile image upload
-		wp_enqueue_script('ct-unlimited-profile-image-uploader', get_template_directory_uri() . '/js/build/profile-image-uploader.min.js');
+		wp_enqueue_script('ct-unlimited-profile-image-uploader', get_template_directory_uri() . '/js/build/profile-image-uploader.min.js#ct_unlimited_asyncload');
 	}
 	// if theme options page
 	if( 'appearance_page_unlimited-options' == $hook ) {
@@ -64,7 +64,7 @@ function ct_unlimited_enqueue_customizer_scripts(){
 	wp_enqueue_style('ct-customizer-styles', get_template_directory_uri() . '/styles/customizer.min.css');
 
 	// JS for all customizer screen modifications
-	wp_enqueue_script('ct-unlimited-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js',array('jquery'),'',true);
+	wp_enqueue_script('ct-unlimited-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js#ct_unlimited_asyncload',array('jquery'),'',true);
 
 }
 add_action('customize_controls_enqueue_scripts','ct_unlimited_enqueue_customizer_scripts');
