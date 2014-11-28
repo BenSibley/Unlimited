@@ -14,7 +14,7 @@
 <div class="overflow-container">
 
 <!--skip to content link-->
-<a class="skip-content" href="#main"><?php _e('Skip to content', 'unlimited'); ?></a>
+<a class="skip-content" id="skip-content" href="#main"><?php _e('Skip to content', 'unlimited'); ?></a>
 
 <header class="site-header" id="site-header" role="banner">
 
