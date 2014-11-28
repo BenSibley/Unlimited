@@ -434,8 +434,8 @@ function ct_unlimited_profile_image_output(){
         // get the id based on the image's URL
         $image_id = ct_unlimited_get_image_id(get_the_author_meta('unlimited_user_profile_image'));
 
-        // retrieve the thumbnail size of profile image
-        $image_thumb = wp_get_attachment_image($image_id, 'thumbnail');
+        // retrieve the thumbnail size of profile image (60px)
+        $image_thumb = wp_get_attachment_image($image_id, array(60,60));
 
         // display the image
         echo $image_thumb;
