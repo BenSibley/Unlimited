@@ -625,8 +625,9 @@ a img {
     -ms-transform: translateX(3px);
     transform: translateX(3px);
   }
-  .menu-item-has-children ul:hover,
-  .menu-unset .page_item_has_children ul:hover {
+  .menu-item-has-children ul:hover, .menu-item-has-children ul.focused,
+  .menu-unset .page_item_has_children ul:hover,
+  .menu-unset .page_item_has_children ul.focused {
     opacity: 1;
     visibility: visible;
   }
@@ -709,7 +710,6 @@ a img {
   left: 0;
   bottom: 0;
   right: 0;
-  opacity: 0;
 }
 
 .entry {

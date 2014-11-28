@@ -96,11 +96,13 @@ jQuery(document).ready(function($){
             if( socialIcons.hasClass('fade') ) {
                 socialIcons.removeClass('fade');
             }
+            $('#site-header').find('.search-field').attr('tabindex', -1);
         } else {
             $(this).addClass('open');
             if( $(window).width() < 600 ) {
                 socialIcons.addClass('fade');
             }
+            $('#site-header').find('.search-field').attr('tabindex', 0);
         }
     }
 
@@ -213,4 +215,28 @@ jQuery(document).ready(function($){
             }
         }
     }
+
+    /* allow keyboard access/visibility for dropdown menu items */
+    $('.menu-item a, .page_item a').focus(function(){
+        $(this).parents('ul').addClass('focused');
+    });
+    $('.menu-item a, .page_item a').focusout(function(){
+        $(this).parents('ul').removeClass('focused');
+    });
 });
+
+/* fix for skip-to-content link bug in Chrome & IE9 */
+window.addEventListener("hashchange", function(event) {
+
+    var element = document.getElementById(location.hash.substring(1));
+
+    if (element) {
+
+        if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
+            element.tabIndex = -1;
+        }
+
+        element.focus();
+    }
+
+}, false);

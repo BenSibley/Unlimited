@@ -284,8 +284,7 @@ if( ! function_exists( 'ct_unlimited_featured_image' ) ) {
 			else {
 				echo "
 	                <div class='featured-image' style=\"background-image: url('" . $image . "')\">
-	                    <a href='" . get_permalink() . "'>" . get_the_title() . "</a>
-	                    <span class='screen-reader-text'>$image_alt_text</span>
+	                    <a href='" . get_permalink() . "'><span class='screen-reader-text'>" . get_the_title() . "</span></a>
 	                </div>
 	                ";
 			}
