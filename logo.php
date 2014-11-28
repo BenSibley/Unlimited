@@ -7,7 +7,7 @@ if ( is_front_page() ) {
     $heading_closing = "</h2>";
 }
 if ( get_theme_mod( 'logo_upload') ) {
-    $logo = "<span class='screen-reader-text'>" . get_bloginfo('name') . "</span><img class='logo' src='".esc_url(get_theme_mod( 'logo_upload'))."' alt='".esc_attr( get_bloginfo( 'name' ) )."' />";
+    $logo = "<span class='screen-reader-text'>" . get_bloginfo('name') . "</span><img class='logo' src='".esc_url(get_theme_mod( 'logo_upload'))."' alt='".esc_attr( get_bloginfo( 'name' ) )." logo' />";
 } else {
     $logo = get_bloginfo('name');
 }

@@ -12,7 +12,7 @@
             var siteTitle = logoContainer.attr('title');
             // if there is an image, add the image markup
             if (newval) {
-                var logo = "<span class='screen-reader-text'>" + siteTitle + "</span><img id='logo' class='logo' src='" + newval + "' alt='" + siteTitle + "' />";
+                var logo = "<span class='screen-reader-text'>" + siteTitle + "</span><img id='logo' class='logo' src='" + newval + "' alt='" + siteTitle + " logo' />";
             }
             // otherwise just use the site title
             else {
