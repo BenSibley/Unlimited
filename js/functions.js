@@ -60,6 +60,12 @@ jQuery(document).ready(function($){
         var hasTouch;
         $(window).on('touchstart', enableTouchDropdown, false );
     }
+    // add the double-click if the menu is made smaller again
+    $(window).resize(function(){
+        if( $(window).width() < 800 ) {
+            enableTouchDropdown();
+        }
+    });
 
     // require a second click to visit parent navigation items
     function enableTouchDropdown(){
@@ -78,46 +84,50 @@ jQuery(document).ready(function($){
     // open the dropdown without visiting parent link
     function openDropdown(e){
 
-        // if the menu item is not showing children
-        if( $(this).hasClass('closed') ) {
-            // prevent link from being visited
-            e.preventDefault();
-            // add an open class
-            $(this).addClass('open');
-            // get the submenu
-            var submenu = $(this).children('ul');
-            // set variable
-            var submenuHeight = 0;
-            // get height of all menu items in submenu combined
-            submenu.children('li').each(function(){
-                submenuHeight = submenuHeight + $(this).height();
-            });
-            // set new max-height to open submenu
-            submenu.css('max-height', submenuHeight);
-            // remove 'closed' class to enable link
-            $(this).removeClass('closed');
+        // don't enforce if screen resized over 800px
+        if( $(window).width() < 800 ) {
 
-            var listItem = $(this);
+            // if the menu item is not showing children
+            if ($(this).hasClass('closed')) {
+                // prevent link from being visited
+                e.preventDefault();
+                // add an open class
+                $(this).addClass('open');
+                // get the submenu
+                var submenu = $(this).children('ul');
+                // set variable
+                var submenuHeight = 0;
+                // get height of all menu items in submenu combined
+                submenu.children('li').each(function () {
+                    submenuHeight = submenuHeight + $(this).height();
+                });
+                // set new max-height to open submenu
+                submenu.css('max-height', submenuHeight);
+                // remove 'closed' class to enable link
+                $(this).removeClass('closed');
 
-            // get the containing ul if it exists
-            var parentList = listItem.parent('.sub-menu, .children');
+                var listItem = $(this);
 
-            // get the height
-            var parentListHeight = parentList.height();
+                // get the containing ul if it exists
+                var parentList = listItem.parent('.sub-menu, .children');
 
-            // expand the height of the parent ul so that it's child can show
-            parentList.css('max-height', parseInt(parentListHeight + submenuHeight) );
+                // get the height
+                var parentListHeight = parentList.height();
 
-            // just needs long enough for the 0.15s animation fo play out
-            setTimeout( function(){
+                // expand the height of the parent ul so that it's child can show
+                parentList.css('max-height', parseInt(parentListHeight + submenuHeight));
 
-                // adjust containing .menu-primary to fit newly expanded list
-                var menuHeight = calculateMenuHeight();
+                // just needs long enough for the 0.15s animation fo play out
+                setTimeout(function () {
 
-                // adjust to the height
-                $('#menu-primary').css('max-height', menuHeight + 48);
+                    // adjust containing .menu-primary to fit newly expanded list
+                    var menuHeight = calculateMenuHeight();
 
-            }, 200)
+                    // adjust to the height
+                    $('#menu-primary').css('max-height', menuHeight + 48);
+
+                }, 200)
+            }
         }
     }
 });
