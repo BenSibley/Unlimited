@@ -73,7 +73,7 @@ add_action('customize_controls_enqueue_scripts','ct_unlimited_enqueue_customizer
 function ct_unlimited_enqueue_customizer_post_message_scripts(){
 
 	// JS for live updating with customizer input
-	wp_enqueue_script('ct-unlimited-customizer-post-message-js', get_template_directory_uri() . '/js/build/postMessage.min.js',array('jquery'),'',true);
+	wp_enqueue_script('ct-unlimited-customizer-post-message-js', get_template_directory_uri() . '/js/build/postMessage.min.js#ct_unlimited_asyncload',array('jquery'),'',true);
 
 }
 add_action('customize_preview_init','ct_unlimited_enqueue_customizer_post_message_scripts');
