@@ -35,6 +35,16 @@
     }
   }
 }
+// 800px
+@media all and (min-width: 50em) {
+
+  .site-header {
+
+    .social-media-icons {
+      position: absolute;
+    }
+  }
+}
 .social-media-icons {
 
   .twitter {

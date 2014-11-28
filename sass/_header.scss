@@ -48,6 +48,6 @@
     overflow: visible; // to allow for dropdown menus
   }
   .title-container {
-    margin: 0 0 $baseline-height * 2;
+    margin: $baseline-height * 1.5 0 $baseline-height * 2;
   }
 }
