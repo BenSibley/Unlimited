@@ -1046,6 +1046,11 @@ li.pingback {
   margin-right: 2px;
 }
 
+.sticky-header {
+  margin-bottom: -1.5em;
+  border-bottom: none;
+}
+
 .search-header {
   background: white;
   border: solid 1px #dedede;

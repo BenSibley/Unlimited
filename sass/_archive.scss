@@ -75,6 +75,10 @@
     margin-right: 2px;
   }
 }
+.sticky-header {
+  margin-bottom: -$baseline-height;
+  border-bottom: none;
+}
 .search-header {
   background: white;
   border: solid 1px $gray-87;
