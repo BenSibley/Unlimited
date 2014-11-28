@@ -259,8 +259,16 @@ if( ! function_exists( 'ct_unlimited_featured_image' ) ) {
 
 		// if post has an image
 		if ( has_post_thumbnail( $post->ID ) ) {
+
+			// get the featured image ID
+			$image_id = get_post_thumbnail_id( $post->ID );
+
+			// get the image's alt text
+			$image_alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
 			// get the full-size version of the image
-			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+			$image = wp_get_attachment_image_src( $image_id, 'single-post-thumbnail' );
+
 			// set $image = the url
 			$image     = $image[0];
 			$has_image = true;
@@ -269,12 +277,15 @@ if( ! function_exists( 'ct_unlimited_featured_image' ) ) {
 
 			// on posts/pages display the featued image
 			if ( is_singular() ) {
-				echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\"></div>";
+				echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\">
+					    <span class='screen-reader-text'>$image_alt_text</span>
+					  </div>";
 			} // on blog/archives display with a link
 			else {
 				echo "
 	                <div class='featured-image' style=\"background-image: url('" . $image . "')\">
 	                    <a href='" . get_permalink() . "'>" . get_the_title() . "</a>
+	                    <span class='screen-reader-text'>$image_alt_text</span>
 	                </div>
 	                ";
 			}
@@ -363,11 +374,26 @@ if( ! function_exists('ct_unlimited_social_icons_output') ) {
 
 				if ( $active_site == 'email' ) {
 					?>
-					<li><a class="email" target="_blank" href="mailto:<?php echo antispambot( is_email( get_theme_mod( $active_site ) ) ); ?>"><i class="fa fa-envelope"></i></a></li>
+					<li>
+						<a class="email" target="_blank" href="mailto:<?php echo antispambot( is_email( get_theme_mod( $active_site ) ) ); ?>">
+							<span class="screen-reader-text">email icon</span>
+							<i class="fa fa-envelope"></i>
+						</a>
+					</li>
 				<?php } elseif ( $active_site == "flickr" || $active_site == "dribbble" || $active_site == "instagram" || $active_site == "soundcloud" || $active_site == "spotify" || $active_site == "vine" || $active_site == "yahoo" || $active_site == "codepen" || $active_site == "delicious" || $active_site == "stumbleupon" || $active_site == "deviantart" || $active_site == "digg" || $active_site == "hacker-news" || $active_site == "vk" || $active_site == 'weibo' || $active_site == 'tencent-weibo' ) { ?>
-					<li><a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>"><i class="fa fa-<?php echo esc_attr( $active_site ); ?>"></i></a></li>
+					<li>
+						<a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>">
+							<span class="screen-reader-text"><?php echo $active_site; ?> icon</span>
+							<i class="fa fa-<?php echo esc_attr( $active_site ); ?>"></i>
+						</a>
+					</li>
 				<?php } else { ?>
-					<li><a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>"><i class="fa fa-<?php echo esc_attr( $active_site ); ?>-square"></i></a></li>
+					<li>
+						<a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>">
+							<span class="screen-reader-text"><?php echo $active_site; ?> icon</span>
+							<i class="fa fa-<?php echo esc_attr( $active_site ); ?>-square"></i>
+						</a>
+					</li>
 				<?php
 				}
 			}
