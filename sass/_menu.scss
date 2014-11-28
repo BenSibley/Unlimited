@@ -228,4 +228,30 @@
       }
     }
   }
+  // CSSJanus can't do this for RTL stylesheet
+  .rtl {
+
+    .menu-primary-items ul,
+    .menu-unset ul ul {
+
+      .menu-item-has-children,
+      .menu-unset .page_item_has_children {
+
+        > a {
+
+          &:after {
+            content: '\f104';
+          }
+          &:hover,
+          &:active,
+          &:focus {
+
+            &:after {
+              transform: translateX(-3px);
+            }
+          }
+        }
+      }
+    }
+  }
 }

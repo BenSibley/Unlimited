@@ -673,6 +673,27 @@ a img {
     color: #3a3a3a;
     background: #d9d9d9;
   }
+
+  .rtl .menu-primary-items ul .menu-item-has-children > a:after,
+  .rtl .menu-primary-items ul .menu-unset .page_item_has_children > a:after,
+  .rtl .menu-unset ul ul .menu-item-has-children > a:after,
+  .rtl .menu-unset ul ul .menu-unset .page_item_has_children > a:after {
+    content: '\f104';
+  }
+  .rtl .menu-primary-items ul .menu-item-has-children > a:hover:after, .rtl .menu-primary-items ul .menu-item-has-children > a:active:after, .rtl .menu-primary-items ul .menu-item-has-children > a:focus:after,
+  .rtl .menu-primary-items ul .menu-unset .page_item_has_children > a:hover:after,
+  .rtl .menu-primary-items ul .menu-unset .page_item_has_children > a:active:after,
+  .rtl .menu-primary-items ul .menu-unset .page_item_has_children > a:focus:after,
+  .rtl .menu-unset ul ul .menu-item-has-children > a:hover:after,
+  .rtl .menu-unset ul ul .menu-item-has-children > a:active:after,
+  .rtl .menu-unset ul ul .menu-item-has-children > a:focus:after,
+  .rtl .menu-unset ul ul .menu-unset .page_item_has_children > a:hover:after,
+  .rtl .menu-unset ul ul .menu-unset .page_item_has_children > a:active:after,
+  .rtl .menu-unset ul ul .menu-unset .page_item_has_children > a:focus:after {
+    -webkit-transform: translateX(-3px);
+    -ms-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
 }
 /* Styles for the post */
 .featured-image {
