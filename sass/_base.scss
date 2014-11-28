@@ -30,6 +30,10 @@ body {
   height: auto;
   min-height: 100%;
 }
+.max-width {
+  max-width: 1400px;
+  margin: 0 auto;
+}
 .main {
   margin: 0 auto;
   padding: 0 $column;

@@ -34,4 +34,6 @@
 
 </header>
 
-<section id="main" class="main" role="main">
+	<div class="max-width">
+
+		<section id="main" class="main" role="main">

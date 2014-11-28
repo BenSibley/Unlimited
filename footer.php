@@ -2,6 +2,8 @@
 
 <?php get_sidebar( 'primary' ); ?>
 
+</div><!-- .max-width -->
+
 <footer class="site-footer" role="contentinfo">
 	<div class="footer-content">
 	    <h4><a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo('title'); ?></a></h4>
@@ -18,7 +20,7 @@
     </div>
 </footer>
 
-</div>
+</div><!-- .overflow-container -->
 
 <?php wp_footer(); ?>
 </body>

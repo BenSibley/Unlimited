@@ -11,7 +11,7 @@
 	</div>
 	<div class="comments-meta">
 		<i class="fa fa-comment"></i>
-		<a href="<?php echo get_comments_link(); ?>" title="Comments on this post">
+		<a href="<?php echo get_comments_link(); ?>" title="Comments for this post">
 			<?php
 			if( ! comments_open() && get_comments_number() < 1 ) :
 				comments_number( __( 'Comments closed', 'unlimited' ), __( 'One Comment', 'unlimited'), __( '% Comments', 'unlimited' ) );
