@@ -58,6 +58,12 @@
 /* 600px */
 @media all and (min-width: 37.5em) {
 
+  .search-form-container {
+
+    .search-submit {
+      margin-top: 0;
+    }
+  }
   .site-header {
 
     .search-form-container {
@@ -80,7 +86,6 @@
 
     .search-submit {
       width: 120px;
-      margin-top: 0;
     }
     .search-field {
       width: calc(100% - 129px) !important;
@@ -90,10 +95,10 @@
   .widget_search {
 
     .search-submit {
-      width: 80px;
+      width: 90px;
     }
     .search-field {
-      width: calc(100% - 89px) !important;
+      width: calc(100% - 99px) !important;
     }
   }
 }

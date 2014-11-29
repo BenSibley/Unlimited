@@ -32,6 +32,7 @@ li.pingback {
   padding: $baseline-height / 2 $baseline-height;
 }
 .comment-author {
+  margin-bottom: 18px;
 
   img {
     width: 48px;
@@ -43,6 +44,17 @@ li.pingback {
 }
 .comment-content {
   @extend %thirteen-pixels;
+
+  blockquote,
+  ul,
+  ol,
+  pre,
+  table {
+    text-align: left;
+  }
+  ul {
+    list-style: disc;
+  }
 }
 .comment-date {
   display: inline-block;
@@ -76,6 +88,30 @@ li.pingback {
 }
 .next-comment {
   margin-top: $baseline-height / 2;
+}
+
+/* 600px */
+@media all and (min-width: 37.5em) {
+
+  .comment-pagination {
+    margin: $baseline-height 0 $baseline-height * 2;
+
+    &:after {
+      @include clearfix;
+    }
+    p {
+      width: 49%;
+      margin: 0;
+    }
+    .previous-comment {
+      float: left;
+      text-align: left;
+    }
+    .next-comment {
+      float: right;
+      text-align: right;
+    }
+  }
 }
 
 /* 800px */

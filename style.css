@@ -929,12 +929,26 @@ li.pingback {
   padding: 0.75em 1.5em;
 }
 
+.comment-author {
+  margin-bottom: 18px;
+}
 .comment-author img {
   width: 48px;
   height: 48px;
   border-radius: 50%;
   margin-bottom: 0.75em;
   line-height: 0;
+}
+
+.comment-content blockquote,
+.comment-content ul,
+.comment-content ol,
+.comment-content pre,
+.comment-content table {
+  text-align: left;
+}
+.comment-content ul {
+  list-style: disc;
 }
 
 .comment-date {
@@ -973,6 +987,32 @@ li.pingback {
   margin-top: 0.75em;
 }
 
+/* 600px */
+@media all and (min-width: 37.5em) {
+  .comment-pagination {
+    margin: 1.5em 0 3em;
+  }
+  .comment-pagination:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+  .comment-pagination p {
+    width: 49%;
+    margin: 0;
+  }
+  .comment-pagination .previous-comment {
+    float: left;
+    text-align: left;
+  }
+  .comment-pagination .next-comment {
+    float: right;
+    text-align: right;
+  }
+}
 /* 800px */
 @media all and (min-width: 50em) {
   #cancel-comment-reply-link {
@@ -1159,6 +1199,10 @@ li.pingback {
 
 /* 600px */
 @media all and (min-width: 37.5em) {
+  .search-form-container .search-submit {
+    margin-top: 0;
+  }
+
   .site-header .search-form-container form {
     top: 0;
   }
@@ -1168,7 +1212,6 @@ li.pingback {
 
   .main .search-form-container .search-submit {
     width: 120px;
-    margin-top: 0;
   }
   .main .search-form-container .search-field {
     width: calc(100% - 129px) !important;
@@ -1176,10 +1219,10 @@ li.pingback {
   }
 
   .widget_search .search-submit {
-    width: 80px;
+    width: 90px;
   }
   .widget_search .search-field {
-    width: calc(100% - 89px) !important;
+    width: calc(100% - 99px) !important;
   }
 }
 /* 800px */
