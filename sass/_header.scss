@@ -6,7 +6,7 @@
   overflow: hidden;
 }
 .title-container {
-  margin: $baseline-height / 2 0 $baseline-height * 1.5;
+  margin: $baseline-height * 1.5 0 $baseline-height * 2;
   text-align: center;
 }
 .site-title {
@@ -46,8 +46,5 @@
 
   .site-header {
     overflow: visible; // to allow for dropdown menus
-  }
-  .title-container {
-    margin: $baseline-height * 1.5 0 $baseline-height * 2;
   }
 }

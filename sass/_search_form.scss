@@ -16,6 +16,7 @@
   .search-form-container {
     float: right;
     margin: 0;
+    text-align: right;
 
     button {
       position: relative;
@@ -67,6 +68,7 @@
   .site-header {
 
     .search-form-container {
+      position: relative;
 
       form {
         top: 0;
@@ -107,8 +109,6 @@
 @media all and (min-width: 50em) {
 
   .site-header .search-form-container {
-    position: absolute;
-    right: $column;
 
     button {
 

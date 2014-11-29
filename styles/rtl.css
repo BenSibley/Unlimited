@@ -396,7 +396,7 @@ a img {
 }
 
 .title-container {
-  margin: 0.75em 0 2.25em;
+  margin: 2.25em 0 3em;
   text-align: center;
 }
 
@@ -429,10 +429,6 @@ a img {
 @media all and (min-width: 50em) {
   .site-header {
     overflow: visible;
-  }
-
-  .title-container {
-    margin: 2.25em 0 3em;
   }
 }
 /* Styles for the primary menu */
@@ -1163,6 +1159,7 @@ li.pingback {
 .site-header .search-form-container {
   float: left;
   margin: 0;
+  text-align: left;
 }
 .site-header .search-form-container button {
   position: relative;
@@ -1203,6 +1200,9 @@ li.pingback {
     margin-top: 0;
   }
 
+  .site-header .search-form-container {
+    position: relative;
+  }
   .site-header .search-form-container form {
     top: 0;
   }
@@ -1227,10 +1227,6 @@ li.pingback {
 }
 /* 800px */
 @media all and (min-width: 50em) {
-  .site-header .search-form-container {
-    position: absolute;
-    left: 3.125%;
-  }
   .site-header .search-form-container button:hover {
     cursor: pointer;
   }
@@ -1480,6 +1476,7 @@ li.pingback {
 }
 
 .site-header .social-media-icons {
+  position: absolute;
   text-align: right;
   display: inline-block;
   margin: 0;
@@ -1502,11 +1499,6 @@ li.pingback {
   margin: 0 4px;
 }
 
-@media all and (min-width: 50em) {
-  .site-header .social-media-icons {
-    position: absolute;
-  }
-}
 .social-media-icons .twitter:hover, .social-media-icons .twitter:active, .social-media-icons .twitter:focus {
   color: #00aced;
 }

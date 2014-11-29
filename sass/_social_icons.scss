@@ -10,6 +10,7 @@
 .site-header {
 
   .social-media-icons {
+    position: absolute;
     text-align: left;
     display: inline-block;
     margin: 0;
@@ -32,16 +33,6 @@
 
     li {
       margin: 0 4px; // accounting for 4px from being inline-block
-    }
-  }
-}
-// 800px
-@media all and (min-width: 50em) {
-
-  .site-header {
-
-    .social-media-icons {
-      position: absolute;
     }
   }
 }
