@@ -96,13 +96,15 @@ pre {
   word-wrap: break-word;
   background: $gray-93;
   padding: $baseline-height / 2;
+  color: $gray-23;
 }
 code {
   background: $gray-93;
   padding: 0 $baseline-height / 4;
+  color: $gray-23;
 }
 blockquote {
-  margin: $baseline-height $baseline-height $baseline-height 0;
+  margin: $baseline-height;
   padding-left: $baseline-height;
   border-left: solid 3px $gray-23;
 
@@ -193,6 +195,7 @@ input[type="submit"] {
   background: $gray-23;
   border-radius: 0px;
   -webkit-appearance: none;
+  transition: background 0.15s ease-in-out;
 
   &:hover {
     cursor: pointer;
@@ -222,13 +225,7 @@ textarea {
   font-weight: 300;
 }
 
-///* sticky */
-//.excerpt.sticky {
-//  outline: solid 3px $orange;
-//}
-
-/* ie image border fix */
-
+/* remove ugly ie image border */
 a img {
   border: none;
 }
