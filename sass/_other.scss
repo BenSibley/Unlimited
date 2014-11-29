@@ -1,5 +1,14 @@
 /* Other stuff */
 
+// password posts
+.post-password-form {
+
+  input[type="password"] {
+    display: block;
+    margin: $baseline-height / 2 0;
+  }
+}
+
 // 800px
 @media all and (min-width: 50em) {
 

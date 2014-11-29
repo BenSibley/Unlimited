@@ -1553,6 +1553,11 @@ li.pingback {
 }
 
 /* Other stuff */
+.post-password-form input[type="password"] {
+  display: block;
+  margin: 0.75em 0;
+}
+
 @media all and (min-width: 50em) {
   .page-template-full-width .main {
     width: 93.75%;
