@@ -527,6 +527,11 @@ a img {
     display: inline-block;
     margin-left: -4px;
   }
+  .menu-primary-items li:hover > a,
+  .menu-unset > ul li:hover > a {
+    background: #ededed;
+    color: #3a3a3a;
+  }
   .menu-primary-items a,
   .menu-unset > ul a {
     color: #666666;

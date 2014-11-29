@@ -92,6 +92,15 @@
     li {
       display: inline-block;
       margin-right: -4px;
+
+      // so bg stays dark when hovering over children
+      &:hover {
+
+        > a {
+          background: $gray-93;
+          color: $gray-23;
+        }
+      }
     }
     a {
       color: $gray-40;
