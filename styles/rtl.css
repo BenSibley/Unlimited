@@ -36,7 +36,7 @@ h2, .footer-content h4 {
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .site-description, .menu-primary-items a,
 .menu-unset > ul a, .post-meta a, .post-categories, .further-reading span, .post-author p,
-.post-author > a, .post-tags a, .comment-content, .comment-notes, .footer-content p, .design-credit, .widget {
+.post-author > a, .post-tags a, .comment-content, .comment-notes, .footer-content p, .design-credit, .widget, .gallery-caption {
   font-size: 0.8125em;
   /* 13px / 16px */
   line-height: 1.385;
@@ -1599,6 +1599,10 @@ li.pingback {
 .post-password-form input[type="password"] {
   display: block;
   margin: 0.75em 0;
+}
+
+.gallery-caption {
+  margin-bottom: 12px;
 }
 
 @media all and (min-width: 50em) {

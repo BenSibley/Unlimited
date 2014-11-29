@@ -9,6 +9,12 @@
   }
 }
 
+// gallery image captions
+.gallery-caption {
+  @extend %thirteen-pixels;
+  margin-bottom: 12px;
+}
+
 // 800px
 @media all and (min-width: 50em) {
 
