@@ -75,15 +75,4 @@
         });
     }
 
-    wp.customize( 'search_bar', function( value ) {
-        value.bind( function( to ) {
-            if( to == 'hide' ) {
-                $('#site-header').find('.search-form-container').css('display', 'none');
-            } else {
-                $('#site-header').append();
-            }
-        } );
-    } );
-
-
 } )( jQuery );
