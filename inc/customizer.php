@@ -195,6 +195,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'ct_unlimited_sanitize_layout_settings',
+		'transport'         => 'postMessage'
 	) );
 	// control
 	$wp_customize->add_control( 'layout', array(
