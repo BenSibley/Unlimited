@@ -1292,6 +1292,10 @@ li.pingback {
   max-width: 100% !important;
 }
 
+.widget_calendar table {
+  margin: 0 auto;
+}
+
 /* 800px */
 @media all and (min-width: 50em) {
   .sidebar-primary {
