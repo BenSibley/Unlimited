@@ -1052,6 +1052,12 @@ li.pingback {
   text-align: center;
 }
 
+.full-post.blog .post-content,
+.full-post.archive .post-content,
+.full-post.search .post-content {
+  text-align: right;
+}
+
 .more-link {
   margin-top: 0.75em;
   font-weight: 300;

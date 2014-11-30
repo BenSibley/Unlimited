@@ -9,6 +9,14 @@
     text-align: center; // center excerpts
   }
 }
+.full-post.blog,
+.full-post.archive,
+.full-post.search {
+
+  .post-content {
+    text-align: left;
+  }
+}
 .more-link {
   margin-top: $baseline-height * 0.5;
   font-weight: 300;

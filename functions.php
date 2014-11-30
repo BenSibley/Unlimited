@@ -488,9 +488,14 @@ function ct_unlimited_body_class( $classes ) {
 	/* get layout chosen by user */
 	$layout = get_theme_mod('layout');
 
+	/* get full post setting */
+	$full_post = get_theme_mod('full_post');
+
 	/* if sidebar left layout */
 	if($layout == 'left') {
 		$classes[] = 'left-sidebar';
+	} elseif( $full_post == 'yes' ) {
+		$classes[] = 'full-post';
 	}
 	return $classes;
 }
