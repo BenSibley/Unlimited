@@ -47,6 +47,10 @@
         wp.customize( socialSites[site], function (value) {
             value.bind(function (to) {
 
+                if( $('.social-media-icons').length === 0 ) {
+                    $('#site-header').prepend('<ul class="social-media-icons"></ul>');
+                }
+
                 // empty the social icons list
                 $('.social-media-icons').empty();
 
