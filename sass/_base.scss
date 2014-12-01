@@ -225,6 +225,20 @@ textarea {
   font-weight: 300;
 }
 
+// fix inputs besides the search bar in site-header
+.ie8 {
+
+  .main,
+  .sidebar,
+  .site-footer {
+
+    input[type="search"], input[type="text"], input[type="password"], input[type="email"], input[type="url"] {
+      min-height: 36px;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}
 /* remove ugly ie image border */
 a img {
   border: none;

@@ -55,6 +55,21 @@
     }
   }
 }
+.ie8 .site-header .search-form-container {
+
+  form {
+    display: none;
+  }
+  button {
+
+    &.open {
+
+      + form {
+        display: block;
+      }
+    }
+  }
+}
 
 /* 600px */
 @media all and (min-width: 37.5em) {

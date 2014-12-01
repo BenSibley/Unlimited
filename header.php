@@ -8,7 +8,6 @@
 
 	<!--[if IE 8 ]>
 	<script src="<?php echo trailingslashit( get_template_directory_uri() ) . 'js/build/html5shiv.min.js'; ?>"></script>
-	<script src="<?php echo trailingslashit( get_template_directory_uri() ) . 'js/build/respond.min.js'; ?>"></script>
 	<![endif]-->
 
 	<title><?php wp_title( ' | ' ); ?></title>

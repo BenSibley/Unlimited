@@ -319,6 +319,22 @@ textarea {
   font-weight: 300;
 }
 
+.ie8 .main input[type="search"], .ie8 .main input[type="text"], .ie8 .main input[type="password"], .ie8 .main input[type="email"], .ie8 .main input[type="url"],
+.ie8 .sidebar input[type="search"],
+.ie8 .sidebar input[type="text"],
+.ie8 .sidebar input[type="password"],
+.ie8 .sidebar input[type="email"],
+.ie8 .sidebar input[type="url"],
+.ie8 .site-footer input[type="search"],
+.ie8 .site-footer input[type="text"],
+.ie8 .site-footer input[type="password"],
+.ie8 .site-footer input[type="email"],
+.ie8 .site-footer input[type="url"] {
+  min-height: 36px;
+  display: inline-block;
+  vertical-align: top;
+}
+
 /* remove ugly ie image border */
 a img {
   border: none;
@@ -1205,6 +1221,13 @@ li.pingback {
   max-width: none !important;
   outline: none !important;
   padding: 9px 12px !important;
+}
+
+.ie8 .site-header .search-form-container form {
+  display: none;
+}
+.ie8 .site-header .search-form-container button.open + form {
+  display: block;
 }
 
 /* 600px */
