@@ -202,6 +202,10 @@ input[type="submit"] {
     background: $gray-17;
   }
 }
+// so that the 'x' isn't covered in some browsers
+input[type="search"] {
+  padding-right: 5px !important;
+}
 textarea {
   max-width: $baseline-height * 15 * 1.85;
   overflow: auto; /* to hide scrollbar in IE */

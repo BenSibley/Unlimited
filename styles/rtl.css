@@ -290,6 +290,10 @@ input[type="submit"]:hover {
   background: #2b2b2b;
 }
 
+input[type="search"] {
+  padding-left: 5px !important;
+}
+
 textarea {
   max-width: 41.625em;
   overflow: auto;
