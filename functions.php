@@ -494,7 +494,9 @@ function ct_unlimited_body_class( $classes ) {
 	/* if sidebar left layout */
 	if($layout == 'left') {
 		$classes[] = 'left-sidebar';
-	} elseif( $full_post == 'yes' ) {
+	}
+	/* if full post setting on */
+	if( $full_post == 'yes' ) {
 		$classes[] = 'full-post';
 	}
 	return $classes;
