@@ -778,6 +778,14 @@ a img {
 .post-content {
   margin: 2.25em 0 3em;
 }
+.post-content:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
 
 .further-reading {
   text-align: center;
@@ -1053,8 +1061,7 @@ li.pingback {
 }
 
 .full-post.blog .post-content,
-.full-post.archive .post-content,
-.full-post.search .post-content {
+.full-post.archive .post-content {
   text-align: left;
 }
 

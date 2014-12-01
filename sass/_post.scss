@@ -73,6 +73,10 @@
 }
 .post-content {
   margin: $baseline-height * 1.5 0 $baseline-height * 2;
+
+  &:after {
+    @include clearfix;
+  }
 }
 .further-reading {
   text-align: center;

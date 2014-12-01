@@ -9,9 +9,9 @@
     text-align: center; // center excerpts
   }
 }
+// not search. always excerpts
 .full-post.blog,
-.full-post.archive,
-.full-post.search {
+.full-post.archive {
 
   .post-content {
     text-align: left;
