@@ -21,10 +21,13 @@
 <!--skip to content link-->
 <a class="skip-content" id="skip-content" href="#main"><?php _e('Skip to content', 'unlimited'); ?></a>
 
-<header class="site-header" id="site-header" role="banner">
+<header class="site-header" id="site-header" role="banner"><?php
 
-	<?php ct_unlimited_social_icons_output('header') ?>
-	<?php get_template_part('content/search-bar'); ?>
+	// get the social icons
+	ct_unlimited_social_icons_output('header');
+
+	// get the search bar
+	if( get_theme_mod( 'search_bar' ) != 'hide' ) get_template_part('content/search-bar'); ?>
 
 	<div id="title-container" class="title-container">
 		<?php get_template_part('logo')  ?>

@@ -167,7 +167,8 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		'default'           => 'show',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_unlimited_sanitize_all_show_hide_settings'
+		'sanitize_callback' => 'ct_unlimited_sanitize_all_show_hide_settings',
+		'transport'         => 'postMessage'
 	) );
 	// control
 	$wp_customize->add_control( 'search_bar', array(
@@ -427,3 +428,25 @@ function ct_unlimited_customize_preview_js() { ?>
 <?php }
 
 add_action('customize_controls_print_footer_scripts', 'ct_unlimited_customize_preview_js');
+
+// ajax in search bar content when updated
+function unlimited_update_search_bar_ajax(){
+
+	// get the search bar content
+	$response = get_template_part('content/search-bar');
+
+	// return it
+	echo $response;
+
+	die();
+}
+add_action( 'wp_ajax_update_search_bar', 'unlimited_update_search_bar_ajax' );
+
+// enable ajaxurl global variable on front-end / customizer
+function unlimited_ajaxurl() { ?>
+	<script type="text/javascript">
+		var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+	</script>
+<?php
+}
+add_action('wp_head','unlimited_ajaxurl');

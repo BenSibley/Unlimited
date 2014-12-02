@@ -86,8 +86,12 @@ jQuery(document).ready(function($){
     // add fitvids to all vids in posts/pages
     $('.post').fitVids();
 
-    // open the search bar in site-header on click
-    $('#search-icon').on('click', openSearchBar);
+    /*
+     * Open the search bar in site-header on click.
+     * Selector added as a parameter so that it works when search bar
+     * is added via ajax in the Customizer
+     */
+    $('body').on('click', '#search-icon', openSearchBar);
 
     function openSearchBar(){
 

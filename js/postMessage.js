@@ -74,7 +74,6 @@
             });
         });
     }
-
     // live update layout
     wp.customize( 'layout', function( value ) {
         value.bind( function( to ) {
@@ -82,6 +81,33 @@
                 $( 'body' ).addClass( 'left-sidebar' );
             } else {
                 $( 'body' ).removeClass( 'left-sidebar' );
+            }
+        } );
+    } );
+    // live update search bar
+    wp.customize( 'search_bar', function( value ) {
+        value.bind( function( to ) {
+
+            // if no, remove it
+            if( to == 'hide' ) {
+                $('#site-header').find('.search-form-container').remove();
+            }
+            // else ajax in the content
+            else {
+
+                // set up data object
+                var data = {
+                    action: 'update_search_bar',
+                    security: '<?php echo $ajax_nonce; ?>'
+                };
+                // post data received from PHP response
+                jQuery.post(ajaxurl, data, function(response) {
+
+                    // if valid response
+                    if( response ){
+                        $('#title-container').before(response);
+                    }
+                });
             }
         } );
     } );
