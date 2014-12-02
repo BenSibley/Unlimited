@@ -255,6 +255,7 @@ jQuery(document).ready(function($){
 
                 }, 200)
             }
+            
         }
     }
 
