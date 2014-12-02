@@ -416,8 +416,9 @@ a img {
 }
 
 .title-container {
-  margin: 2.25em 0 3em;
+  margin: 1.5em 0 2.25em;
   text-align: center;
+  clear: both;
 }
 
 .site-description {
@@ -449,6 +450,11 @@ a img {
 @media all and (min-width: 50em) {
   .site-header {
     overflow: visible;
+  }
+
+  .title-container {
+    margin: 3em 0 3.75em;
+    text-align: center;
   }
 }
 /* Styles for the primary menu */
@@ -1191,7 +1197,7 @@ li.pingback {
 
 .site-header .search-form-container {
   float: left;
-  margin: 0;
+  margin: 0 0 0.75em 0;
   text-align: left;
 }
 .site-header .search-form-container button {
@@ -1520,10 +1526,9 @@ li.pingback {
 }
 
 .site-header .social-media-icons {
-  position: absolute;
+  float: right;
   text-align: right;
-  display: inline-block;
-  margin: 0;
+  margin: 0 0 0.75em 0;
   -webkit-transition: opacity 0.15s ease-in-out;
   transition: opacity 0.15s ease-in-out;
 }

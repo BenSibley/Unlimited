@@ -397,6 +397,8 @@ if( ! function_exists('ct_unlimited_social_icons_output') ) {
 				}
 			}
 			echo "</ul>";
+		} else {
+			return "empty";
 		}
 	}
 }

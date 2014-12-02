@@ -10,10 +10,9 @@
 .site-header {
 
   .social-media-icons {
-    position: absolute;
+    float: left;
     text-align: left;
-    display: inline-block;
-    margin: 0;
+    margin: 0 0 $baseline-height / 2 0;
     transition: opacity 0.15s ease-in-out;
 
     &.fade {
