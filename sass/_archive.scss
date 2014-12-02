@@ -6,6 +6,7 @@
 
   .post-content {
     margin-top: $baseline-height;
+    margin-bottom: $baseline-height;
     text-align: center; // center excerpts
   }
 }
@@ -37,8 +38,7 @@
   margin: $baseline-height 0;
   padding: $baseline-height / 2;
   background: white;
-  outline: solid 1px $gray-87; // needs to be outline or border-top is angled
-  border-top: solid 4px $gray-23;
+  border: solid 1px $gray-87;
   text-align: center;
 
   a {
