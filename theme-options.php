@@ -10,7 +10,7 @@ add_action( 'admin_menu', 'ct_unlimited_register_theme_page' );
 function ct_unlimited_options_content(){
     ?>
     <div id="unlimited-dashboard-wrap" class="wrap">
-        <h2><?php _e('unlimited Dashboard', 'unlimited'); ?></h2>
+        <h2><?php _e('Unlimited Dashboard', 'unlimited'); ?></h2>
         <div class="content content-customization">
             <h3><?php _e('Customization', 'unlimited'); ?></h3>
             <p><?php _e('Click the "Customize" link in your menu, or use the button below to get started customizing Unlimited', 'unlimited'); ?>.</p>
@@ -27,16 +27,17 @@ function ct_unlimited_options_content(){
         </div>
         <div class="content content-premium-upgrade">
             <h3><?php _e('Unlimited Pro ($49)', 'unlimited'); ?></h3>
-            <p><?php _e('Unlimited Pro is the premium version of Unlimited. By upgrading, you get:', 'unlimited'); ?></p>
-            <ul>
-                <li><?php _e('Custom colors', 'unlimited'); ?></li>
-                <li><?php _e('Background images & textures', 'unlimited'); ?></li>
-                <li><?php _e('New layouts', 'unlimited'); ?></li>
-                <li><?php _e('and much more&#8230;', 'unlimited'); ?></li>
-            </ul>
+            <p><?php _e('Unlimited Pro is a premium upgrade for Unlimited. It has custom colors, new layouts, background images, and more', 'unlimited'); ?>...</p>
             <p>
                 <a target="_blank" class="button-primary" href="https://www.competethemes.com/unlimited-pro/"><?php _e('See Full Feature List', 'unlimited'); ?></a>
             </p>
         </div>
+	    <div class="content content-resources">
+		    <h3><?php _e('WordPress Resources', 'unlimited'); ?></h3>
+		    <p><?php _e("Save time and money searching for WordPress products by following our recommendations", "unlimited"); ?>.</p>
+		    <p>
+			    <a target="_blank" class="button-primary" href="https://www.competethemes.com/wordpress-resources/"><?php _e('View Resources', 'unlimited'); ?></a>
+		    </p>
+	    </div>
     </div>
 <?php } ?>
