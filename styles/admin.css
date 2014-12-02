@@ -7,8 +7,7 @@
 .content {
   margin-top: 12px;
   padding: 12px 24px 24px;
-  border-right: solid 1px #e5e5e5;
-  border-bottom: solid 1px #e5e5e5;
+  border: solid 1px #e5e5e5;
   background: white;
 }
 .content .button-primary {
@@ -28,16 +27,13 @@
   .content p {
     min-height: 57px;
   }
-  .content:nth-child(3n + 5) {
-    clear: left;
-  }
 
   .content-premium-upgrade p {
     min-height: 0px;
   }
 
   .content-customization,
-  .content-support {
+  .content-premium-upgrade {
     margin-right: 2%;
   }
 }
@@ -46,9 +42,16 @@
   .content {
     width: 27%;
   }
+  .content:nth-child(3n + 5) {
+    clear: left;
+  }
 
   .content-customization,
   .content-support {
     margin-right: 1%;
+  }
+
+  .content-premium-upgrade {
+    margin-right: 0;
   }
 }
