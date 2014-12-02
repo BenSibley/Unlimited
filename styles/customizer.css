@@ -15,7 +15,7 @@
       margin-left: 4px; }
   .upgrades-ad a {
     display: block;
-    padding: 0.5em;
+    padding: 0.5em 0.5em 0.5em 14px;
     color: white; }
     .upgrades-ad a:link, .upgrades-ad a:visited, .upgrades-ad a:hover, .upgrades-ad a:active, .upgrades-ad a:focus {
       color: white; }

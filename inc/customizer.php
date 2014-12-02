@@ -423,7 +423,7 @@ add_action( 'init', 'ct_unlimited_set_customizer_values' );
 // add the ad for Unlimited Pro
 function ct_unlimited_customize_preview_js() { ?>
 	<script>
-		jQuery('#customize-info').append('<div class="upgrades-ad"><a href="<?php echo esc_url('https://www.competethemes.com/unlimited-pro/');?>" target="_blank"><?php _e('Premium Upgrade Available!','unlimited');?> <span>&rarr;</span></a></div>');
+		jQuery('#customize-info').append('<div class="upgrades-ad"><a href="<?php echo esc_url('https://www.competethemes.com/unlimited-pro/');?>" target="_blank"><?php _e('Have you seen Unlimited Pro?','unlimited');?> <span>&rarr;</span></a></div>');
 	</script>
 <?php }
 
