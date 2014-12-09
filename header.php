@@ -16,18 +16,21 @@
 </head>
 
 <body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
+
+<?php hybrid_do_atomic( 'body_before' ); ?>
+
 <div class="overflow-container">
 
 <!--skip to content link-->
 <a class="skip-content" id="skip-content" href="#main"><?php _e('Skip to content', 'unlimited'); ?></a>
 
-<header class="site-header" id="site-header" role="banner"><?php
+<header class="site-header" id="site-header" role="banner">
 
-	// get the social icons
-	ct_unlimited_social_icons_output('header');
+	<?php hybrid_do_atomic( 'header_before' ); ?>
 
-	// get the search bar
-	if( get_theme_mod( 'search_bar' ) != 'hide' ) get_template_part('content/search-bar'); ?>
+	<?php ct_unlimited_social_icons_output('header'); ?>
+
+	<?php if( get_theme_mod( 'search_bar' ) != 'hide' ) get_template_part('content/search-bar'); ?>
 
 	<div id="title-container" class="title-container">
 		<?php get_template_part('logo')  ?>
@@ -40,8 +43,11 @@
 		<i class="fa fa-bars"></i>
 	</button>
 
+	<?php hybrid_do_atomic( 'header_after' ); ?>
 </header>
 
 	<div class="max-width">
 
 		<section id="main" class="main" role="main">
+
+		<?php hybrid_do_atomic( 'main_before' ); ?>
