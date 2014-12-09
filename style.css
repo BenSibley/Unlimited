@@ -1314,18 +1314,19 @@ li.pingback {
   text-align: center;
   margin: 1.8465em 0;
 }
-.widget .widget-title {
-  font-size: 1.231em;
-  line-height: 1.5;
-  font-weight: 400;
-  color: #3a3a3a;
-  margin-bottom: 1.5em;
-}
 .widget ul {
   list-style: none;
 }
 .widget select {
   margin-bottom: 1.8465em;
+}
+
+.widget-title {
+  font-size: 1.231em;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #3a3a3a;
+  margin-bottom: 1.5em;
 }
 
 .widget_search .search-field {

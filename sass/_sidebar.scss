@@ -13,19 +13,19 @@
   text-align: center;
   margin: $baseline-height * 1.231 0;
 
-  .widget-title {
-    font-size: 1.231em;
-    line-height: 1.5;
-    font-weight: 400;
-    color: $gray-23;
-    margin-bottom: $baseline-height;
-  }
   ul {
     list-style: none;
   }
   select {
     margin-bottom: $baseline-height * 1.231;
   }
+}
+.widget-title {
+  font-size: 1.231em;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $gray-23;
+  margin-bottom: $baseline-height;
 }
 .widget_search {
 
