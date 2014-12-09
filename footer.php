@@ -22,7 +22,7 @@
             <?php
                 $site_url = 'https://www.competethemes.com/unlimited/';
                 $footer_text = sprintf( __( '<a target="_blank" href="%s">Unlimited WordPress Theme</a> by Compete Themes', 'unlimited' ), esc_url( $site_url ) );
-                echo $footer_text;
+                echo apply_filters('footer_text', $footer_text );
             ?>
         </span>
     </div>
