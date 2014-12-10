@@ -37,6 +37,8 @@
 				<p class="site-description"><?php bloginfo('description'); ?></p>
 			</div>
 
+			<?php hybrid_do_atomic( 'primary_menu_before' ); ?>
+
 			<?php get_template_part( 'menu', 'primary' ); ?>
 
 			<button id="toggle-navigation" class="toggle-navigation">
@@ -46,6 +48,8 @@
 			<?php hybrid_do_atomic( 'header_after' ); ?>
 
 		</header>
+
+		<?php hybrid_do_atomic( 'before_main' ); ?>
 
 		<div class="max-width">
 
