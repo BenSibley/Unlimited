@@ -83,10 +83,6 @@
     margin-right: 2px;
   }
 }
-.sticky-header {
-  margin-bottom: -$baseline-height;
-  border-bottom: none;
-}
 .search-header {
   background: white;
   border: solid 1px $gray-87;
@@ -94,6 +90,26 @@
 }
 .search-header.bottom {
   padding-top: 0;
+}
+.sticky {
+  position: relative;
+}
+.sticky-status {
+  @extend %thirteen-pixels;
+  @extend %uppercase;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  background: $gray-17;
+  padding: 6px 12px;
+  color: white;
+}
+.has-post-thumbnail .sticky-status {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  z-index: 9;
+  text-align: left;
 }
 
 /* 800px */

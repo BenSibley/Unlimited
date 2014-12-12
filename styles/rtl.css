@@ -36,7 +36,7 @@ h2, .footer-content h4 {
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .site-description, .menu-primary-items a,
 .menu-unset > ul a, .post-meta a, .post-categories, .further-reading span, .post-author p,
-.post-author > a, .post-tags a, .comment-content, .comment-notes, .footer-content p, .design-credit, .widget, .gallery-caption {
+.post-author > a, .post-tags a, .comment-content, .comment-notes, .footer-content p, .design-credit, .sticky-status, .widget, .gallery-caption {
   font-size: 0.8125em;
   /* 13px / 16px */
   line-height: 1.385;
@@ -44,7 +44,7 @@ textarea, input[type="submit"], .site-description, .menu-primary-items a,
 }
 
 .menu-primary-items a,
-.menu-unset > ul a {
+.menu-unset > ul a, .sticky-status {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 400;
@@ -1156,11 +1156,6 @@ li.pingback {
   margin-left: 2px;
 }
 
-.sticky-header {
-  margin-bottom: -1.5em;
-  border-bottom: none;
-}
-
 .search-header {
   background: white;
   border: solid 1px #dedede;
@@ -1169,6 +1164,27 @@ li.pingback {
 
 .search-header.bottom {
   padding-top: 0;
+}
+
+.sticky {
+  position: relative;
+}
+
+.sticky-status {
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  background: #2b2b2b;
+  padding: 6px 12px;
+  color: white;
+}
+
+.has-post-thumbnail .sticky-status {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  z-index: 9;
+  text-align: right;
 }
 
 /* 800px */

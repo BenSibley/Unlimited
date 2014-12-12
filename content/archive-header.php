@@ -44,13 +44,3 @@ elseif( is_date() ){ ?>
 	</div>
 <?php
 }
-/* sticky post */
-if( is_sticky() ) { ?>
-	<div class='archive-header sticky-header'>
-		<i class="fa fa-thumb-tack"></i>
-		<h2>
-			<?php _e('Featured post', 'unlimited'); ?>
-		</h2>
-	</div>
-<?php
-}

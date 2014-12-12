@@ -516,3 +516,11 @@ function ct_unlimited_custom_css_output(){
 	}
 }
 add_action('wp_enqueue_scripts', 'ct_unlimited_custom_css_output');
+
+function ct_unlimited_sticky_post_marker() {
+
+	if( is_sticky() ) {
+		echo '<span class="sticky-status">Featured Post</span>';
+	}
+}
+add_action( 'archive_post_before', 'ct_unlimited_sticky_post_marker' );
