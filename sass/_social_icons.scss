@@ -18,7 +18,9 @@
     &.fade {
       opacity: 0;
     }
-    a {
+    a,
+    a:link,
+    a:visited {
       color: $gray-85;
       display: block;
       padding: 6px 9px;

@@ -1551,7 +1551,9 @@ li.pingback {
 .site-header .social-media-icons.fade {
   opacity: 0;
 }
-.site-header .social-media-icons a {
+.site-header .social-media-icons a,
+.site-header .social-media-icons a:link,
+.site-header .social-media-icons a:visited {
   color: #d9d9d9;
   display: block;
   padding: 6px 9px;
