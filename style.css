@@ -73,7 +73,10 @@ a:link, a:visited, a:hover, a:active, a:focus {
 .design-credit a {
   color: #d9d9d9;
 }
-.design-credit a:link, .design-credit a:visited, .design-credit a:hover, .design-credit a:active, .design-credit a:focus {
+.design-credit a:link, .design-credit a:visited {
+  color: #d9d9d9;
+}
+.design-credit a:hover, .design-credit a:active, .design-credit a:focus {
   color: white;
 }
 

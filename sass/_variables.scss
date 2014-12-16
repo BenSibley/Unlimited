@@ -115,7 +115,9 @@ $tencent-weibo: #20b8e5;
   color: $gray-85;
 
   &:link,
-  &:visited,
+  &:visited {
+    color: $gray-85;
+  }
   &:hover,
   &:active,
   &:focus {
