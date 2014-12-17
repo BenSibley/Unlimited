@@ -186,7 +186,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 
 	// section
 	$wp_customize->add_section( 'ct_unlimited_layout', array(
-		'title'      => __( 'Layout', 'unlimited' ),
+		'title'      => __( 'Layouts', 'unlimited' ),
 		'priority'   => 50,
 		'capability' => 'edit_theme_options'
 	) );
@@ -200,7 +200,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	) );
 	// control
 	$wp_customize->add_control( 'layout', array(
-		'label'          => __( 'Choose Your Layout:', 'unlimited' ),
+		'label'          => __( 'Choose your layout:', 'unlimited' ),
 		'section'        => 'ct_unlimited_layout',
 		'settings'       => 'layout',
 		'type'           => 'radio',
