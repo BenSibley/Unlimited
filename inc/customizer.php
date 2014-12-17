@@ -339,9 +339,21 @@ function ct_unlimited_sanitize_email( $input ) {
 
 // sanitize layout selection
 function ct_unlimited_sanitize_layout_settings($input){
+
+	/*
+	 * Also allow layouts only included in the premium plugin.
+	 * Needs to be done this way b/c sanitize_callback cannot by updated
+	 * via get_setting()
+	 */
 	$valid = array(
-		'right'   => __('Right sidebar', 'unlimited'),
-		'left'  => __('Left sidebar', 'unlimited'),
+		'right'      => __( 'Right sidebar', 'unlimited' ),
+		'left'       => __( 'Left sidebar', 'unlimited' ),
+		'narrow'     => __( 'No sidebar - Narrow', 'unlimited' ),
+		'wide'       => __( 'No sidebar - Wide', 'unlimited' ),
+		'two-right'  => __( 'Two column - Right sidebar', 'unlimited' ),
+		'two-left'   => __( 'Two column - Left sidebar', 'unlimited' ),
+		'two-narrow' => __( 'Two column - No Sidebar - Narrow', 'unlimited' ),
+		'two-wide'   => __( 'Two column - No Sidebar - Wide', 'unlimited' )
 	);
 
 	if ( array_key_exists( $input, $valid ) ) {
