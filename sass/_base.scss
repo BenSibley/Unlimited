@@ -33,6 +33,10 @@ body {
 .max-width {
   max-width: 1400px;
   margin: 0 auto;
+
+  &:after {
+    @include clearfix;
+  }
 }
 .main {
   margin: 0 auto;
