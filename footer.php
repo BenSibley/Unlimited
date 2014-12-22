@@ -6,7 +6,7 @@
 
 </div><!-- .max-width -->
 
-<footer class="site-footer" role="contentinfo">
+<footer id="site-footer" class="site-footer" role="contentinfo">
 
 	<?php hybrid_do_atomic( 'footer_before' ); ?>
 
