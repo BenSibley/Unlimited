@@ -9,6 +9,7 @@ body#tinymce.wp-editor {
   line-height: 1.5;
   color: $gray-40;
   margin: 0 24px 24px 24px;
+  -webkit-font-smoothing: subpixel-antialiased !important;
 
   h1,h2,h3,h4,h5,h6 {
     margin: 0;

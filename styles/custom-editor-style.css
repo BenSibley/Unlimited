@@ -32,6 +32,7 @@ body#tinymce.wp-editor {
   line-height: 1.5;
   color: #666666;
   margin: 0 24px 24px 24px;
+  -webkit-font-smoothing: subpixel-antialiased !important;
 }
 body#tinymce.wp-editor h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor h6 {
   margin: 0;
