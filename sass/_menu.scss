@@ -42,12 +42,12 @@
   }
   &.open {
 
-  >   a:after {
+    > a:after {
       transform: rotate(180deg);
     }
   }
   ul {
-    max-height: 0px;
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.15s ease-in-out;
 
@@ -91,7 +91,7 @@
 
     li {
       display: inline-block;
-      margin-right: -4px;
+      margin-right: -4px; // remove inline-block native 4px space
 
       // so bg stays dark when hovering over children
       &:hover {

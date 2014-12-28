@@ -8,18 +8,6 @@
 }
 .footer-content {
   padding: $baseline-height * 1.5 $column 0;
-
-  a {
-    @extend %light-link;
-  }
-  p {
-    @extend %thirteen-pixels;
-    margin: 0;
-    display: inline-block;
-  }
-  h4 {
-    @extend %twenty-one-pixels;
-  }
 }
 .design-credit {
   @extend %thirteen-pixels;

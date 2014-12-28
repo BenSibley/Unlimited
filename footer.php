@@ -11,8 +11,8 @@
 	<?php hybrid_do_atomic( 'footer_before' ); ?>
 
 	<div class="footer-content">
-	    <h4><a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo('title'); ?></a></h4>
-		<p><?php bloginfo('description'); ?></p>
+	    <h4 class="site-title"><a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo('title'); ?></a></h4>
+		<p class="site-description"><?php bloginfo('description'); ?></p>
 	</div>
 
 	<?php hybrid_do_atomic( 'footer_widgets' ); ?>

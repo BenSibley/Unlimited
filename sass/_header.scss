@@ -10,6 +10,7 @@
   text-align: center;
   clear: both;
 }
+// also used for .site-title in footer
 .site-title {
   @extend %twenty-eight-pixels; // so the size is the same even when an h2
 
@@ -17,6 +18,7 @@
     @extend %light-link;
   }
 }
+// also used for .site-description in footer
 .site-description {
   @extend %thirteen-pixels;
   font-weight: 400;

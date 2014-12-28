@@ -26,7 +26,7 @@ h1, .site-title, .comments-number h3,
   /* 37px */
 }
 
-h2, .footer-content h4 {
+h2 {
   font-size: 1.3125em;
   /* 21px / 16px */
   line-height: 1.143;
@@ -36,7 +36,7 @@ h2, .footer-content h4 {
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .site-description, .menu-primary-items a,
 .menu-unset > ul a, .post-meta a, .post-categories, .further-reading span, .post-author p,
-.post-author > a, .post-tags a, .comment-content, .comment-notes, .footer-content p, .design-credit, .sticky-status, .widget, .gallery-caption {
+.post-author > a, .post-tags a, .comment-content, .comment-notes, .design-credit, .sticky-status, .widget, .gallery-caption {
   font-size: 0.8125em;
   /* 13px / 16px */
   line-height: 1.385;
@@ -58,15 +58,15 @@ a:link, a:visited, a:hover, a:active, a:focus {
 }
 
 .site-title a, .menu-primary-items a,
-.menu-unset > ul a, .post-meta a, .footer-content a {
+.menu-unset > ul a, .post-meta a {
   color: white;
 }
 .site-title a:link, .menu-primary-items a:link,
-.menu-unset > ul a:link, .post-meta a:link, .footer-content a:link, .site-title a:visited, .menu-primary-items a:visited,
-.menu-unset > ul a:visited, .post-meta a:visited, .footer-content a:visited, .site-title a:hover, .menu-primary-items a:hover,
-.menu-unset > ul a:hover, .post-meta a:hover, .footer-content a:hover, .site-title a:active, .menu-primary-items a:active,
-.menu-unset > ul a:active, .post-meta a:active, .footer-content a:active, .site-title a:focus, .menu-primary-items a:focus,
-.menu-unset > ul a:focus, .post-meta a:focus, .footer-content a:focus {
+.menu-unset > ul a:link, .post-meta a:link, .site-title a:visited, .menu-primary-items a:visited,
+.menu-unset > ul a:visited, .post-meta a:visited, .site-title a:hover, .menu-primary-items a:hover,
+.menu-unset > ul a:hover, .post-meta a:hover, .site-title a:active, .menu-primary-items a:active,
+.menu-unset > ul a:active, .post-meta a:active, .site-title a:focus, .menu-primary-items a:focus,
+.menu-unset > ul a:focus, .post-meta a:focus {
   color: white;
 }
 
@@ -516,7 +516,7 @@ a img {
 }
 .menu-item-has-children ul,
 .page_item_has_children ul {
-  max-height: 0px;
+  max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height 0.15s ease-in-out;
   transition: max-height 0.15s ease-in-out;
@@ -1071,10 +1071,6 @@ li.pingback {
 
 .footer-content {
   padding: 2.25em 3.125% 0;
-}
-.footer-content p {
-  margin: 0;
-  display: inline-block;
 }
 
 .design-credit {
