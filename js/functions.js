@@ -161,16 +161,20 @@ jQuery(document).ready(function($){
                 // expand the height of the parent ul so that it's child can show
                 parentList.css('max-height', parseInt(parentListHeight + submenuHeight));
 
-                // just needs long enough for the 0.15s animation fo play out
-                setTimeout(function () {
+                // only open the primary menu if clicked menu item is in primary menu
+                if( $(this).parent().hasClass('menu-primary-items') || $(this).parent().hasClass('menu-unset') ) {
 
-                    // adjust containing .menu-primary to fit newly expanded list
-                    var menuHeight = calculateMenuHeight();
+                    // just needs long enough for the 0.15s animation fo play out
+                    setTimeout(function () {
 
-                    // adjust to the height
-                    $('#menu-primary').css('max-height', menuHeight + 48);
+                        // adjust containing .menu-primary to fit newly expanded list
+                        var menuHeight = calculateMenuHeight();
 
-                }, 200)
+                        // adjust to the height
+                        $('#menu-primary').css('max-height', menuHeight + 48);
+
+                    }, 200)
+                }
             }
         }
     }
