@@ -636,12 +636,16 @@ a img {
     border: solid 1px #dedede;
     -webkit-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   .menu-item-has-children ul li,
   .menu-unset .page_item_has_children ul li {
     display: block;
     white-space: nowrap;
     margin-left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   .menu-item-has-children ul li:hover > a:after,
   .menu-unset .page_item_has_children ul li:hover > a:after {
