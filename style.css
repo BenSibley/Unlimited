@@ -1223,6 +1223,7 @@ li.pingback {
 }
 
 .site-header .search-form-container {
+  position: relative;
   float: right;
   margin: 0 0 0.75em 0;
   text-align: right;
@@ -1238,7 +1239,6 @@ li.pingback {
   line-height: 1.5;
 }
 .site-header .search-form-container button.open + form {
-  left: 3.125%;
   opacity: 1;
 }
 .site-header .search-form-container i {
@@ -1247,9 +1247,9 @@ li.pingback {
 }
 .site-header .search-form-container form {
   position: absolute;
-  top: 0.75em;
-  right: 3.125%;
-  left: 100%;
+  top: 0;
+  right: 0;
+  left: 0px;
   opacity: 0;
   -webkit-transition: opacity 0.15s ease-in-out, left 0.15s ease-in-out;
   transition: opacity 0.15s ease-in-out, left 0.15s ease-in-out;
@@ -1302,10 +1302,6 @@ li.pingback {
 @media all and (min-width: 50em) {
   .site-header .search-form-container button:hover {
     cursor: pointer;
-  }
-  .site-header .search-form-container button:focus {
-    background: white;
-    outline: none;
   }
 }
 /* Attachment styles */

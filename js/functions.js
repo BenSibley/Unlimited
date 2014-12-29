@@ -41,6 +41,16 @@ jQuery(document).ready(function($){
 
             // make search input keyboard accessible
             $('#site-header').find('.search-field').attr('tabindex', 0);
+
+            // handle mobile width search bar sizing
+            if( $(window).width() < 600 ) {
+
+                // distance to other side (35px is width of icon space)
+                var leftDistance = $(window).width() * 0.9375 - 35;
+
+                $('#site-header').find('.search-form').css('left', -leftDistance + 'px')
+            }
+
         }
     }
 
