@@ -48,7 +48,12 @@
             value.bind(function (to) {
 
                 if( $('.social-media-icons').length === 0 ) {
-                    $('#site-header').prepend('<ul class="social-media-icons"></ul>');
+
+                    if( $('#site-header').find('.search-form-container').length ) {
+                        $('#site-header').find('.search-form-container').before('<ul class="social-media-icons"></ul>');
+                    } else {
+                        $('#title-container').before('<ul class="social-media-icons"></ul>');
+                    }
                 }
 
                 // empty the social icons list
