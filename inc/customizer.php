@@ -5,6 +5,14 @@ add_action( 'customize_register', 'ct_unlimited_add_customizer_content' );
 
 function ct_unlimited_add_customizer_content( $wp_customize ) {
 
+	/***** Reorder default sections *****/
+
+	$wp_customize->get_section('title_tagline')->priority     = 1;
+	$wp_customize->get_section('static_front_page')->priority = 5;
+	$wp_customize->get_section('static_front_page')->title = __('Front Page', 'unlimited');
+	$wp_customize->get_section('nav')->priority = 10;
+	$wp_customize->get_section('nav')->title = __('Menus', 'unlimited');
+
 	/***** Add PostMessage Support *****/
 	
 	// Add postMessage support for site title and description.
@@ -82,7 +90,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'ct_unlimited_logo_upload', array(
 		'title'      => __( 'Logo Upload', 'unlimited' ),
-		'priority'   => 30,
+		'priority'   => 20,
 		'capability' => 'edit_theme_options'
 	) );
 	// setting
@@ -113,7 +121,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'ct_unlimited_social_media_icons', array(
 		'title'          => __('Social Media Icons', 'unlimited'),
-		'priority'       => 35,
+		'priority'       => 25,
 	) );
 
 	// create a setting and control for each social site
@@ -159,7 +167,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'ct_unlimited_search_bar', array(
 		'title'      => __( 'Search Bar', 'unlimited' ),
-		'priority'   => 40,
+		'priority'   => 30,
 		'capability' => 'edit_theme_options'
 	) );
 	// setting
@@ -187,7 +195,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'ct_unlimited_layout', array(
 		'title'      => __( 'Layouts', 'unlimited' ),
-		'priority'   => 50,
+		'priority'   => 45,
 		'capability' => 'edit_theme_options'
 	) );
 	// setting
@@ -257,8 +265,8 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 
 	// section
 	$wp_customize->add_section( 'ct_unlimited_comments_display', array(
-		'title'      => __( 'Comments', 'unlimited' ),
-		'priority'   => 70,
+		'title'      => __( 'Comment Display', 'unlimited' ),
+		'priority'   => 65,
 		'capability' => 'edit_theme_options'
 	) );
 	// setting
@@ -289,7 +297,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'ct_unlimited_custom_css', array(
 		'title'      => __( 'Custom CSS', 'unlimited' ),
-		'priority'   => 90,
+		'priority'   => 80,
 		'capability' => 'edit_theme_options'
 	) );
 	// setting
