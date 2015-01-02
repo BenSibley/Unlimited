@@ -413,7 +413,6 @@ function ct_unlimited_sanitize_comments_setting($input){
 
 /*
  * Sets default values in customizer.
- * Otherwise, they will be empty until a visitor visits and saves changed in the Customizer
  */
 function ct_unlimited_set_customizer_values() {
 
@@ -438,7 +437,7 @@ function ct_unlimited_set_customizer_values() {
 		set_theme_mod( 'comments_display', array( 'post', 'page', 'attachment', 'none' ) );
 	}
 }
-add_action( 'init', 'ct_unlimited_set_customizer_values' );
+add_action( 'admin_init', 'ct_unlimited_set_customizer_values' );
 
 // add the ad for Unlimited Pro
 function ct_unlimited_customize_preview_js() { ?>
