@@ -471,7 +471,7 @@ function ct_unlimited_set_date_format() {
 		add_option('ct_unlimited_date_format_origin', 'updated');
 	}
 }
-add_action( 'init', 'ct_unlimited_set_date_format' );
+add_action( 'admin_init', 'ct_unlimited_set_date_format' );
 
 /*
  * WP will apply the ".menu-primary-items" class & id to the containing <div> instead of <ul>
