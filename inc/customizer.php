@@ -465,11 +465,11 @@ function ct_unlimited_customizer_ad_array() {
 
 	// create array of ad text
 	$ads_array = array(
-		'Have you seen Unlimited Pro?'  => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=have-you-seen-unlimited-pro&utm_campaign=customizer-ad',
-		'Upgrade to Unlimited Pro'      => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=upgrade-to-unlimited-pro&utm_campaign=customizer-ad',
-		'Check out Unlimited Pro'       => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=check-out-unlimited-pro&utm_campaign=customizer-ad',
-		'Unlimited Pro'                 => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=unlimited-pro&utm_campaign=customizer-ad',
-		'Premium Upgrade for Unlimited' => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=premium-upgrade-for-unlimited&utm_campaign=customizer-ad'
+		__('Have you seen Unlimited Pro?', 'unlimited')  => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=have-you-seen-unlimited-pro&utm_campaign=customizer-ad',
+		__('Upgrade to Unlimited Pro', 'unlimited')      => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=upgrade-to-unlimited-pro&utm_campaign=customizer-ad',
+		__('Check out Unlimited Pro', 'unlimited')       => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=check-out-unlimited-pro&utm_campaign=customizer-ad',
+		__('Unlimited Pro', 'unlimited')                 => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=unlimited-pro&utm_campaign=customizer-ad',
+		__('Premium Upgrade for Unlimited', 'unlimited') => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=premium-upgrade-for-unlimited&utm_campaign=customizer-ad'
 	);
 	return $ads_array;
 }
