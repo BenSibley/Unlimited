@@ -519,7 +519,7 @@ add_action('wp_enqueue_scripts', 'ct_unlimited_custom_css_output');
 
 function ct_unlimited_sticky_post_marker() {
 
-	if( is_sticky() ) {
+	if( is_sticky() && !is_archive() ) {
 		echo '<span class="sticky-status">Featured Post</span>';
 	}
 }
