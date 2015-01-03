@@ -2,7 +2,7 @@
 
 /* create theme options page */
 function ct_unlimited_register_theme_page(){
-add_theme_page( 'unlimited Dashboard', 'Unlimited Dashboard', 'edit_theme_options', 'unlimited-options', 'ct_unlimited_options_content', 'ct_unlimited_options_content');
+    add_theme_page( 'unlimited Dashboard', 'Unlimited Dashboard', 'edit_theme_options', 'unlimited-options', 'ct_unlimited_options_content', 'ct_unlimited_options_content');
 }
 add_action( 'admin_menu', 'ct_unlimited_register_theme_page' );
 

@@ -542,7 +542,22 @@ function ct_unlimited_reset_customizer_options() {
 	// delete customizer mods
 	remove_theme_mods();
 
+	$redirect = admin_url( 'themes.php?page=unlimited-options' );
+	$redirect = add_query_arg( 'unlimited_status', 'deleted', $redirect);
+
 	// safely redirect
-	wp_safe_redirect( admin_url( 'themes.php?page=unlimited-options' ) ); exit;
+	wp_safe_redirect( $redirect ); exit;
 }
 add_action( 'admin_init', 'ct_unlimited_reset_customizer_options' );
+
+function ct_unlimited_delete_settings_notice() {
+
+	if ( isset( $_GET['unlimited_status'] ) ) {
+		?>
+		<div class="updated">
+			<p><?php _e( 'Customizer settings deleted', 'unlimited' ); ?>.</p>
+		</div>
+		<?php
+	}
+}
+add_action( 'admin_notices', 'ct_unlimited_delete_settings_notice' );
