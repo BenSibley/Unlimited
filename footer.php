@@ -20,7 +20,7 @@
     <div class="design-credit">
         <span>
             <?php
-                $site_url = 'https://www.competethemes.com/unlimited/';
+                $site_url = 'https://www.competethemes.com/unlimited/?utm_source=Footer%20Link&utm_medium=Referral&utm_campaign=Unlimited%20Footer%20Link';
                 $footer_text = sprintf( __( '<a target="_blank" href="%s">Unlimited WordPress Theme</a> by Compete Themes', 'unlimited' ), esc_url( $site_url ) );
                 echo apply_filters('footer_text', $footer_text );
             ?>
