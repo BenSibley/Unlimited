@@ -439,15 +439,6 @@ function ct_unlimited_set_customizer_values() {
 }
 add_action( 'admin_init', 'ct_unlimited_set_customizer_values' );
 
-// add the ad for Unlimited Pro
-function ct_unlimited_customize_preview_js() { ?>
-	<script>
-		jQuery('#customize-info').append('<div class="upgrades-ad"><a href="<?php echo esc_url('https://www.competethemes.com/unlimited-pro/');?>" target="_blank"><?php _e('Have you seen Unlimited Pro?','unlimited');?> <span>&rarr;</span></a></div>');
-	</script>
-<?php }
-
-add_action('customize_controls_print_footer_scripts', 'ct_unlimited_customize_preview_js');
-
 // ajax in search bar content when updated
 function unlimited_update_search_bar_ajax(){
 
@@ -469,3 +460,58 @@ function unlimited_ajaxurl() { ?>
 <?php
 }
 add_action('wp_head','unlimited_ajaxurl');
+
+function ct_unlimited_customizer_ad_array() {
+
+	// create array of ad text
+	$ads_array = array(
+		'Have you seen Unlimited Pro?'  => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=have-you-seen-unlimited-pro&utm_campaign=customizer-ad',
+		'Upgrade to Unlimited Pro'      => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=upgrade-to-unlimited-pro&utm_campaign=customizer-ad',
+		'Check out Unlimited Pro'       => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=check-out-unlimited-pro&utm_campaign=customizer-ad',
+		'Unlimited Pro'                 => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=unlimited-pro&utm_campaign=customizer-ad',
+		'Premium Upgrade for Unlimited' => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=premium-upgrade-for-unlimited&utm_campaign=customizer-ad'
+	);
+	return $ads_array;
+}
+function ct_unlimited_assign_customizer_ad() {
+
+	// if the ad text isn't set already
+	if( ! get_option('ct_unlimited_ad_text') ) {
+
+		$ads_array = ct_unlimited_customizer_ad_array();
+
+		// randomly pick one
+		$ad = rand(0,4);
+
+		// get randomly selected ad from array
+		$ad = array_slice($ads_array, $ad, 1);
+
+		// the phrase from the array
+		$ad_text = key($ad);
+
+		// sanitize
+		$ad_text = esc_html($ad_text);
+
+		// update database
+		update_option('ct_unlimited_ad_text', $ad_text);
+	}
+}
+add_action('admin_init', 'ct_unlimited_assign_customizer_ad');
+
+function ct_unlimited_customize_preview_js() {
+
+	// get the ad text
+	$ad = get_option('ct_unlimited_ad_text');
+
+	// get the array of ads
+	$ads_array = ct_unlimited_customizer_ad_array();
+
+	// get the link based on the ad text
+	$link = $ads_array[$ad];
+
+	?>
+	<script>
+		jQuery('#customize-info').append('<div class="upgrades-ad"><a href="<?php echo esc_url($link);?>" target="_blank"><?php echo esc_html($ad) ?> <span>&rarr;</span></a></div>');
+	</script>
+<?php }
+add_action('customize_controls_print_footer_scripts', 'ct_unlimited_customize_preview_js');
