@@ -509,9 +509,8 @@ function ct_unlimited_customize_preview_js() {
 	// get the link based on the ad text
 	$link = $ads_array[$ad];
 
-	?>
-	<script>
-		jQuery('#customize-info').append('<div class="upgrades-ad"><a href="<?php echo esc_url($link);?>" target="_blank"><?php echo esc_html($ad) ?> <span>&rarr;</span></a></div>');
-	</script>
-<?php }
+	$content = "<script>jQuery('#customize-info').append('<div class=\"upgrades-ad\"><a href=\"" . esc_url($link) . "\" target=\"_blank\">" . esc_html($ad) . "<span>&rarr;</span></a></div>');</script>";
+
+	echo apply_filters('ct_unlimited_customizer_ad', $content);
+}
 add_action('customize_controls_print_footer_scripts', 'ct_unlimited_customize_preview_js');
