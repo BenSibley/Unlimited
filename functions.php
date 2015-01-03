@@ -524,3 +524,25 @@ function ct_unlimited_sticky_post_marker() {
 	}
 }
 add_action( 'archive_post_before', 'ct_unlimited_sticky_post_marker' );
+
+function ct_unlimited_reset_customizer_options() {
+
+	// validate name and value
+	if( empty( $_POST['ct_unlimited_reset_customizer'] ) || 'ct_unlimited_reset_customizer_settings' !== $_POST['ct_unlimited_reset_customizer'] )
+		return;
+
+	// validate nonce
+	if( ! wp_verify_nonce( $_POST['ct_unlimited_reset_customizer_nonce'], 'ct_unlimited_reset_customizer_nonce' ) )
+		return;
+
+	// validate user permissions
+	if( ! current_user_can( 'manage_options' ) )
+		return;
+
+	// delete customizer mods
+	remove_theme_mods();
+
+	// safely redirect
+	wp_safe_redirect( admin_url( 'themes.php?page=unlimited-options' ) ); exit;
+}
+add_action( 'admin_init', 'ct_unlimited_reset_customizer_options' );

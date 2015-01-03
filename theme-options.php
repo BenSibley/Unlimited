@@ -40,6 +40,23 @@ function ct_unlimited_options_content(){
 			    <a target="_blank" class="button-primary" href="https://www.competethemes.com/wordpress-resources/"><?php _e('View Resources', 'unlimited'); ?></a>
 		    </p>
 	    </div>
+        <div class="content content-delete-settings">
+            <h3><?php _e('Delete Settings', 'unlimited'); ?></h3>
+            <p>
+                <?php
+                $url = admin_url('customize.php');
+                $text = sprintf( __( '<strong>Warning:</strong> Clicking this button will permanently delete your settings in the <a href="%s">Customizer</a>', 'unlimited' ), esc_url( $url ) );
+                echo $text . ".";
+                ?>
+            </p>
+            <form method="post">
+                <input type="hidden" name="ct_unlimited_reset_customizer" value="ct_unlimited_reset_customizer_settings" />
+                <p>
+                    <?php wp_nonce_field( 'ct_unlimited_reset_customizer_nonce', 'ct_unlimited_reset_customizer_nonce' ); ?>
+                    <?php submit_button( __( 'Delete Customizer Settings', 'unlimited' ), 'delete', 'delete', false ); ?>
+                </p>
+            </form>
+        </div>
         <?php hybrid_do_atomic( 'theme_options_after' ); ?>
     </div>
 <?php } ?>
