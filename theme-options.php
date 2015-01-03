@@ -11,6 +11,7 @@ function ct_unlimited_options_content(){
     ?>
     <div id="unlimited-dashboard-wrap" class="wrap">
         <h2><?php _e('Unlimited Dashboard', 'unlimited'); ?></h2>
+        <?php hybrid_do_atomic( 'theme_options_before' ); ?>
         <div class="content content-customization">
             <h3><?php _e('Customization', 'unlimited'); ?></h3>
             <p><?php _e('Click the "Customize" link in your menu, or use the button below to get started customizing Unlimited', 'unlimited'); ?>.</p>
@@ -39,5 +40,6 @@ function ct_unlimited_options_content(){
 			    <a target="_blank" class="button-primary" href="https://www.competethemes.com/wordpress-resources/"><?php _e('View Resources', 'unlimited'); ?></a>
 		    </p>
 	    </div>
+        <?php hybrid_do_atomic( 'theme_options_after' ); ?>
     </div>
 <?php } ?>
