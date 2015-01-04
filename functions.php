@@ -246,7 +246,7 @@ function ct_unlimited_custom_excerpt_length( $length ) {
 		return 25;
 	}
 }
-add_filter( 'excerpt_length', 'ct_unlimited_custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'ct_unlimited_custom_excerpt_length', 99 );
 
 // for displaying featured images
 if( ! function_exists( 'ct_unlimited_featured_image' ) ) {
@@ -456,12 +456,14 @@ function ct_unlimited_wp_backwards_compatibility() {
 }
 add_action('init', 'ct_unlimited_wp_backwards_compatibility');
 
-/*
- * Set the date format for new users.
- * Needs to be done this way so that the date defaults to the right format, but can
- * still be changed from the Settings menu
- */
-function ct_unlimited_set_date_format() {
+// set default values
+function ct_unlimited_set_defaults() {
+
+	/*
+	 * Set the date format for new users.
+	 * Needs to be done this way so that the date defaults to the right format, but can
+	 * still be changed from the Settings menu
+	 */
 
 	// if the date format has never been set by Unlimited, set it
 	if( get_option('ct_unlimited_date_format_origin') != 'updated' ) {

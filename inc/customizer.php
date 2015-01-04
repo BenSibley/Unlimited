@@ -411,34 +411,6 @@ function ct_unlimited_sanitize_comments_setting($input){
 
 /***** Helper Functions *****/
 
-/*
- * Sets default values in customizer.
- */
-function ct_unlimited_set_customizer_values() {
-
-	// search bar
-	if( ! get_theme_mod('search_bar') ) {
-		set_theme_mod( 'search_bar', 'show' );
-	}
-	// layout
-	if( ! get_theme_mod('layout') ) {
-		set_theme_mod( 'layout', 'right' );
-	}
-	// full post
-	if( ! get_theme_mod('full_post') ) {
-		set_theme_mod( 'full_post', 'no' );
-	}
-	// excerpt length
-	if( ! get_theme_mod('excerpt_length') ) {
-		set_theme_mod( 'excerpt_length', '25' );
-	}
-	// comments display
-	if( ! get_theme_mod( 'comments_display' ) ) {
-		set_theme_mod( 'comments_display', array( 'post', 'page', 'attachment', 'none' ) );
-	}
-}
-add_action( 'admin_init', 'ct_unlimited_set_customizer_values' );
-
 // ajax in search bar content when updated
 function unlimited_update_search_bar_ajax(){
 
