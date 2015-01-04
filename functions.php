@@ -456,14 +456,12 @@ function ct_unlimited_wp_backwards_compatibility() {
 }
 add_action('init', 'ct_unlimited_wp_backwards_compatibility');
 
-// set default values
-function ct_unlimited_set_defaults() {
-
-	/*
-	 * Set the date format for new users.
-	 * Needs to be done this way so that the date defaults to the right format, but can
-	 * still be changed from the Settings menu
-	 */
+/*
+ * Set the date format for new users.
+ * Needs to be done this way so that the date defaults to the right format, but can
+ * still be changed from the Settings menu
+ */
+function ct_unlimited_set_date_format() {
 
 	// if the date format has never been set by Unlimited, set it
 	if( get_option('ct_unlimited_date_format_origin') != 'updated' ) {
@@ -473,7 +471,7 @@ function ct_unlimited_set_defaults() {
 		add_option('ct_unlimited_date_format_origin', 'updated');
 	}
 }
-add_action( 'admin_init', 'ct_unlimited_set_date_format' );
+add_action( 'after_switch_theme', 'ct_unlimited_set_date_format' );
 
 /*
  * WP will apply the ".menu-primary-items" class & id to the containing <div> instead of <ul>
