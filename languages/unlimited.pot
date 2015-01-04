@@ -1,14 +1,14 @@
-# Copyright (C) 2014 Compete Themes
+# Copyright (C) 2015 Compete Themes
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Unlimited 1.0\n"
+"Project-Id-Version: Unlimited 1.01\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-12-02 18:02:50+00:00\n"
+"POT-Creation-Date: 2015-01-04 21:26:35+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.9\n"
@@ -51,10 +51,6 @@ msgstr ""
 
 #: content/archive-header.php:41
 msgid "Date archive for:"
-msgstr ""
-
-#: content/archive-header.php:52
-msgid "Featured post"
 msgstr ""
 
 #: content/post-author.php:6
@@ -143,188 +139,240 @@ msgid ""
 "correct or try the search form below to find what you were looking for."
 msgstr ""
 
-#: content-page.php:10 content.php:12
+#: content-page.php:12 content.php:14
 msgid "Pages:"
 msgstr ""
 
-#: footer.php:16
+#: footer.php:24
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Unlimited WordPress Theme</a> by Compete "
 "Themes"
 msgstr ""
 
-#: functions.php:36
+#: functions.php:37
 msgid "Primary"
 msgstr ""
 
-#: functions.php:56
+#: functions.php:57
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:58
+#: functions.php:59
 msgid ""
 "Widgets in this area will be shown in the sidebar next to the main post "
 "content"
 msgstr ""
 
-#: functions.php:85
+#: functions.php:86
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:90
+#: functions.php:91
 msgid "Reply"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:118
 msgid "optional"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:126
 msgid "Name"
 msgstr ""
 
-#: functions.php:126
+#: functions.php:127
 msgid "John Doe"
 msgstr ""
 
-#: functions.php:132
+#: functions.php:133
 msgid "Email"
 msgstr ""
 
-#: functions.php:133
+#: functions.php:134
 msgid "name@email.com"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:140
 msgid "Website"
 msgstr ""
 
-#: functions.php:140
+#: functions.php:141
 msgid "http://example.com"
 msgstr ""
 
-#: functions.php:154
+#: functions.php:155
 msgid "Comment"
 msgstr ""
 
-#: functions.php:155
+#: functions.php:156
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:201 functions.php:214
+#: functions.php:202 functions.php:215
 msgid "Read More"
 msgstr ""
 
-#: header.php:22
+#: functions.php:558
+msgid "Customizer settings deleted"
+msgstr ""
+
+#: header.php:24
 msgid "Skip to content"
 msgstr ""
 
-#: inc/customizer.php:84
+#: inc/customizer.php:12
+msgid "Front Page"
+msgstr ""
+
+#: inc/customizer.php:14
+msgid "Menus"
+msgstr ""
+
+#: inc/customizer.php:92
 msgid "Logo Upload"
 msgstr ""
 
-#: inc/customizer.php:99
+#: inc/customizer.php:107
 msgid "Upload custom logo."
 msgstr ""
 
-#: inc/customizer.php:115
+#: inc/customizer.php:123
 msgid "Social Media Icons"
 msgstr ""
 
-#: inc/customizer.php:132
+#: inc/customizer.php:140
 msgid "address:"
 msgstr ""
 
-#: inc/customizer.php:147
+#: inc/customizer.php:155
 msgid "url:"
 msgstr ""
 
-#: inc/customizer.php:161
+#: inc/customizer.php:169
 msgid "Search Bar"
 msgstr ""
 
-#: inc/customizer.php:176
+#: inc/customizer.php:184
 msgid "Show search bar at top of site?"
 msgstr ""
 
-#: inc/customizer.php:180 inc/customizer.php:320
+#: inc/customizer.php:188 inc/customizer.php:328
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:181 inc/customizer.php:321
+#: inc/customizer.php:189 inc/customizer.php:329
 msgid "Hide"
 msgstr ""
 
-#: inc/customizer.php:189
-msgid "Layout"
+#: inc/customizer.php:197
+msgid "Layouts"
 msgstr ""
 
-#: inc/customizer.php:203
-msgid "Choose Your Layout:"
+#: inc/customizer.php:211
+msgid "Choose your layout:"
 msgstr ""
 
-#: inc/customizer.php:208 inc/customizer.php:343
+#: inc/customizer.php:216 inc/customizer.php:357
 msgid "Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:209 inc/customizer.php:344
+#: inc/customizer.php:217 inc/customizer.php:358
 msgid "Left sidebar"
 msgstr ""
 
-#: inc/customizer.php:217
+#: inc/customizer.php:225
 msgid "Blog"
 msgstr ""
 
-#: inc/customizer.php:230
+#: inc/customizer.php:238
 msgid "Show full posts on blog?"
 msgstr ""
 
-#: inc/customizer.php:235 inc/customizer.php:358
+#: inc/customizer.php:243 inc/customizer.php:378
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:236 inc/customizer.php:359
+#: inc/customizer.php:244 inc/customizer.php:379
 msgid "No"
 msgstr ""
 
-#: inc/customizer.php:249
+#: inc/customizer.php:257
 msgid "Excerpt length"
 msgstr ""
 
-#: inc/customizer.php:260
-msgid "Comments"
+#: inc/customizer.php:268
+msgid "Comment Display"
 msgstr ""
 
-#: inc/customizer.php:274
+#: inc/customizer.php:282
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:279 inc/customizer.php:374
+#: inc/customizer.php:287 inc/customizer.php:394
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:280 inc/customizer.php:375
+#: inc/customizer.php:288 inc/customizer.php:395
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:281 inc/customizer.php:376
+#: inc/customizer.php:289 inc/customizer.php:396
 msgid "Attachments"
 msgstr ""
 
-#: inc/customizer.php:282 inc/customizer.php:377
+#: inc/customizer.php:290 inc/customizer.php:397
 msgid "Do not show"
 msgstr ""
 
-#: inc/customizer.php:291
+#: inc/customizer.php:299
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:304
+#: inc/customizer.php:312
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: inc/customizer.php:426
+#: inc/customizer.php:359
+msgid "No sidebar - Narrow"
+msgstr ""
+
+#: inc/customizer.php:360
+msgid "No sidebar - Wide"
+msgstr ""
+
+#: inc/customizer.php:361
+msgid "Two column - Right sidebar"
+msgstr ""
+
+#: inc/customizer.php:362
+msgid "Two column - Left sidebar"
+msgstr ""
+
+#: inc/customizer.php:363
+msgid "Two column - No Sidebar - Narrow"
+msgstr ""
+
+#: inc/customizer.php:364
+msgid "Two column - No Sidebar - Wide"
+msgstr ""
+
+#: inc/customizer.php:440
 msgid "Have you seen Unlimited Pro?"
+msgstr ""
+
+#: inc/customizer.php:441
+msgid "Upgrade to Unlimited Pro"
+msgstr ""
+
+#: inc/customizer.php:442
+msgid "Check out Unlimited Pro"
+msgstr ""
+
+#: inc/customizer.php:443
+msgid "Unlimited Pro"
+msgstr ""
+
+#: inc/customizer.php:444
+msgid "Premium Upgrade for Unlimited"
 msgstr ""
 
 #: inc/user-profile.php:15
@@ -371,60 +419,74 @@ msgstr ""
 msgid "Unlimited Dashboard"
 msgstr ""
 
-#: theme-options.php:15
+#: theme-options.php:16
 msgid "Customization"
 msgstr ""
 
-#: theme-options.php:16
+#: theme-options.php:17
 msgid ""
 "Click the \"Customize\" link in your menu, or use the button below to get "
 "started customizing Unlimited"
 msgstr ""
 
-#: theme-options.php:18
+#: theme-options.php:19
 msgid "Use Customizer"
 msgstr ""
 
-#: theme-options.php:22
+#: theme-options.php:23
 msgid "Support"
 msgstr ""
 
-#: theme-options.php:23
+#: theme-options.php:24
 msgid ""
 "You can find the knowledgebase, changelog, support forum, and more in the "
 "Unlimited Support Center"
 msgstr ""
 
-#: theme-options.php:25
+#: theme-options.php:26
 msgid "Visit Support Center"
 msgstr ""
 
-#: theme-options.php:29
+#: theme-options.php:30
 msgid "Unlimited Pro ($49)"
 msgstr ""
 
-#: theme-options.php:30
+#: theme-options.php:31
 msgid ""
 "Unlimited Pro is a premium upgrade for Unlimited. It has custom colors, new "
 "layouts, background images, and more"
 msgstr ""
 
-#: theme-options.php:32
+#: theme-options.php:33
 msgid "See Full Feature List"
 msgstr ""
 
-#: theme-options.php:36
+#: theme-options.php:37
 msgid "WordPress Resources"
 msgstr ""
 
-#: theme-options.php:37
+#: theme-options.php:38
 msgid ""
 "Save time and money searching for WordPress products by following our "
 "recommendations"
 msgstr ""
 
-#: theme-options.php:39
+#: theme-options.php:40
 msgid "View Resources"
+msgstr ""
+
+#: theme-options.php:44
+msgid "Delete Settings"
+msgstr ""
+
+#: theme-options.php:48
+msgid ""
+"<strong>Warning:</strong> Clicking this button will permanently delete your "
+"settings in the <a href=\"%s\">Customizer</a>"
+msgstr ""
+
+#: theme-options.php:56
+msgid "Delete Customizer Settings"
 msgstr ""
 
 #. Theme Name of the plugin/theme
@@ -456,7 +518,7 @@ msgstr ""
 msgid "Full-width"
 msgstr ""
 
-#: functions.php:80
+#: functions.php:81
 msgctxt "unlimited"
 msgid "said:"
 msgstr ""
