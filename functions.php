@@ -312,7 +312,7 @@ function ct_unlimited_social_array(){
 	$social_sites = array(
 		'twitter' => 'unlimited_twitter_profile',
 		'facebook' => 'unlimited_facebook_profile',
-		'googleplus' => 'unlimited_googleplus_profile',
+		'google-plus' => 'unlimited_google_plus_profile',
 		'pinterest' => 'unlimited_pinterest_profile',
 		'linkedin' => 'unlimited_linkedin_profile',
 		'youtube' => 'unlimited_youtube_profile',
