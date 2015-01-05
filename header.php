@@ -18,10 +18,10 @@
 
 	<?php hybrid_do_atomic( 'body_before' ); ?>
 
-	<div class="overflow-container">
+	<!--skip to content link-->
+	<a class="skip-content" id="skip-content" href="#main"><?php _e('Skip to content', 'unlimited'); ?></a>
 
-		<!--skip to content link-->
-		<a class="skip-content" id="skip-content" href="#main"><?php _e('Skip to content', 'unlimited'); ?></a>
+	<div class="overflow-container">
 
 		<header class="site-header" id="site-header" role="banner">
 
