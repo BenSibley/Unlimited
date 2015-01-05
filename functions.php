@@ -351,21 +351,22 @@ function ct_unlimited_get_social_url($source, $site){
 if( ! function_exists('ct_unlimited_social_icons_output') ) {
 	function ct_unlimited_social_icons_output($source) {
 
-		//
-		if( $source == 'header' ) {
-			$social_sites = ct_unlimited_social_array();
-			foreach ( $social_sites as $social_site => $value ) {
+		// get social sites array
+		$social_sites = ct_unlimited_social_array();
+
+		// store the site name and url
+		foreach ( $social_sites as $social_site => $profile ) {
+
+			if( $source == 'header') {
 
 				if ( strlen( get_theme_mod( $social_site ) ) > 0 ) {
 					$active_sites[$social_site] = $social_site;
 				}
 			}
-		} elseif( $source == 'author' ) {
-			$social_sites = ct_unlimited_social_array();
-			foreach ( $social_sites as $key => $social_site ) {
+			elseif( $source == 'author' ) {
 
-				if ( strlen( get_the_author_meta( $social_site ) ) > 0 ) {
-					$active_sites[$social_site] = $key;
+				if ( strlen( get_the_author_meta( $profile ) ) > 0 ) {
+					$active_sites[$profile] = $social_site;
 				}
 			}
 		}
