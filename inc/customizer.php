@@ -113,7 +113,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	/***** Social Media Icons *****/
 
 	// get the social sites array
-	$social_sites = ct_unlimited_social_site_list();
+	$social_sites = ct_unlimited_social_array();
 
 	// set a priority used to order the social sites
 	$priority = 5;
@@ -125,7 +125,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	) );
 
 	// create a setting and control for each social site
-	foreach( $social_sites as $social_site ) {
+	foreach( $social_sites as $social_site => $value ) {
 		// if email icon
 		if( $social_site == 'email' ) {
 			// setting

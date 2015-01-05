@@ -299,13 +299,6 @@ if ( function_exists( 'dsq_options' ) ) {
     add_filter( 'comments_template', 'dsq_comments_template', 99 ); // You can use any priority higher than '10'
 }
 
-// list social media sites
-function ct_unlimited_social_site_list(){
-
-    $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'github', 'hacker-news', 'steam', 'vk', 'weibo', 'tencent-weibo', 'email' );
-    return $social_sites;
-}
-
 // associative array of social media sites
 function ct_unlimited_social_array(){
 
@@ -360,8 +353,8 @@ if( ! function_exists('ct_unlimited_social_icons_output') ) {
 
 		//
 		if( $source == 'header' ) {
-			$social_sites = ct_unlimited_social_site_list();
-			foreach ( $social_sites as $social_site ) {
+			$social_sites = ct_unlimited_social_array();
+			foreach ( $social_sites as $social_site => $value ) {
 
 				if ( strlen( get_theme_mod( $social_site ) ) > 0 ) {
 					$active_sites[$social_site] = $social_site;
