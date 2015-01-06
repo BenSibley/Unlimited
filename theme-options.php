@@ -41,11 +41,11 @@ function ct_unlimited_options_content(){
 		    </p>
 	    </div>
         <div class="content content-delete-settings">
-            <h3><?php _e('Delete Settings', 'unlimited'); ?></h3>
+            <h3><?php _e('Reset Customizer Settings', 'unlimited'); ?></h3>
             <p>
                 <?php
                 $url = admin_url('customize.php');
-                $text = sprintf( __( '<strong>Warning:</strong> Clicking this button will permanently delete your settings in the <a href="%s">Customizer</a>', 'unlimited' ), esc_url( $url ) );
+                $text = sprintf( __( '<strong>Warning:</strong> Clicking this button will erase your current settings in the <a href="%s">Customizer</a>', 'unlimited' ), esc_url( $url ) );
                 echo $text . ".";
                 ?>
             </p>
@@ -53,7 +53,7 @@ function ct_unlimited_options_content(){
                 <input type="hidden" name="ct_unlimited_reset_customizer" value="ct_unlimited_reset_customizer_settings" />
                 <p>
                     <?php wp_nonce_field( 'ct_unlimited_reset_customizer_nonce', 'ct_unlimited_reset_customizer_nonce' ); ?>
-                    <?php submit_button( __( 'Delete Customizer Settings', 'unlimited' ), 'delete', 'delete', false ); ?>
+                    <?php submit_button( __( 'Reset Customizer Settings', 'unlimited' ), 'delete', 'delete', false ); ?>
                 </p>
             </form>
         </div>
