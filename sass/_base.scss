@@ -295,6 +295,12 @@ a img {
     outline: none;
   }
 }
+.admin-bar {
+
+  .skip-content:focus {
+    top: 32px;
+  }
+}
 
 /* 800px */
 @media all and (min-width: 50em) {
