@@ -42,7 +42,8 @@
   .content {
     width: 27%;
   }
-  .content:nth-child(3n + 5) {
+
+  .content-resources {
     clear: left;
   }
 

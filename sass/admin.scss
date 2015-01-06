@@ -48,10 +48,9 @@
 
   .content {
     width: 27%;
-
-    &:nth-child(3n + 5) {
-      clear: left;
-    }
+  }
+  .content-resources {
+    clear: left;
   }
   .content-customization,
   .content-support,
