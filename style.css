@@ -106,6 +106,7 @@ body {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .overflow-container {
@@ -474,7 +475,7 @@ a img {
 }
 /* Styles for the primary menu */
 .menu-primary {
-  max-height: 0px;
+  max-height: 0;
   text-align: center;
   -webkit-transition: max-height 0.25s ease-in-out;
   transition: max-height 0.25s ease-in-out;
