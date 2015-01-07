@@ -174,7 +174,7 @@ jQuery(document).ready(function($){
     // get height of primary menu
     function calculateMenuHeight() {
 
-        if( $('#menu-primary-items').length > 0 ) {
+        if( $('#menu-primary-items').length ) {
             var menuHeight = $('#menu-primary-items').height();
         } else {
             var menuHeight = $('.menu-unset').height();
@@ -226,6 +226,9 @@ jQuery(document).ready(function($){
                 // add an open class
                 $(this).addClass('open');
 
+                // remove 'closed' class to enable link
+                $(this).removeClass('closed');
+
                 // get the submenu
                 var submenu = $(this).children('ul');
 
@@ -265,9 +268,6 @@ jQuery(document).ready(function($){
 
                     }, 200)
                 }
-
-                // remove 'closed' class to enable link
-                $(this).removeClass('closed');
             }
         }
     }
