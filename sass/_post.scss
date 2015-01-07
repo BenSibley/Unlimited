@@ -34,10 +34,9 @@
 
   a {
     @extend %light-link;
-    @extend %thirteen-pixels;
   }
-  a,
   span {
+    @extend %thirteen-pixels;
     opacity: 0;
     position: absolute;
     top: 0;
@@ -178,7 +177,6 @@
   .post-meta {
     padding: $baseline-height / 2;
 
-    a,
     span {
       font-weight: 300;
       opacity: 1;

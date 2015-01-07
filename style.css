@@ -35,7 +35,7 @@ h2 {
 
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .site-description, .menu-primary-items a,
-.menu-unset > ul a, .post-meta a, .post-categories, .further-reading span, .post-author p,
+.menu-unset > ul a, .post-meta span, .post-categories, .further-reading span, .post-author p,
 .post-author > a, .post-tags a, .comment-content, .comment-notes, .design-credit, .sticky-status, .widget, .gallery-caption {
   font-size: 0.8125em;
   /* 13px / 16px */
@@ -787,7 +787,6 @@ a img {
   background: #3a3a3a;
   text-align: center;
 }
-.post-meta a,
 .post-meta span {
   opacity: 0;
   position: absolute;
@@ -922,7 +921,6 @@ a img {
   .post-meta {
     padding: 0.75em;
   }
-  .post-meta a,
   .post-meta span {
     font-weight: 300;
     opacity: 1;
