@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Unlimited 1.01\n"
+"Project-Id-Version: Unlimited 1.02\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-01-04 21:26:35+00:00\n"
+"POT-Creation-Date: 2015-01-08 16:26:53+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,13 +17,13 @@ msgstr ""
 msgid "Be First to Comment"
 msgstr ""
 
-#: comments.php:26 comments.php:45 comments.php:66 content/post-meta.php:17
-#: content/post-meta.php:19
+#: comments.php:26 comments.php:45 comments.php:66 content/post-meta.php:20
+#: content/post-meta.php:22
 msgid "One Comment"
 msgstr ""
 
-#: comments.php:26 comments.php:45 comments.php:66 content/post-meta.php:17
-#: content/post-meta.php:19
+#: comments.php:26 comments.php:45 comments.php:66 content/post-meta.php:20
+#: content/post-meta.php:22
 msgid "% Comments"
 msgstr ""
 
@@ -69,11 +69,11 @@ msgstr ""
 msgid "View all posts in %s"
 msgstr ""
 
-#: content/post-meta.php:17
+#: content/post-meta.php:20
 msgid "Comments closed"
 msgstr ""
 
-#: content/post-meta.php:19
+#: content/post-meta.php:22
 msgid "Leave a Comment"
 msgstr ""
 
@@ -211,11 +211,11 @@ msgstr ""
 msgid "Read More"
 msgstr ""
 
-#: functions.php:558
+#: functions.php:562
 msgid "Customizer settings deleted"
 msgstr ""
 
-#: header.php:24
+#: header.php:22
 msgid "Skip to content"
 msgstr ""
 
@@ -367,7 +367,7 @@ msgstr ""
 msgid "Check out Unlimited Pro"
 msgstr ""
 
-#: inc/customizer.php:443
+#: inc/customizer.php:443 theme-options.php:30
 msgid "Unlimited Pro"
 msgstr ""
 
@@ -447,10 +447,6 @@ msgstr ""
 msgid "Visit Support Center"
 msgstr ""
 
-#: theme-options.php:30
-msgid "Unlimited Pro ($49)"
-msgstr ""
-
 #: theme-options.php:31
 msgid ""
 "Unlimited Pro is a premium upgrade for Unlimited. It has custom colors, new "
@@ -475,18 +471,14 @@ msgstr ""
 msgid "View Resources"
 msgstr ""
 
-#: theme-options.php:44
-msgid "Delete Settings"
+#: theme-options.php:44 theme-options.php:56
+msgid "Reset Customizer Settings"
 msgstr ""
 
 #: theme-options.php:48
 msgid ""
-"<strong>Warning:</strong> Clicking this button will permanently delete your "
+"<strong>Warning:</strong> Clicking this button will erase your current "
 "settings in the <a href=\"%s\">Customizer</a>"
-msgstr ""
-
-#: theme-options.php:56
-msgid "Delete Customizer Settings"
 msgstr ""
 
 #. Theme Name of the plugin/theme
