@@ -175,7 +175,7 @@ if ( !class_exists( 'Hybrid' ) ) {
 			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'customize.php' );
 
 			/* Load the framework filters. */
-//			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'filters.php' );
+			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'filters.php' );
 
 			/* Load the <head> functions. */
 			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'head.php' );
