@@ -1378,6 +1378,13 @@ li.pingback {
     float: right;
     margin: 1.5em 3.125% 1.5em 0;
   }
+
+  .widget_nav_menu .menu-item-has-children a:hover + ul, .widget_nav_menu .menu-item-has-children a:active + ul, .widget_nav_menu .menu-item-has-children a:focus + ul {
+    top: 1.5em;
+  }
+  .widget_nav_menu .menu-item-has-children ul:hover, .widget_nav_menu .menu-item-has-children ul:active, .widget_nav_menu .menu-item-has-children ul:focus {
+    top: 1.5em;
+  }
 }
 /* gallery styles copied from Hybrid Core */
 /**

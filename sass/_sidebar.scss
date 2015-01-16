@@ -52,4 +52,28 @@
     float: left;
     margin: $baseline-height 0 $baseline-height $column;
   }
+  .widget_nav_menu {
+
+    .menu-item-has-children {
+
+      a {
+
+        &:hover,
+        &:active,
+        &:focus {
+
+          + ul {
+            top: $baseline-height;
+          }
+        }
+      }
+      ul {
+        &:hover,
+        &:active,
+        &:focus {
+          top: $baseline-height;
+        }
+      }
+    }
+  }
 }
