@@ -108,7 +108,6 @@ if( ! function_exists( 'ct_unlimited_customize_comments' ) ) {
 					<?php edit_comment_link( 'Edit', '|' ); ?>
 				</div>
 			</article>
-		</li>
 	<?php
 	}
 }
