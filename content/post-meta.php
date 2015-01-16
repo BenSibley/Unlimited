@@ -1,4 +1,4 @@
-<div id="post-meta" class="post-meta">
+<div class="post-meta">
 	<div class="date-meta">
 		<a href="<?php echo get_month_link( get_the_date('Y'), get_the_date('n') ); ?>" title="Posts from <?php echo get_the_date('F'); ?>">
 			<i class="fa fa-calendar"></i>
