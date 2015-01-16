@@ -19,10 +19,7 @@
   .children {
     position: relative;
     background: white;
-    border: solid 1px $gray-85;
-    border-top: none;
-    margin: -13px 0 $baseline-height;
-    padding: 1px $baseline-height $baseline-height;
+    margin: $baseline-height 0 0;
   }
 }
 li.comment,
