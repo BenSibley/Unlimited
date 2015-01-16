@@ -34,6 +34,16 @@
 
   a {
     @extend %light-link;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+
+      span {
+        text-decoration: underline;
+      }
+    }
   }
   span {
     @extend %thirteen-pixels;

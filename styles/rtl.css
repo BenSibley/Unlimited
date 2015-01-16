@@ -788,6 +788,12 @@ a img {
   background: #3a3a3a;
   text-align: center;
 }
+.post-meta a:hover, .post-meta a:active, .post-meta a:focus {
+  text-decoration: none;
+}
+.post-meta a:hover span, .post-meta a:active span, .post-meta a:focus span {
+  text-decoration: underline;
+}
 .post-meta span {
   opacity: 0;
   position: absolute;
