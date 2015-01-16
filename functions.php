@@ -52,7 +52,7 @@ add_action( 'after_setup_theme', 'ct_unlimited_remove_cleaner_gallery', 11 );
 // register widget areas
 function ct_unlimited_register_widget_areas(){
 
-    /* register after post content widget area */
+    /* register primary sidebar widget area */
     hybrid_register_sidebar( array(
         'name'         => __( 'Primary Sidebar', 'unlimited' ),
         'id'           => 'primary',
