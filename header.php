@@ -27,7 +27,7 @@
 
 			<?php hybrid_do_atomic( 'header_before' ); ?>
 
-			<?php ct_unlimited_social_icons_output('header'); ?>
+			<?php unlimited_social_icons_output('header'); ?>
 
 			<?php if( get_theme_mod( 'search_bar' ) != 'hide' ) get_template_part('content/search-bar'); ?>
 

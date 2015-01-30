@@ -3,10 +3,10 @@
 /*
  * Front-end scripts
  */
-function ct_unlimited_load_scripts_styles() {
+function unlimited_load_scripts_styles() {
 
 	// main JS file
-	wp_enqueue_script('ct-unlimited-js', get_template_directory_uri() . '/js/build/production.min.js#ct_unlimited_asyncload', array('jquery'),'', true);
+	wp_enqueue_script('ct-unlimited-js', get_template_directory_uri() . '/js/build/production.min.js#unlimited_asyncload', array('jquery'),'', true);
 
 	// Google Fonts (required to register outside scripts first)
 	wp_register_style( 'ct-unlimited-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:400,300');
@@ -27,12 +27,12 @@ function ct_unlimited_load_scripts_styles() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action('wp_enqueue_scripts', 'ct_unlimited_load_scripts_styles' );
+add_action('wp_enqueue_scripts', 'unlimited_load_scripts_styles' );
 
 /*
  * Back-end scripts
  */
-function ct_unlimited_enqueue_admin_styles($hook){
+function unlimited_enqueue_admin_styles($hook){
 
 	// if is user profile page
 	if('profile.php' == $hook || 'user-edit.php' == $hook ){
@@ -41,7 +41,7 @@ function ct_unlimited_enqueue_admin_styles($hook){
 		wp_enqueue_media();
 
 		// enqueue the JS needed to utilize media uploader on profile image upload
-		wp_enqueue_script('ct-unlimited-profile-image-uploader', get_template_directory_uri() . '/js/build/profile-image-uploader.min.js#ct_unlimited_asyncload');
+		wp_enqueue_script('ct-unlimited-profile-image-uploader', get_template_directory_uri() . '/js/build/profile-image-uploader.min.js#unlimited_asyncload');
 	}
 	// if theme options page
 	if( 'appearance_page_unlimited-options' == $hook ) {
@@ -50,12 +50,12 @@ function ct_unlimited_enqueue_admin_styles($hook){
 		wp_enqueue_style('ct-unlimited-admin-styles', get_template_directory_uri() . '/styles/admin.min.css');
 	}
 }
-add_action('admin_enqueue_scripts',	'ct_unlimited_enqueue_admin_styles' );
+add_action('admin_enqueue_scripts',	'unlimited_enqueue_admin_styles' );
 
 /*
  * Customizer scripts
  */
-function ct_unlimited_enqueue_customizer_scripts(){
+function unlimited_enqueue_customizer_scripts(){
 
 	// stylesheet for customizer
 	wp_enqueue_style('ct-customizer-styles', get_template_directory_uri() . '/styles/customizer.min.css');
@@ -64,34 +64,34 @@ function ct_unlimited_enqueue_customizer_scripts(){
 	wp_enqueue_script('ct-unlimited-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js',array('jquery'),'',true);
 
 }
-add_action('customize_controls_enqueue_scripts','ct_unlimited_enqueue_customizer_scripts');
+add_action('customize_controls_enqueue_scripts','unlimited_enqueue_customizer_scripts');
 
 /*
  * Script for live updating with customizer options. Has to be loaded separately on customize_preview_init hook
  * transport => postMessage
  */
-function ct_unlimited_enqueue_customizer_post_message_scripts(){
+function unlimited_enqueue_customizer_post_message_scripts(){
 
 	// JS for live updating with customizer input
 	wp_enqueue_script('ct-unlimited-customizer-post-message-js', get_template_directory_uri() . '/js/build/postMessage.min.js',array('jquery'),'',true);
 
 }
-add_action('customize_preview_init','ct_unlimited_enqueue_customizer_post_message_scripts');
+add_action('customize_preview_init','unlimited_enqueue_customizer_post_message_scripts');
 
 // load scripts asynchronously
-function ct_unlimited_add_async_script($url) {
+function unlimited_add_async_script($url) {
 
 	// if async parameter not present, do nothing
-	if (strpos($url, '#ct_unlimited_asyncload') === false){
+	if (strpos($url, '#unlimited_asyncload') === false){
 		return $url;
 	}
 	// if async parameter present, add async attribute
-	return str_replace('#ct_unlimited_asyncload', '', $url)."' async='async";
+	return str_replace('#unlimited_asyncload', '', $url)."' async='async";
 }
-add_filter('clean_url', 'ct_unlimited_add_async_script', 11, 1);
+add_filter('clean_url', 'unlimited_add_async_script', 11, 1);
 
 // add custom editor styles
-function ct_unlimited_add_editor_styles() {
+function unlimited_add_editor_styles() {
 	add_editor_style( 'styles/custom-editor-style.min.css' );
 }
-add_action( 'admin_init', 'ct_unlimited_add_editor_styles' );
+add_action( 'admin_init', 'unlimited_add_editor_styles' );

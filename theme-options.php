@@ -1,13 +1,13 @@
 <?php
 
 /* create theme options page */
-function ct_unlimited_register_theme_page(){
-    add_theme_page( 'unlimited Dashboard', 'Unlimited Dashboard', 'edit_theme_options', 'unlimited-options', 'ct_unlimited_options_content', 'ct_unlimited_options_content');
+function unlimited_register_theme_page(){
+    add_theme_page( 'unlimited Dashboard', 'Unlimited Dashboard', 'edit_theme_options', 'unlimited-options', 'unlimited_options_content', 'unlimited_options_content');
 }
-add_action( 'admin_menu', 'ct_unlimited_register_theme_page' );
+add_action( 'admin_menu', 'unlimited_register_theme_page' );
 
 /* callback used to add content to options page */
-function ct_unlimited_options_content(){
+function unlimited_options_content(){
     ?>
     <div id="unlimited-dashboard-wrap" class="wrap">
         <h2><?php _e('Unlimited Dashboard', 'unlimited'); ?></h2>
@@ -50,9 +50,9 @@ function ct_unlimited_options_content(){
                 ?>
             </p>
             <form method="post">
-                <input type="hidden" name="ct_unlimited_reset_customizer" value="ct_unlimited_reset_customizer_settings" />
+                <input type="hidden" name="unlimited_reset_customizer" value="unlimited_reset_customizer_settings" />
                 <p>
-                    <?php wp_nonce_field( 'ct_unlimited_reset_customizer_nonce', 'ct_unlimited_reset_customizer_nonce' ); ?>
+                    <?php wp_nonce_field( 'unlimited_reset_customizer_nonce', 'unlimited_reset_customizer_nonce' ); ?>
                     <?php submit_button( __( 'Reset Customizer Settings', 'unlimited' ), 'delete', 'delete', false ); ?>
                 </p>
             </form>

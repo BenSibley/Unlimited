@@ -1,7 +1,7 @@
 <div <?php post_class(); ?>>
 	<?php hybrid_do_atomic( 'post_before' ); ?>
 	<article>
-	    <?php ct_unlimited_featured_image(); ?>
+	    <?php unlimited_featured_image(); ?>
         <?php get_template_part('content/post-meta'); ?>
 		<div class="post-padding-container">
 		    <div class='post-header'>

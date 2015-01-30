@@ -60,7 +60,7 @@
                 $('.social-media-icons').empty();
 
                 // for each social icon input in customizer
-                $('html', window.parent.document).find('#accordion-section-ct_unlimited_social_media_icons').find('input').each(function() {
+                $('html', window.parent.document).find('#accordion-section-unlimited_social_media_icons').find('input').each(function() {
 
                     if( $(this).val().length > 0 ) {
 

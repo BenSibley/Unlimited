@@ -1,7 +1,7 @@
 <?php
 
 // add profile image option for contributors roles and higher
-function ct_unlimited_user_profile_image_setting( $user ) {
+function unlimited_user_profile_image_setting( $user ) {
 
 	// get user ID
 	$user_id = get_current_user_id();
@@ -25,13 +25,13 @@ function ct_unlimited_user_profile_image_setting( $user ) {
 		</tr>
 	</table><!-- end form-table -->
 <?php } // additional_user_fields
-add_action( 'show_user_profile', 'ct_unlimited_user_profile_image_setting' );
-add_action( 'edit_user_profile', 'ct_unlimited_user_profile_image_setting' );
+add_action( 'show_user_profile', 'unlimited_user_profile_image_setting' );
+add_action( 'edit_user_profile', 'unlimited_user_profile_image_setting' );
 
 /**
  * Saves additional user fields to the database
  */
-function ct_unlimited_save_user_profile_image( $user_id ) {
+function unlimited_save_user_profile_image( $user_id ) {
 
 	// only saves if the current user can edit current user profile
 	if ( ! current_user_can( 'edit_user', $user_id ) ) return false;
@@ -39,11 +39,11 @@ function ct_unlimited_save_user_profile_image( $user_id ) {
 	update_user_meta( $user_id, 'unlimited_user_profile_image', esc_url_raw( $_POST['unlimited_user_profile_image'] ) );
 }
 
-add_action( 'personal_options_update', 'ct_unlimited_save_user_profile_image' );
-add_action( 'edit_user_profile_update', 'ct_unlimited_save_user_profile_image' );
+add_action( 'personal_options_update', 'unlimited_save_user_profile_image' );
+add_action( 'edit_user_profile_update', 'unlimited_save_user_profile_image' );
 
 // add the social profile boxes to the user screen.
-function ct_unlimited_add_social_profile_settings($user) {
+function unlimited_add_social_profile_settings($user) {
 
 	// get current user ID
 	$user_id = get_current_user_id();
@@ -52,7 +52,7 @@ function ct_unlimited_add_social_profile_settings($user) {
 	if ( ! current_user_can( 'edit_posts', $user_id ) ) return false;
 
 	// get social sites
-	$social_sites = ct_unlimited_social_array();
+	$social_sites = unlimited_social_array();
 
 	?>
 	<table class="form-table">
@@ -82,14 +82,14 @@ function ct_unlimited_add_social_profile_settings($user) {
 <?php
 }
 
-add_action( 'show_user_profile', 'ct_unlimited_add_social_profile_settings' );
-add_action( 'edit_user_profile', 'ct_unlimited_add_social_profile_settings' );
+add_action( 'show_user_profile', 'unlimited_add_social_profile_settings' );
+add_action( 'edit_user_profile', 'unlimited_add_social_profile_settings' );
 
-function ct_unlimited_save_social_profiles($user_id) {
+function unlimited_save_social_profiles($user_id) {
 
 	if ( ! current_user_can( 'edit_user', $user_id ) ) { return false; }
 
-	$social_sites = ct_unlimited_social_array();
+	$social_sites = unlimited_social_array();
 
 	foreach ($social_sites as $key => $social_site) {
 		if( $key == 'email' ) {
@@ -105,5 +105,5 @@ function ct_unlimited_save_social_profiles($user_id) {
 	}
 }
 
-add_action( 'personal_options_update', 'ct_unlimited_save_social_profiles' );
-add_action( 'edit_user_profile_update', 'ct_unlimited_save_social_profiles' );
+add_action( 'personal_options_update', 'unlimited_save_social_profiles' );
+add_action( 'edit_user_profile_update', 'unlimited_save_social_profiles' );

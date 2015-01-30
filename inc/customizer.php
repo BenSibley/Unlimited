@@ -1,9 +1,9 @@
 <?php
 
 /* Add customizer panels, sections, settings, and controls */
-add_action( 'customize_register', 'ct_unlimited_add_customizer_content' );
+add_action( 'customize_register', 'unlimited_add_customizer_content' );
 
-function ct_unlimited_add_customizer_content( $wp_customize ) {
+function unlimited_add_customizer_content( $wp_customize ) {
 
 	/***** Reorder default sections *****/
 
@@ -22,7 +22,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	/***** Add Custom Controls *****/
 
 	// create url input control
-	class ct_unlimited_url_input_control extends WP_Customize_Control {
+	class unlimited_url_input_control extends WP_Customize_Control {
 		// create new type called 'url'
 		public $type = 'url';
 		// the content to be output in the Customizer
@@ -36,7 +36,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		}
 	}
 	// number input control
-	class ct_unlimited_number_input_control extends WP_Customize_Control {
+	class unlimited_number_input_control extends WP_Customize_Control {
 		public $type = 'number';
 
 		public function render_content() {
@@ -49,7 +49,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		}
 	}
 	// create textarea control
-	class ct_unlimited_Textarea_Control extends WP_Customize_Control {
+	class unlimited_Textarea_Control extends WP_Customize_Control {
 		public $type = 'textarea';
 
 		public function render_content() {
@@ -63,7 +63,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	}
 
 	// create multi-checkbox/select control
-	class ct_unlimited_Multi_Checkbox_Control extends WP_Customize_Control {
+	class unlimited_Multi_Checkbox_Control extends WP_Customize_Control {
 		public $type = 'multi-checkbox';
 
 		public function render_content() {
@@ -88,7 +88,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	/***** Logo Upload *****/
 
 	// section
-	$wp_customize->add_section( 'ct_unlimited_logo_upload', array(
+	$wp_customize->add_section( 'unlimited_logo_upload', array(
 		'title'      => __( 'Logo Upload', 'unlimited' ),
 		'priority'   => 20,
 		'capability' => 'edit_theme_options'
@@ -105,7 +105,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Image_Control(
 		$wp_customize, 'logo_image', array(
 			'label'    => __( 'Upload custom logo.', 'unlimited' ),
-			'section'  => 'ct_unlimited_logo_upload',
+			'section'  => 'unlimited_logo_upload',
 			'settings' => 'logo_upload',
 		)
 	) );
@@ -113,13 +113,13 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	/***** Social Media Icons *****/
 
 	// get the social sites array
-	$social_sites = ct_unlimited_social_array();
+	$social_sites = unlimited_social_array();
 
 	// set a priority used to order the social sites
 	$priority = 5;
 
 	// section
-	$wp_customize->add_section( 'ct_unlimited_social_media_icons', array(
+	$wp_customize->add_section( 'unlimited_social_media_icons', array(
 		'title'          => __('Social Media Icons', 'unlimited'),
 		'priority'       => 25,
 	) );
@@ -132,13 +132,13 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 			$wp_customize->add_setting( "$social_site", array(
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'ct_unlimited_sanitize_email',
+				'sanitize_callback' => 'unlimited_sanitize_email',
 				'transport'         => 'postMessage'
 			) );
 			// control
 			$wp_customize->add_control( $social_site, array(
 				'label'   => $social_site . ' ' . __('address:', 'unlimited' ),
-				'section' => 'ct_unlimited_social_media_icons',
+				'section' => 'unlimited_social_media_icons',
 				'priority'=> $priority,
 			) );
 		} else {
@@ -150,10 +150,10 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 				'transport'         => 'postMessage'
 			) );
 			// control
-			$wp_customize->add_control( new ct_unlimited_url_input_control(
+			$wp_customize->add_control( new unlimited_url_input_control(
 				$wp_customize, $social_site, array(
 					'label'   => $social_site . ' ' . __('url:', 'unlimited' ),
-					'section' => 'ct_unlimited_social_media_icons',
+					'section' => 'unlimited_social_media_icons',
 					'priority'=> $priority,
 				)
 			) );
@@ -165,7 +165,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	/***** Search Bar *****/
 
 	// section
-	$wp_customize->add_section( 'ct_unlimited_search_bar', array(
+	$wp_customize->add_section( 'unlimited_search_bar', array(
 		'title'      => __( 'Search Bar', 'unlimited' ),
 		'priority'   => 30,
 		'capability' => 'edit_theme_options'
@@ -175,14 +175,14 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		'default'           => 'show',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_unlimited_sanitize_all_show_hide_settings',
+		'sanitize_callback' => 'unlimited_sanitize_all_show_hide_settings',
 		'transport'         => 'postMessage'
 	) );
 	// control
 	$wp_customize->add_control( 'search_bar', array(
 		'type' => 'radio',
 		'label' => __('Show search bar at top of site?', 'unlimited'),
-		'section' => 'ct_unlimited_search_bar',
+		'section' => 'unlimited_search_bar',
 		'setting' => 'search_bar',
 		'choices' => array(
 			'show' => __('Show', 'unlimited'),
@@ -193,7 +193,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	/***** Layout *****/
 
 	// section
-	$wp_customize->add_section( 'ct_unlimited_layout', array(
+	$wp_customize->add_section( 'unlimited_layout', array(
 		'title'      => __( 'Layouts', 'unlimited' ),
 		'priority'   => 45,
 		'capability' => 'edit_theme_options'
@@ -203,13 +203,13 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		'default'           => 'right',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_unlimited_sanitize_layout_settings',
+		'sanitize_callback' => 'unlimited_sanitize_layout_settings',
 		'transport'         => 'postMessage'
 	) );
 	// control
 	$wp_customize->add_control( 'layout', array(
 		'label'          => __( 'Choose your layout:', 'unlimited' ),
-		'section'        => 'ct_unlimited_layout',
+		'section'        => 'unlimited_layout',
 		'settings'       => 'layout',
 		'type'           => 'radio',
 		'choices'        => array(
@@ -221,7 +221,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	/***** Blog *****/
 
 	// section
-	$wp_customize->add_section( 'ct_unlimited_blog', array(
+	$wp_customize->add_section( 'unlimited_blog', array(
 		'title'      => __( 'Blog', 'unlimited' ),
 		'priority'   => 60,
 		'capability' => 'edit_theme_options'
@@ -231,12 +231,12 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		'default'           => 'no',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_unlimited_sanitize_yes_no_settings',
+		'sanitize_callback' => 'unlimited_sanitize_yes_no_settings',
 	) );
 	// control
 	$wp_customize->add_control( 'full_post', array(
 		'label'          => __( 'Show full posts on blog?', 'unlimited' ),
-		'section'        => 'ct_unlimited_blog',
+		'section'        => 'unlimited_blog',
 		'settings'       => 'full_post',
 		'type'           => 'radio',
 		'choices'        => array(
@@ -252,10 +252,10 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'absint',
 	) );
 	// control
-	$wp_customize->add_control( new ct_unlimited_number_input_control(
+	$wp_customize->add_control( new unlimited_number_input_control(
 		$wp_customize, 'excerpt_length', array(
 			'label'          => __( 'Excerpt length', 'unlimited' ),
-			'section'        => 'ct_unlimited_blog',
+			'section'        => 'unlimited_blog',
 			'settings'       => 'excerpt_length',
 			'type'           => 'number',
 		)
@@ -264,7 +264,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	/***** Comment Display *****/
 
 	// section
-	$wp_customize->add_section( 'ct_unlimited_comments_display', array(
+	$wp_customize->add_section( 'unlimited_comments_display', array(
 		'title'      => __( 'Comment Display', 'unlimited' ),
 		'priority'   => 65,
 		'capability' => 'edit_theme_options'
@@ -274,13 +274,13 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		'default'           => 'none',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_unlimited_sanitize_comments_setting',
+		'sanitize_callback' => 'unlimited_sanitize_comments_setting',
 	) );
 	// control
-	$wp_customize->add_control( new ct_unlimited_Multi_Checkbox_Control(
+	$wp_customize->add_control( new unlimited_Multi_Checkbox_Control(
 		$wp_customize, 'comments_display', array(
 			'label'          => __( 'Show comments on:', 'unlimited' ),
-			'section'        => 'ct_unlimited_comments_display',
+			'section'        => 'unlimited_comments_display',
 			'settings'       => 'comments_display',
 			'type'           => 'multi-checkbox',
 			'choices'        => array(
@@ -295,7 +295,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 	/***** Custom CSS *****/
 
 	// section
-	$wp_customize->add_section( 'ct_unlimited_custom_css', array(
+	$wp_customize->add_section( 'unlimited_custom_css', array(
 		'title'      => __( 'Custom CSS', 'unlimited' ),
 		'priority'   => 80,
 		'capability' => 'edit_theme_options'
@@ -307,10 +307,10 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'esc_textarea',
 	) );
 	// control
-	$wp_customize->add_control( new ct_unlimited_Textarea_Control(
+	$wp_customize->add_control( new unlimited_Textarea_Control(
 		$wp_customize, 'custom_css', array(
 			'label'          => __( 'Add Custom CSS Here:', 'unlimited' ),
-			'section'        => 'ct_unlimited_custom_css',
+			'section'        => 'unlimited_custom_css',
 			'settings'       => 'custom_css',
 		)
 	) );
@@ -322,7 +322,7 @@ function ct_unlimited_add_customizer_content( $wp_customize ) {
  * Sanitize settings with show/hide as options
  * Used in: search bar
  */
-function ct_unlimited_sanitize_all_show_hide_settings($input){
+function unlimited_sanitize_all_show_hide_settings($input){
 	// create array of valid values
 	$valid = array(
 		'show' => __('Show', 'unlimited'),
@@ -340,13 +340,13 @@ function ct_unlimited_sanitize_all_show_hide_settings($input){
  * sanitize email address
  * Used in: Social Media Icons
  */
-function ct_unlimited_sanitize_email( $input ) {
+function unlimited_sanitize_email( $input ) {
 
 	return sanitize_email( $input );
 }
 
 // sanitize layout selection
-function ct_unlimited_sanitize_layout_settings($input){
+function unlimited_sanitize_layout_settings($input){
 
 	/*
 	 * Also allow layouts only included in the premium plugin.
@@ -372,7 +372,7 @@ function ct_unlimited_sanitize_layout_settings($input){
 }
 
 // sanitize yes/no settings
-function ct_unlimited_sanitize_yes_no_settings($input){
+function unlimited_sanitize_yes_no_settings($input){
 
 	$valid = array(
 		'yes'   => __('Yes', 'unlimited'),
@@ -387,7 +387,7 @@ function ct_unlimited_sanitize_yes_no_settings($input){
 }
 
 // sanitize comment display multi-check
-function ct_unlimited_sanitize_comments_setting($input){
+function unlimited_sanitize_comments_setting($input){
 
 	// valid data
 	$valid = array(
@@ -433,7 +433,7 @@ function unlimited_ajaxurl() { ?>
 }
 add_action('wp_head','unlimited_ajaxurl');
 
-function ct_unlimited_customizer_ad_array() {
+function unlimited_customizer_ad_array() {
 
 	// create array of ad text
 	$ads_array = array(
@@ -445,12 +445,12 @@ function ct_unlimited_customizer_ad_array() {
 	);
 	return $ads_array;
 }
-function ct_unlimited_assign_customizer_ad() {
+function unlimited_assign_customizer_ad() {
 
 	// if the ad text isn't set already
-	if( ! get_option('ct_unlimited_ad_text') ) {
+	if( ! get_option('unlimited_ad_text') ) {
 
-		$ads_array = ct_unlimited_customizer_ad_array();
+		$ads_array = unlimited_customizer_ad_array();
 
 		// randomly pick one
 		$ad = rand(0,4);
@@ -465,24 +465,24 @@ function ct_unlimited_assign_customizer_ad() {
 		$ad_text = esc_html($ad_text);
 
 		// update database
-		update_option('ct_unlimited_ad_text', $ad_text);
+		update_option('unlimited_ad_text', $ad_text);
 	}
 }
-add_action('admin_init', 'ct_unlimited_assign_customizer_ad');
+add_action('admin_init', 'unlimited_assign_customizer_ad');
 
-function ct_unlimited_customize_preview_js() {
+function unlimited_customize_preview_js() {
 
 	// get the ad text
-	$ad = get_option('ct_unlimited_ad_text');
+	$ad = get_option('unlimited_ad_text');
 
 	// get the array of ads
-	$ads_array = ct_unlimited_customizer_ad_array();
+	$ads_array = unlimited_customizer_ad_array();
 
 	// get the link based on the ad text
 	$link = $ads_array[$ad];
 
 	$content = "<script>jQuery('#customize-info').append('<div class=\"upgrades-ad\"><a href=\"" . esc_url($link) . "\" target=\"_blank\">" . esc_html($ad) . "<span>&rarr;</span></a></div>');</script>";
 
-	echo apply_filters('ct_unlimited_customizer_ad', $content);
+	echo apply_filters('unlimited_customizer_ad', $content);
 }
-add_action('customize_controls_print_footer_scripts', 'ct_unlimited_customize_preview_js');
+add_action('customize_controls_print_footer_scripts', 'unlimited_customize_preview_js');

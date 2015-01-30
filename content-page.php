@@ -1,7 +1,7 @@
 <div <?php post_class(); ?>>
 	<?php hybrid_do_atomic( 'page_before' ); ?>
 	<article>
-		<?php ct_unlimited_featured_image(); ?>
+		<?php unlimited_featured_image(); ?>
 		<div class="post-padding-container">
 			<div class='post-header'>
 				<h1 class='post-title'><?php the_title(); ?></h1>
