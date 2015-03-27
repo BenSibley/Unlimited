@@ -433,55 +433,9 @@ function unlimited_ajaxurl() { ?>
 }
 add_action('wp_head','unlimited_ajaxurl');
 
-function unlimited_customizer_ad_array() {
-
-	// create array of ad text
-	$ads_array = array(
-		__('Have you seen Unlimited Pro?', 'unlimited')  => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=have-you-seen-unlimited-pro&utm_campaign=customizer-ad',
-		__('Upgrade to Unlimited Pro', 'unlimited')      => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=upgrade-to-unlimited-pro&utm_campaign=customizer-ad',
-		__('Check out Unlimited Pro', 'unlimited')       => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=check-out-unlimited-pro&utm_campaign=customizer-ad',
-		__('Unlimited Pro', 'unlimited')                 => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=unlimited-pro&utm_campaign=customizer-ad',
-		__('Premium Upgrade for Unlimited', 'unlimited') => 'https://www.competethemes.com/unlimited-pro/?utm_source=customizer-ad&utm_medium=unlimited&utm_content=premium-upgrade-for-unlimited&utm_campaign=customizer-ad'
-	);
-	return $ads_array;
-}
-function unlimited_assign_customizer_ad() {
-
-	// if the ad text isn't set already
-	if( ! get_option('unlimited_ad_text') ) {
-
-		$ads_array = unlimited_customizer_ad_array();
-
-		// randomly pick one
-		$ad = rand(0,4);
-
-		// get randomly selected ad from array
-		$ad = array_slice($ads_array, $ad, 1);
-
-		// the phrase from the array
-		$ad_text = key($ad);
-
-		// sanitize
-		$ad_text = esc_html($ad_text);
-
-		// update database
-		update_option('unlimited_ad_text', $ad_text);
-	}
-}
-add_action('admin_init', 'unlimited_assign_customizer_ad');
-
 function unlimited_customize_preview_js() {
 
-	// get the ad text
-	$ad = get_option('unlimited_ad_text');
-
-	// get the array of ads
-	$ads_array = unlimited_customizer_ad_array();
-
-	// get the link based on the ad text
-	$link = $ads_array[$ad];
-
-	$content = "<script>jQuery('#customize-info').append('<div class=\"upgrades-ad\"><a href=\"" . esc_url($link) . "\" target=\"_blank\">" . esc_html($ad) . "<span>&rarr;</span></a></div>');</script>";
+	$content = "<script>jQuery('#customize-info').append('<div class=\"upgrades-ad\"><a href=\"https://www.competethemes.com/unlimited-pro/\" target=\"_blank\">View the Unlimited Pro Upgrade <span>&rarr;</span></a></div>');</script>";
 
 	echo apply_filters('unlimited_customizer_ad', $content);
 }
