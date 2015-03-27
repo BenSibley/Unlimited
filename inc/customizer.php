@@ -271,7 +271,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	) );
 	// setting
 	$wp_customize->add_setting( 'comments_display', array(
-		'default'           => 'none',
+		'default'           => array('post','page','attachment','none'),
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'unlimited_sanitize_comments_setting',
