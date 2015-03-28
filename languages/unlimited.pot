@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Unlimited 1.04\n"
+"Project-Id-Version: Unlimited 1.05\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-01-30 18:49:38+00:00\n"
+"POT-Creation-Date: 2015-03-28 16:50:47+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -355,26 +355,6 @@ msgstr ""
 msgid "Two column - No Sidebar - Wide"
 msgstr ""
 
-#: inc/customizer.php:440
-msgid "Have you seen Unlimited Pro?"
-msgstr ""
-
-#: inc/customizer.php:441
-msgid "Upgrade to Unlimited Pro"
-msgstr ""
-
-#: inc/customizer.php:442
-msgid "Check out Unlimited Pro"
-msgstr ""
-
-#: inc/customizer.php:443 theme-options.php:30
-msgid "Unlimited Pro"
-msgstr ""
-
-#: inc/customizer.php:444
-msgid "Premium Upgrade for Unlimited"
-msgstr ""
-
 #: inc/user-profile.php:15
 msgid "Profile image"
 msgstr ""
@@ -400,14 +380,16 @@ msgid "Profile:"
 msgstr ""
 
 #: search.php:9
-msgid "%d search results for"
-msgstr ""
+msgid "%d search result for \"%s\""
+msgid_plural "%d search results for \"%s\""
+msgstr[0] ""
+msgstr[1] ""
 
 #: search.php:11
-msgid "No search results for "
+msgid "No search results for \"%s\""
 msgstr ""
 
-#: search.php:37
+#: search.php:36
 msgid "Can't find what you're looking for?  Try refining your search:"
 msgstr ""
 
@@ -445,6 +427,10 @@ msgstr ""
 
 #: theme-options.php:26
 msgid "Visit Support Center"
+msgstr ""
+
+#: theme-options.php:30
+msgid "Unlimited Pro"
 msgstr ""
 
 #: theme-options.php:31
@@ -503,7 +489,7 @@ msgid "Compete Themes"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://www.competethemes.com/"
+msgid "https://www.competethemes.com"
 msgstr ""
 
 #. Template Name of the plugin/theme
