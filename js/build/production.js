@@ -182,20 +182,8 @@ jQuery(document).ready(function($){
         return menuHeight;
     }
 
-    // enable double-click menu parent items right away
-    if( $(window).width() < 800 ) {
-        enableTouchDropdown();
-    } else {
-        // otherwise wait to see if a touch event is fired
-        $(window).on('touchstart', enableTouchDropdown );
-    }
-
-    // add the double-click if the menu is made smaller again
-    $(window).resize(function(){
-        if( $(window).width() < 800 ) {
-            enableTouchDropdown();
-        }
-    });
+    // enforce double-click for parent menu items when a touch event is registered
+    $(window).on('touchstart', enableTouchDropdown );
 
     // require a second click to visit parent navigation items
     function enableTouchDropdown(){
