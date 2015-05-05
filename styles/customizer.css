@@ -40,6 +40,12 @@
   margin-top: 12px;
 }
 
+#accordion-section-unlimited_colors .accordion-section-title,
+#accordion-section-unlimited_colors .accordion-section-title:hover {
+  background: -webkit-repeating-linear-gradient(145deg, #ededed, #ededed 10px, white 10px, white 20px) !important;
+  background: repeating-linear-gradient(-55deg, #ededed, #ededed 10px, white 10px, white 20px) !important;
+}
+
 /* Multiple select styles (for comments dropdown */
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>

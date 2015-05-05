@@ -48,6 +48,19 @@
 //    display: block;
   }
 }
+#accordion-section-unlimited_colors {
+
+  .accordion-section-title,
+  .accordion-section-title:hover {
+    background: repeating-linear-gradient(
+                    -55deg,
+                    #ededed,
+                    #ededed 10px,
+                    #fff 10px,
+                    #fff 20px
+    ) !important;
+  }
+}
 
 /* Multiple select styles (for comments dropdown */
 /**

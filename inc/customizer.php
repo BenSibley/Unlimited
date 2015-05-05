@@ -84,6 +84,19 @@ function unlimited_add_customizer_content( $wp_customize ) {
 			</label>
 		<?php }
 	}
+	// create description control
+	class unlimited_description_color_control extends WP_Customize_Control {
+		public $type = 'description_color';
+
+		public function render_content() { ?>
+			<p>
+			<?php
+			$link = 'https://www.competethemes.com/unlimited-pro/';
+			echo __('Check out <a href="%s">Unlimited Pro</a> for custom colors (loaded with 77 custom color controls).', 'unlimited'); ?>
+			</p>
+		<?php }
+	}
+
 
 	/***** Logo Upload *****/
 
@@ -318,6 +331,55 @@ function unlimited_add_customizer_content( $wp_customize ) {
 			'label'          => __( 'Add Custom CSS Here:', 'unlimited' ),
 			'section'        => 'unlimited_custom_css',
 			'settings'       => 'custom_css',
+		)
+	) );
+
+	/*
+	 * PRO only sections
+	 */
+
+	/***** Header Image *****/
+
+	// section
+	$wp_customize->add_section( 'unlimited_header_image', array(
+		'title'      => __( 'Header Image', 'unlimited' ),
+		'priority'   => 25,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'header_image_ad', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( new unlimited_description_color_control(
+		$wp_customize, 'header_image_ad', array(
+			'label'          => __( 'Show full posts on blog?', 'unlimited' ),
+			'section'        => 'unlimited_colors',
+			'settings'       => 'header_image_ad'
+		)
+	) );
+
+	/***** Colors *****/
+
+	// section
+	$wp_customize->add_section( 'unlimited_colors', array(
+		'title'      => __( 'Colors', 'unlimited' ),
+		'priority'   => 50,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'colors_ad', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( new unlimited_description_color_control(
+		$wp_customize, 'colors_ad', array(
+			'section'        => 'unlimited_colors',
+			'settings'       => 'colors_ad'
 		)
 	) );
 }
