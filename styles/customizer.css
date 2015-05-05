@@ -36,6 +36,10 @@
   transition: right 0.15s ease-in-out;
 }
 
+.customize-control-description {
+  margin-top: 12px;
+}
+
 /* Multiple select styles (for comments dropdown */
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>

@@ -206,9 +206,15 @@ function unlimited_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'unlimited_sanitize_layout_settings',
 		'transport'         => 'postMessage'
 	) );
+
+	$unlimited_pro = 'https://www.competethemes.com/unlimited-pro/';
+
+	$description_layout = sprintf( __('Want more layouts? <a href="%s">Check out Unlimited Pro</a>', 'unlimited'), $unlimited_pro );
+
 	// control
 	$wp_customize->add_control( 'layout', array(
 		'label'          => __( 'Choose your layout:', 'unlimited' ),
+		'description'    => $description_layout,
 		'section'        => 'unlimited_layout',
 		'settings'       => 'layout',
 		'type'           => 'radio',
