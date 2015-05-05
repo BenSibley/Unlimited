@@ -48,17 +48,24 @@
 //    display: block;
   }
 }
-#accordion-section-unlimited_colors {
+#accordion-section-unlimited_colors,
+#accordion-section-unlimited_header_image,
+#accordion-section-unlimited_background {
 
   .accordion-section-title,
   .accordion-section-title:hover {
     background: repeating-linear-gradient(
                     -55deg,
-                    #ededed,
-                    #ededed 10px,
-                    #fff 10px,
-                    #fff 20px
+                    #f7f7f7,
+                    #f7f7f7 7px,
+                    #fff 7px,
+                    #fff 14px
     ) !important;
+
+    &:after {
+      content: '\f023';
+      font-family: 'FontAwesome';
+    }
   }
 }
 

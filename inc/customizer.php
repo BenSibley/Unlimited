@@ -84,17 +84,27 @@ function unlimited_add_customizer_content( $wp_customize ) {
 			</label>
 		<?php }
 	}
-	// create description control
+	// create ad controls
 	class unlimited_description_color_control extends WP_Customize_Control {
-		public $type = 'description_color';
 
-		public function render_content() { ?>
-			<p>
-			<?php
+		public function render_content() {
 			$link = 'https://www.competethemes.com/unlimited-pro/';
-			echo __('Check out <a href="%s">Unlimited Pro</a> for custom colors (loaded with 77 custom color controls).', 'unlimited'); ?>
-			</p>
-		<?php }
+			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Unlimited Pro</a> to unlock custom colors.', 'unlimited'), $link ) . "</p>";
+		}
+	}
+	class unlimited_description_header_image_control extends WP_Customize_Control {
+
+		public function render_content() {
+			$link = 'https://www.competethemes.com/unlimited-pro/';
+			echo "<p>" . sprintf( __('Check out <a target="_blank" href="%s">Unlimited Pro</a> to add a header image.', 'unlimited'), $link ) . "</p>";
+		}
+	}
+	class unlimited_description_background_control extends WP_Customize_Control {
+
+		public function render_content() {
+			$link = 'https://www.competethemes.com/unlimited-pro/';
+			echo "<p>" . sprintf( __('Check out <a target="_blank" href="%s">Unlimited Pro</a> to add background images and textures.', 'unlimited'), $link ) . "</p>";
+		}
 	}
 
 
@@ -343,7 +353,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'unlimited_header_image', array(
 		'title'      => __( 'Header Image', 'unlimited' ),
-		'priority'   => 25,
+		'priority'   => 35,
 		'capability' => 'edit_theme_options'
 	) );
 	// setting
@@ -353,10 +363,9 @@ function unlimited_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'absint',
 	) );
 	// control
-	$wp_customize->add_control( new unlimited_description_color_control(
+	$wp_customize->add_control( new unlimited_description_header_image_control(
 		$wp_customize, 'header_image_ad', array(
-			'label'          => __( 'Show full posts on blog?', 'unlimited' ),
-			'section'        => 'unlimited_colors',
+			'section'        => 'unlimited_header_image',
 			'settings'       => 'header_image_ad'
 		)
 	) );
@@ -380,6 +389,28 @@ function unlimited_add_customizer_content( $wp_customize ) {
 		$wp_customize, 'colors_ad', array(
 			'section'        => 'unlimited_colors',
 			'settings'       => 'colors_ad'
+		)
+	) );
+
+	/***** Background *****/
+
+	// section
+	$wp_customize->add_section( 'unlimited_background', array(
+		'title'      => __( 'Background', 'unlimited' ),
+		'priority'   => 55,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'background_ad', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( new unlimited_description_header_image_control(
+		$wp_customize, 'background_ad', array(
+			'section'        => 'unlimited_background',
+			'settings'       => 'background_ad'
 		)
 	) );
 }
