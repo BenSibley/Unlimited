@@ -53,16 +53,17 @@
 #accordion-section-unlimited_background,
 #accordion-section-unlimited_font,
 #accordion-section-unlimited_fixed_menu,
-#accordion-section-unlimited_display_control {
+#accordion-section-unlimited_display_control,
+#accordion-section-unlimited_footer_text {
 
   .accordion-section-title,
   .accordion-section-title:hover {
     background: repeating-linear-gradient(
                     -55deg,
-                    #f7f7f7,
-                    #f7f7f7 7px,
-                    #fff 7px,
-                    #fff 14px
+                    #ededed,
+                    #ededed 7px,
+                    #ffffff 7px,
+                    #ffffff 14px
     ) !important;
 
     &:after {

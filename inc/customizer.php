@@ -127,6 +127,13 @@ function unlimited_add_customizer_content( $wp_customize ) {
 			echo "<p>" . sprintf( __('Check out <a target="_blank" href="%s">Unlimited Pro</a> to get hide/show controls.', 'unlimited'), $link ) . "</p>";
 		}
 	}
+	class unlimited_description_footer_text_control extends WP_Customize_Control {
+
+		public function render_content() {
+			$link = 'https://www.competethemes.com/unlimited-pro/';
+			echo "<p>" . sprintf( __('Check out <a target="_blank" href="%s">Unlimited Pro</a> to customize the footer text.', 'unlimited'), $link ) . "</p>";
+		}
+	}
 
 
 	/***** Logo Upload *****/
@@ -498,6 +505,28 @@ function unlimited_add_customizer_content( $wp_customize ) {
 		$wp_customize, 'display_control_ad', array(
 			'section'        => 'unlimited_display_control',
 			'settings'       => 'display_control_ad'
+		)
+	) );
+
+	/***** Footer Text *****/
+
+	// section
+	$wp_customize->add_section( 'unlimited_footer_text', array(
+		'title'      => __( 'Footer Text', 'unlimited' ),
+		'priority'   => 85,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'footer_text_ad', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( new unlimited_description_footer_text_control(
+		$wp_customize, 'footer_text_ad', array(
+			'section'        => 'unlimited_footer_text',
+			'settings'       => 'footer_text_ad'
 		)
 	) );
 }

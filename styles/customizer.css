@@ -51,9 +51,11 @@
 #accordion-section-unlimited_fixed_menu .accordion-section-title,
 #accordion-section-unlimited_fixed_menu .accordion-section-title:hover,
 #accordion-section-unlimited_display_control .accordion-section-title,
-#accordion-section-unlimited_display_control .accordion-section-title:hover {
-  background: -webkit-repeating-linear-gradient(145deg, #f7f7f7, #f7f7f7 7px, white 7px, white 14px) !important;
-  background: repeating-linear-gradient(-55deg, #f7f7f7, #f7f7f7 7px, white 7px, white 14px) !important;
+#accordion-section-unlimited_display_control .accordion-section-title:hover,
+#accordion-section-unlimited_footer_text .accordion-section-title,
+#accordion-section-unlimited_footer_text .accordion-section-title:hover {
+  background: -webkit-repeating-linear-gradient(145deg, #ededed, #ededed 7px, white 7px, white 14px) !important;
+  background: repeating-linear-gradient(-55deg, #ededed, #ededed 7px, white 7px, white 14px) !important;
 }
 #accordion-section-unlimited_colors .accordion-section-title:after,
 #accordion-section-unlimited_colors .accordion-section-title:hover:after,
@@ -66,7 +68,9 @@
 #accordion-section-unlimited_fixed_menu .accordion-section-title:after,
 #accordion-section-unlimited_fixed_menu .accordion-section-title:hover:after,
 #accordion-section-unlimited_display_control .accordion-section-title:after,
-#accordion-section-unlimited_display_control .accordion-section-title:hover:after {
+#accordion-section-unlimited_display_control .accordion-section-title:hover:after,
+#accordion-section-unlimited_footer_text .accordion-section-title:after,
+#accordion-section-unlimited_footer_text .accordion-section-title:hover:after {
   content: '\f023';
   font-family: 'FontAwesome';
 }
