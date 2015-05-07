@@ -632,7 +632,7 @@ a img {
     max-height: 999px;
     overflow: visible;
     visibility: hidden;
-    z-index: 9;
+    z-index: 19;
     background: white;
     top: 48px;
     left: 0;
