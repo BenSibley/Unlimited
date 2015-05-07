@@ -106,6 +106,13 @@ function unlimited_add_customizer_content( $wp_customize ) {
 			echo "<p>" . sprintf( __('Check out <a target="_blank" href="%s">Unlimited Pro</a> to add background images and textures.', 'unlimited'), $link ) . "</p>";
 		}
 	}
+	class unlimited_description_font_control extends WP_Customize_Control {
+
+		public function render_content() {
+			$link = 'https://www.competethemes.com/unlimited-pro/';
+			echo "<p>" . sprintf( __('Check out <a target="_blank" href="%s">Unlimited Pro</a> to change your font.', 'unlimited'), $link ) . "</p>";
+		}
+	}
 
 
 	/***** Logo Upload *****/
@@ -411,6 +418,28 @@ function unlimited_add_customizer_content( $wp_customize ) {
 		$wp_customize, 'background_ad', array(
 			'section'        => 'unlimited_background',
 			'settings'       => 'background_ad'
+		)
+	) );
+
+	/***** Fonts *****/
+
+	// section
+	$wp_customize->add_section( 'unlimited_font', array(
+		'title'      => __( 'Font', 'unlimited' ),
+		'priority'   => 40,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'font_ad', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( new unlimited_description_font_control(
+		$wp_customize, 'font_ad', array(
+			'section'        => 'unlimited_font',
+			'settings'       => 'font_ad'
 		)
 	) );
 }
