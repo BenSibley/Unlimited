@@ -473,23 +473,6 @@ function unlimited_wp_backwards_compatibility() {
 add_action('init', 'unlimited_wp_backwards_compatibility');
 
 /*
- * Set the date format for new users.
- * Needs to be done this way so that the date defaults to the right format, but can
- * still be changed from the Settings menu
- */
-function unlimited_set_date_format() {
-
-	// if the date format has never been set by Unlimited, set it
-	if( get_option('unlimited_date_format_origin') != 'updated' ) {
-		update_option('date_format', 'F j, Y');
-
-		// add option so never updates date format again. Allows users to change format.
-		add_option('unlimited_date_format_origin', 'updated');
-	}
-}
-add_action( 'after_switch_theme', 'unlimited_set_date_format' );
-
-/*
  * WP will apply the ".menu-primary-items" class & id to the containing <div> instead of <ul>
  * making styling difficult and confusing. Using this wrapper to add a unique class to make styling easier.
  */
