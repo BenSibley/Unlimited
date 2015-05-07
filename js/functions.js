@@ -80,7 +80,7 @@ jQuery(document).ready(function($){
             });
 
             // change screen reader text
-            //$(this).children('span').text(objectL10n.openMenu);
+            $(this).children('span').text(objectL10n.openMenu);
 
             // change aria text
             $(this).attr('aria-expanded', 'false');
@@ -94,7 +94,7 @@ jQuery(document).ready(function($){
             $('#menu-primary').css('max-height', menuHeight + 48);
 
             // change screen reader text
-            //$(this).children('span').text(objectL10n.closeMenu);
+            $(this).children('span').text(objectL10n.closeMenu);
 
             // change aria text
             $(this).attr('aria-expanded', 'true');

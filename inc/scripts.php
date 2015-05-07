@@ -7,6 +7,10 @@ function unlimited_load_scripts_styles() {
 
 	// main JS file
 	wp_enqueue_script('ct-unlimited-js', get_template_directory_uri() . '/js/build/production.min.js#unlimited_asyncload', array('jquery'),'', true);
+	wp_localize_script( 'ct-unlimited-js', 'objectL10n', array(
+		'openMenu'     => __( 'open menu', 'unlimited' ),
+		'closeMenu'    => __( 'close menu', 'unlimited' )
+	) );
 
 	// Google Fonts (required to register outside scripts first)
 	wp_register_style( 'ct-unlimited-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:400,300');
