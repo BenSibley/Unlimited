@@ -87,7 +87,7 @@ if( ! function_exists( 'unlimited_customize_comments' ) ) {
 					if ( $comment->user_id === $post->post_author ) {
 						unlimited_profile_image_output();
 					} else {
-						echo get_avatar( get_comment_author_email(), 48 );
+						echo get_avatar( get_comment_author_email(), 48, '', get_comment_author() );
 					}
 					?>
 					<div class="author-name"><span><?php comment_author_link(); ?></span> <?php _x('said:', 'unlimited', 'the commenter said the following:'); ?></div>
@@ -464,13 +464,13 @@ function unlimited_profile_image_output(){
         $image_id = unlimited_get_image_id(get_the_author_meta('unlimited_user_profile_image'));
 
         // retrieve the thumbnail size of profile image (60px)
-        $image_thumb = wp_get_attachment_image($image_id, array(60,60));
+        $image_thumb = wp_get_attachment_image($image_id, array(60,60), false, array('alt' => get_the_author() ) );
 
         // display the image
         echo $image_thumb;
 
     } else {
-        echo get_avatar( get_the_author_meta( 'ID' ), 60 );
+        echo get_avatar( get_the_author_meta( 'ID' ), 60, '', get_the_author() );
     }
 }
 
