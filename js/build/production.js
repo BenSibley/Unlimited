@@ -161,6 +161,13 @@ jQuery(document).ready(function($){
                     $(this).addClass('closed');
                 }
             });
+
+            // change screen reader text
+            //$(this).children('span').text(objectL10n.openMenu);
+
+            // change aria text
+            $(this).attr('aria-expanded', 'false');
+
         } else {
 
             // add styling class to reveal primary menu
@@ -168,6 +175,12 @@ jQuery(document).ready(function($){
 
             // open to show whole menu plus 48px of padding for style
             $('#menu-primary').css('max-height', menuHeight + 48);
+
+            // change screen reader text
+            //$(this).children('span').text(objectL10n.closeMenu);
+
+            // change aria text
+            $(this).attr('aria-expanded', 'true');
         }
     }
 
