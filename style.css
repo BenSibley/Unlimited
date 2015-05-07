@@ -766,6 +766,8 @@ a img {
   right: 0;
   bottom: 0;
   left: 0;
+  opacity: 0;
+  font-size: 0;
 }
 
 .entry {

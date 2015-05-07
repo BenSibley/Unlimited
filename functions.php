@@ -282,21 +282,24 @@ if( ! function_exists( 'unlimited_featured_image' ) ) {
 			$image = wp_get_attachment_image_src( $image_id, 'single-post-thumbnail' );
 
 			// set $image = the url
-			$image     = $image[0];
+			$image = $image[0];
+
+			// if alt text is empty, nothing else equal to title string
+			$title = empty($image_alt_text) ? '' : "title='$image_alt_text'";
+
+			// set to true
 			$has_image = true;
 		}
 		if ( $has_image == true ) {
 
 			// on posts/pages display the featued image
 			if ( is_singular() ) {
-				echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\">
-					    <span class='screen-reader-text'>$image_alt_text</span>
-					  </div>";
+				echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\" $title></div>";
 			} // on blog/archives display with a link
 			else {
 				echo "
-	                <div class='featured-image' style=\"background-image: url('" . $image . "')\">
-	                    <a href='" . get_permalink() . "'><span class='screen-reader-text'>" . get_the_title() . "</span></a>
+	                <div class='featured-image' style=\"background-image: url('" . $image . "')\" $title>
+	                    <a href='" . get_permalink() . "'>" . get_the_title() . "</a>
 	                </div>
 	                ";
 			}
