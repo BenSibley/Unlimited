@@ -1,0 +1,482 @@
+# Copyright (C) 2015 Compete Themes
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Unlimited 1.05\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2015-03-28 16:50:47+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-04-29 21:32+0300\n"
+"X-Generator: Poedit 1.7.6\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+
+#: comments.php:26 comments.php:45 comments.php:66
+msgid "Be First to Comment"
+msgstr "Ваш комментарий будет первым"
+
+#: comments.php:26 comments.php:45 comments.php:66 content/post-meta.php:20
+#: content/post-meta.php:22
+msgid "One Comment"
+msgstr "Всего один комментарий"
+
+#: comments.php:26 comments.php:45 comments.php:66 content/post-meta.php:20
+#: content/post-meta.php:22
+msgid "% Comments"
+msgstr "Комментарий"
+
+#: comments.php:58
+msgid "Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post\">trackbacks</a> and pingbacks are open."
+msgstr "Комментарии закрыты, но <a href=\"%s\" title=\"Trackback URL для этого поста\">обратных ссылок</a> и Pingbacks открыты."
+
+#: comments.php:79 comments.php:85
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#: content/archive-header.php:7
+msgid "Category archive for:"
+msgstr "Архив категорий"
+
+#: content/archive-header.php:18
+msgid "Tag archive for:"
+msgstr "Архив тэгов для %s"
+
+#: content/archive-header.php:30
+msgid "Author archive for:"
+msgstr "Архив записей автора"
+
+#: content/archive-header.php:41
+msgid "Date archive for:"
+msgstr "Архив за:"
+
+#: content/post-author.php:6
+msgid "View more posts"
+msgstr "Просмотреть другие записи"
+
+#: content/post-categories.php:10
+msgid "Posted in"
+msgstr "Опубликовано в"
+
+#: content/post-categories.php:19
+msgid "and"
+msgstr "и"
+
+#: content/post-categories.php:22
+msgid "View all posts in %s"
+msgstr "Просмотреть другие записи в %s"
+
+#: content/post-meta.php:20
+msgid "Comments closed"
+msgstr "Комментарии закрыты"
+
+#: content/post-meta.php:22
+msgid "Leave a Comment"
+msgstr "Оставьте комментарий"
+
+#: content/post-nav-attachment.php:3
+msgid "Previous Image"
+msgstr "Предыдущее изображение"
+
+#: content/post-nav-attachment.php:6
+msgid "Next Image"
+msgstr "Следующее изображение"
+
+#: content/post-nav.php:11
+msgid "Previous Post"
+msgstr "Предыдущая запись"
+
+#: content/post-nav.php:13
+msgid "The Previous Post"
+msgstr "Предыдущая запись"
+
+#: content/post-nav.php:20
+msgid "No Older Posts"
+msgstr "Нет более старых записей"
+
+#: content/post-nav.php:22 content/post-nav.php:48
+msgid "Return to Blog"
+msgstr "Вернуться к блогу"
+
+#: content/post-nav.php:37
+msgid "Next Post"
+msgstr "Следующая запись"
+
+#: content/post-nav.php:39
+msgid "The Next Post"
+msgstr "Следующая запись"
+
+#: content/post-nav.php:46
+msgid "No Newer Posts"
+msgstr "Нет более новых записей"
+
+#: content/post-tags.php:6
+msgid "View all posts tagged %s"
+msgstr "Посмотреть все записи с меткой %s"
+
+#: content/search-bar.php:6 searchform.php:3
+msgid "Search"
+msgstr "Поиск"
+
+#: content/search-bar.php:7 searchform.php:4
+msgid "Search..."
+msgstr "Попробуйте поискать здесь..."
+
+#: content/search-bar.php:7 searchform.php:4
+msgid "Search for:"
+msgstr "Поиск:"
+
+#: content-404.php:5
+msgid "404: Page Not Found"
+msgstr "404: УПС! По-моему ничего не найдено!"
+
+#: content-404.php:8
+msgid "Looks like nothing was found on this url.  Double-check that the url is correct or try the search form below to find what you were looking for."
+msgstr "Похоже на то, что мы не смогли ничего найти! Убедитесь в правильности вводимого адреса старницы или воспользуйтесь поиском!"
+
+#: content-page.php:12 content.php:14
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: footer.php:24
+msgid "<a target=\"_blank\" href=\"%s\">Unlimited WordPress Theme</a> by Compete Themes"
+msgstr ""
+
+#: functions.php:37
+msgid "Primary"
+msgstr "Первичный"
+
+#: functions.php:69
+msgid "Primary Sidebar"
+msgstr "Первичный сайдбар"
+
+#: functions.php:71
+msgid "Widgets in this area will be shown in the sidebar next to the main post content"
+msgstr "Виджеты в этой области будет показаны в боковой панели рядом с главным содержимым записи"
+
+#: functions.php:98
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш комментарий ожидает модерации"
+
+#: functions.php:103
+msgid "Reply"
+msgstr "Повтор"
+
+#: functions.php:129
+msgid "optional"
+msgstr "дополнительно"
+
+#: functions.php:137
+msgid "Name"
+msgstr "Имя"
+
+#: functions.php:138
+msgid "John Doe"
+msgstr ""
+
+#: functions.php:144
+msgid "Email"
+msgstr ""
+
+#: functions.php:145
+msgid "name@email.com"
+msgstr ""
+
+#: functions.php:151
+msgid "Website"
+msgstr "Вэб-сайт"
+
+#: functions.php:152
+msgid "http://example.com"
+msgstr ""
+
+#: functions.php:166
+msgid "Comment"
+msgstr "Комментарий"
+
+#: functions.php:167
+msgid "Enter Your Comment"
+msgstr "Напишите свой комментарий"
+
+#: functions.php:213 functions.php:226
+msgid "Read More"
+msgstr "Читать далее"
+
+#: functions.php:573
+msgid "Customizer settings deleted"
+msgstr "Настройки кастомайзера удалены"
+
+#: header.php:22
+msgid "Skip to content"
+msgstr "Пропустить контент"
+
+#: inc/customizer.php:12
+msgid "Front Page"
+msgstr "Главная страница"
+
+#: inc/customizer.php:14
+msgid "Menus"
+msgstr "Меню"
+
+#: inc/customizer.php:92
+msgid "Logo Upload"
+msgstr "Загрузка логотипа"
+
+#: inc/customizer.php:107
+msgid "Upload custom logo."
+msgstr "Загрузка своего логотипа."
+
+#: inc/customizer.php:123
+msgid "Social Media Icons"
+msgstr "Иконки соц. сетей"
+
+#: inc/customizer.php:140
+msgid "address:"
+msgstr "Адрес:"
+
+#: inc/customizer.php:155
+msgid "url:"
+msgstr ""
+
+#: inc/customizer.php:169
+msgid "Search Bar"
+msgstr "Панель поиска"
+
+#: inc/customizer.php:184
+msgid "Show search bar at top of site?"
+msgstr "Показывать панель поиска вверху сайта?"
+
+#: inc/customizer.php:188 inc/customizer.php:328
+msgid "Show"
+msgstr "Посмотреть"
+
+#: inc/customizer.php:189 inc/customizer.php:329
+msgid "Hide"
+msgstr "Скрыть"
+
+#: inc/customizer.php:197
+msgid "Layouts"
+msgstr "Слои"
+
+#: inc/customizer.php:211
+msgid "Choose your layout:"
+msgstr "Выберите слой"
+
+#: inc/customizer.php:216 inc/customizer.php:357
+msgid "Right sidebar"
+msgstr "Правый сайдбар"
+
+#: inc/customizer.php:217 inc/customizer.php:358
+msgid "Left sidebar"
+msgstr "Левый сайдбар"
+
+#: inc/customizer.php:225
+msgid "Blog"
+msgstr "Блог"
+
+#: inc/customizer.php:238
+msgid "Show full posts on blog?"
+msgstr "Показывать полные записи в блоге"
+
+#: inc/customizer.php:243 inc/customizer.php:378
+msgid "Yes"
+msgstr "Да"
+
+#: inc/customizer.php:244 inc/customizer.php:379
+msgid "No"
+msgstr "Нет"
+
+#: inc/customizer.php:257
+msgid "Excerpt length"
+msgstr "Длина текста"
+
+#: inc/customizer.php:268
+msgid "Comment Display"
+msgstr "Показывать комментарии"
+
+#: inc/customizer.php:282
+msgid "Show comments on:"
+msgstr "Показать комментарии:"
+
+#: inc/customizer.php:287 inc/customizer.php:394
+msgid "Posts"
+msgstr "Записи"
+
+#: inc/customizer.php:288 inc/customizer.php:395
+msgid "Pages"
+msgstr "Страницы"
+
+#: inc/customizer.php:289 inc/customizer.php:396
+msgid "Attachments"
+msgstr "Вложения"
+
+#: inc/customizer.php:290 inc/customizer.php:397
+msgid "Do not show"
+msgstr "Не показывать"
+
+#: inc/customizer.php:299
+msgid "Custom CSS"
+msgstr "Кастомный CSS"
+
+#: inc/customizer.php:312
+msgid "Add Custom CSS Here:"
+msgstr "Добавьте кастомный CSS здесь:"
+
+#: inc/customizer.php:359
+msgid "No sidebar - Narrow"
+msgstr "Нет сайдбара - Узкая"
+
+#: inc/customizer.php:360
+msgid "No sidebar - Wide"
+msgstr "Нет сайдбара - Широкая"
+
+#: inc/customizer.php:361
+msgid "Two column - Right sidebar"
+msgstr "Две колонки - Правый сайдбар"
+
+#: inc/customizer.php:362
+msgid "Two column - Left sidebar"
+msgstr "Две колонки - Левый сайдбар"
+
+#: inc/customizer.php:363
+msgid "Two column - No Sidebar - Narrow"
+msgstr "Две колонки - Нет сайдбара - Узкий"
+
+#: inc/customizer.php:364
+msgid "Two column - No Sidebar - Wide"
+msgstr "Две колонки - Нет сайдраба - Широкий"
+
+#: inc/user-profile.php:15
+msgid "Profile image"
+msgstr "Изображение профиля"
+
+#: inc/user-profile.php:22
+msgid "Upload Image"
+msgstr "Загрузка логотипа"
+
+#: inc/user-profile.php:23
+msgid "Upload an image here to use instead of your Gravatar."
+msgstr "Загрузить изображение здесь, чтобы использовать вместо вашего Gravatar."
+
+#: inc/user-profile.php:60
+msgid "Social Profiles"
+msgstr "Социальные сети"
+
+#: inc/user-profile.php:67
+msgid "Address:"
+msgstr "Адрес:"
+
+#: inc/user-profile.php:69
+msgid "Profile:"
+msgstr "Профиль:"
+
+#: search.php:9
+msgid "%d search result for \"%s\""
+msgid_plural "%d search results for \"%s\""
+msgstr[0] "%d результат поиска для: \"%s"
+msgstr[1] "%d результата поиска для: \"%s"
+msgstr[2] "%d результов поиска для: \"%s"
+
+#: search.php:11
+msgid "No search results for \"%s\""
+msgstr "Ничего не найдено для"
+
+#: search.php:36
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr "Не можете найти то, что вы ищете? Попробуйте уточнить параметры поиска:"
+
+#: searchform.php:5
+msgid "Go"
+msgstr "Найти!"
+
+#: theme-options.php:13
+msgid "Unlimited Dashboard"
+msgstr "Панель управления"
+
+#: theme-options.php:16
+msgid "Customization"
+msgstr "Кастомизация"
+
+#: theme-options.php:17
+msgid "Click the \"Customize\" link in your menu, or use the button below to get started customizing Unlimited"
+msgstr "Нажмите \"Customize\" ссылку в меню или используйте кнопку ниже, чтобы начать настройку темы"
+
+#: theme-options.php:19
+msgid "Use Customizer"
+msgstr "Использовать Кастомайзер"
+
+#: theme-options.php:23
+msgid "Support"
+msgstr "Поддержка"
+
+#: theme-options.php:24
+msgid "You can find the knowledgebase, changelog, support forum, and more in the Unlimited Support Center"
+msgstr "Вы можете найти базу знаний, лог изменений, форум поддержки, и прочее в центре поддержки темы"
+
+#: theme-options.php:26
+msgid "Visit Support Center"
+msgstr "Посетите Центр Поддержки"
+
+#: theme-options.php:30
+msgid "Unlimited Pro"
+msgstr ""
+
+#: theme-options.php:31
+msgid "Unlimited Pro is a premium upgrade for Unlimited. It has custom colors, new layouts, background images, and more"
+msgstr "Тема Unlimited Pro это премиум обновление темы Unlimited. Она имеет настраиваемые цвета, новые макеты, фоновые изображения и многое другое"
+
+#: theme-options.php:33
+msgid "See Full Feature List"
+msgstr "Посмотреть полный список возможностей"
+
+#: theme-options.php:37
+msgid "WordPress Resources"
+msgstr "Ресурсы WordPress"
+
+#: theme-options.php:38
+msgid "Save time and money searching for WordPress products by following our recommendations"
+msgstr "Экономьте время и деньги на поиск продуктов WordPress, следуя нашим рекомендациям"
+
+#: theme-options.php:40
+msgid "View Resources"
+msgstr "Посмотреть ресурсы"
+
+#: theme-options.php:44 theme-options.php:56
+msgid "Reset Customizer Settings"
+msgstr "Сбросить настройки Кастомайзера"
+
+#: theme-options.php:48
+msgid "<strong>Warning:</strong> Clicking this button will erase your current settings in the <a href=\"%s\">Customizer</a>"
+msgstr "<strong>Внимание:</strong> Нажатие этой кнопки сотрет ваши текущие настройки в <a href=\"%s\">Customizer</a>"
+
+#. Theme Name of the plugin/theme
+msgid "Unlimited"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://www.competethemes.com/unlimited/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Fast, responsive, beautiful, and accessible. What does this mean? It means your content will reach more people, on more devices, around the world. It means your site will look beautiful, load quickly, and perform professionally. This is the product of experience and ambition. We call it, Unlimited."
+msgstr "Быстрая, отзывчивая, красивая и доступная. Что это значит? Это означает, что ваш контент будет привлекать больше людей, на большем количестве устройств, по всему миру. Это означает, что ваш сайт будет выглядеть красиво, быстро загружаться и работать профессионально. Это продукт опыта и амбиций. Мы называем ее, Unlimited."
+
+#. Author of the plugin/theme
+msgid "Compete Themes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.competethemes.com"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full-width"
+msgstr "Полная ширина"
+
+#: functions.php:93
+msgctxt "unlimited"
+msgid "said:"
+msgstr "сказал:"
