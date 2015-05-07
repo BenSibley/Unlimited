@@ -113,6 +113,13 @@ function unlimited_add_customizer_content( $wp_customize ) {
 			echo "<p>" . sprintf( __('Check out <a target="_blank" href="%s">Unlimited Pro</a> to change your font.', 'unlimited'), $link ) . "</p>";
 		}
 	}
+	class unlimited_description_fixed_menu_control extends WP_Customize_Control {
+
+		public function render_content() {
+			$link = 'https://www.competethemes.com/unlimited-pro/';
+			echo "<p>" . sprintf( __('Check out <a target="_blank" href="%s">Unlimited Pro</a> to change your menu to fixed style.', 'unlimited'), $link ) . "</p>";
+		}
+	}
 
 
 	/***** Logo Upload *****/
@@ -440,6 +447,28 @@ function unlimited_add_customizer_content( $wp_customize ) {
 		$wp_customize, 'font_ad', array(
 			'section'        => 'unlimited_font',
 			'settings'       => 'font_ad'
+		)
+	) );
+
+	/***** Fixed Menu *****/
+
+	// section
+	$wp_customize->add_section( 'unlimited_fixed_menu', array(
+		'title'      => __( 'Fixed Menu', 'unlimited' ),
+		'priority'   => 15,
+		'capability' => 'edit_theme_options'
+	) );
+	// setting
+	$wp_customize->add_setting( 'fixed_menu_ad', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'absint',
+	) );
+	// control
+	$wp_customize->add_control( new unlimited_description_fixed_menu_control(
+		$wp_customize, 'fixed_menu_ad', array(
+			'section'        => 'unlimited_fixed_menu',
+			'settings'       => 'fixed_menu_ad'
 		)
 	) );
 }
