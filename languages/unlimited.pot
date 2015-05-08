@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Unlimited 1.05\n"
+"Project-Id-Version: Unlimited 1.07\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-03-28 16:50:47+00:00\n"
+"POT-Creation-Date: 2015-05-08 16:05:59+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -211,12 +211,28 @@ msgstr ""
 msgid "Read More"
 msgstr ""
 
-#: functions.php:573
+#: functions.php:410
+msgid "email icon"
+msgstr ""
+
+#: functions.php:416 functions.php:422
+msgid "%s icon"
+msgstr ""
+
+#: functions.php:567
 msgid "Customizer settings deleted"
 msgstr ""
 
 #: header.php:22
 msgid "Skip to content"
+msgstr ""
+
+#: header.php:44 inc/scripts.php:11
+msgid "open menu"
+msgstr ""
+
+#: header.php:45
+msgid "primary menu icon"
 msgstr ""
 
 #: inc/customizer.php:12
@@ -228,131 +244,209 @@ msgid "Menus"
 msgstr ""
 
 #: inc/customizer.php:92
+msgid ""
+"Activate <a target=\"_blank\" href=\"%s\">Unlimited Pro</a> to change your "
+"colors."
+msgstr ""
+
+#: inc/customizer.php:99
+msgid ""
+"Activate <a target=\"_blank\" href=\"%s\">Unlimited Pro</a> to add a header "
+"image."
+msgstr ""
+
+#: inc/customizer.php:106
+msgid ""
+"Activate <a target=\"_blank\" href=\"%s\">Unlimited Pro</a> to add "
+"background images and textures."
+msgstr ""
+
+#: inc/customizer.php:113
+msgid ""
+"Activate <a target=\"_blank\" href=\"%s\">Unlimited Pro</a> to change your "
+"font."
+msgstr ""
+
+#: inc/customizer.php:120
+msgid ""
+"Activate <a target=\"_blank\" href=\"%s\">Unlimited Pro</a> to change your "
+"menu to a fixed style."
+msgstr ""
+
+#: inc/customizer.php:127
+msgid ""
+"Activate <a target=\"_blank\" href=\"%s\">Unlimited Pro</a> to get "
+"hide/show controls."
+msgstr ""
+
+#: inc/customizer.php:134
+msgid ""
+"Activate <a target=\"_blank\" href=\"%s\">Unlimited Pro</a> to customize "
+"the footer text."
+msgstr ""
+
+#: inc/customizer.php:143
 msgid "Logo Upload"
 msgstr ""
 
-#: inc/customizer.php:107
+#: inc/customizer.php:158
 msgid "Upload custom logo."
 msgstr ""
 
-#: inc/customizer.php:123
+#: inc/customizer.php:174
 msgid "Social Media Icons"
 msgstr ""
 
-#: inc/customizer.php:140
+#: inc/customizer.php:191
 msgid "address:"
 msgstr ""
 
-#: inc/customizer.php:155
+#: inc/customizer.php:206
 msgid "url:"
 msgstr ""
 
-#: inc/customizer.php:169
+#: inc/customizer.php:220
 msgid "Search Bar"
 msgstr ""
 
-#: inc/customizer.php:184
+#: inc/customizer.php:235
 msgid "Show search bar at top of site?"
 msgstr ""
 
-#: inc/customizer.php:188 inc/customizer.php:328
+#: inc/customizer.php:239 inc/customizer.php:543
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:189 inc/customizer.php:329
+#: inc/customizer.php:240 inc/customizer.php:544
 msgid "Hide"
 msgstr ""
 
-#: inc/customizer.php:197
+#: inc/customizer.php:248
 msgid "Layouts"
 msgstr ""
 
-#: inc/customizer.php:211
+#: inc/customizer.php:263
+msgid "Want more layouts? <a href=\"%s\">Check out Unlimited Pro</a>"
+msgstr ""
+
+#: inc/customizer.php:267
 msgid "Choose your layout:"
 msgstr ""
 
-#: inc/customizer.php:216 inc/customizer.php:357
+#: inc/customizer.php:273 inc/customizer.php:572
 msgid "Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:217 inc/customizer.php:358
+#: inc/customizer.php:274 inc/customizer.php:573
 msgid "Left sidebar"
 msgstr ""
 
-#: inc/customizer.php:225
+#: inc/customizer.php:282
 msgid "Blog"
 msgstr ""
 
-#: inc/customizer.php:238
+#: inc/customizer.php:295
 msgid "Show full posts on blog?"
 msgstr ""
 
-#: inc/customizer.php:243 inc/customizer.php:378
+#: inc/customizer.php:300 inc/customizer.php:593
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:244 inc/customizer.php:379
+#: inc/customizer.php:301 inc/customizer.php:594
 msgid "No"
 msgstr ""
 
-#: inc/customizer.php:257
+#: inc/customizer.php:314
 msgid "Excerpt length"
 msgstr ""
 
-#: inc/customizer.php:268
+#: inc/customizer.php:325
 msgid "Comment Display"
 msgstr ""
 
-#: inc/customizer.php:282
+#: inc/customizer.php:339
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:287 inc/customizer.php:394
+#: inc/customizer.php:344 inc/customizer.php:609
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:288 inc/customizer.php:395
+#: inc/customizer.php:345 inc/customizer.php:610
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:289 inc/customizer.php:396
+#: inc/customizer.php:346 inc/customizer.php:611
 msgid "Attachments"
 msgstr ""
 
-#: inc/customizer.php:290 inc/customizer.php:397
+#: inc/customizer.php:347 inc/customizer.php:612
 msgid "Do not show"
 msgstr ""
 
-#: inc/customizer.php:299
+#: inc/customizer.php:356
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:312
+#: inc/customizer.php:369
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: inc/customizer.php:359
+#: inc/customizer.php:383
+msgid "Header Image"
+msgstr ""
+
+#: inc/customizer.php:405
+msgid "Colors"
+msgstr ""
+
+#: inc/customizer.php:427
+msgid "Background"
+msgstr ""
+
+#: inc/customizer.php:449
+msgid "Font"
+msgstr ""
+
+#: inc/customizer.php:471
+msgid "Fixed Menu"
+msgstr ""
+
+#: inc/customizer.php:493
+msgid "Display Controls"
+msgstr ""
+
+#: inc/customizer.php:515
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer.php:574
 msgid "No sidebar - Narrow"
 msgstr ""
 
-#: inc/customizer.php:360
+#: inc/customizer.php:575
 msgid "No sidebar - Wide"
 msgstr ""
 
-#: inc/customizer.php:361
+#: inc/customizer.php:576
 msgid "Two column - Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:362
+#: inc/customizer.php:577
 msgid "Two column - Left sidebar"
 msgstr ""
 
-#: inc/customizer.php:363
+#: inc/customizer.php:578
 msgid "Two column - No Sidebar - Narrow"
 msgstr ""
 
-#: inc/customizer.php:364
+#: inc/customizer.php:579
 msgid "Two column - No Sidebar - Wide"
+msgstr ""
+
+#: inc/scripts.php:12
+msgid "close menu"
 msgstr ""
 
 #: inc/user-profile.php:15
@@ -481,7 +575,8 @@ msgid ""
 "your content will reach more people, on more devices, around the world. It "
 "means your site will look beautiful, load quickly, and perform "
 "professionally. This is the product of experience and ambition. We call it, "
-"Unlimited."
+"Unlimited. See our fully setup live demo here: "
+"https://www.competethemes.com/unlimited-live-demo/"
 msgstr ""
 
 #. Author of the plugin/theme
