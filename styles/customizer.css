@@ -74,6 +74,23 @@
   content: '\f023';
   font-family: 'FontAwesome';
 }
+#accordion-section-unlimited_colors:hover .accordion-section-title,
+#accordion-section-unlimited_colors:hover .accordion-section-title:hover,
+#accordion-section-unlimited_header_image:hover .accordion-section-title,
+#accordion-section-unlimited_header_image:hover .accordion-section-title:hover,
+#accordion-section-unlimited_background:hover .accordion-section-title,
+#accordion-section-unlimited_background:hover .accordion-section-title:hover,
+#accordion-section-unlimited_font:hover .accordion-section-title,
+#accordion-section-unlimited_font:hover .accordion-section-title:hover,
+#accordion-section-unlimited_fixed_menu:hover .accordion-section-title,
+#accordion-section-unlimited_fixed_menu:hover .accordion-section-title:hover,
+#accordion-section-unlimited_display_control:hover .accordion-section-title,
+#accordion-section-unlimited_display_control:hover .accordion-section-title:hover,
+#accordion-section-unlimited_footer_text:hover .accordion-section-title,
+#accordion-section-unlimited_footer_text:hover .accordion-section-title:hover {
+  background: -webkit-repeating-linear-gradient(145deg, #e3e3e3, #e3e3e3 7px, #fafafa 7px, #fafafa 14px) !important;
+  background: repeating-linear-gradient(-55deg, #e3e3e3, #e3e3e3 7px, #fafafa 7px, #fafafa 14px) !important;
+}
 
 /* Multiple select styles (for comments dropdown */
 /**

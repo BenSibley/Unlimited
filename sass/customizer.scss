@@ -71,6 +71,19 @@
       font-family: 'FontAwesome';
     }
   }
+  &:hover {
+
+    .accordion-section-title,
+    .accordion-section-title:hover {
+      background: repeating-linear-gradient(
+                      -55deg,
+                      #e3e3e3,
+                      #e3e3e3 7px,
+                      #fafafa 7px,
+                      #fafafa 14px
+      ) !important;
+    }
+  }
 }
 
 /* Multiple select styles (for comments dropdown */
