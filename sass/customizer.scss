@@ -58,30 +58,12 @@
 
   .accordion-section-title,
   .accordion-section-title:hover {
-    background: repeating-linear-gradient(
-                    -55deg,
-                    #ededed,
-                    #ededed 7px,
-                    #ffffff 7px,
-                    #ffffff 14px
-    ) !important;
+    background-image: url('../assets/images/gray-lines.png');
+    background-size: 100%;
 
     &:after {
       content: '\f023';
       font-family: 'FontAwesome';
-    }
-  }
-  &:hover {
-
-    .accordion-section-title,
-    .accordion-section-title:hover {
-      background: repeating-linear-gradient(
-                      -55deg,
-                      #e3e3e3,
-                      #e3e3e3 7px,
-                      #fafafa 7px,
-                      #fafafa 14px
-      ) !important;
     }
   }
 }
