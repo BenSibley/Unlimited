@@ -260,7 +260,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 
 	$unlimited_pro = 'https://www.competethemes.com/unlimited-pro/';
 
-	$description_layout = sprintf( __('Want more layouts? <a href="%s">Check out Unlimited Pro</a>', 'unlimited'), $unlimited_pro );
+	$description_layout = sprintf( __('Want more layouts? <a target="_blank" href="%s">Check out Unlimited Pro</a>', 'unlimited'), $unlimited_pro );
 
 	// control
 	$wp_customize->add_control( 'layout', array(
