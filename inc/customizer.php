@@ -96,14 +96,14 @@ function unlimited_add_customizer_content( $wp_customize ) {
 
 		public function render_content() {
 			$link = 'https://www.competethemes.com/unlimited-pro/';
-			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Unlimited Pro</a> to add a header image.', 'unlimited'), $link ) . "</p>";
+			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Unlimited Pro</a> for advanced header image functionality.', 'unlimited'), $link ) . "</p>";
 		}
 	}
 	class unlimited_description_background_control extends WP_Customize_Control {
 
 		public function render_content() {
 			$link = 'https://www.competethemes.com/unlimited-pro/';
-			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Unlimited Pro</a> to add background images and textures.', 'unlimited'), $link ) . "</p>";
+			echo "<p>" . sprintf( __('Activate <a target="_blank" href="%s">Unlimited Pro</a> for advanced background image and texture functionality.', 'unlimited'), $link ) . "</p>";
 		}
 	}
 	class unlimited_description_font_control extends WP_Customize_Control {
