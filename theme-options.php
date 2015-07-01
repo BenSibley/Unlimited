@@ -8,6 +8,14 @@ add_action( 'admin_menu', 'unlimited_register_theme_page' );
 
 /* callback used to add content to options page */
 function unlimited_options_content(){
+
+	$customizer_url = add_query_arg(
+		array(
+			'url'    => site_url(),
+			'return' => admin_url('themes.php?page=unlimited-options')
+		),
+		admin_url('customize.php')
+	);
     ?>
     <div id="unlimited-dashboard-wrap" class="wrap">
         <h2><?php _e('Unlimited Dashboard', 'unlimited'); ?></h2>
@@ -16,7 +24,7 @@ function unlimited_options_content(){
             <h3><?php _e('Customization', 'unlimited'); ?></h3>
             <p><?php _e('Click the "Customize" link in your menu, or use the button below to get started customizing Unlimited', 'unlimited'); ?>.</p>
             <p>
-                <a class="button-primary" href="customize.php"><?php _e('Use Customizer', 'unlimited') ?></a>
+                <a class="button-primary" href="<?php echo esc_url( $customizer_url ); ?>"><?php _e('Use Customizer', 'unlimited') ?></a>
             </p>
         </div>
         <div class="content content-support">
