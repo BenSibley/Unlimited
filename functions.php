@@ -105,7 +105,7 @@ if( ! function_exists( 'unlimited_customize_comments' ) ) {
 								'max_depth'  => $args['max_depth'],
 								'before'     => '|'
 							) ) ); ?>
-					<?php edit_comment_link( 'Edit', '|' ); ?>
+					<?php edit_comment_link( __('Edit', 'unlimited'), '|' ); ?>
 				</div>
 			</article>
 	<?php
