@@ -98,7 +98,7 @@ if( ! function_exists( 'unlimited_customize_comments' ) ) {
 						echo "<em>" . __( 'Your comment is awaiting moderation.', 'unlimited' ) . "</em><br />";
 					endif;
 					comment_text(); ?>
-					<div class="comment-date"><?php comment_date( 'n/j/Y' ); ?></div>
+					<div class="comment-date"><?php comment_date(); ?></div>
 					<?php comment_reply_link( array_merge( $args, array(
 								'reply_text' => __( 'Reply', 'unlimited' ),
 								'depth'      => $depth,
