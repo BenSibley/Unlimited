@@ -581,7 +581,7 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) :
 endif;
 
 // show notice telling users about avatar change coming in v1.50
-function ct_unlimited_delete_avatar_notice() {
+function ct_unlimited_avatar_notice() {
 
 	// if not dismissed previously, show message
 	if ( get_option( 'ct_unlimited_dismiss_avatar_notice' ) != true ) {
@@ -596,7 +596,7 @@ function ct_unlimited_delete_avatar_notice() {
 	<?php
 	}
 }
-add_action( 'admin_notices', 'ct_unlimited_delete_avatar_notice' );
+add_action( 'admin_notices', 'ct_unlimited_avatar_notice' );
 
 // remove the notice permanently if user clicks the "x" button
 function ct_unlimited_dismiss_avatar_notice() {
