@@ -51,11 +51,7 @@ function unlimited_options_content(){
         <div class="content content-delete-settings">
             <h3><?php _e('Reset Customizer Settings', 'unlimited'); ?></h3>
             <p>
-                <?php
-                $url = admin_url('customize.php');
-                $text = sprintf( __( '<strong>Warning:</strong> Clicking this button will erase your current settings in the <a href="%s">Customizer</a>', 'unlimited' ), esc_url( $url ) );
-                echo $text . ".";
-                ?>
+                <?php printf( __( '<strong>Warning:</strong> Clicking this button will erase your current settings in the <a href="%s">Customizer</a>', 'unlimited' ), esc_url( $customizer_url ) ); ?>
             </p>
             <form method="post">
                 <input type="hidden" name="unlimited_reset_customizer" value="unlimited_reset_customizer_settings" />
