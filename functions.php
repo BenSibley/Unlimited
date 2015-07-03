@@ -80,34 +80,36 @@ if( ! function_exists( 'unlimited_customize_comments' ) ) {
 		global $post;
 		?>
 		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-			<article id="comment-<?php comment_ID(); ?>" class="comment">
-				<div class="comment-author">
-					<?php
-					// if is post author
-					if ( $comment->user_id === $post->post_author ) {
-						unlimited_profile_image_output();
-					} else {
-						echo get_avatar( get_comment_author_email(), 48, '', get_comment_author() );
-					}
-					?>
-					<div class="author-name"><span><?php comment_author_link(); ?></span> <?php _x('said:', 'unlimited', 'the commenter said the following:'); ?></div>
+		<article id="comment-<?php comment_ID(); ?>" class="comment">
+			<div class="comment-author">
+				<?php
+				// if is post author
+				if ( $comment->user_id === $post->post_author ) {
+					unlimited_profile_image_output();
+				} else {
+					echo get_avatar( get_comment_author_email(), 48, '', get_comment_author() );
+				}
+				?>
+				<div class="author-name">
+					<span><?php comment_author_link(); ?></span> <?php _x( 'said:', 'unlimited', 'the commenter said the following:' ); ?>
 				</div>
-				<div class="comment-content">
-					<?php
-					if ( $comment->comment_approved == '0' ) :
-						echo "<em>" . __( 'Your comment is awaiting moderation.', 'unlimited' ) . "</em><br />";
-					endif;
-					comment_text(); ?>
-					<div class="comment-date"><?php comment_date(); ?></div>
-					<?php comment_reply_link( array_merge( $args, array(
-								'reply_text' => __( 'Reply', 'unlimited' ),
-								'depth'      => $depth,
-								'max_depth'  => $args['max_depth'],
-								'before'     => '|'
-							) ) ); ?>
-					<?php edit_comment_link( __('Edit', 'unlimited'), '|' ); ?>
-				</div>
-			</article>
+			</div>
+			<div class="comment-content">
+				<?php
+				if ( $comment->comment_approved == '0' ) :
+					echo "<em>" . __( 'Your comment is awaiting moderation.', 'unlimited' ) . "</em><br />";
+				endif;
+				comment_text(); ?>
+				<div class="comment-date"><?php comment_date(); ?></div>
+				<?php comment_reply_link( array_merge( $args, array(
+					'reply_text' => __( 'Reply', 'unlimited' ),
+					'depth'      => $depth,
+					'max_depth'  => $args['max_depth'],
+					'before'     => '|'
+				) ) ); ?>
+				<?php edit_comment_link( __( 'Edit', 'unlimited' ), '|' ); ?>
+			</div>
+		</article>
 	<?php
 	}
 }
