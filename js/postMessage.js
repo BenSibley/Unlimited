@@ -35,7 +35,11 @@
     } );
     wp.customize( 'blogdescription', function( value ) {
         value.bind( function( to ) {
-            $( '.site-description' ).text( to );
+            var tagline = $('.site-description');
+            if( tagline.length == 0 ) {
+                $('#title-container').append('<p class="site-description"></p>');
+            }
+            tagline.text( to );
         } );
     } );
 
