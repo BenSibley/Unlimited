@@ -1,16 +1,65 @@
+Thanks for downloading Unlimited!
+
 -------------------------------------------------------
-    Thank you for downloading Unlimited!
+    Support
 -------------------------------------------------------
-If you need help getting setup, you can find
-documentation here:
+
+You can find tutorials and other support resources for Unlimited in the Unlimited Support Center:
 https://www.competethemes.com/documentation/unlimited-support-center/
+
+Additional support resources:
+
+Support forum: http://wordpress.org/support/theme/unlimited
+Changelog: https://www.competethemes.com/unlimited-changelog/
+Unlimited on Github: https://github.com/BenSibley/unlimited
+
+-------------------------------------------------------
+    Features
+-------------------------------------------------------
+
+Unlimited includes the following features:
+
+    * Custom logo
+    * Social media icons
+    * Search icon/input
+    * Right & Left sidebar layouts
+    * Comment display controls
+    * Custom excerpt length
+    * Show full posts on Blog
+    * Full-width page template
+    * Custom CSS
+
+Unlimited also has a premium plugin upgrade called Unlimited Pro that includes the following features:
+
+    * Custom colors
+    * Additional layouts
+    * Flexible header image
+    * Google fonts
+    * Background images
+    * Background textures
+    * Navigation styles
+    * Additional menus
+    * More widget areas
+    * Display controls
+    * Custom footer text
+
+Unlimited Pro: https://www.competethemes.com/unlimited-pro/
+
+-------------------------------------------------------
+    Additional Info:
+-------------------------------------------------------
+
+    * All menus in Unlimited can have 1-3 tiers
+    * Featured Images on Posts and Pages have a 2x1 ratio at all screen sizes
+    * Unlimited is child theme compatible. Download a starter child theme here:
+        https://www.competethemes.com/help/child-theme-unlimited/
 
 
 -------------------------------------------------------
     Licenses:
 -------------------------------------------------------
 
-Unlimited WordPress Theme, Copyright 2014 Compete Themes
+Unlimited WordPress Theme, Copyright 2015 Compete Themes
 Unlimited is distributed under the terms of the GNU GPL
 
 License: GNU General Public License v2 or later
