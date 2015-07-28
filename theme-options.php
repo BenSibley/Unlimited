@@ -35,8 +35,8 @@ function unlimited_options_content(){
             </p>
         </div>
         <div class="content content-premium-upgrade">
-            <h3><?php _e('Unlimited Pro', 'unlimited'); ?></h3>
-            <p><?php _e('Unlimited Pro is a premium upgrade for Unlimited. It has custom colors, new layouts, background images, and more', 'unlimited'); ?>...</p>
+            <h3><?php _e('Get More Features & Flexibility', 'unlimited'); ?></h3>
+            <p><?php _e('Download the Unlimited Pro plugin and unlock custom colors, new layouts, background images, and more', 'unlimited'); ?>...</p>
             <p>
                 <a target="_blank" class="button-primary" href="https://www.competethemes.com/unlimited-pro/"><?php _e('See Full Feature List', 'unlimited'); ?></a>
             </p>
