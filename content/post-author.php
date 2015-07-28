@@ -1,5 +1,5 @@
 <div class="post-author">
-	<?php echo get_avatar( get_comment_author_email(), 60, '', get_comment_author() ); ?>
+	<?php echo get_avatar( get_the_author_meta( 'ID' ), 60, '', get_the_author() ); ?>
 	<h3><?php echo get_the_author(); ?></h3>
 	<?php unlimited_social_icons_output('author') ?>
 	<p><?php the_author_meta('description'); ?></p>
