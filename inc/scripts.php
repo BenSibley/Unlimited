@@ -54,7 +54,6 @@ function unlimited_enqueue_admin_styles($hook){
 		// Admin styles
 		wp_enqueue_style('ct-unlimited-admin-styles', get_template_directory_uri() . '/styles/admin.min.css');
 	}
-	wp_enqueue_script('ct-unlimited-admin-js', get_template_directory_uri() . '/js/build/admin.min.js');
 }
 add_action('admin_enqueue_scripts',	'unlimited_enqueue_admin_styles' );
 

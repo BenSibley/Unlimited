@@ -19,8 +19,7 @@ module.exports = function(grunt) {
                     'js/build/customizer.min.js' : 'js/build/customizer.js',
                     'js/build/postMessage.min.js' : 'js/postMessage.js',
                     'js/build/html5shiv.min.js' : 'js/html5shiv.js',
-                    'js/build/respond.min.js' : 'js/respond.js',
-                    'js/build/admin.min.js' : 'js/admin.js'
+                    'js/build/respond.min.js' : 'js/respond.js'
                 }
             }
         },
