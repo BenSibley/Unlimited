@@ -140,7 +140,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 
 	// section
 	$wp_customize->add_section( 'unlimited_logo_upload', array(
-		'title'      => __( 'Logo Upload', 'unlimited' ),
+		'title'      => __( 'Logo', 'unlimited' ),
 		'priority'   => 20,
 		'capability' => 'edit_theme_options'
 	) );
