@@ -530,35 +530,3 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) :
 	}
 	add_action( 'wp_head', 'unlimited_add_title_tag' );
 endif;
-
-// show notice telling users about avatar change coming in v1.50
-function ct_unlimited_avatar_notice() {
-
-	// if not dismissed previously, show message
-	if ( get_option( 'ct_unlimited_dismiss_avatar_notice' ) != true ) {
-
-		// set link with full explanation
-		// linking to my site and redirecting as a precaution to maintain control
-		$url = 'https://www.competethemes.com/unlimited-avatar-redirect/';
-		?>
-		<div id="unlimited-avatar-notice" class="update-nag notice is-dismissible">
-			<p><?php printf( __( 'Custom avatars are being removed from Unlimited in v1.09. Please <a target="_blank" href="%s">follow these instructions</a> before the next update', 'unlimited' ), esc_url($url) ); ?>.</p>
-		</div>
-	<?php
-	}
-}
-add_action( 'admin_notices', 'ct_unlimited_avatar_notice' );
-
-// remove the notice permanently if user clicks the "x" button
-function ct_unlimited_dismiss_avatar_notice() {
-
-	// get the dismissed value
-	$dismissed = $_POST['dismissed'];
-
-	// if set to true, update option
-	if( $dismissed == true ) {
-		update_option('ct_unlimited_dismiss_avatar_notice', true);
-	}
-	die();
-}
-add_action( 'wp_ajax_dismiss_unlimited_avatar_notice', 'ct_unlimited_dismiss_avatar_notice' );
