@@ -84,7 +84,9 @@
 jQuery(document).ready(function($){
 
     // add fitvids to all vids in posts/pages
-    $('.post').fitVids();
+    $('.post').fitVids({
+        customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="vine.co"], iframe[src*="wordpress.tv"], iframe[src*="soundcloud.com"]'
+    });
 
     /*
      * Open the search bar in site-header on click.
