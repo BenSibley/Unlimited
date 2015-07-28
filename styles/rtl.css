@@ -1368,6 +1368,12 @@ li.pingback {
   margin: 0 auto;
 }
 
+.widget_recent_entries span {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 11px;
+}
+
 /* 800px */
 @media all and (min-width: 50em) {
   .sidebar-primary {
