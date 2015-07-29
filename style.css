@@ -862,7 +862,7 @@ a img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  margin: 0 0 0.75em;
+  margin: 0.75em 0;
 }
 .post-author p {
   margin: 0.75em 0 1.5em;

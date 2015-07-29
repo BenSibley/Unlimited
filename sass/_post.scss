@@ -111,7 +111,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    margin: 0 0 $baseline-height / 2;
+    margin: $baseline-height / 2 0;
   }
   // > a used so links in bio don't get further shrunk
   p,
