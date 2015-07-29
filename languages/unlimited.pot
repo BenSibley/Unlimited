@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Unlimited 1.08\n"
+"Project-Id-Version: Unlimited 1.09\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-07-06 19:19:30+00:00\n"
+"POT-Creation-Date: 2015-07-29 13:41:21+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -163,75 +163,68 @@ msgid ""
 "content"
 msgstr ""
 
-#: functions.php:100
+#: functions.php:95
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:105
+#: functions.php:100
 msgid "Reply"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:105
 msgid "Edit"
 msgstr ""
 
-#: functions.php:131
+#: functions.php:126
 msgid "optional"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:134
 msgid "Name"
 msgstr ""
 
-#: functions.php:140
+#: functions.php:135
 msgid "John Doe"
 msgstr ""
 
-#: functions.php:146
+#: functions.php:141
 msgid "Email"
 msgstr ""
 
-#: functions.php:147
+#: functions.php:142
 msgid "name@email.com"
 msgstr ""
 
-#: functions.php:153
+#: functions.php:148
 msgid "Website"
 msgstr ""
 
-#: functions.php:154
+#: functions.php:149
 msgid "http://example.com"
 msgstr ""
 
-#: functions.php:168
+#: functions.php:163
 msgid "Comment"
 msgstr ""
 
-#: functions.php:169
+#: functions.php:164
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:207 functions.php:213 functions.php:226
+#: functions.php:202 functions.php:208 functions.php:221
 msgid "Read More"
 msgstr ""
 
-#: functions.php:410
+#: functions.php:405
 msgid "email icon"
 msgstr ""
 
-#: functions.php:416 functions.php:422
+#: functions.php:411 functions.php:417
 msgid "%s icon"
 msgstr ""
 
-#: functions.php:567
+#: functions.php:518
 msgid "Customizer settings deleted"
-msgstr ""
-
-#: functions.php:594
-msgid ""
-"Custom avatars are being removed from Unlimited in v1.09. Please <a "
-"target=\"_blank\" href=\"%s\">follow these instructions</a> before the next "
-"update"
 msgstr ""
 
 #: header.php:17
@@ -256,48 +249,48 @@ msgstr ""
 
 #: inc/customizer.php:92
 msgid ""
-"Activate <a target=\"_blank\" href=\"%s\">Unlimited Pro</a> to change your "
-"colors."
+"Activate the <a target=\"_blank\" href=\"%s\">Unlimited Pro Plugin</a> to "
+"change your colors."
 msgstr ""
 
 #: inc/customizer.php:99
 msgid ""
-"Activate <a target=\"_blank\" href=\"%s\">Unlimited Pro</a> for advanced "
-"header image functionality."
+"Activate the <a target=\"_blank\" href=\"%s\">Unlimited Pro Plugin</a> for "
+"advanced header image functionality."
 msgstr ""
 
 #: inc/customizer.php:106
 msgid ""
-"Activate <a target=\"_blank\" href=\"%s\">Unlimited Pro</a> for advanced "
-"background image and texture functionality."
+"Activate the <a target=\"_blank\" href=\"%s\">Unlimited Pro Plugin</a> for "
+"advanced background image and texture functionality."
 msgstr ""
 
 #: inc/customizer.php:113
 msgid ""
-"Activate <a target=\"_blank\" href=\"%s\">Unlimited Pro</a> to change your "
-"font."
+"Activate the <a target=\"_blank\" href=\"%s\">Unlimited Pro Plugin</a> to "
+"change your font."
 msgstr ""
 
 #: inc/customizer.php:120
 msgid ""
-"Activate <a target=\"_blank\" href=\"%s\">Unlimited Pro</a> to change your "
-"menu to a fixed style."
+"Activate the <a target=\"_blank\" href=\"%s\">Unlimited Pro Plugin</a> to "
+"change your menu to a fixed style."
 msgstr ""
 
 #: inc/customizer.php:127
 msgid ""
-"Activate <a target=\"_blank\" href=\"%s\">Unlimited Pro</a> to get "
-"hide/show controls."
+"Activate the <a target=\"_blank\" href=\"%s\">Unlimited Pro Plugin</a> to "
+"get hide/show controls."
 msgstr ""
 
 #: inc/customizer.php:134
 msgid ""
-"Activate <a target=\"_blank\" href=\"%s\">Unlimited Pro</a> to customize "
-"the footer text."
+"Activate the <a target=\"_blank\" href=\"%s\">Unlimited Pro Plugin</a> to "
+"customize the footer text."
 msgstr ""
 
 #: inc/customizer.php:143
-msgid "Logo Upload"
+msgid "Logo"
 msgstr ""
 
 #: inc/customizer.php:158
@@ -462,27 +455,15 @@ msgstr ""
 msgid "close menu"
 msgstr ""
 
-#: inc/user-profile.php:15
-msgid "Profile image"
-msgstr ""
-
-#: inc/user-profile.php:22
-msgid "Upload Image"
-msgstr ""
-
-#: inc/user-profile.php:23
-msgid "Upload an image here to use instead of your Gravatar."
-msgstr ""
-
-#: inc/user-profile.php:60
+#: inc/user-profile.php:18
 msgid "Social Profiles"
 msgstr ""
 
-#: inc/user-profile.php:67
+#: inc/user-profile.php:25
 msgid "Address:"
 msgstr ""
 
-#: inc/user-profile.php:69
+#: inc/user-profile.php:27
 msgid "Profile:"
 msgstr ""
 
@@ -537,13 +518,13 @@ msgid "Visit Support Center"
 msgstr ""
 
 #: theme-options.php:38
-msgid "Unlimited Pro"
+msgid "Get More Features & Flexibility"
 msgstr ""
 
 #: theme-options.php:39
 msgid ""
-"Unlimited Pro is a premium upgrade for Unlimited. It has custom colors, new "
-"layouts, background images, and more"
+"Download the Unlimited Pro plugin and unlock custom colors, new layouts, "
+"background images, and more"
 msgstr ""
 
 #: theme-options.php:41
@@ -604,7 +585,7 @@ msgstr ""
 msgid "Full-width"
 msgstr ""
 
-#: functions.php:94
+#: functions.php:89
 msgctxt "unlimited"
 msgid "said:"
 msgstr ""
