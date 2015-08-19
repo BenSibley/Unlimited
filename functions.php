@@ -356,7 +356,7 @@ if ( !function_exists( 'unlimited_social_array' ) ) {
 			'email'         => 'unlimited_email_profile'
 		);
 
-		return $social_sites;
+		return apply_filters( 'unlimited_social_array_filter', $social_sites );
 	}
 }
 
