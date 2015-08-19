@@ -832,6 +832,9 @@ a img {
 .post-content {
   margin: 2.25em 0 3em;
 }
+.post-content .post-content iframe {
+  max-width: 100%;
+}
 .post-content:after {
   content: ".";
   display: block;

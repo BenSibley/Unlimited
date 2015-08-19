@@ -85,6 +85,9 @@
 .post-content {
   margin: $baseline-height * 1.5 0 $baseline-height * 2;
 
+  .post-content iframe {
+    max-width: 100%;
+  }
   &:after {
     @include clearfix;
   }
