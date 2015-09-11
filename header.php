@@ -11,7 +11,7 @@
 
 <body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
 
-	<?php hybrid_do_atomic( 'body_before' ); ?>
+	<?php do_action( 'body_before' ); ?>
 
 	<!--skip to content link-->
 	<a class="skip-content" id="skip-content" href="#main"><?php _e('Skip to content', 'unlimited'); ?></a>
@@ -20,7 +20,7 @@
 
 		<header class="site-header" id="site-header" role="banner">
 
-			<?php hybrid_do_atomic( 'header_before' ); ?>
+			<?php do_action( 'header_before' ); ?>
 
 			<?php unlimited_social_icons_output('header'); ?>
 
@@ -31,7 +31,7 @@
 				<p class="site-description"><?php bloginfo('description'); ?></p>
 			</div>
 
-			<?php hybrid_do_atomic( 'primary_menu_before' ); ?>
+			<?php do_action( 'primary_menu_before' ); ?>
 
 			<?php get_template_part( 'menu', 'primary' ); ?>
 
@@ -40,14 +40,14 @@
 				<i class="fa fa-bars" title="<?php _e('primary menu icon', 'unlimited'); ?>"></i>
 			</button>
 
-			<?php hybrid_do_atomic( 'header_after' ); ?>
+			<?php do_action( 'header_after' ); ?>
 
 		</header>
 
-		<?php hybrid_do_atomic( 'before_main' ); ?>
+		<?php do_action( 'before_main' ); ?>
 
 		<div class="max-width">
 
 			<section id="main" class="main" role="main">
 
-			<?php hybrid_do_atomic( 'main_before' ); ?>
+			<?php do_action( 'main_before' ); ?>

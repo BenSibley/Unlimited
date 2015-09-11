@@ -1,4 +1,4 @@
-<?php hybrid_do_atomic( 'main_after' ); ?>
+<?php do_action( 'main_after' ); ?>
 
 </section> <!-- .main -->
 
@@ -8,14 +8,14 @@
 
 <footer id="site-footer" class="site-footer" role="contentinfo">
 
-	<?php hybrid_do_atomic( 'footer_before' ); ?>
+	<?php do_action( 'footer_before' ); ?>
 
 	<div class="footer-content">
 	    <h4 class="site-title"><a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo('title'); ?></a></h4>
 		<p class="site-description"><?php bloginfo('description'); ?></p>
 	</div>
 
-	<?php hybrid_do_atomic( 'footer_widgets' ); ?>
+	<?php do_action( 'footer_widgets' ); ?>
 
     <div class="design-credit">
         <span>
@@ -28,7 +28,7 @@
         </span>
     </div>
 
-	<?php hybrid_do_atomic( 'footer_after' ); ?>
+	<?php do_action( 'footer_after' ); ?>
 
 </footer>
 
@@ -36,7 +36,7 @@
 
 <?php wp_footer(); ?>
 
-<?php hybrid_do_atomic( 'body_after' ); ?>
+<?php do_action( 'body_after' ); ?>
 
 </body>
 
