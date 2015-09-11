@@ -1796,3 +1796,15 @@ li.pingback {
     margin: 1.5em 3.125% 0;
   }
 }
+/*
+
+ATTENTION:
+
+CSS edits made here won't have any effect. Unlimited doesn't load the style.css file because
+it loads a minified version of the stylesheet instead (style.min.css) to make your site faster.
+
+If you want to make CSS edits to your site, use the "Custom CSS" section in the Customizer.
+
+If you want more information about customizing Unlimited with CSS, check out this guide: https://www.competethemes.com/help/custom-css-unlimited/
+
+*/
