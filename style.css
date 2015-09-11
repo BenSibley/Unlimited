@@ -761,7 +761,7 @@ a img {
   background-size: cover;
   background-position: 50%;
 }
-.featured-image a {
+.featured-image > a {
   position: absolute;
   top: 0;
   right: 0;
@@ -772,7 +772,7 @@ a img {
   -webkit-transition: background 0.1s ease-in-out;
   transition: background 0.1s ease-in-out;
 }
-.featured-image a:focus {
+.featured-image > a:focus {
   opacity: 1;
   background: rgba(255, 255, 255, 0.1);
   outline: none;
