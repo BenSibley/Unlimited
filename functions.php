@@ -588,3 +588,26 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) :
 	}
 	add_action( 'wp_head', 'unlimited_add_title_tag' );
 endif;
+
+function unlimited_loop_pagination(){
+
+	global $wp_query;
+
+	// If there's not more than one page, return nothing.
+	if ( 1 >= $wp_query->max_num_pages ) {
+		return;
+	}
+
+	/* Set up some default arguments for the paginate_links() function. */
+	$defaults = array(
+		'base'         => add_query_arg( 'paged', '%#%' ),
+		'format'       => '',
+		'mid_size'     => 1
+	);
+
+	$loop_pagination = '<nav class="pagination loop-pagination">';
+	$loop_pagination .= paginate_links( $defaults );
+	$loop_pagination .= '</nav>';
+
+	return $loop_pagination;
+}
