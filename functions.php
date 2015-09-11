@@ -489,6 +489,14 @@ function unlimited_body_class( $classes ) {
 }
 add_filter( 'body_class', 'unlimited_body_class' );
 
+function unlimited_post_class( $classes ) {
+
+	$classes[] = 'entry';
+
+	return $classes;
+}
+add_filter( 'post_class', 'unlimited_post_class' );
+
 // custom css output
 function unlimited_custom_css_output(){
 
