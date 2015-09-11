@@ -1,5 +1,10 @@
 <?php
 
+// set the content width
+if ( ! isset( $content_width ) ) {
+	$content_width = 655;
+}
+
 // Load the core theme framework.
 //require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
 //new Hybrid();
@@ -320,7 +325,7 @@ if( ! function_exists( 'unlimited_featured_image' ) ) {
 		}
 		if ( $has_image == true ) {
 
-			// on posts/pages display the featued image
+			// on posts/pages display the featured image
 			if ( is_singular() ) {
 				$featured_image = "<div class='featured-image' style=\"background-image: url('" . esc_url( $image ) . "')\" $title></div>";
 			} // on blog/archives display with a link
