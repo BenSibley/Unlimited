@@ -471,6 +471,8 @@ function unlimited_wp_page_menu() {
 
 function unlimited_body_class( $classes ) {
 
+	global $post;
+
 	/* get layout chosen by user */
 	$layout = get_theme_mod('layout');
 
@@ -484,6 +486,21 @@ function unlimited_body_class( $classes ) {
 	/* if full post setting on */
 	if( $full_post == 'yes' ) {
 		$classes[] = 'full-post';
+	}
+
+	// add all historic singular classes
+	if ( is_singular() ) {
+		$classes[] = 'singular';
+		if ( is_singular('page') ) {
+			$classes[] = 'singular-page';
+			$classes[] = 'singular-page-' . $post->ID;
+		} elseif ( is_singular('post') ) {
+			$classes[] = 'singular-post';
+			$classes[] = 'singular-post-' . $post->ID;
+		} elseif ( is_singular('attachment') ) {
+			$classes[] = 'singular-attachment';
+			$classes[] = 'singular-attachment-' . $post->ID;
+		}
 	}
 	return $classes;
 }
