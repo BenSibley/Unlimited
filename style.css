@@ -775,7 +775,7 @@ a img {
 }
 .featured-image > a:focus {
   opacity: 1;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   outline: none;
 }
 
