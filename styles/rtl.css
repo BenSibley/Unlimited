@@ -1005,6 +1005,10 @@ li.pingback {
   line-height: 0;
 }
 
+li.bypostauthor {
+  border: solid 3px #d9d9d9;
+}
+
 .comment-content blockquote,
 .comment-content ul,
 .comment-content ol,

@@ -39,6 +39,9 @@ li.pingback {
     line-height: 0;
   }
 }
+li.bypostauthor {
+  border: solid 3px $gray-85;
+}
 .comment-content {
   @extend %thirteen-pixels;
 
