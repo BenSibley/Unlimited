@@ -126,6 +126,22 @@ module.exports = function(grunt) {
                 bootstrap: 'tests/php/phpunit.php',
                 colors: true
             }
+        },
+        excludeFiles: '--exclude "*.gitignore" --exclude ".sass-cache/" --exclude "*.DS_Store" --exclude ".git/" --exclude ".idea/" --exclude "gruntfile.js" --exclude "node_modules/" --exclude "package.json" --exclude "sass/"',
+        shell: {
+            zip: {
+                command: [
+                    // delete existing copies on Desktop (if they exist)
+                    'rm -R /Users/bensibley/Documents/compete-themes/dist/unlimited || true',
+                    'rm -R /Users/bensibley/Documents/compete-themes/dist/unlimited.zip || true',
+                    // copy theme folder to desktop without any project/meta files
+                    'rsync -r /Applications/MAMP/htdocs/wordpress/wp-content/themes/unlimited /Users/bensibley/Documents/compete-themes/dist/ <%= excludeFiles %>',
+                    // open dist folder
+                    'cd /Users/bensibley/Documents/compete-themes/dist/',
+                    // zip the unlimited folder
+                    'zip -r unlimited.zip unlimited'
+                ].join('&&')
+            }
         }
     });
 
@@ -141,8 +157,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-phpcs');
     grunt.loadNpmTasks('grunt-phpunit');
     grunt.loadNpmTasks('grunt-cssjanus');
+    grunt.loadNpmTasks('grunt-shell');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify', 'watch', 'sass', 'autoprefixer', 'cssmin', 'compress', 'makepot', 'phpcs', 'phpunit', 'cssjanus']);
+    grunt.registerTask('default', ['concat', 'uglify', 'watch', 'sass', 'autoprefixer', 'cssmin', 'compress', 'makepot', 'phpcs', 'phpunit', 'cssjanus', 'shell']);
 
 };
