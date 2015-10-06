@@ -43,7 +43,7 @@
         } );
     } );
 
-    var socialSites = ['twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam', 'vk', 'weibo', 'tencent-weibo', 'email' ];
+    var socialSites = ['twitter', 'facebook', 'google-plus', 'pinterest', 'linkedin', 'youtube', 'vimeo', 'tumblr', 'instagram', 'flickr', 'dribbble', 'rss', 'reddit', 'soundcloud', 'spotify', 'vine', 'yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'github', 'hacker-news', 'steam', 'vk', 'paypal', 'weibo', 'tencent-weibo', 'email' ];
 
     // for each social site setting
     for ( var site in socialSites ) {
@@ -63,6 +63,9 @@
                 // empty the social icons list
                 $('.social-media-icons').empty();
 
+                // icons that should use a special square icon
+                var squareIcons = ['linkedin', 'twitter', 'vimeo', 'youtube', 'pinterest', 'reddit', 'tumblr', 'steam', 'xing', 'github', 'google-plus', 'behance', 'facebook'];
+
                 // for each social icon input in customizer
                 $('html', window.parent.document).find('#accordion-section-unlimited_social_media_icons').find('input').each(function() {
 
@@ -70,13 +73,17 @@
 
                         var siteName = $(this).attr('data-customize-setting-link');
 
+                        if ( $.inArray( siteName, squareIcons ) > -1 ) {
+                            var siteClass = 'fa fa-' + siteName + '-square';
+                        } else {
+                            var siteClass = 'fa fa-' + siteName;
+                        }
+
                         if( siteName == 'email' ) {
                             $('.social-media-icons').append( '<li><a target="_blank" href="mailto:' + $(this).val() + '"><i class="fa fa-envelope"></i></a></li>' );
                         }
-                        if( siteName == "flickr" || siteName == "dribbble" || siteName == "instagram" || siteName == "soundcloud" || siteName == "spotify" || siteName == "vine" || siteName == "yahoo" || siteName == "codepen" || siteName == "delicious" || siteName == "stumbleupon" || siteName == "deviantart" || siteName == "digg" || siteName == "hacker-news" || siteName == "vk" || siteName == 'weibo' || siteName == 'tencent-weibo' ) {
-                            $('.social-media-icons').append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="fa fa-' + siteName + '"></i></a></li>');
-                        } else {
-                            $('.social-media-icons').append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="fa fa-' + siteName + '-square"></i></a></li>');
+                        else {
+                            $('.social-media-icons').append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="' + siteClass + '"></i></a></li>');
                         }
                     }
                 });

@@ -346,6 +346,7 @@ if ( !function_exists( 'unlimited_social_array' ) ) {
 			'hacker-news'   => 'unlimited_hacker-news_profile',
 			'steam'         => 'unlimited_steam_profile',
 			'vk'            => 'unlimited_vk_profile',
+			'paypal'        => 'unlimited_paypal_profile',
 			'weibo'         => 'unlimited_weibo_profile',
 			'tencent-weibo' => 'unlimited_tencent_weibo_profile',
 			'email'         => 'unlimited_email_profile'
