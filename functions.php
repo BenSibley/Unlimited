@@ -372,6 +372,9 @@ if( ! function_exists('unlimited_social_icons_output') ) {
 		// get social sites array
 		$social_sites = unlimited_social_array();
 
+		// icons that should use a special square icon
+		$square_icons = array('linkedin', 'twitter', 'vimeo', 'youtube', 'pinterest', 'reddit', 'tumblr', 'steam', 'xing', 'github', 'google-plus', 'behance', 'facebook');
+
 		// store the site name and url
 		foreach ( $social_sites as $social_site => $profile ) {
 
@@ -396,6 +399,13 @@ if( ! function_exists('unlimited_social_icons_output') ) {
 
 			foreach ( $active_sites as $key => $active_site ) {
 
+				// get the square or plain class
+				if ( in_array( $active_site, $square_icons ) ) {
+					$class = 'fa fa-' . $active_site . '-square';
+				} else {
+					$class = 'fa fa-' . $active_site;
+				}
+
 				if ( $active_site == 'email' ) {
 					?>
 					<li>
@@ -403,16 +413,10 @@ if( ! function_exists('unlimited_social_icons_output') ) {
 							<i class="fa fa-envelope" title="<?php _e('email icon', 'unlimited'); ?>"></i>
 						</a>
 					</li>
-				<?php } elseif ( $active_site == "flickr" || $active_site == "dribbble" || $active_site == "instagram" || $active_site == "soundcloud" || $active_site == "spotify" || $active_site == "vine" || $active_site == "yahoo" || $active_site == "codepen" || $active_site == "delicious" || $active_site == "stumbleupon" || $active_site == "deviantart" || $active_site == "digg" || $active_site == "hacker-news" || $active_site == "vk" || $active_site == 'weibo' || $active_site == 'tencent-weibo' ) { ?>
-					<li>
-						<a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( unlimited_get_social_url( $source, $key ) ); ?>">
-							<i class="fa fa-<?php echo esc_attr( $active_site ); ?>" title="<?php printf( __('%s icon', 'unlimited'), $active_site ); ?>"></i>
-						</a>
-					</li>
 				<?php } else { ?>
 					<li>
-						<a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( unlimited_get_social_url( $source, $key ) ); ?>">
-							<i class="fa fa-<?php echo esc_attr( $active_site ); ?>-square" title="<?php printf( __('%s icon', 'unlimited'), $active_site ); ?>"></i>
+						<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank" href="<?php echo esc_url( unlimited_get_social_url( $source, $key ) ); ?>">
+							<i class="<?php echo esc_attr( $class ); ?>" title="<?php printf( __('%s icon', 'unlimited'), esc_attr( $active_site ) ); ?>"></i>
 						</a>
 					</li>
 				<?php
