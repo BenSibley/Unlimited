@@ -171,6 +171,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	$wp_customize->add_section( 'unlimited_social_media_icons', array(
 		'title'          => __('Social Media Icons', 'unlimited'),
 		'priority'       => 25,
+		'description' => __('Add the URL for each of your social profiles.', 'unlimited')
 	) );
 
 	// create a setting and control for each social site
@@ -186,11 +187,42 @@ function unlimited_add_customizer_content( $wp_customize ) {
 			) );
 			// control
 			$wp_customize->add_control( $social_site, array(
-				'label'   => $social_site . ' ' . __('address:', 'unlimited' ),
+				'label'   => __('Email Address:', 'unlimited' ),
 				'section' => 'unlimited_social_media_icons',
 				'priority'=> $priority,
 			) );
 		} else {
+
+			$label = ucfirst( $social_site );
+
+			if ( $social_site == 'google-plus' ) {
+				$label = 'Google Plus';
+			} elseif ( $social_site == 'rss' ) {
+				$label = 'RSS';
+			} elseif ( $social_site == 'soundcloud' ) {
+				$label = 'SoundCloud';
+			} elseif ( $social_site == 'slideshare' ) {
+				$label = 'SlideShare';
+			} elseif ( $social_site == 'codepen' ) {
+				$label = 'CodePen';
+			} elseif ( $social_site == 'stumbleupon' ) {
+				$label = 'StumbleUpon';
+			} elseif ( $social_site == 'deviantart' ) {
+				$label = 'DeviantArt';
+			} elseif ( $social_site == 'hacker-news' ) {
+				$label = 'Hacker News';
+			} elseif ( $social_site == 'whatsapp' ) {
+				$label = 'WhatsApp';
+			} elseif ( $social_site == 'qq' ) {
+				$label = 'QQ';
+			} elseif ( $social_site == 'vk' ) {
+				$label = 'VK';
+			} elseif ( $social_site == 'wechat' ) {
+				$label = 'WeChat';
+			} elseif ( $social_site == 'tencent-weibo' ) {
+				$label = 'Tencent Weibo';
+			}
+
 			// setting
 			$wp_customize->add_setting( $social_site, array(
 				'type'              => 'theme_mod',
@@ -201,7 +233,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 			// control
 			$wp_customize->add_control( new unlimited_url_input_control(
 				$wp_customize, $social_site, array(
-					'label'   => $social_site . ' ' . __('url:', 'unlimited' ),
+					'label'   => $label,
 					'section' => 'unlimited_social_media_icons',
 					'priority'=> $priority,
 				)
