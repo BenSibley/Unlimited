@@ -1,5 +1,9 @@
 ( function( $ ) {
 
+    // establish variables for common site elements
+    var panel = $('html', window.parent.document);
+    var body = $('body');
+
     /*
      * Following functions are for utilizing the postMessage transport setting
      */
@@ -128,13 +132,27 @@
         } );
     } );
 
+    // move any existing CSS into separate style element to avoid affecting other CSS
+    // not from the Custom CSS box
+
+    // get the Custom CSS
+    var customCSS = panel.find('#customize-control-custom_css').find('textarea').val();
+    // get all the CSS in the inline element
+    var allCSS = $('#style-inline-css').text();
+    // remove the Custom CSS from the other CSS
+    allCSS = allCSS.replace(customCSS, '');
+    // update the CSS in the inline element w/o the custom css
+    $('#style-inline-css').text(allCSS);
+    // put custom CSS in its own style element
+    body.append('<style id="style-inline-custom-css" type="text/css">' + customCSS + '</style>');
+
     // Custom CSS
     wp.customize( 'custom_css', function( value ) {
         value.bind( function( to ) {
-            $('#style-inline-css').remove();
+            $('#style-inline-custom-css').remove();
             if ( to != '' ) {
-                to = '<style id="style-inline-css" type="text/css">' + to + '</style>';
-                $('body').append( to );
+                to = '<style id="style-inline-custom-css" type="text/css">' + to + '</style>';
+                body.append( to );
             }
         } );
     } );
