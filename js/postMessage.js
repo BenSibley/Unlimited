@@ -128,4 +128,15 @@
         } );
     } );
 
+    // Custom CSS
+    wp.customize( 'custom_css', function( value ) {
+        value.bind( function( to ) {
+            $('#style-inline-css').remove();
+            if ( to != '' ) {
+                to = '<style id="style-inline-css" type="text/css">' + to + '</style>';
+                $('body').append( to );
+            }
+        } );
+    } );
+
 } )( jQuery );
