@@ -82,6 +82,9 @@
     color: $gray-23;
     margin-right: 2px;
   }
+  p {
+    margin-bottom: $baseline-height / 2;
+  }
 }
 .search-header {
   background: white;
