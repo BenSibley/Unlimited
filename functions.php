@@ -77,7 +77,7 @@ if( ! function_exists( 'unlimited_customize_comments' ) ) {
 					echo get_avatar( get_comment_author_email(), 48, '', get_comment_author() );
 				?>
 				<div class="author-name">
-					<span><?php comment_author_link(); ?></span> <?php _x( 'said:', 'unlimited', 'the commenter said the following:' ); ?>
+					<span><?php comment_author_link(); ?></span> <?php _x( 'said:', 'the commenter said the following:', 'unlimited' ); ?>
 				</div>
 			</div>
 			<div class="comment-content">
