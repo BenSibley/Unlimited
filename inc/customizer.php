@@ -169,8 +169,8 @@ function unlimited_add_customizer_content( $wp_customize ) {
 
 	// section
 	$wp_customize->add_section( 'unlimited_social_media_icons', array(
-		'title'          => __('Social Media Icons', 'unlimited'),
-		'priority'       => 25,
+		'title'       => __('Social Media Icons', 'unlimited'),
+		'priority'    => 25,
 		'description' => __('Add the URL for each of your social profiles.', 'unlimited')
 	) );
 
@@ -187,9 +187,9 @@ function unlimited_add_customizer_content( $wp_customize ) {
 			) );
 			// control
 			$wp_customize->add_control( $social_site, array(
-				'label'   => __('Email Address:', 'unlimited' ),
-				'section' => 'unlimited_social_media_icons',
-				'priority'=> $priority,
+				'label'    => __('Email Address:', 'unlimited' ),
+				'section'  => 'unlimited_social_media_icons',
+				'priority' => $priority,
 			) );
 		} else {
 
@@ -233,9 +233,9 @@ function unlimited_add_customizer_content( $wp_customize ) {
 			// control
 			$wp_customize->add_control( new unlimited_url_input_control(
 				$wp_customize, $social_site, array(
-					'label'   => $label,
-					'section' => 'unlimited_social_media_icons',
-					'priority'=> $priority,
+					'label'    => $label,
+					'section'  => 'unlimited_social_media_icons',
+					'priority' => $priority,
 				)
 			) );
 		}
