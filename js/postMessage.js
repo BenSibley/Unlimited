@@ -47,7 +47,7 @@
         } );
     } );
 
-    var socialSites = ['twitter', 'facebook', 'google-plus', 'pinterest', 'linkedin', 'youtube', 'vimeo', 'tumblr', 'instagram', 'flickr', 'dribbble', 'rss', 'reddit', 'soundcloud', 'spotify', 'vine', 'yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'github', 'hacker-news', 'steam', 'vk', 'paypal', 'weibo', 'tencent-weibo', 'email' ];
+    var socialSites = ['twitter', 'facebook', 'google-plus', 'pinterest', 'linkedin', 'youtube', 'vimeo', 'tumblr', 'instagram', 'flickr', 'dribbble', 'rss', 'reddit', 'soundcloud', 'spotify', 'vine', 'yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'github', 'hacker-news', 'foursquare', 'slack', 'slideshare', 'skype', 'whatsapp', 'qq', 'wechat', 'xing', '500px', 'steam', 'vk', 'paypal', 'weibo', 'tencent-weibo', 'email' ];
 
     // for each social site setting
     for ( var site in socialSites ) {
