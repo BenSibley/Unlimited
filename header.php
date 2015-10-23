@@ -22,13 +22,17 @@
 
 			<?php do_action( 'header_before' ); ?>
 
-			<?php unlimited_social_icons_output('header'); ?>
+			<div id="header-inner" class="header-inner">
 
-			<?php if( get_theme_mod( 'search_bar' ) != 'hide' ) get_template_part('content/search-bar'); ?>
+				<?php unlimited_social_icons_output('header'); ?>
 
-			<div id="title-container" class="title-container">
-				<?php get_template_part('logo')  ?>
-				<p class="site-description"><?php bloginfo('description'); ?></p>
+				<?php if( get_theme_mod( 'search_bar' ) != 'hide' ) get_template_part('content/search-bar'); ?>
+
+				<div id="title-container" class="title-container">
+					<?php get_template_part('logo')  ?>
+					<p class="site-description"><?php bloginfo('description'); ?></p>
+				</div>
+
 			</div>
 
 			<?php do_action( 'primary_menu_before' ); ?>
