@@ -88,7 +88,7 @@ jQuery(document).ready(function($){
     var toggleNav = $('#toggle-navigation');
     var menuPrimary = $('#menu-primary');
     var menuPrimaryItems = $('#menu-primary-items');
-    var dropdownMenuItems = $('.menu-item a, .page_item a');
+    var dropdownMenuItems = $('.menu-item').children('a').add( $('.page-item').children('a') );
 
     // add fitvids to all vids in posts/pages
     $('.post').fitVids({
