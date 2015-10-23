@@ -225,7 +225,6 @@ function unlimited_add_customizer_content( $wp_customize ) {
 				$label = 'PayPal';
 			}
 
-
 			// setting
 			$wp_customize->add_setting( $social_site, array(
 				'type'              => 'theme_mod',

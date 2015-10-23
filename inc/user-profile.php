@@ -18,13 +18,47 @@ function unlimited_add_social_profile_settings($user) {
 			<th><h3><?php _e('Social Profiles', 'unlimited'); ?></h3></th>
 		</tr>
 		<?php
-		foreach($social_sites as $key => $social_site) { ?>
+		foreach($social_sites as $key => $social_site) {
+
+			$label = ucfirst( $key );
+
+			if ( $key == 'google-plus' ) {
+				$label = 'Google Plus';
+			} elseif ( $key == 'rss' ) {
+				$label = 'RSS';
+			} elseif ( $key == 'soundcloud' ) {
+				$label = 'SoundCloud';
+			} elseif ( $key == 'slideshare' ) {
+				$label = 'SlideShare';
+			} elseif ( $key == 'codepen' ) {
+				$label = 'CodePen';
+			} elseif ( $key == 'stumbleupon' ) {
+				$label = 'StumbleUpon';
+			} elseif ( $key == 'deviantart' ) {
+				$label = 'DeviantArt';
+			} elseif ( $key == 'hacker-news' ) {
+				$label = 'Hacker News';
+			} elseif ( $key == 'whatsapp' ) {
+				$label = 'WhatsApp';
+			} elseif ( $key == 'qq' ) {
+				$label = 'QQ';
+			} elseif ( $key == 'vk' ) {
+				$label = 'VK';
+			} elseif ( $key == 'wechat' ) {
+				$label = 'WeChat';
+			} elseif ( $key == 'tencent-weibo' ) {
+				$label = 'Tencent Weibo';
+			} elseif ( $key == 'paypal' ) {
+				$label = 'PayPal';
+			}
+
+			?>
 			<tr>
 				<th>
 					<?php if( $key == 'email' ) : ?>
-						<label for="<?php echo $key; ?>-profile"><?php echo ucfirst($key); ?> <?php _e('Address:', 'unlimited'); ?></label>
+						<label for="<?php echo $key; ?>-profile"><?php _e('Email Address', 'unlimited'); ?></label>
 					<?php else : ?>
-						<label for="<?php echo $key; ?>-profile"><?php echo ucfirst($key); ?> <?php _e('Profile:', 'unlimited'); ?></label>
+						<label for="<?php echo $key; ?>-profile"><?php echo $label; ?></label>
 					<?php endif; ?>
 				</th>
 				<td>
