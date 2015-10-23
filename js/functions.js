@@ -37,7 +37,7 @@ jQuery(document).ready(function($){
             $(this).addClass('open');
 
             // if search input is still 100%, add styling class
-            if( $(window).width() < 600 ) {
+            if( window.innerWidth < 600 ) {
                 socialIcons.addClass('fade');
             }
 
@@ -45,10 +45,10 @@ jQuery(document).ready(function($){
             $('#site-header').find('.search-field').attr('tabindex', 0);
 
             // handle mobile width search bar sizing
-            if( $(window).width() < 600 ) {
+            if( window.innerWidth < 600 ) {
 
                 // distance to other side (35px is width of icon space)
-                var leftDistance = $(window).width() * 0.9375 - 35;
+                var leftDistance = window.innerWidth * 0.9375 - 35;
 
                 $('#site-header').find('.search-form').css('left', -leftDistance + 'px')
             }
