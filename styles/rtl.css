@@ -103,10 +103,6 @@ body {
   color: #666666;
   word-wrap: break-word;
   -ms-word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
