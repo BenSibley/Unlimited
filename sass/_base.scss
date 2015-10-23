@@ -40,6 +40,12 @@ body {
   margin: 0 auto;
   padding: 0 $column;
 }
+.loop-container {
+
+  &:after {
+    @include clearfix;
+  }
+}
 p {
   margin: $baseline-height 0;
 }
