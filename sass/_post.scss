@@ -4,8 +4,7 @@
   position: relative;
   height: 0;
   padding-bottom: 50%;
-  background-size: cover;
-  background-position: 50%;
+  overflow: hidden;
 
   > a {
     position: absolute;
@@ -13,15 +12,33 @@
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0;
     font-size: 0;
-    transition: background 0.1s ease-in-out;
 
-    &:focus {
-      opacity: 1;
-      background: rgba(255,255,255,0.2);
-      outline: none;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: white;
+      opacity: 0;
+      transition: opacity 0.1s ease-in-out;
     }
+    &:focus {
+      outline: none;
+
+      &:after {
+        opacity: 0.2;
+      }
+    }
+  }
+  > img,
+  > a > img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    min-height: 100%; // stretch if it doesn't fill the area
   }
 }
 .entry {

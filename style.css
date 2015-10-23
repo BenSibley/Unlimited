@@ -759,8 +759,7 @@ a img {
   position: relative;
   height: 0;
   padding-bottom: 50%;
-  background-size: cover;
-  background-position: 50%;
+  overflow: hidden;
 }
 .featured-image > a {
   position: absolute;
@@ -768,15 +767,34 @@ a img {
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0;
   font-size: 0;
-  -webkit-transition: background 0.1s ease-in-out;
-  transition: background 0.1s ease-in-out;
+}
+.featured-image > a:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: white;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
 }
 .featured-image > a:focus {
-  opacity: 1;
-  background: rgba(255, 255, 255, 0.2);
   outline: none;
+}
+.featured-image > a:focus:after {
+  opacity: 0.2;
+}
+.featured-image > img,
+.featured-image > a > img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  min-height: 100%;
 }
 
 .entry {
