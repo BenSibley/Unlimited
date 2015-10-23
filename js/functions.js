@@ -1,31 +1,38 @@
 jQuery(document).ready(function($){
 
+    var body = $('body');
+    var siteHeader = $('#site-header');
+    var toggleNav = $('#toggle-navigation');
+    var menuPrimary = $('#menu-primary');
+    var menuPrimaryItems = $('#menu-primary-items');
+    var dropdownMenuItems = $('.menu-item a, .page_item a');
+
     // add fitvids to all vids in posts/pages
     $('.post').fitVids({
         customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
     });
 
     // open search bar
-    $('body').on('click', '#search-icon', openSearchBar);
+    body.on('click', '#search-icon', openSearchBar);
 
     // display the primary menu at mobile widths
-    $('#toggle-navigation').on('click', openPrimaryMenu);
+    toggleNav.on('click', openPrimaryMenu);
 
     // enforce double-click for parent menu items when a touch event is registered
     $(window).on('touchstart', enableTouchDropdown );
 
     /* allow keyboard access/visibility for dropdown menu items */
-    $('.menu-item a, .page_item a').focus(function(){
+    dropdownMenuItems.focus(function(){
         $(this).parents('ul').addClass('focused');
     });
-    $('.menu-item a, .page_item a').focusout(function(){
+    dropdownMenuItems.focusout(function(){
         $(this).parents('ul').removeClass('focused');
     });
 
     function openSearchBar(){
 
         // get the social icons
-        var socialIcons = $('#site-header').find('.social-media-icons');
+        var socialIcons = siteHeader.find('.social-media-icons');
 
         // if search bar already open
         if( $(this).hasClass('open') ) {
@@ -39,7 +46,7 @@ jQuery(document).ready(function($){
             }
 
             // make search input inaccessible to keyboards
-            $('#site-header').find('.search-field').attr('tabindex', -1);
+            siteHeader.find('.search-field').attr('tabindex', -1);
 
         } else {
 
@@ -52,7 +59,7 @@ jQuery(document).ready(function($){
             }
 
             // make search input keyboard accessible
-            $('#site-header').find('.search-field').attr('tabindex', 0);
+            siteHeader.find('.search-field').attr('tabindex', 0);
 
             // handle mobile width search bar sizing
             if( window.innerWidth < 600 ) {
@@ -60,7 +67,7 @@ jQuery(document).ready(function($){
                 // distance to other side (35px is width of icon space)
                 var leftDistance = window.innerWidth * 0.9375 - 35;
 
-                $('#site-header').find('.search-form').css('left', -leftDistance + 'px')
+                siteHeader.find('.search-form').css('left', -leftDistance + 'px')
             }
 
         }
@@ -100,7 +107,7 @@ jQuery(document).ready(function($){
             $(this).addClass('open');
 
             // open to show whole menu plus 48px of padding for style
-            $('#menu-primary').css('max-height', menuHeight + 48);
+            menuPrimary.css('max-height', menuHeight + 48);
 
             // change screen reader text
             $(this).children('span').text(objectL10n.closeMenu);
@@ -113,10 +120,12 @@ jQuery(document).ready(function($){
     // get height of primary menu
     function calculateMenuHeight() {
 
-        if( $('#menu-primary-items').length ) {
-            var menuHeight = $('#menu-primary-items').height();
+        var menuHeight = '';
+
+        if( menuPrimaryItems.length ) {
+            menuHeight = menuPrimaryItems.height();
         } else {
-            var menuHeight = $('.menu-unset').height();
+            menuHeight = $('.menu-unset').height();
         }
         return menuHeight;
     }
@@ -185,7 +194,7 @@ jQuery(document).ready(function($){
                     var menuHeight = calculateMenuHeight();
 
                     // adjust to the height
-                    $('#menu-primary').css('max-height', menuHeight + 48);
+                    menuPrimary.css('max-height', menuHeight + 48);
 
                 }, 200)
             }
