@@ -88,12 +88,22 @@ jQuery(document).ready(function($){
         customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
     });
 
-    /*
-     * Open the search bar in site-header on click.
-     * Selector added as a parameter so that it works when search bar
-     * is added via ajax in the Customizer
-     */
+    // open search bar
     $('body').on('click', '#search-icon', openSearchBar);
+
+    // display the primary menu at mobile widths
+    $('#toggle-navigation').on('click', openPrimaryMenu);
+
+    // enforce double-click for parent menu items when a touch event is registered
+    $(window).on('touchstart', enableTouchDropdown );
+
+    /* allow keyboard access/visibility for dropdown menu items */
+    $('.menu-item a, .page_item a').focus(function(){
+        $(this).parents('ul').addClass('focused');
+    });
+    $('.menu-item a, .page_item a').focusout(function(){
+        $(this).parents('ul').removeClass('focused');
+    });
 
     function openSearchBar(){
 
@@ -138,9 +148,6 @@ jQuery(document).ready(function($){
 
         }
     }
-
-    // display the primary menu at mobile widths
-    $('#toggle-navigation').on('click', openPrimaryMenu);
 
     function openPrimaryMenu() {
 
@@ -196,9 +203,6 @@ jQuery(document).ready(function($){
         }
         return menuHeight;
     }
-
-    // enforce double-click for parent menu items when a touch event is registered
-    $(window).on('touchstart', enableTouchDropdown );
 
     // require a second click to visit parent navigation items
     function enableTouchDropdown(){
@@ -270,14 +274,6 @@ jQuery(document).ready(function($){
             }
         }
     }
-
-    /* allow keyboard access/visibility for dropdown menu items */
-    $('.menu-item a, .page_item a').focus(function(){
-        $(this).parents('ul').addClass('focused');
-    });
-    $('.menu-item a, .page_item a').focusout(function(){
-        $(this).parents('ul').removeClass('focused');
-    });
 
 });
 
