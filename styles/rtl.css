@@ -408,6 +408,11 @@ a img {
   top: 32px;
 }
 
+.infinite-loader,
+#infinite-handle {
+  clear: both;
+}
+
 /* 800px */
 @media all and (min-width: 50em) {
   .overflow-container:after {
