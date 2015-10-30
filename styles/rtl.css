@@ -800,11 +800,10 @@ a img {
 .featured-image > img,
 .featured-image > a > img {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  min-height: 100%;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .entry {
