@@ -26,7 +26,7 @@ if( ! function_exists( 'unlimited_theme_setup' ) ) {
 		add_theme_support( 'infinite-scroll', array(
 			'container' => 'loop-container',
 			'footer'    => 'overflow-container',
-			'render'    => 'ct_unlimited_infinite_scroll_render'
+			'render'    => 'unlimited_infinite_scroll_render'
 		) );
 
 		// load theme options page
@@ -588,7 +588,7 @@ add_action( 'wp_head', 'unlimited_add_meta_elements', 1 );
 remove_action( 'wp_head', 'wp_generator' );
 add_action( 'wp_head', 'wp_generator', 1 );
 
-function ct_unlimited_infinite_scroll_render(){
+function unlimited_infinite_scroll_render(){
 	while( have_posts() ) {
 		the_post();
 		get_template_part( 'content', 'archive' );
