@@ -332,6 +332,18 @@ function unlimited_add_customizer_content( $wp_customize ) {
 			'type'           => 'number'
 		)
 	) );
+	// Read More text - setting
+	$wp_customize->add_setting( 'read_more_text', array(
+		'default'           => __('Read More', 'unlimited'),
+		'sanitize_callback' => 'unlimited_sanitize_text'
+	) );
+	// Read More text - control
+	$wp_customize->add_control( 'read_more_text', array(
+		'label'    => __( 'Read More button text', 'unlimited' ),
+		'section'  => 'unlimited_blog',
+		'settings' => 'read_more_text',
+		'type'     => 'text'
+	) );
 
 	/***** Comment Display *****/
 
@@ -611,6 +623,10 @@ function unlimited_sanitize_comments_setting($input){
 			return '';
 		}
 	}
+}
+
+function unlimited_sanitize_text( $input ) {
+	return wp_kses_post( force_balance_tags( $input ) );
 }
 
 /***** Helper Functions *****/
