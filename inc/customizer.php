@@ -347,7 +347,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	// control
 	$wp_customize->add_control( new unlimited_number_input_control(
 		$wp_customize, 'excerpt_length', array(
-			'label'          => __( 'Excerpt length', 'unlimited' ),
+			'label'          => __( 'Excerpt word count', 'unlimited' ),
 			'section'        => 'unlimited_blog',
 			'settings'       => 'excerpt_length',
 			'type'           => 'number',
