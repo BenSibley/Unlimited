@@ -300,15 +300,12 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'unlimited_blog', array(
 		'title'      => __( 'Blog', 'unlimited' ),
-		'priority'   => 60,
-		'capability' => 'edit_theme_options'
+		'priority'   => 60
 	) );
 	// setting
 	$wp_customize->add_setting( 'full_post', array(
 		'default'           => 'no',
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'unlimited_sanitize_yes_no_settings',
+		'sanitize_callback' => 'unlimited_sanitize_yes_no_settings'
 	) );
 	// control
 	$wp_customize->add_control( 'full_post', array(
@@ -324,9 +321,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	// setting
 	$wp_customize->add_setting( 'excerpt_length', array(
 		'default'           => '25',
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new unlimited_number_input_control(
@@ -334,7 +329,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 			'label'          => __( 'Excerpt word count', 'unlimited' ),
 			'section'        => 'unlimited_blog',
 			'settings'       => 'excerpt_length',
-			'type'           => 'number',
+			'type'           => 'number'
 		)
 	) );
 
@@ -343,15 +338,12 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'unlimited_comments_display', array(
 		'title'      => __( 'Comment Display', 'unlimited' ),
-		'priority'   => 65,
-		'capability' => 'edit_theme_options'
+		'priority'   => 65
 	) );
 	// setting
 	$wp_customize->add_setting( 'comments_display', array(
 		'default'           => array('post','page','attachment','none'),
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'unlimited_sanitize_comments_setting',
+		'sanitize_callback' => 'unlimited_sanitize_comments_setting'
 	) );
 	// control
 	$wp_customize->add_control( new unlimited_Multi_Checkbox_Control(
@@ -374,13 +366,10 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'unlimited_custom_css', array(
 		'title'      => __( 'Custom CSS', 'unlimited' ),
-		'priority'   => 80,
-		'capability' => 'edit_theme_options'
+		'priority'   => 80
 	) );
 	// setting
 	$wp_customize->add_setting( 'custom_css', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'wp_filter_nohtml_kses',
 		'transport'         => 'postMessage'
 	) );
@@ -389,7 +378,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 		$wp_customize, 'custom_css', array(
 			'label'          => __( 'Add Custom CSS Here:', 'unlimited' ),
 			'section'        => 'unlimited_custom_css',
-			'settings'       => 'custom_css',
+			'settings'       => 'custom_css'
 		)
 	) );
 
@@ -402,14 +391,11 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'unlimited_header_image', array(
 		'title'      => __( 'Header Image', 'unlimited' ),
-		'priority'   => 35,
-		'capability' => 'edit_theme_options'
+		'priority'   => 35
 	) );
 	// setting
 	$wp_customize->add_setting( 'header_image_ad', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new unlimited_description_header_image_control(
@@ -424,14 +410,11 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'unlimited_colors', array(
 		'title'      => __( 'Colors', 'unlimited' ),
-		'priority'   => 50,
-		'capability' => 'edit_theme_options'
+		'priority'   => 50
 	) );
 	// setting
 	$wp_customize->add_setting( 'colors_ad', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new unlimited_description_color_control(
@@ -446,14 +429,11 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'unlimited_background', array(
 		'title'      => __( 'Background', 'unlimited' ),
-		'priority'   => 55,
-		'capability' => 'edit_theme_options'
+		'priority'   => 55
 	) );
 	// setting
 	$wp_customize->add_setting( 'background_ad', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new unlimited_description_background_control(
@@ -468,14 +448,11 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'unlimited_font', array(
 		'title'      => __( 'Font', 'unlimited' ),
-		'priority'   => 40,
-		'capability' => 'edit_theme_options'
+		'priority'   => 40
 	) );
 	// setting
 	$wp_customize->add_setting( 'font_ad', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new unlimited_description_font_control(
@@ -490,14 +467,11 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'unlimited_fixed_menu', array(
 		'title'      => __( 'Fixed Menu', 'unlimited' ),
-		'priority'   => 15,
-		'capability' => 'edit_theme_options'
+		'priority'   => 15
 	) );
 	// setting
 	$wp_customize->add_setting( 'fixed_menu_ad', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new unlimited_description_fixed_menu_control(
@@ -512,14 +486,11 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'unlimited_display_control', array(
 		'title'      => __( 'Display Controls', 'unlimited' ),
-		'priority'   => 70,
-		'capability' => 'edit_theme_options'
+		'priority'   => 70
 	) );
 	// setting
 	$wp_customize->add_setting( 'display_control_ad', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new unlimited_description_display_control_control(
@@ -534,14 +505,11 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	// section
 	$wp_customize->add_section( 'unlimited_footer_text', array(
 		'title'      => __( 'Footer Text', 'unlimited' ),
-		'priority'   => 85,
-		'capability' => 'edit_theme_options'
+		'priority'   => 85
 	) );
 	// setting
 	$wp_customize->add_setting( 'footer_text_ad', array(
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint',
+		'sanitize_callback' => 'absint'
 	) );
 	// control
 	$wp_customize->add_control( new unlimited_description_footer_text_control(
