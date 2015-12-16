@@ -20,8 +20,7 @@
     <div class="design-credit">
         <span>
             <?php
-                $site_url = 'https://www.competethemes.com/unlimited/';
-                $footer_text = sprintf( __( '<a target="_blank" href="%s">Unlimited WordPress Theme</a> by Compete Themes', 'unlimited' ), esc_url( $site_url ) );
+                $footer_text = sprintf( __( '<a target="_blank" href="%s">Unlimited WordPress Theme</a> by Compete Themes', 'unlimited' ), 'https://www.competethemes.com/unlimited/' );
                 $footer_text = apply_filters('footer_text', $footer_text );
                 echo wp_kses_post( $footer_text );
             ?>
