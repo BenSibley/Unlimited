@@ -117,10 +117,10 @@ jQuery(document).ready(function($){
 
     /* allow keyboard access/visibility for dropdown menu items */
     dropdownMenuItems.focus(function(){
-        $(this).parents('ul').addClass('focused');
+        $(this).parents('ul, li').addClass('focused');
     });
     dropdownMenuItems.focusout(function(){
-        $(this).parents('ul').removeClass('focused');
+        $(this).parents('ul, li').removeClass('focused');
     });
 
     function openSearchBar(){

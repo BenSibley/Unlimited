@@ -581,8 +581,9 @@ a img {
     display: inline-block;
     margin-left: -4px;
   }
-  .menu-primary-items li:hover > a,
-  .menu-unset > ul li:hover > a {
+  .menu-primary-items li:hover > a, .menu-primary-items li.focused > a,
+  .menu-unset > ul li:hover > a,
+  .menu-unset > ul li.focused > a {
     background: #EDEDED;
     color: #3a3a3a;
   }
@@ -612,8 +613,9 @@ a img {
   .menu-unset .page_item_has_children {
     /* tier 3 */
   }
-  .menu-item-has-children:hover > a:after,
-  .menu-unset .page_item_has_children:hover > a:after {
+  .menu-item-has-children:hover > a:after, .menu-item-has-children.focused > a:after,
+  .menu-unset .page_item_has_children:hover > a:after,
+  .menu-unset .page_item_has_children.focused > a:after {
     -webkit-transform: translateY(3px);
     -ms-transform: translateY(3px);
     transform: translateY(3px);
@@ -664,8 +666,9 @@ a img {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
-  .menu-item-has-children ul li:hover > a:after,
-  .menu-unset .page_item_has_children ul li:hover > a:after {
+  .menu-item-has-children ul li:hover > a:after, .menu-item-has-children ul li.focused > a:after,
+  .menu-unset .page_item_has_children ul li:hover > a:after,
+  .menu-unset .page_item_has_children ul li.focused > a:after {
     -webkit-transform: translateX(3px);
     -ms-transform: translateX(3px);
     transform: translateX(3px);
