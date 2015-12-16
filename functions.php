@@ -176,27 +176,29 @@ add_action('comment_form_defaults', 'unlimited_remove_comments_notes_after');
 if( ! function_exists( 'unlimited_excerpt' ) ) {
 	function unlimited_excerpt() {
 
-		// make post variable available
 		global $post;
-
-		// check for the more tag
-		$ismore = strpos( $post->post_content, '<!--more-->' );
-
-		// get the show full post setting
+		$ismore         = strpos( $post->post_content, '<!--more-->' );
 		$show_full_post = get_theme_mod( 'full_post' );
+		$read_more_text = get_theme_mod( 'read_more_text' );
 
-		// if show full post is on and not on a search results page
 		if ( ( $show_full_post == 'yes' ) && ! is_search() ) {
-
-			// use the read more link if present
 			if ( $ismore ) {
-				the_content( __( 'Read More', 'unlimited' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				// Has to be written this way because i18n text CANNOT be stored in a variable
+				if ( ! empty( $read_more_text ) ) {
+					the_content( $read_more_text . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				} else {
+					the_content( __( 'Read More', 'unlimited' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				}
 			} else {
 				the_content();
 			}
 		} // use the read more link if present
 		elseif ( $ismore ) {
-			the_content( __( 'Read More', 'unlimited' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span>" );
+			if ( ! empty( $read_more_text ) ) {
+				the_content( $read_more_text . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+			} else {
+				the_content( __( 'Read More', 'unlimited' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+			}
 		} // otherwise the excerpt is automatic, so output it
 		else {
 			the_excerpt();
@@ -207,9 +209,13 @@ if( ! function_exists( 'unlimited_excerpt' ) ) {
 // filter the link on excerpts
 if( ! function_exists( 'unlimited_excerpt_read_more_link' ) ) {
 	function unlimited_excerpt_read_more_link( $output ) {
-		global $post;
+		$read_more_text = get_theme_mod( 'read_more_text' );
 
-		return $output . "<p><a class='more-link' href='" . get_permalink() . "'>" . __( 'Read More', 'unlimited' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+		if ( ! empty( $read_more_text ) ) {
+			return $output . "<p><a class='more-link' href='" . get_permalink() . "'>" . $read_more_text . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+		} else {
+			return $output . "<p><a class='more-link' href='" . get_permalink() . "'>" . __( 'Read More', 'unlimited' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+		}
 	}
 }
 add_filter('the_excerpt', 'unlimited_excerpt_read_more_link');
