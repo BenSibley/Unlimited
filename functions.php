@@ -397,13 +397,13 @@ if( ! function_exists('unlimited_social_icons_output') ) {
 					?>
 					<li>
 						<a class="email" target="_blank" href="mailto:<?php echo antispambot( is_email( unlimited_get_social_url( $source, $key ) ) ); ?>">
-							<i class="fa fa-envelope" title="<?php _e('email icon', 'unlimited'); ?>"></i>
+							<i class="fa fa-envelope" title="<?php esc_attr_e('email', 'unlimited'); ?>"></i>
 						</a>
 					</li>
 				<?php } else { ?>
 					<li>
 						<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank" href="<?php echo esc_url( unlimited_get_social_url( $source, $key ) ); ?>">
-							<i class="<?php echo esc_attr( $class ); ?>" title="<?php printf( __('%s icon', 'unlimited'), esc_attr( $active_site ) ); ?>"></i>
+							<i class="<?php echo esc_attr( $class ); ?>" title="<?php esc_attr( $active_site ); ?>"></i>
 						</a>
 					</li>
 				<?php
