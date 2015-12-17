@@ -571,7 +571,7 @@ add_action('wp_head','unlimited_ajaxurl');
 
 function unlimited_customize_preview_js() {
 
-	$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"https://www.competethemes.com/unlimited-pro/\" target=\"_blank\">" . __('View the Unlimited Pro Plugin', 'unlimited') . "<span>&rarr;</span></a></div>');</script>";
+	$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"https://www.competethemes.com/unlimited-pro/\" target=\"_blank\">" . __('View the Unlimited Pro Plugin', 'unlimited') . " <span>&rarr;</span></a></div>');</script>";
 
 	echo apply_filters('unlimited_customizer_ad', $content);
 }
