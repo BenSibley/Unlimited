@@ -511,8 +511,28 @@ function unlimited_reset_customizer_options() {
 	if( ! current_user_can( 'manage_options' ) )
 		return;
 
-	// delete customizer mods
-	remove_theme_mods();
+	$mods_array = array(
+		'logo_upload',
+		'search_bar',
+		'layout',
+		'full_post',
+		'excerpt_length',
+		'read_more_text',
+		'comments_display',
+		'custom_css'
+	);
+
+	$social_sites = unlimited_social_array();
+
+	foreach( $social_sites as $social_site => $value ) {
+		$mods_array[] = $social_site;
+	}
+
+	$mods_array = apply_filters( 'unlimited_mods_to_remove', $mods_array );
+
+	foreach ( $mods_array as $theme_mod ) {
+		remove_theme_mod( $theme_mod );
+	}
 
 	$redirect = admin_url( 'themes.php?page=unlimited-options' );
 	$redirect = add_query_arg( 'unlimited_status', 'deleted', $redirect);
