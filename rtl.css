@@ -1720,6 +1720,60 @@ li.bypostauthor {
 .post-author .social-media-icons .hacker-news:focus {
   color: #ff6600;
 }
+.site-header .social-media-icons .foursquare:hover, .site-header .social-media-icons .foursquare:active, .site-header .social-media-icons .foursquare:focus,
+.post-author .social-media-icons .foursquare:hover,
+.post-author .social-media-icons .foursquare:active,
+.post-author .social-media-icons .foursquare:focus {
+  color: #0072b1;
+}
+.site-header .social-media-icons .slack:hover, .site-header .social-media-icons .slack:active, .site-header .social-media-icons .slack:focus,
+.post-author .social-media-icons .slack:hover,
+.post-author .social-media-icons .slack:active,
+.post-author .social-media-icons .slack:focus {
+  color: #47C09B;
+}
+.site-header .social-media-icons .slideshare:hover, .site-header .social-media-icons .slideshare:active, .site-header .social-media-icons .slideshare:focus,
+.post-author .social-media-icons .slideshare:hover,
+.post-author .social-media-icons .slideshare:active,
+.post-author .social-media-icons .slideshare:focus {
+  color: #0282BD;
+}
+.site-header .social-media-icons .skype:hover, .site-header .social-media-icons .skype:active, .site-header .social-media-icons .skype:focus,
+.post-author .social-media-icons .skype:hover,
+.post-author .social-media-icons .skype:active,
+.post-author .social-media-icons .skype:focus {
+  color: #02B8F2;
+}
+.site-header .social-media-icons .whatsapp:hover, .site-header .social-media-icons .whatsapp:active, .site-header .social-media-icons .whatsapp:focus,
+.post-author .social-media-icons .whatsapp:hover,
+.post-author .social-media-icons .whatsapp:active,
+.post-author .social-media-icons .whatsapp:focus {
+  color: #6FDA51;
+}
+.site-header .social-media-icons .qq:hover, .site-header .social-media-icons .qq:active, .site-header .social-media-icons .qq:focus,
+.post-author .social-media-icons .qq:hover,
+.post-author .social-media-icons .qq:active,
+.post-author .social-media-icons .qq:focus {
+  color: #3AA3E0;
+}
+.site-header .social-media-icons .wechat:hover, .site-header .social-media-icons .wechat:active, .site-header .social-media-icons .wechat:focus,
+.post-author .social-media-icons .wechat:hover,
+.post-author .social-media-icons .wechat:active,
+.post-author .social-media-icons .wechat:focus {
+  color: #66C150;
+}
+.site-header .social-media-icons .xing:hover, .site-header .social-media-icons .xing:active, .site-header .social-media-icons .xing:focus,
+.post-author .social-media-icons .xing:hover,
+.post-author .social-media-icons .xing:active,
+.post-author .social-media-icons .xing:focus {
+  color: #01656B;
+}
+.site-header .social-media-icons .paypal:hover, .site-header .social-media-icons .paypal:active, .site-header .social-media-icons .paypal:focus,
+.post-author .social-media-icons .paypal:hover,
+.post-author .social-media-icons .paypal:active,
+.post-author .social-media-icons .paypal:focus {
+  color: #02A6E2;
+}
 .site-header .social-media-icons .steam:hover, .site-header .social-media-icons .steam:active, .site-header .social-media-icons .steam:focus,
 .post-author .social-media-icons .steam:hover,
 .post-author .social-media-icons .steam:active,
