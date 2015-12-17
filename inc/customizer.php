@@ -23,21 +23,6 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	
 	/***** Add Custom Controls *****/
 
-	// create textarea control
-	class unlimited_Textarea_Control extends WP_Customize_Control {
-		public $type = 'textarea';
-
-		public function render_content() {
-			?>
-			<label>
-				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-				<textarea rows="8" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
-			</label>
-		<?php
-		}
-	}
-
-	// create multi-checkbox/select control
 	class unlimited_Multi_Checkbox_Control extends WP_Customize_Control {
 		public $type = 'multi-checkbox';
 
@@ -356,12 +341,10 @@ function unlimited_add_customizer_content( $wp_customize ) {
 		'transport'         => 'postMessage'
 	) );
 	// control
-	$wp_customize->add_control( new unlimited_Textarea_Control(
-		$wp_customize, 'custom_css', array(
-			'label'          => __( 'Add Custom CSS Here:', 'unlimited' ),
-			'section'        => 'unlimited_custom_css',
-			'settings'       => 'custom_css'
-		)
+	$wp_customize->add_control( 'custom_css', array(
+		'label'          => __( 'Add Custom CSS Here:', 'unlimited' ),
+		'section'        => 'unlimited_custom_css',
+		'settings'       => 'custom_css'
 	) );
 
 	/*
