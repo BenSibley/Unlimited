@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
     <div class="post-header search-header">
         <h1 class="post-title">
             <?php
@@ -15,10 +14,8 @@
         </h1>
         <?php get_search_form(); ?>
     </div>
-
     <div id="loop-container" class="loop-container">
         <?php
-        // The loop
         if ( have_posts() ) :
             while (have_posts() ) :
                 the_post();
@@ -27,10 +24,9 @@
         endif;
         ?>
     </div>
-
-    <?php the_posts_pagination(); ?>
-
     <?php
+    the_posts_pagination();
+
     // only display bottom search bar if there are search results
     $total_results = $wp_query->found_posts;
     if($total_results) {
