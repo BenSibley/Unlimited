@@ -1186,7 +1186,7 @@ li.bypostauthor {
   outline-color: #3a3a3a;
 }
 
-.loop-pagination {
+.pagination {
   position: relative;
   margin: 1.5em 0;
   padding: 0.75em;
@@ -1194,27 +1194,27 @@ li.bypostauthor {
   border: solid 1px #DEDEDE;
   text-align: center;
 }
-.loop-pagination a {
+.pagination a {
   text-decoration: underline;
 }
-.loop-pagination .prev,
-.loop-pagination .next {
+.pagination .prev,
+.pagination .next {
   position: absolute;
   text-decoration: none;
 }
-.loop-pagination .prev:hover, .loop-pagination .prev:active, .loop-pagination .prev:focus,
-.loop-pagination .next:hover,
-.loop-pagination .next:active,
-.loop-pagination .next:focus {
+.pagination .prev:hover, .pagination .prev:active, .pagination .prev:focus,
+.pagination .next:hover,
+.pagination .next:active,
+.pagination .next:focus {
   text-decoration: underline;
 }
-.loop-pagination .prev {
+.pagination .prev {
   left: 3.33344%;
 }
-.loop-pagination .next {
+.pagination .next {
   right: 3.33344%;
 }
-.loop-pagination .page-numbers {
+.pagination .page-numbers {
   padding: 0 4px;
 }
 
@@ -1278,7 +1278,7 @@ li.bypostauthor {
     margin-bottom: 1.5em;
   }
 
-  .loop-pagination {
+  .pagination {
     margin-bottom: 3em;
   }
 }

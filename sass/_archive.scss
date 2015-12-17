@@ -33,7 +33,7 @@
     outline-color: $gray-23;
   }
 }
-.loop-pagination {
+.pagination {
   position: relative;
   margin: $baseline-height 0;
   padding: $baseline-height / 2;
@@ -126,7 +126,7 @@
       margin-bottom: $baseline-height;
     }
   }
-  .loop-pagination {
+  .pagination {
     margin-bottom: $baseline-height * 2;
   }
 }
