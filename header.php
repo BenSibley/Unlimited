@@ -38,5 +38,8 @@
 	</header>
 	<?php do_action( 'before_main' ); ?>
 	<div class="max-width">
+		<?php if ( function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb( '<p id="breadcrumbs">' , '</p>' );
+		} ?>
 		<section id="main" class="main" role="main">
-<?php do_action( 'main_before' ); ?>
+			<?php do_action( 'main_before' ); ?>

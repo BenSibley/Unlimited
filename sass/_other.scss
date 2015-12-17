@@ -15,6 +15,11 @@
   margin-bottom: 12px;
 }
 
+// Yoast breadcrumbs
+#breadcrumbs {
+  margin: $baseline-height $column 0;
+}
+
 // 800px
 @media all and (min-width: 50em) {
 
@@ -24,5 +29,8 @@
       width: 100% - $column * 2;
       margin: $baseline-height $column 0;
     }
+  }
+  #breadcrumbs {
+    margin: $baseline-height $column -24px;
   }
 }
