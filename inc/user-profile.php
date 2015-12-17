@@ -1,23 +1,21 @@
 <?php
 
-// add the social profile boxes to the user screen.
 function unlimited_add_social_profile_settings( $user ) {
 
-	// get current user ID
 	$user_id = get_current_user_id();
 
-	// only added for contributors and above
 	if ( ! current_user_can( 'edit_posts', $user_id ) ) {
 		return false;
 	}
 
-	// get social sites
 	$social_sites = unlimited_social_array();
 
 	?>
 	<table class="form-table">
 		<tr>
-			<th><h3><?php _e( 'Social Profiles', 'unlimited' ); ?></h3></th>
+			<th>
+				<h3><?php _e( 'Social Profiles', 'unlimited' ); ?></h3>
+			</th>
 		</tr>
 		<?php
 		foreach ( $social_sites as $key => $social_site ) {
@@ -79,7 +77,6 @@ function unlimited_add_social_profile_settings( $user ) {
 	</table>
 	<?php
 }
-
 add_action( 'show_user_profile', 'unlimited_add_social_profile_settings' );
 add_action( 'edit_user_profile', 'unlimited_add_social_profile_settings' );
 
@@ -104,6 +101,5 @@ function unlimited_save_social_profiles( $user_id ) {
 		}
 	}
 }
-
 add_action( 'personal_options_update', 'unlimited_save_social_profiles' );
 add_action( 'edit_user_profile_update', 'unlimited_save_social_profiles' );

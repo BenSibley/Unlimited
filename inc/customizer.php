@@ -16,11 +16,11 @@ function unlimited_add_customizer_content( $wp_customize ) {
 
 	/***** Add PostMessage Support *****/
 
-	// Add postMessage support for site title and description.
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
 	/***** Add Custom Controls *****/
+
 	class unlimited_Multi_Checkbox_Control extends WP_Customize_Control {
 		public $type = 'multi-checkbox';
 
@@ -549,9 +549,7 @@ function unlimited_ajaxurl() { ?>
 add_action( 'wp_head', 'unlimited_ajaxurl' );
 
 function unlimited_customize_preview_js() {
-
 	$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"https://www.competethemes.com/unlimited-pro/\" target=\"_blank\">" . __( 'View the Unlimited Pro Plugin', 'unlimited' ) . " <span>&rarr;</span></a></div>');</script>";
-
 	echo apply_filters( 'unlimited_customizer_ad', $content );
 }
 add_action( 'customize_controls_print_footer_scripts', 'unlimited_customize_preview_js' );
