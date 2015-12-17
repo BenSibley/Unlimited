@@ -1,6 +1,6 @@
 <?php do_action( 'main_after' ); ?>
 
-</section> <!-- .main -->
+</section><!-- .main -->
 
 <?php get_sidebar( 'primary' ); ?>
 

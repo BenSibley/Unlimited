@@ -3,7 +3,6 @@
 function unlimited_register_theme_page() {
 	add_theme_page( __( 'Unlimited Dashboard', 'unlimited' ), __( 'Unlimited Dashboard', 'unlimited' ), 'edit_theme_options', 'unlimited-options', 'unlimited_options_content', 'unlimited_options_content' );
 }
-
 add_action( 'admin_menu', 'unlimited_register_theme_page' );
 
 function unlimited_options_content() {
@@ -62,7 +61,6 @@ function unlimited_options_content() {
 			</p>
 			<form method="post">
 				<input type="hidden" name="unlimited_reset_customizer" value="unlimited_reset_customizer_settings"/>
-
 				<p>
 					<?php wp_nonce_field( 'unlimited_reset_customizer_nonce', 'unlimited_reset_customizer_nonce' ); ?>
 					<?php submit_button( __( 'Reset Customizer Settings', 'unlimited' ), 'delete', 'delete', false ); ?>
