@@ -12,7 +12,7 @@
 		</a>
 	</div>
 	<div class="comments-meta">
-		<a href="<?php echo get_comments_link(); ?>" title="Comments for this post">
+		<a href="<?php echo esc_url( get_comments_link() ); ?>" title="Comments for this post">
 			<i class="fa fa-comment"></i>
 			<span>
 				<?php
