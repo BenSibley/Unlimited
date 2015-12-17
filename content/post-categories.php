@@ -11,7 +11,6 @@ $output = __( 'Posted in', 'unlimited' ) . ' ';
 
 // if there are categories for the post
 if ( $categories ) {
-
 	echo '<p class="post-categories">';
 	foreach ( $categories as $category ) {
 		// if it's the last and not also the first (only) category, pre-prend with "and"

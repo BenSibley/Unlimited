@@ -1,6 +1,5 @@
 <?php
 
-/* Add customizer panels, sections, settings, and controls */
 add_action( 'customize_register', 'unlimited_add_customizer_content' );
 
 function unlimited_add_customizer_content( $wp_customize ) {
@@ -456,17 +455,13 @@ function unlimited_add_customizer_content( $wp_customize ) {
  * Used in: search bar
  */
 function unlimited_sanitize_all_show_hide_settings( $input ) {
-	// create array of valid values
+
 	$valid = array(
 		'show' => __( 'Show', 'unlimited' ),
 		'hide' => __( 'Hide', 'unlimited' )
 	);
-	// if returned data is in array use it, else return nothing
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	} else {
-		return '';
-	}
+
+	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 /*
@@ -474,7 +469,6 @@ function unlimited_sanitize_all_show_hide_settings( $input ) {
  * Used in: Social Media Icons
  */
 function unlimited_sanitize_email( $input ) {
-
 	return sanitize_email( $input );
 }
 
@@ -497,11 +491,7 @@ function unlimited_sanitize_layout_settings( $input ) {
 		'two-wide'   => __( 'Two column - No Sidebar - Wide', 'unlimited' )
 	);
 
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	} else {
-		return '';
-	}
+	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 // sanitize yes/no settings
@@ -512,17 +502,11 @@ function unlimited_sanitize_yes_no_settings( $input ) {
 		'no'  => __( 'No', 'unlimited' ),
 	);
 
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	} else {
-		return '';
-	}
+	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
-// sanitize comment display multi-check
 function unlimited_sanitize_comments_setting( $input ) {
 
-	// valid data
 	$valid = array(
 		'post'       => __( 'Posts', 'unlimited' ),
 		'page'       => __( 'Pages', 'unlimited' ),
@@ -530,15 +514,9 @@ function unlimited_sanitize_comments_setting( $input ) {
 		'none'       => __( 'Do not show', 'unlimited' )
 	);
 
-	// loop through array
 	foreach ( $input as $selection ) {
 
-		// if it's in the valid data, return it
-		if ( array_key_exists( $selection, $valid ) ) {
-			return $input;
-		} else {
-			return '';
-		}
+		return array_key_exists( $selection, $valid ) ? $input : '';
 	}
 }
 
@@ -559,7 +537,6 @@ function unlimited_update_search_bar_ajax() {
 
 	die();
 }
-
 add_action( 'wp_ajax_update_search_bar', 'unlimited_update_search_bar_ajax' );
 
 // enable ajaxurl global variable on front-end / customizer
@@ -569,7 +546,6 @@ function unlimited_ajaxurl() { ?>
 	</script>
 	<?php
 }
-
 add_action( 'wp_head', 'unlimited_ajaxurl' );
 
 function unlimited_customize_preview_js() {
@@ -578,5 +554,4 @@ function unlimited_customize_preview_js() {
 
 	echo apply_filters( 'unlimited_customizer_ad', $content );
 }
-
 add_action( 'customize_controls_print_footer_scripts', 'unlimited_customize_preview_js' );
