@@ -1,8 +1,7 @@
 <?php
 
-/* create theme options page */
 function unlimited_register_theme_page(){
-    add_theme_page( 'unlimited Dashboard', 'Unlimited Dashboard', 'edit_theme_options', 'unlimited-options', 'unlimited_options_content', 'unlimited_options_content');
+    add_theme_page( __('Unlimited Dashboard', 'unlimited'), __('Unlimited Dashboard', 'unlimited'), 'edit_theme_options', 'unlimited-options', 'unlimited_options_content', 'unlimited_options_content');
 }
 add_action( 'admin_menu', 'unlimited_register_theme_page' );
 
