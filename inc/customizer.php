@@ -23,19 +23,6 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	
 	/***** Add Custom Controls *****/
 
-	// number input control
-	class unlimited_number_input_control extends WP_Customize_Control {
-		public $type = 'number';
-
-		public function render_content() {
-			?>
-			<label>
-				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-				<input type="number" <?php $this->link(); ?> value="<?php echo $this->value(); ?>" />
-			</label>
-		<?php
-		}
-	}
 	// create textarea control
 	class unlimited_Textarea_Control extends WP_Customize_Control {
 		public $type = 'textarea';
@@ -309,13 +296,11 @@ function unlimited_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'absint'
 	) );
 	// control
-	$wp_customize->add_control( new unlimited_number_input_control(
-		$wp_customize, 'excerpt_length', array(
-			'label'          => __( 'Excerpt word count', 'unlimited' ),
-			'section'        => 'unlimited_blog',
-			'settings'       => 'excerpt_length',
-			'type'           => 'number'
-		)
+	$wp_customize->add_control( 'excerpt_length', array(
+		'label'          => __( 'Excerpt word count', 'unlimited' ),
+		'section'        => 'unlimited_blog',
+		'settings'       => 'excerpt_length',
+		'type'           => 'number'
 	) );
 	// Read More text - setting
 	$wp_customize->add_setting( 'read_more_text', array(
