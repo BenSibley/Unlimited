@@ -6,7 +6,7 @@ if ( ! isset( $content_width ) ) {
 }
 
 // theme setup
-if( ! function_exists( 'unlimited_theme_setup' ) ) {
+if ( ! function_exists( 'unlimited_theme_setup' ) ) {
 	function unlimited_theme_setup() {
 
 		// add functionality from WordPress core
@@ -19,7 +19,11 @@ if( ! function_exists( 'unlimited_theme_setup' ) ) {
 		 * to output valid HTML5.
 		 */
 		add_theme_support( 'html5', array(
-			'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption'
 		) );
 
 		// adds support for Jetpack infinite scroll feature
@@ -49,23 +53,24 @@ if( ! function_exists( 'unlimited_theme_setup' ) ) {
 add_action( 'after_setup_theme', 'unlimited_theme_setup', 10 );
 
 // register widget areas
-function unlimited_register_widget_areas(){
+function unlimited_register_widget_areas() {
 
-    /* register primary sidebar widget area */
-    register_sidebar( array(
-        'name'         => __( 'Primary Sidebar', 'unlimited' ),
-        'id'           => 'primary',
-        'description'  => __( 'Widgets in this area will be shown in the sidebar next to the main post content', 'unlimited' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>'
-    ) );
+	/* register primary sidebar widget area */
+	register_sidebar( array(
+		'name'          => __( 'Primary Sidebar', 'unlimited' ),
+		'id'            => 'primary',
+		'description'   => __( 'Widgets in this area will be shown in the sidebar next to the main post content', 'unlimited' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>'
+	) );
 }
-add_action('widgets_init','unlimited_register_widget_areas');
+
+add_action( 'widgets_init', 'unlimited_register_widget_areas' );
 
 /* added to customize the comments. Same as default except -> added use of gravatar images for comment authors */
-if( ! function_exists( 'unlimited_customize_comments' ) ) {
+if ( ! function_exists( 'unlimited_customize_comments' ) ) {
 	function unlimited_customize_comments( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment;
 		global $post;
@@ -74,7 +79,7 @@ if( ! function_exists( 'unlimited_customize_comments' ) ) {
 		<article id="comment-<?php comment_ID(); ?>" class="comment">
 			<div class="comment-author">
 				<?php
-					echo get_avatar( get_comment_author_email(), 48, '', get_comment_author() );
+				echo get_avatar( get_comment_author_email(), 48, '', get_comment_author() );
 				?>
 				<div class="author-name">
 					<span><?php comment_author_link(); ?></span> <?php _x( 'said:', 'the commenter said the following:', 'unlimited' ); ?>
@@ -96,12 +101,12 @@ if( ! function_exists( 'unlimited_customize_comments' ) ) {
 				<?php edit_comment_link( __( 'Edit', 'unlimited' ), '|' ); ?>
 			</div>
 		</article>
-	<?php
+		<?php
 	}
 }
 
 /* added HTML5 placeholders for each default field and aria-required to required */
-if( ! function_exists( 'unlimited_update_fields' ) ) {
+if ( ! function_exists( 'unlimited_update_fields' ) ) {
 	function unlimited_update_fields( $fields ) {
 
 		// get commenter object
@@ -114,7 +119,7 @@ if( ! function_exists( 'unlimited_update_fields' ) ) {
 		if ( $req == 1 ) {
 			$label = '*';
 		} else {
-			$label = ' ' . __("optional", "unlimited");
+			$label = ' ' . __( "optional", "unlimited" );
 		}
 
 		// adds aria required tag if required
@@ -144,9 +149,9 @@ if( ! function_exists( 'unlimited_update_fields' ) ) {
 		return $fields;
 	}
 }
-add_filter('comment_form_default_fields','unlimited_update_fields');
+add_filter( 'comment_form_default_fields', 'unlimited_update_fields' );
 
-if( ! function_exists( 'unlimited_update_comment_field' ) ) {
+if ( ! function_exists( 'unlimited_update_comment_field' ) ) {
 	function unlimited_update_comment_field( $comment_field ) {
 
 		$comment_field =
@@ -158,10 +163,10 @@ if( ! function_exists( 'unlimited_update_comment_field' ) ) {
 		return $comment_field;
 	}
 }
-add_filter('comment_form_field_comment','unlimited_update_comment_field');
+add_filter( 'comment_form_field_comment', 'unlimited_update_comment_field' );
 
 // remove allowed tags text after comment form
-if( ! function_exists( 'unlimited_remove_comments_notes_after' ) ) {
+if ( ! function_exists( 'unlimited_remove_comments_notes_after' ) ) {
 	function unlimited_remove_comments_notes_after( $defaults ) {
 
 		$defaults['comment_notes_after'] = '';
@@ -170,10 +175,10 @@ if( ! function_exists( 'unlimited_remove_comments_notes_after' ) ) {
 	}
 }
 
-add_action('comment_form_defaults', 'unlimited_remove_comments_notes_after');
+add_action( 'comment_form_defaults', 'unlimited_remove_comments_notes_after' );
 
 // excerpt handling
-if( ! function_exists( 'unlimited_excerpt' ) ) {
+if ( ! function_exists( 'unlimited_excerpt' ) ) {
 	function unlimited_excerpt() {
 
 		global $post;
@@ -207,7 +212,7 @@ if( ! function_exists( 'unlimited_excerpt' ) ) {
 }
 
 // filter the link on excerpts
-if( ! function_exists( 'unlimited_excerpt_read_more_link' ) ) {
+if ( ! function_exists( 'unlimited_excerpt_read_more_link' ) ) {
 	function unlimited_excerpt_read_more_link( $output ) {
 		$read_more_text = get_theme_mod( 'read_more_text' );
 
@@ -218,30 +223,29 @@ if( ! function_exists( 'unlimited_excerpt_read_more_link' ) ) {
 		}
 	}
 }
-add_filter('the_excerpt', 'unlimited_excerpt_read_more_link');
+add_filter( 'the_excerpt', 'unlimited_excerpt_read_more_link' );
 
 // switch [...] to ellipsis on automatic excerpt
-if( ! function_exists( 'unlimited_new_excerpt_more' ) ) {
+if ( ! function_exists( 'unlimited_new_excerpt_more' ) ) {
 	function unlimited_new_excerpt_more( $more ) {
 
 		// get user set excerpt length
-		$new_excerpt_length = get_theme_mod('excerpt_length');
+		$new_excerpt_length = get_theme_mod( 'excerpt_length' );
 
 		// if set to 0, return nothing
 		if ( $new_excerpt_length === 0 ) {
 			return '';
-		}
-		// else add the ellipsis
+		} // else add the ellipsis
 		else {
 			return '&#8230;';
 		}
 
 	}
 }
-add_filter('excerpt_more', 'unlimited_new_excerpt_more');
+add_filter( 'excerpt_more', 'unlimited_new_excerpt_more' );
 
 // turns of the automatic scrolling to the read more link 
-if( ! function_exists( 'unlimited_remove_more_link_scroll' ) ) {
+if ( ! function_exists( 'unlimited_remove_more_link_scroll' ) ) {
 	function unlimited_remove_more_link_scroll( $link ) {
 		$link = preg_replace( '|#more-[0-9]+|', '', $link );
 
@@ -253,24 +257,23 @@ add_filter( 'the_content_more_link', 'unlimited_remove_more_link_scroll' );
 // change the length of the excerpts
 function unlimited_custom_excerpt_length( $length ) {
 
-	$new_excerpt_length = get_theme_mod('excerpt_length');
+	$new_excerpt_length = get_theme_mod( 'excerpt_length' );
 
 	// if there is a new length set and it's not 15, change it
-	if( ! empty( $new_excerpt_length ) && $new_excerpt_length != 25 ){
+	if ( ! empty( $new_excerpt_length ) && $new_excerpt_length != 25 ) {
 		return $new_excerpt_length;
-	}
-	// return 0 if user explicitly sets it to 0
+	} // return 0 if user explicitly sets it to 0
 	elseif ( $new_excerpt_length === 0 ) {
 		return 0;
-	}
-	else {
+	} else {
 		return 25;
 	}
 }
+
 add_filter( 'excerpt_length', 'unlimited_custom_excerpt_length', 99 );
 
 // for displaying featured images
-if( ! function_exists( 'unlimited_featured_image' ) ) {
+if ( ! function_exists( 'unlimited_featured_image' ) ) {
 	function unlimited_featured_image() {
 
 		// get post object
@@ -291,14 +294,14 @@ if( ! function_exists( 'unlimited_featured_image' ) ) {
 		// allow videos to be added
 		$featured_image = apply_filters( 'ct_unlimited_featured_image', $featured_image );
 
-		if( $featured_image ) {
+		if ( $featured_image ) {
 			echo $featured_image;
 		}
 	}
 }
 
 // associative array of social media sites
-if ( !function_exists( 'unlimited_social_array' ) ) {
+if ( ! function_exists( 'unlimited_social_array' ) ) {
 	function unlimited_social_array() {
 
 		$social_sites = array(
@@ -349,38 +352,52 @@ if ( !function_exists( 'unlimited_social_array' ) ) {
 }
 
 // used in unlimited_social_icons_output to return urls
-function unlimited_get_social_url($source, $site){
+function unlimited_get_social_url( $source, $site ) {
 
-	if( $source == 'header' ) {
-		return get_theme_mod($site);
-	} elseif( $source == 'author' ) {
-		return get_the_author_meta($site);
+	if ( $source == 'header' ) {
+		return get_theme_mod( $site );
+	} elseif ( $source == 'author' ) {
+		return get_the_author_meta( $site );
 	}
 }
 
 // output social icons
-if( ! function_exists('unlimited_social_icons_output') ) {
-	function unlimited_social_icons_output($source) {
+if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
+	function unlimited_social_icons_output( $source ) {
 
 		// get social sites array
 		$social_sites = unlimited_social_array();
 
 		// icons that should use a special square icon
-		$square_icons = array('linkedin', 'twitter', 'vimeo', 'youtube', 'pinterest', 'rss', 'reddit', 'tumblr', 'steam', 'xing', 'github', 'google-plus', 'behance', 'facebook');
+		$square_icons = array(
+			'linkedin',
+			'twitter',
+			'vimeo',
+			'youtube',
+			'pinterest',
+			'rss',
+			'reddit',
+			'tumblr',
+			'steam',
+			'xing',
+			'github',
+			'google-plus',
+			'behance',
+			'facebook'
+		);
 
 		// store the site name and url
 		foreach ( $social_sites as $social_site => $profile ) {
 
-			if( $source == 'header') {
+			if ( $source == 'header' ) {
 
 				if ( strlen( get_theme_mod( $social_site ) ) > 0 ) {
-					$active_sites[$social_site] = $social_site;
+					$active_sites[ $social_site ] = $social_site;
 				}
-			}
-			elseif( $source == 'author' ) {
+			} elseif ( $source == 'author' ) {
 
 				if ( strlen( get_the_author_meta( $profile ) ) > 0 ) {
-					$active_sites[$profile] = $social_site;
+					$active_sites[ $profile ] = $social_site;
 				}
 			}
 		}
@@ -402,17 +419,19 @@ if( ! function_exists('unlimited_social_icons_output') ) {
 				if ( $active_site == 'email' ) {
 					?>
 					<li>
-						<a class="email" target="_blank" href="mailto:<?php echo antispambot( is_email( unlimited_get_social_url( $source, $key ) ) ); ?>">
-							<i class="fa fa-envelope" title="<?php esc_attr_e('email', 'unlimited'); ?>"></i>
+						<a class="email" target="_blank"
+						   href="mailto:<?php echo antispambot( is_email( unlimited_get_social_url( $source, $key ) ) ); ?>">
+							<i class="fa fa-envelope" title="<?php esc_attr_e( 'email', 'unlimited' ); ?>"></i>
 						</a>
 					</li>
 				<?php } else { ?>
 					<li>
-						<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank" href="<?php echo esc_url( unlimited_get_social_url( $source, $key ) ); ?>">
+						<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
+						   href="<?php echo esc_url( unlimited_get_social_url( $source, $key ) ); ?>">
 							<i class="<?php echo esc_attr( $class ); ?>" title="<?php esc_attr( $active_site ); ?>"></i>
 						</a>
 					</li>
-				<?php
+					<?php
 				}
 			}
 			echo "</ul>";
@@ -425,7 +444,7 @@ if( ! function_exists('unlimited_social_icons_output') ) {
  * making styling difficult and confusing. Using this wrapper to add a unique class to make styling easier.
  */
 function unlimited_wp_page_menu() {
-	wp_page_menu(array(
+	wp_page_menu( array(
 			"menu_class" => "menu-unset"
 		)
 	);
@@ -436,36 +455,38 @@ function unlimited_body_class( $classes ) {
 	global $post;
 
 	/* get layout chosen by user */
-	$layout = get_theme_mod('layout');
+	$layout = get_theme_mod( 'layout' );
 
 	/* get full post setting */
-	$full_post = get_theme_mod('full_post');
+	$full_post = get_theme_mod( 'full_post' );
 
 	/* if sidebar left layout */
-	if($layout == 'left') {
+	if ( $layout == 'left' ) {
 		$classes[] = 'left-sidebar';
 	}
 	/* if full post setting on */
-	if( $full_post == 'yes' ) {
+	if ( $full_post == 'yes' ) {
 		$classes[] = 'full-post';
 	}
 
 	// add all historic singular classes
 	if ( is_singular() ) {
 		$classes[] = 'singular';
-		if ( is_singular('page') ) {
+		if ( is_singular( 'page' ) ) {
 			$classes[] = 'singular-page';
 			$classes[] = 'singular-page-' . $post->ID;
-		} elseif ( is_singular('post') ) {
+		} elseif ( is_singular( 'post' ) ) {
 			$classes[] = 'singular-post';
 			$classes[] = 'singular-post-' . $post->ID;
-		} elseif ( is_singular('attachment') ) {
+		} elseif ( is_singular( 'attachment' ) ) {
 			$classes[] = 'singular-attachment';
 			$classes[] = 'singular-attachment-' . $post->ID;
 		}
 	}
+
 	return $classes;
 }
+
 add_filter( 'body_class', 'unlimited_body_class' );
 
 function unlimited_post_class( $classes ) {
@@ -474,42 +495,48 @@ function unlimited_post_class( $classes ) {
 
 	return $classes;
 }
+
 add_filter( 'post_class', 'unlimited_post_class' );
 
 // custom css output
-function unlimited_custom_css_output(){
+function unlimited_custom_css_output() {
 
-	$custom_css = get_theme_mod('custom_css');
+	$custom_css = get_theme_mod( 'custom_css' );
 
 	/* output custom css */
-	if( $custom_css ) {
+	if ( $custom_css ) {
 		$custom_css = wp_filter_nohtml_kses( $custom_css );
 		wp_add_inline_style( 'style', $custom_css );
 	}
 }
-add_action('wp_enqueue_scripts', 'unlimited_custom_css_output', 20);
+
+add_action( 'wp_enqueue_scripts', 'unlimited_custom_css_output', 20 );
 
 function unlimited_sticky_post_marker() {
 
-	if( is_sticky() && !is_archive() ) {
+	if ( is_sticky() && ! is_archive() ) {
 		echo '<span class="sticky-status">Featured Post</span>';
 	}
 }
+
 add_action( 'archive_post_before', 'unlimited_sticky_post_marker' );
 
 function unlimited_reset_customizer_options() {
 
 	// validate name and value
-	if( empty( $_POST['unlimited_reset_customizer'] ) || 'unlimited_reset_customizer_settings' !== $_POST['unlimited_reset_customizer'] )
+	if ( empty( $_POST['unlimited_reset_customizer'] ) || 'unlimited_reset_customizer_settings' !== $_POST['unlimited_reset_customizer'] ) {
 		return;
+	}
 
 	// validate nonce
-	if( ! wp_verify_nonce( $_POST['unlimited_reset_customizer_nonce'], 'unlimited_reset_customizer_nonce' ) )
+	if ( ! wp_verify_nonce( $_POST['unlimited_reset_customizer_nonce'], 'unlimited_reset_customizer_nonce' ) ) {
 		return;
+	}
 
 	// validate user permissions
-	if( ! current_user_can( 'edit_theme_options' ) )
+	if ( ! current_user_can( 'edit_theme_options' ) ) {
 		return;
+	}
 
 	$mods_array = array(
 		'logo_upload',
@@ -524,7 +551,7 @@ function unlimited_reset_customizer_options() {
 
 	$social_sites = unlimited_social_array();
 
-	foreach( $social_sites as $social_site => $value ) {
+	foreach ( $social_sites as $social_site => $value ) {
 		$mods_array[] = $social_site;
 	}
 
@@ -535,11 +562,13 @@ function unlimited_reset_customizer_options() {
 	}
 
 	$redirect = admin_url( 'themes.php?page=unlimited-options' );
-	$redirect = add_query_arg( 'unlimited_status', 'deleted', $redirect);
+	$redirect = add_query_arg( 'unlimited_status', 'deleted', $redirect );
 
 	// safely redirect
-	wp_safe_redirect( $redirect ); exit;
+	wp_safe_redirect( $redirect );
+	exit;
 }
+
 add_action( 'admin_init', 'unlimited_reset_customizer_options' );
 
 function unlimited_delete_settings_notice() {
@@ -552,14 +581,16 @@ function unlimited_delete_settings_notice() {
 		<?php
 	}
 }
+
 add_action( 'admin_notices', 'unlimited_delete_settings_notice' );
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) :
 	function unlimited_add_title_tag() {
 		?>
 		<title><?php wp_title( ' | ' ); ?></title>
-	<?php
+		<?php
 	}
+
 	add_action( 'wp_head', 'unlimited_add_title_tag' );
 endif;
 
@@ -581,14 +612,15 @@ function unlimited_add_meta_elements() {
 
 	echo $meta_elements;
 }
+
 add_action( 'wp_head', 'unlimited_add_meta_elements', 1 );
 
 /* Move the WordPress generator to a better priority. */
 remove_action( 'wp_head', 'wp_generator' );
 add_action( 'wp_head', 'wp_generator', 1 );
 
-function unlimited_infinite_scroll_render(){
-	while( have_posts() ) {
+function unlimited_infinite_scroll_render() {
+	while ( have_posts() ) {
 		the_post();
 		get_template_part( 'content', 'archive' );
 	}
@@ -597,26 +629,21 @@ function unlimited_infinite_scroll_render(){
 function unlimited_get_content_template() {
 
 	/* Blog */
-	if( is_home() ) {
+	if ( is_home() ) {
 		get_template_part( 'content', 'archive' );
-	}
-	/* Post */
-	elseif( is_singular( 'post' ) ) {
+	} /* Post */
+	elseif ( is_singular( 'post' ) ) {
 		get_template_part( 'content' );
-	}
-	/* Page */
-	elseif( is_page() ) {
+	} /* Page */
+	elseif ( is_page() ) {
 		get_template_part( 'content', 'page' );
-	}
-	/* Attachment */
-	elseif( is_attachment() ) {
+	} /* Attachment */
+	elseif ( is_attachment() ) {
 		get_template_part( 'content', 'attachment' );
-	}
-	/* Archive */
-	elseif( is_archive() ) {
+	} /* Archive */
+	elseif ( is_archive() ) {
 		get_template_part( 'content', 'archive' );
-	}
-	/* Custom Post Type */
+	} /* Custom Post Type */
 	else {
 		get_template_part( 'content' );
 	}

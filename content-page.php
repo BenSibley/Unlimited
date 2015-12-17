@@ -9,7 +9,10 @@
 			<?php do_action( 'page_content_before' ); ?>
 			<div class="post-content">
 				<?php the_content(); ?>
-				<?php wp_link_pages(array('before' => '<p class="singular-pagination">' . __('Pages:','unlimited'), 'after' => '</p>', ) ); ?>
+				<?php wp_link_pages( array(
+					'before' => '<p class="singular-pagination">' . __( 'Pages:', 'unlimited' ),
+					'after'  => '</p>',
+				) ); ?>
 			</div>
 			<?php do_action( 'page_content_after' ); ?>
 			<?php comments_template(); ?>
