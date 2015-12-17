@@ -1,11 +1,9 @@
 <?php
 
-// set the content width
 if ( ! isset( $content_width ) ) {
 	$content_width = 655;
 }
 
-// theme setup
 if ( ! function_exists( 'unlimited_theme_setup' ) ) {
 	function unlimited_theme_setup() {
 
@@ -109,21 +107,10 @@ if ( ! function_exists( 'unlimited_customize_comments' ) ) {
 if ( ! function_exists( 'unlimited_update_fields' ) ) {
 	function unlimited_update_fields( $fields ) {
 
-		// get commenter object
 		$commenter = wp_get_current_commenter();
-
-		// are name and email required?
-		$req = get_option( 'require_name_email' );
-
-		// required or optional label to be added
-		if ( $req == 1 ) {
-			$label = '*';
-		} else {
-			$label = ' ' . __( "optional", "unlimited" );
-		}
-
-		// adds aria required tag if required
-		$aria_req = ( $req ? " aria-required='true'" : '' );
+		$req       = get_option( 'require_name_email' );
+		$label     = $req ? '*' : ' ' . __( '(optional)', 'unlimited' );
+		$aria_req  = $req ? "aria-required='true'" : '';
 
 		$fields['author'] =
 			'<p class="comment-form-author">
@@ -141,7 +128,7 @@ if ( ! function_exists( 'unlimited_update_fields' ) ) {
 
 		$fields['url'] =
 			'<p class="comment-form-url">
-	            <label for="url">' . __( "Website", "unlimited" ) . '</label>
+	            <label for="url">' . __( "Website", "unlimited" )  . '</label>
 	            <input placeholder="' . __( "http://example.com", "unlimited" ) . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
 			'" size="30" />
 	            </p>';
@@ -229,17 +216,10 @@ add_filter( 'the_excerpt', 'unlimited_excerpt_read_more_link' );
 if ( ! function_exists( 'unlimited_new_excerpt_more' ) ) {
 	function unlimited_new_excerpt_more( $more ) {
 
-		// get user set excerpt length
 		$new_excerpt_length = get_theme_mod( 'excerpt_length' );
+		$excerpt_more       = ( $new_excerpt_length === 0 ) ? '' : '&#8230';
 
-		// if set to 0, return nothing
-		if ( $new_excerpt_length === 0 ) {
-			return '';
-		} // else add the ellipsis
-		else {
-			return '&#8230;';
-		}
-
+		return $excerpt_more;
 	}
 }
 add_filter( 'excerpt_more', 'unlimited_new_excerpt_more' );
@@ -259,17 +239,14 @@ function unlimited_custom_excerpt_length( $length ) {
 
 	$new_excerpt_length = get_theme_mod( 'excerpt_length' );
 
-	// if there is a new length set and it's not 15, change it
 	if ( ! empty( $new_excerpt_length ) && $new_excerpt_length != 25 ) {
 		return $new_excerpt_length;
-	} // return 0 if user explicitly sets it to 0
-	elseif ( $new_excerpt_length === 0 ) {
+	} elseif ( $new_excerpt_length === 0 ) {
 		return 0;
 	} else {
 		return 25;
 	}
 }
-
 add_filter( 'excerpt_length', 'unlimited_custom_excerpt_length', 99 );
 
 // for displaying featured images
@@ -351,16 +328,6 @@ if ( ! function_exists( 'unlimited_social_array' ) ) {
 	}
 }
 
-// used in unlimited_social_icons_output to return urls
-function unlimited_get_social_url( $source, $site ) {
-
-	if ( $source == 'header' ) {
-		return get_theme_mod( $site );
-	} elseif ( $source == 'author' ) {
-		return get_the_author_meta( $site );
-	}
-}
-
 // output social icons
 if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 	function unlimited_social_icons_output( $source ) {
@@ -390,26 +357,30 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 		foreach ( $social_sites as $social_site => $profile ) {
 
 			if ( $source == 'header' ) {
-
 				if ( strlen( get_theme_mod( $social_site ) ) > 0 ) {
 					$active_sites[ $social_site ] = $social_site;
 				}
 			} elseif ( $source == 'author' ) {
-
 				if ( strlen( get_the_author_meta( $profile ) ) > 0 ) {
 					$active_sites[ $profile ] = $social_site;
 				}
 			}
 		}
 
-		// for each active social site, add it as a list item
 		if ( ! empty( $active_sites ) ) {
 
 			echo "<ul class='social-media-icons'>";
 
 			foreach ( $active_sites as $key => $active_site ) {
 
-				// get the square or plain class
+				// get the URL
+				if ( $source == 'author' ) {
+					$url = get_the_author_meta( $active_site );
+				} elseif ( $source == 'header' ) {
+					$url = get_theme_mod( $active_site );
+				}
+
+				// get the class (square OR plain)
 				if ( in_array( $active_site, $square_icons ) ) {
 					$class = 'fa fa-' . $active_site . '-square';
 				} else {
@@ -420,14 +391,14 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 					?>
 					<li>
 						<a class="email" target="_blank"
-						   href="mailto:<?php echo antispambot( is_email( unlimited_get_social_url( $source, $key ) ) ); ?>">
+						   href="mailto:<?php echo antispambot( is_email( $url ) ); ?>">
 							<i class="fa fa-envelope" title="<?php esc_attr_e( 'email', 'unlimited' ); ?>"></i>
 						</a>
 					</li>
 				<?php } else { ?>
 					<li>
 						<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
-						   href="<?php echo esc_url( unlimited_get_social_url( $source, $key ) ); ?>">
+						   href="<?php echo esc_url( $url ); ?>">
 							<i class="<?php echo esc_attr( $class ); ?>" title="<?php esc_attr( $active_site ); ?>"></i>
 						</a>
 					</li>
