@@ -212,9 +212,9 @@ if( ! function_exists( 'unlimited_excerpt_read_more_link' ) ) {
 		$read_more_text = get_theme_mod( 'read_more_text' );
 
 		if ( ! empty( $read_more_text ) ) {
-			return $output . "<p><a class='more-link' href='" . get_permalink() . "'>" . $read_more_text . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . $read_more_text . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
 		} else {
-			return $output . "<p><a class='more-link' href='" . get_permalink() . "'>" . __( 'Read More', 'unlimited' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Read More', 'unlimited' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
 		}
 	}
 }
@@ -284,7 +284,7 @@ if( ! function_exists( 'unlimited_featured_image' ) ) {
 			if ( is_singular() ) {
 				$featured_image = '<div class="featured-image">' . get_the_post_thumbnail( $post->ID, 'full' ) . '</div>';
 			} else {
-				$featured_image = '<div class="featured-image"><a href="' . get_permalink() . '">' . get_the_title() . get_the_post_thumbnail( $post->ID, 'full' ) . '</a></div>';
+				$featured_image = '<div class="featured-image"><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . get_the_post_thumbnail( $post->ID, 'full' ) . '</a></div>';
 			}
 		}
 
