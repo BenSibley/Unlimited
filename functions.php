@@ -191,7 +191,7 @@ if ( ! function_exists( 'unlimited_new_excerpt_more' ) ) {
 	function unlimited_new_excerpt_more( $more ) {
 
 		$new_excerpt_length = get_theme_mod( 'excerpt_length' );
-		$excerpt_more       = ( $new_excerpt_length === 0 ) ? '' : '&#8230';
+		$excerpt_more       = ( $new_excerpt_length === 0 ) ? '' : '&#8230;';
 
 		return $excerpt_more;
 	}
