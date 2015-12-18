@@ -298,6 +298,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	) );
 	// control
 	$wp_customize->add_control( 'custom_css', array(
+		'type'     => 'textarea',
 		'label'    => __( 'Add Custom CSS Here:', 'unlimited' ),
 		'section'  => 'unlimited_custom_css',
 		'settings' => 'custom_css'
