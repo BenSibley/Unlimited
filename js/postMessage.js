@@ -3,7 +3,8 @@
     // establish variables for common site elements
     var panel = $('html', window.parent.document);
     var body = $('body');
-    var socialMediaIcons = $('.social-media-icons');
+    var siteHeader = $('#site-header');
+    var socialMediaIcons = siteHeader.find('.social-media-icons');
 
     /*
      * Following functions are for utilizing the postMessage transport setting
@@ -56,13 +57,17 @@
         wp.customize( socialSites[site], function (value) {
             value.bind(function (to) {
 
-                if( socialMediaIcons.length === 0 ) {
+                // check again
+                socialMediaIcons = siteHeader.find('.social-media-icons');
 
-                    if( socialMediaIcons.find('.search-form-container').length ) {
-                        $('#site-header').find('.search-form-container').before('<ul class="social-media-icons"></ul>');
+                if( ! socialMediaIcons.length ) {
+                    if( siteHeader.find('.search-form-container').length ) {
+                        siteHeader.find('.search-form-container').before('<ul class="social-media-icons"></ul>');
                     } else {
                         $('#title-container').before('<ul class="social-media-icons"></ul>');
                     }
+                    // store newly added element
+                    socialMediaIcons = siteHeader.find('.social-media-icons');
                 }
 
                 // empty the social icons list
