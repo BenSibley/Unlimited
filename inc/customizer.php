@@ -293,7 +293,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	) );
 	// setting
 	$wp_customize->add_setting( 'custom_css', array(
-		'sanitize_callback' => 'wp_filter_nohtml_kses',
+		'sanitize_callback' => 'ct_unlimited_sanitize_css',
 		'transport'         => 'postMessage'
 	) );
 	// control
@@ -554,3 +554,10 @@ function unlimited_customize_preview_js() {
 	echo apply_filters( 'unlimited_customizer_ad', $content );
 }
 add_action( 'customize_controls_print_footer_scripts', 'unlimited_customize_preview_js' );
+
+function ct_unlimited_sanitize_css( $css ) {
+	$css = wp_kses( $css, array( '\'', '\"' ) );
+	$css = str_replace( '&gt;', '>', $css );
+
+	return $css;
+}

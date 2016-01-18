@@ -427,7 +427,7 @@ function unlimited_custom_css_output() {
 	$custom_css = get_theme_mod( 'custom_css' );
 
 	if ( $custom_css ) {
-		$custom_css = wp_filter_nohtml_kses( $custom_css );
+		$custom_css = ct_unlimited_sanitize_css( $custom_css );
 		wp_add_inline_style( 'style', $custom_css );
 	}
 }
