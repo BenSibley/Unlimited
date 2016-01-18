@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Unlimited
 Theme URI: https://www.competethemes.com/unlimited/
@@ -310,6 +311,11 @@ input[type="submit"]:hover {
 
 input[type="search"] {
   padding-right: 5px !important;
+}
+input[type="search"]::-ms-clear, input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 textarea {

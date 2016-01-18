@@ -312,6 +312,11 @@ input[type="submit"]:hover {
 input[type="search"] {
   padding-left: 5px !important;
 }
+input[type="search"]::-ms-clear, input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
 
 textarea {
   max-width: 41.625em;
