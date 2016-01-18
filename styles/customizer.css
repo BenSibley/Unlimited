@@ -26,7 +26,6 @@
 .upgrades-ad span {
   position: relative;
   right: 0;
-  -webkit-transition: right 0.15s ease-in-out;
   transition: right 0.15s ease-in-out;
 }
 
@@ -189,9 +188,6 @@
   border-radius: 0;
   box-shadow: none;
   background: #fff url("multiple-select.png") no-repeat 100% -22px;
-  background: url("multiple-select.png") no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
-  background: url("multiple-select.png") no-repeat 100% -22px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
-  background: url("multiple-select.png") no-repeat 100% -22px, -webkit-linear-gradient(top, #ffffff 85%, #eeeeee 99%);
   background: url("multiple-select.png") no-repeat 100% -22px, linear-gradient(top, #ffffff 85%, #eeeeee 99%);
 }
 
