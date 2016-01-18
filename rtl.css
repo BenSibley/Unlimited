@@ -1223,6 +1223,10 @@ li.bypostauthor {
   padding: 0 4px;
 }
 
+.infinite-scroll .pagination {
+  display: none;
+}
+
 .archive-header {
   margin: 1.5em 0;
   padding: 1.5em;
