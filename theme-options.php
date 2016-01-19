@@ -20,8 +20,7 @@ function unlimited_options_content() {
 		<?php do_action( 'theme_options_before' ); ?>
 		<div class="content content-customization">
 			<h3><?php _e( 'Customization', 'unlimited' ); ?></h3>
-			<p><?php _e( 'Click the "Customize" link in your menu, or use the button below to get started customizing Unlimited', 'unlimited' ); ?>
-				.</p>
+			<p><?php _e( 'Click the "Customize" link in your menu, or use the button below to get started customizing Unlimited.', 'unlimited' ); ?></p>
 			<p>
 				<a class="button-primary"
 				   href="<?php echo esc_url( $customizer_url ); ?>"><?php _e( 'Use Customizer', 'unlimited' ) ?></a>
@@ -29,8 +28,7 @@ function unlimited_options_content() {
 		</div>
 		<div class="content content-support">
 			<h3><?php _e( 'Support', 'unlimited' ); ?></h3>
-			<p><?php _e( "You can find the knowledgebase, changelog, support forum, and more in the Unlimited Support Center", "unlimited" ); ?>
-				.</p>
+			<p><?php _e( "You can find the knowledgebase, changelog, support forum, and more in the Unlimited Support Center.", "unlimited" ); ?></p>
 			<p>
 				<a target="_blank" class="button-primary"
 				   href="https://www.competethemes.com/documentation/unlimited-support-center/"><?php _e( 'Visit Support Center', 'unlimited' ); ?></a>
@@ -38,8 +36,7 @@ function unlimited_options_content() {
 		</div>
 		<div class="content content-premium-upgrade">
 			<h3><?php _e( 'Get More Features & Flexibility', 'unlimited' ); ?></h3>
-			<p><?php _e( 'Download the Unlimited Pro plugin and unlock custom colors, new layouts, background images, and more', 'unlimited' ); ?>
-				...</p>
+			<p><?php _e( 'Download the Unlimited Pro plugin and unlock custom colors, new layouts, background images, and more...', 'unlimited' ); ?></p>
 			<p>
 				<a target="_blank" class="button-primary"
 				   href="https://www.competethemes.com/unlimited-pro/"><?php _e( 'See Full Feature List', 'unlimited' ); ?></a>
@@ -47,8 +44,7 @@ function unlimited_options_content() {
 		</div>
 		<div class="content content-resources">
 			<h3><?php _e( 'WordPress Resources', 'unlimited' ); ?></h3>
-			<p><?php _e( "Save time and money searching for WordPress products by following our recommendations", "unlimited" ); ?>
-				.</p>
+			<p><?php _e( "Save time and money searching for WordPress products by following our recommendations.", "unlimited" ); ?></p>
 			<p>
 				<a target="_blank" class="button-primary"
 				   href="https://www.competethemes.com/wordpress-resources/"><?php _e( 'View Resources', 'unlimited' ); ?></a>
