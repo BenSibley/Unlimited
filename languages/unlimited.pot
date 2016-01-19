@@ -1,14 +1,14 @@
-# Copyright (C) 2015 Compete Themes
+# Copyright (C) 2016 Compete Themes
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Unlimited 1.13\n"
+"Project-Id-Version: Unlimited 1.14.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-12-18 14:44:34+00:00\n"
+"POT-Creation-Date: 2016-01-19 19:41:59+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.9\n"
@@ -476,66 +476,66 @@ msgstr ""
 #: theme-options.php:23
 msgid ""
 "Click the \"Customize\" link in your menu, or use the button below to get "
-"started customizing Unlimited"
+"started customizing Unlimited."
 msgstr ""
 
-#: theme-options.php:27
+#: theme-options.php:26
 msgid "Use Customizer"
 msgstr ""
 
-#: theme-options.php:31
+#: theme-options.php:30
 msgid "Support"
 msgstr ""
 
-#: theme-options.php:32
+#: theme-options.php:31
 msgid ""
 "You can find the knowledgebase, changelog, support forum, and more in the "
-"Unlimited Support Center"
+"Unlimited Support Center."
 msgstr ""
 
-#: theme-options.php:36
+#: theme-options.php:34
 msgid "Visit Support Center"
 msgstr ""
 
-#: theme-options.php:40
+#: theme-options.php:38
 msgid "Get More Features & Flexibility"
 msgstr ""
 
-#: theme-options.php:41
+#: theme-options.php:39
 msgid ""
 "Download the Unlimited Pro plugin and unlock custom colors, new layouts, "
-"background images, and more"
+"background images, and more..."
 msgstr ""
 
-#: theme-options.php:45
+#: theme-options.php:42
 msgid "See Full Feature List"
 msgstr ""
 
-#: theme-options.php:49
+#: theme-options.php:46
 msgid "WordPress Resources"
 msgstr ""
 
-#: theme-options.php:50
+#: theme-options.php:47
 msgid ""
 "Save time and money searching for WordPress products by following our "
-"recommendations"
+"recommendations."
 msgstr ""
 
-#: theme-options.php:54
+#: theme-options.php:50
 msgid "View Resources"
 msgstr ""
 
-#: theme-options.php:58
+#: theme-options.php:54
 msgid "Reset Unlimited Settings"
 msgstr ""
 
-#: theme-options.php:60
+#: theme-options.php:56
 msgid ""
 "<strong>Warning:</strong> Clicking this button will erase the Unlimited "
 "theme's current settings in the <a href='%s'>Customizer</a>"
 msgstr ""
 
-#: theme-options.php:66
+#: theme-options.php:62
 msgid "Reset Customizer Settings"
 msgstr ""
 
