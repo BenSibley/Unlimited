@@ -337,7 +337,7 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 
 				// get the URL
 				if ( $source == 'author' ) {
-					$url = get_the_author_meta( $active_site );
+					$url = get_the_author_meta( $key );
 				} elseif ( $source == 'header' ) {
 					$url = get_theme_mod( $active_site );
 				}
