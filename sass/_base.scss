@@ -189,7 +189,7 @@ textarea {
   outline: solid 1px $gray-85;
   border: none;
   font-family: $primary-font-stack;
-  border-radius: 0px;
+  border-radius: 0;
   -webkit-appearance: none;
   transition: outline-offset 0.15s ease-in-out;
 }
@@ -202,7 +202,7 @@ input[type="submit"] {
   border: none;
   font-family: $primary-font-stack;
   background: $gray-23;
-  border-radius: 0px;
+  border-radius: 0;
   -webkit-appearance: none;
   transition: background 0.15s ease-in-out;
 
