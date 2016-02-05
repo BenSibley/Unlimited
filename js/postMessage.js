@@ -49,7 +49,7 @@
         } );
     } );
 
-    var socialSites = ['twitter', 'facebook', 'google-plus', 'pinterest', 'linkedin', 'youtube', 'vimeo', 'tumblr', 'instagram', 'flickr', 'dribbble', 'rss', 'reddit', 'soundcloud', 'spotify', 'vine', 'yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'github', 'hacker-news', 'foursquare', 'slack', 'slideshare', 'skype', 'whatsapp', 'qq', 'wechat', 'xing', '500px', 'steam', 'vk', 'paypal', 'weibo', 'tencent-weibo', 'email' ];
+    var socialSites = ['twitter', 'facebook', 'google-plus', 'pinterest', 'linkedin', 'youtube', 'vimeo', 'tumblr', 'instagram', 'flickr', 'dribbble', 'rss', 'reddit', 'soundcloud', 'spotify', 'vine', 'yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'github', 'hacker-news', 'foursquare', 'slack', 'slideshare', 'skype', 'whatsapp', 'qq', 'wechat', 'xing', '500px', 'steam', 'vk', 'paypal', 'weibo', 'tencent-weibo', 'email', 'email_form' ];
 
     // for each social site setting
     for ( var site in socialSites ) {
@@ -91,6 +91,9 @@
 
                         if( siteName == 'email' ) {
                             socialMediaIcons.append( '<li><a target="_blank" href="mailto:' + $(this).val() + '"><i class="fa fa-envelope"></i></a></li>' );
+                        }
+                        if ( siteName == 'email_form' ) {
+                            socialMediaIcons.append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="fa fa-envelope-o"></i></a></li>');
                         }
                         else {
                             socialMediaIcons.append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="' + siteClass + '"></i></a></li>');

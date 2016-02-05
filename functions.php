@@ -287,7 +287,8 @@ if ( ! function_exists( 'unlimited_social_array' ) ) {
 			'paypal'        => 'unlimited_paypal_profile',
 			'weibo'         => 'unlimited_weibo_profile',
 			'tencent-weibo' => 'unlimited_tencent_weibo_profile',
-			'email'         => 'unlimited_email_profile'
+			'email'         => 'unlimited_email_profile',
+			'email_form'    => 'unlimited_email_form'
 		);
 
 		return apply_filters( 'unlimited_social_array_filter', $social_sites );
@@ -357,7 +358,15 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 							<i class="fa fa-envelope" title="<?php esc_attr_e( 'email', 'unlimited' ); ?>"></i>
 						</a>
 					</li>
-					<?php
+				<?php
+				} elseif ( $active_site == 'email_form' ) { ?>
+					<li>
+						<a class="contact-form" target="_blank"
+						   href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>">
+							<i class="fa fa-envelope-o" title="<?php esc_attr_e( 'contact form', 'unlimited' ); ?>"></i>
+						</a>
+					</li>
+				<?php
 				} elseif ( $active_site == 'skype' ) { ?>
 					<li>
 						<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
