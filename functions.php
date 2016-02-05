@@ -357,6 +357,14 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 							<i class="fa fa-envelope" title="<?php esc_attr_e( 'email', 'unlimited' ); ?>"></i>
 						</a>
 					</li>
+					<?php
+				} elseif ( $active_site == 'skype' ) { ?>
+					<li>
+						<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
+						   href="<?php echo esc_url( $url, array( 'http', 'https', 'skype') ); ?>">
+							<i class="<?php echo esc_attr( $class ); ?>" title="<?php esc_attr( $active_site ); ?>"></i>
+						</a>
+					</li>
 				<?php } else { ?>
 					<li>
 						<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
@@ -558,3 +566,10 @@ function unlimited_get_content_template() {
 		get_template_part( 'content' );
 	}
 }
+
+// allow skype URIs to be used
+function ct_unlimited_allow_skype_protocol( $protocols ){
+	$protocols[] = 'skype';
+	return $protocols;
+}
+add_filter( 'kses_allowed_protocols' , 'ct_unlimited_allow_skype_protocol' );
