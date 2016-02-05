@@ -33,41 +33,6 @@
   margin-top: 12px;
 }
 
-#accordion-section-unlimited_colors .accordion-section-title,
-#accordion-section-unlimited_colors .accordion-section-title:hover,
-#accordion-section-unlimited_header_image .accordion-section-title,
-#accordion-section-unlimited_header_image .accordion-section-title:hover,
-#accordion-section-unlimited_background .accordion-section-title,
-#accordion-section-unlimited_background .accordion-section-title:hover,
-#accordion-section-unlimited_font .accordion-section-title,
-#accordion-section-unlimited_font .accordion-section-title:hover,
-#accordion-section-unlimited_fixed_menu .accordion-section-title,
-#accordion-section-unlimited_fixed_menu .accordion-section-title:hover,
-#accordion-section-unlimited_display_control .accordion-section-title,
-#accordion-section-unlimited_display_control .accordion-section-title:hover,
-#accordion-section-unlimited_footer_text .accordion-section-title,
-#accordion-section-unlimited_footer_text .accordion-section-title:hover {
-  background-image: url("../assets/images/gray-lines.png");
-  background-size: 100%;
-}
-#accordion-section-unlimited_colors .accordion-section-title:after,
-#accordion-section-unlimited_colors .accordion-section-title:hover:after,
-#accordion-section-unlimited_header_image .accordion-section-title:after,
-#accordion-section-unlimited_header_image .accordion-section-title:hover:after,
-#accordion-section-unlimited_background .accordion-section-title:after,
-#accordion-section-unlimited_background .accordion-section-title:hover:after,
-#accordion-section-unlimited_font .accordion-section-title:after,
-#accordion-section-unlimited_font .accordion-section-title:hover:after,
-#accordion-section-unlimited_fixed_menu .accordion-section-title:after,
-#accordion-section-unlimited_fixed_menu .accordion-section-title:hover:after,
-#accordion-section-unlimited_display_control .accordion-section-title:after,
-#accordion-section-unlimited_display_control .accordion-section-title:hover:after,
-#accordion-section-unlimited_footer_text .accordion-section-title:after,
-#accordion-section-unlimited_footer_text .accordion-section-title:hover:after {
-  content: '\f023';
-  font-family: 'FontAwesome';
-}
-
 #accordion-section-colors {
   display: none !important;
 }

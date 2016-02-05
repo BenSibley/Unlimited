@@ -44,25 +44,6 @@
 //    display: block;
   }
 }
-#accordion-section-unlimited_colors,
-#accordion-section-unlimited_header_image,
-#accordion-section-unlimited_background,
-#accordion-section-unlimited_font,
-#accordion-section-unlimited_fixed_menu,
-#accordion-section-unlimited_display_control,
-#accordion-section-unlimited_footer_text {
-
-  .accordion-section-title,
-  .accordion-section-title:hover {
-    background-image: url('../assets/images/gray-lines.png');
-    background-size: 100%;
-
-    &:after {
-      content: '\f023';
-      font-family: 'FontAwesome';
-    }
-  }
-}
 
 #accordion-section-colors {
   display: none !important;
