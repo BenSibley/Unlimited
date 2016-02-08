@@ -196,7 +196,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 		'transport'         => 'postMessage'
 	) );
 
-	$description_layout = sprintf( __( 'Want more layouts? <a target="_blank" href="%s">Check out Unlimited Pro</a>', 'unlimited' ), 'https://www.competethemes.com/unlimited-pro/' );
+	$description_layout = sprintf( __( 'Want more layouts? <a target="_blank" href="%s">Check out Unlimited Pro</a>.', 'unlimited' ), 'https://www.competethemes.com/unlimited-pro/' );
 
 	// control
 	$wp_customize->add_control( 'layout', array(
