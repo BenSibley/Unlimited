@@ -64,21 +64,26 @@ function unlimited_add_social_profile_settings( $user ) {
 					<?php endif; ?>
 				</th>
 				<td>
-					<?php if ( $key == 'email' ) : ?>
+					<?php if ( $key == 'email' ) { ?>
 						<input type='text' id='<?php echo $key; ?>-profile' class='regular-text'
 						       name='<?php echo $key; ?>-profile'
 						       value='<?php echo is_email( get_the_author_meta( $social_site, $user->ID ) ); ?>'/>
-					<?php else : ?>
+					<?php } elseif ( $key == 'skype' ) { ?>
+						<input type='url' id='<?php echo $key; ?>-profile' class='regular-text'
+						       name='<?php echo $key; ?>-profile'
+						       value='<?php echo esc_url( get_the_author_meta( $social_site, $user->ID ), array( 'http', 'https', 'skype' ) ); ?>'/>
+					<?php } else { ?>
 						<input type='url' id='<?php echo $key; ?>-profile' class='regular-text'
 						       name='<?php echo $key; ?>-profile'
 						       value='<?php echo esc_url( get_the_author_meta( $social_site, $user->ID ) ); ?>'/>
-					<?php endif; ?>
+					<?php } ?>
 				</td>
 			</tr>
 		<?php } ?>
 	</table>
 	<?php
 }
+
 add_action( 'show_user_profile', 'unlimited_add_social_profile_settings' );
 add_action( 'edit_user_profile', 'unlimited_add_social_profile_settings' );
 
@@ -96,6 +101,11 @@ function unlimited_save_social_profiles( $user_id ) {
 			if ( isset( $_POST["$key-profile"] ) ) {
 				update_user_meta( $user_id, $social_site, sanitize_email( $_POST["$key-profile"] ) );
 			}
+		} elseif ( $key == 'skype' ) {
+			// accept skype protocol
+			if ( isset( $_POST["$key-profile"] ) ) {
+				update_user_meta( $user_id, $social_site, esc_url_raw( $_POST["$key-profile"], array( 'http', 'https', 'skype' ) ) );
+			}
 		} else {
 			if ( isset( $_POST["$key-profile"] ) ) {
 				update_user_meta( $user_id, $social_site, esc_url_raw( $_POST["$key-profile"] ) );
@@ -103,5 +113,6 @@ function unlimited_save_social_profiles( $user_id ) {
 		}
 	}
 }
+
 add_action( 'personal_options_update', 'unlimited_save_social_profiles' );
 add_action( 'edit_user_profile_update', 'unlimited_save_social_profiles' );
