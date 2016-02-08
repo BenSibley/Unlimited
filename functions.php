@@ -362,7 +362,7 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 				} elseif ( $active_site == 'email_form' ) { ?>
 					<li>
 						<a class="contact-form" target="_blank"
-						   href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>">
+						   href="<?php echo esc_url( $url ); ?>">
 							<i class="fa fa-envelope-o" title="<?php esc_attr_e( 'contact form', 'unlimited' ); ?>"></i>
 						</a>
 					</li>
