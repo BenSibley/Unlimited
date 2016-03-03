@@ -26,11 +26,15 @@
   #unlimited-dashboard-wrap .content p {
     min-height: 57px;
   }
+  #unlimited-dashboard-wrap .content-review {
+    min-height: 191px;
+  }
   #unlimited-dashboard-wrap .content-premium-upgrade p {
     min-height: 0;
   }
   #unlimited-dashboard-wrap .content-customization,
-  #unlimited-dashboard-wrap .content-premium-upgrade {
+  #unlimited-dashboard-wrap .content-premium-upgrade,
+  #unlimited-dashboard-wrap .content-review {
     margin-right: 2%;
   }
 }
@@ -44,7 +48,8 @@
   }
   #unlimited-dashboard-wrap .content-customization,
   #unlimited-dashboard-wrap .content-support,
-  #unlimited-dashboard-wrap .content-resources {
+  #unlimited-dashboard-wrap .content-resources,
+  #unlimited-dashboard-wrap .content-review {
     margin-right: 1%;
   }
   #unlimited-dashboard-wrap .content-premium-upgrade {
