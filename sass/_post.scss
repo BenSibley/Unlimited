@@ -177,6 +177,10 @@
   a {
     text-decoration: underline;
   }
+  h2 {
+    font-size: 1em;
+    line-height: 1.5;
+  }
 }
 .post-tags {
   text-align: center;
@@ -208,6 +212,10 @@
 /* 600px */
 @media all and (min-width: 37.5em) {
 
+  .post-title {
+    font-size: 1.75em; /* 28px / 16px */
+    line-height: 1.321; /* 37px */
+  }
   .further-reading {
 
     &:after {

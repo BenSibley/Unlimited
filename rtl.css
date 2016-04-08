@@ -18,7 +18,7 @@ Unlimited is distributed under the terms of the GNU GPL
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /***** Silent Classes *****/
-h1, .site-title, .comments-number h3,
+h1, .site-title, .comments-number h2,
 .comment-reply-title {
   font-size: 1.75em;
   /* 28px / 16px */
@@ -922,6 +922,10 @@ a img {
 .post-author a {
   text-decoration: underline;
 }
+.post-author h2 {
+  font-size: 1em;
+  line-height: 1.5;
+}
 
 .post-tags {
   text-align: center;
@@ -947,6 +951,13 @@ a img {
 
 /* 600px */
 @media all and (min-width: 37.5em) {
+  .post-title {
+    font-size: 1.75em;
+    /* 28px / 16px */
+    line-height: 1.321;
+    /* 37px */
+  }
+
   .further-reading:after {
     content: ".";
     display: block;
@@ -1223,7 +1234,7 @@ li.bypostauthor {
   border: solid 1px #DEDEDE;
   text-align: center;
 }
-.archive-header h2 {
+.archive-header h1 {
   display: inline-block;
   font-size: 1em;
   line-height: 1.5;

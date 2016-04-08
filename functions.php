@@ -365,7 +365,7 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 						<a class="contact-form" target="_blank"
 						   href="<?php echo esc_url( $url ); ?>">
 							<i class="fa fa-envelope-o" title="<?php esc_attr_e( 'contact form', 'unlimited' ); ?>"></i>
-							<span class="screen-reader-text"><?php echo esc_attr( $active_site );  ?></span>
+							<span class="screen-reader-text"><?php echo esc_attr( $active_site ); ?></span>
 						</a>
 					</li>
 				<?php
@@ -373,16 +373,16 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 					<li>
 						<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 						   href="<?php echo esc_url( $url, array( 'http', 'https', 'skype') ); ?>">
-							<i class="<?php echo esc_attr( $class ); ?>" title="<?php esc_attr( $active_site ); ?>"></i>
-							<span class="screen-reader-text"><?php echo esc_attr( $active_site );  ?></span>
+							<i class="<?php echo esc_attr( $class ); ?>" title="<?php echo esc_attr( $active_site ); ?>"></i>
+							<span class="screen-reader-text"><?php echo esc_attr( $active_site ); ?></span>
 						</a>
 					</li>
 				<?php } else { ?>
 					<li>
 						<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 						   href="<?php echo esc_url( $url ); ?>">
-							<i class="<?php echo esc_attr( $class ); ?>" title="<?php esc_attr( $active_site ); ?>"></i>
-							<span class="screen-reader-text"><?php echo esc_attr( $active_site );  ?></span>
+							<i class="<?php echo esc_attr( $class ); ?>" title="<?php echo esc_attr( $active_site ); ?>"></i>
+							<span class="screen-reader-text"><?php echo esc_attr( $active_site ); ?></span>
 						</a>
 					</li>
 					<?php

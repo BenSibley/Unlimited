@@ -5,8 +5,8 @@
 		<?php get_template_part( 'content/post-meta' ); ?>
 		<div class="post-padding-container">
 			<div class='post-header'>
-				<h1 class='post-title'><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
-				</h1>
+				<h2 class='post-title'><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
+				</h2>
 				<?php get_template_part( 'content/post-categories' ); ?>
 			</div>
 			<?php do_action( 'archive_post_content_after' ); ?>

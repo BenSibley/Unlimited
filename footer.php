@@ -9,9 +9,9 @@
 <footer id="site-footer" class="site-footer" role="contentinfo">
 	<?php do_action( 'footer_before' ); ?>
 	<div class="footer-content">
-		<h4 class="site-title">
+		<h1 class="site-title">
 			<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'title' ); ?></a>
-		</h4>
+		</h1>
 		<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 	</div>
 	<?php do_action( 'footer_widgets' ); ?>
