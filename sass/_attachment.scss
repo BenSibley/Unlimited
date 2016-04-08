@@ -2,8 +2,14 @@
 
 .singular-attachment {
 
-  .post-content {
-    text-align: center;
+  .attachment-container {
+
+    img {
+      display: block;
+    }
+  }
+  .attachment-caption {
+    @extend %thirteen-pixels;
   }
   .further-reading {
 

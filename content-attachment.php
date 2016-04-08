@@ -7,7 +7,17 @@
 			</div>
 			<?php do_action( 'attachment_content_before' ); ?>
 			<div class="post-content">
-				<?php the_content(); ?>
+				<?php
+				$image = wp_get_attachment_image($post->ID, 'full');
+				$image_meta = wp_prepare_attachment_for_js($post->ID);
+				?>
+				<div class="attachment-container">
+					<?php echo $image; ?>
+					<span class="attachment-caption">
+					<?php echo $image_meta['caption']; ?>
+				</span>
+				</div>
+				<?php echo wpautop( $image_meta['description'] ); ?>
 			</div>
 			<?php do_action( 'attachment_content_after' ); ?>
 			<?php get_template_part( 'content/post-nav-attachment' ); ?>

@@ -36,7 +36,7 @@ h2 {
 .wp-caption-text, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .site-description, .menu-primary-items a,
 .menu-unset > ul a, .post-meta span, .post-categories, .further-reading span, .post-author p,
-.post-author > a, .post-tags a, .comment-content, .comment-notes, .design-credit, .sticky-status, .widget, .gallery-caption {
+.post-author > a, .post-tags a, .comment-content, .comment-notes, .design-credit, .sticky-status, .singular-attachment .attachment-caption, .widget, .gallery-caption {
   font-size: 0.8125em;
   /* 13px / 16px */
   line-height: 1.385;
@@ -1374,8 +1374,8 @@ li.bypostauthor {
   }
 }
 /* Attachment styles */
-.singular-attachment .post-content {
-  text-align: center;
+.singular-attachment .attachment-container img {
+  display: block;
 }
 .singular-attachment .further-reading:after {
   content: ".";
