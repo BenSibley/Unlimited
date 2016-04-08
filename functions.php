@@ -356,6 +356,7 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 						<a class="email" target="_blank"
 						   href="mailto:<?php echo antispambot( is_email( $url ) ); ?>">
 							<i class="fa fa-envelope" title="<?php esc_attr_e( 'email', 'unlimited' ); ?>"></i>
+							<span class="screen-reader-text"><?php esc_attr_e('email', 'unlimited'); ?></span>
 						</a>
 					</li>
 				<?php
@@ -364,6 +365,7 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 						<a class="contact-form" target="_blank"
 						   href="<?php echo esc_url( $url ); ?>">
 							<i class="fa fa-envelope-o" title="<?php esc_attr_e( 'contact form', 'unlimited' ); ?>"></i>
+							<span class="screen-reader-text"><?php echo esc_attr( $active_site );  ?></span>
 						</a>
 					</li>
 				<?php
@@ -372,6 +374,7 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 						<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 						   href="<?php echo esc_url( $url, array( 'http', 'https', 'skype') ); ?>">
 							<i class="<?php echo esc_attr( $class ); ?>" title="<?php esc_attr( $active_site ); ?>"></i>
+							<span class="screen-reader-text"><?php echo esc_attr( $active_site );  ?></span>
 						</a>
 					</li>
 				<?php } else { ?>
@@ -379,6 +382,7 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 						<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 						   href="<?php echo esc_url( $url ); ?>">
 							<i class="<?php echo esc_attr( $class ); ?>" title="<?php esc_attr( $active_site ); ?>"></i>
+							<span class="screen-reader-text"><?php echo esc_attr( $active_site );  ?></span>
 						</a>
 					</li>
 					<?php
