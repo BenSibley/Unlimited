@@ -12,7 +12,7 @@ if ( $image ) {
 	$logo = get_bloginfo( 'name' );
 }
 
-$output = '<div class="site-title">';
+$output = '<div id="site-title" class="site-title">';
 $output .= "<a href='" . esc_url( home_url() ) . "'>";
 $output .= $logo;
 $output .= "</a>";
