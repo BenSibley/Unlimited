@@ -1,0 +1,525 @@
+# Copyright (C) 2016 Compete Themes
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Unlimited 1.16\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2016-04-19 10:04+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-04-19 11:23+0200\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.7\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de_DE\n"
+
+#: comments.php:20 comments.php:40 comments.php:62
+msgid "Be First to Comment"
+msgstr "Schreibe den ersten Kommentar"
+
+#: comments.php:20 comments.php:40 comments.php:62 content/post-meta.php:22
+#: content/post-meta.php:24
+msgid "One Comment"
+msgstr "Einen Kommentar"
+
+#: comments.php:20 comments.php:40 comments.php:62 content/post-meta.php:22
+#: content/post-meta.php:24
+msgid "% Comments"
+msgstr "% Kommentare"
+
+#: comments.php:54
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
+"\">trackbacks</a> and pingbacks are open."
+msgstr ""
+
+#: comments.php:76 comments.php:83
+msgid "Comments are closed."
+msgstr "Die Kommentare wurden geschlossen"
+
+#: content/post-author.php:10
+msgid "View more posts"
+msgstr "Zeige weitere Beiträge"
+
+#: content/post-categories.php:5
+msgid "Posted in"
+msgstr "Gepostet in"
+
+#: content/post-categories.php:11
+msgid "and"
+msgstr "und"
+
+#: content/post-categories.php:13
+msgid "View all posts in %s"
+msgstr "Zeige alle Beiträge in %s"
+
+#: content/post-meta.php:22
+msgid "Comments closed"
+msgstr "Kommentare geschlossen"
+
+#: content/post-meta.php:24
+msgid "Leave a Comment"
+msgstr "Schreibe einen Kommentar"
+
+#: content/post-nav-attachment.php:3
+msgid "Previous Image"
+msgstr "Vorheriges Bild"
+
+#: content/post-nav-attachment.php:6
+msgid "Next Image"
+msgstr "Nächstes Bild"
+
+#: content/post-nav.php:8
+msgid "Previous Post"
+msgstr "Vorheriger Beitrag"
+
+#: content/post-nav.php:9
+msgid "The Previous Post"
+msgstr "Der vorherige Beitrag"
+
+#: content/post-nav.php:12
+msgid "No Older Posts"
+msgstr "Keine älteren Beiträge"
+
+#: content/post-nav.php:13 content/post-nav.php:28
+msgid "Return to Blog"
+msgstr "Zurück zum Blog"
+
+#: content/post-nav.php:23
+msgid "Next Post"
+msgstr "Nächster Beitrag"
+
+#: content/post-nav.php:24
+msgid "The Next Post"
+msgstr "Der nächste Beitrag"
+
+#: content/post-nav.php:27
+msgid "No Newer Posts"
+msgstr "Keine neueren Beiträge"
+
+#: content/post-tags.php:8
+msgid "View all posts tagged %s"
+msgstr "Zeige alle Beiträge, die mit %s getagt sind"
+
+#: content/search-bar.php:6 searchform.php:3
+msgid "Search"
+msgstr "Suche"
+
+#: content/search-bar.php:7 searchform.php:5
+msgid "Search..."
+msgstr "Suche..."
+
+#: content/search-bar.php:8 searchform.php:6
+msgid "Search for:"
+msgstr "Suche nach:"
+
+#: content-404.php:5
+msgid "404: Page Not Found"
+msgstr "404: Seite nicht gefunden"
+
+#: content-404.php:8
+msgid ""
+"Looks like nothing was found on this url.  Double-check that the url is "
+"correct or try the search form below to find what you were looking for."
+msgstr ""
+"Die angegebene URL existiert nicht. Vergewissern Sie sich, dass die URL "
+"korrekt ist oder verwenden Sie das Suchformular weiter unten."
+
+#: content-page.php:13 content.php:15
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: footer.php:21
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Unlimited WordPress Theme</a> by Compete "
+"Themes"
+msgstr ""
+
+#: functions.php:34
+msgid "Primary"
+msgstr "Primäre"
+
+#: functions.php:42
+msgid "Primary Sidebar"
+msgstr "Primäre Seitenleiste"
+
+#: functions.php:44
+msgid ""
+"Widgets in this area will be shown in the sidebar next to the main post "
+"content"
+msgstr ""
+"Widgets werden direkt neben dem Inhalt von Beiträgen in der Seitenleiste "
+"angezeigt."
+
+#: functions.php:71
+msgid "Your comment is awaiting moderation."
+msgstr "Ihr Kommentar ist für die Moderation bereit"
+
+#: functions.php:76
+msgid "Reply"
+msgstr "Antworten"
+
+#: functions.php:81
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: functions.php:93
+msgid "(optional)"
+msgstr "(optional)"
+
+#: functions.php:98
+msgid "Name"
+msgstr "Name"
+
+#: functions.php:99
+msgid "John Doe"
+msgstr "Angezeigter Name"
+
+#: functions.php:104
+msgid "Email"
+msgstr "E-Mail Adresse"
+
+#: functions.php:105
+msgid "name@email.com"
+msgstr "Name@example.com"
+
+#: functions.php:110
+msgid "Website"
+msgstr "Website"
+
+#: functions.php:111
+msgid "http://example.com"
+msgstr "http://example.com"
+
+#: functions.php:125
+msgid "Comment"
+msgstr "Kommentar"
+
+#: functions.php:126
+msgid "Enter Your Comment"
+msgstr "Kommentar hier eingeben"
+
+#: functions.php:156 functions.php:166 functions.php:183 inc/customizer.php:256
+msgid "Read More"
+msgstr "Weiterlesen"
+
+#: functions.php:358
+msgid "email"
+msgstr "E-Mail"
+
+#: functions.php:366
+msgid "contact form"
+msgstr "Kontakt Formular"
+
+#: functions.php:513
+msgid "Customizer settings deleted"
+msgstr "Customizer Einstellungen gelöscht"
+
+#: header.php:13
+msgid "Skip to content"
+msgstr "Direkt zum Inhalt"
+
+#: header.php:32 inc/scripts.php:8
+msgid "open menu"
+msgstr "Öffne Menü"
+
+#: header.php:33
+msgid "primary menu icon"
+msgstr "Hauptnavigation Icon"
+
+#: inc/customizer.php:14
+msgid "Front Page"
+msgstr "Startseite"
+
+#: inc/customizer.php:51
+msgid "Logo"
+msgstr "Logo"
+
+#: inc/customizer.php:62
+msgid "Upload custom logo."
+msgstr "Benutzerdefiniertes Logo hochladen"
+
+#: inc/customizer.php:78
+msgid "Social Media Icons"
+msgstr "Social Media Icons"
+
+#: inc/customizer.php:80
+msgid "Add the URL for each of your social profiles."
+msgstr "Fügen Sie die URLs für Ihre Social Media Profile hinzu"
+
+#: inc/customizer.php:94
+msgid "Email Address:"
+msgstr "E-Mail Adresse:"
+
+#: inc/customizer.php:144
+msgid ""
+"Accepts Skype link protocol (<a href=\"%s\" target=\"_blank\">learn more</a>)"
+msgstr ""
+
+#: inc/customizer.php:171
+msgid "Search Bar"
+msgstr "Suchleiste"
+
+#: inc/customizer.php:183
+msgid "Show search bar at top of site?"
+msgstr "Suchleiste zuoberst auf der Seite anzeigen?"
+
+#: inc/customizer.php:187 inc/customizer.php:326
+msgid "Show"
+msgstr "Anzeigen"
+
+#: inc/customizer.php:188 inc/customizer.php:327
+msgid "Hide"
+msgstr "Ausblenden"
+
+#: inc/customizer.php:196
+msgid "Layouts"
+msgstr "Layouts"
+
+#: inc/customizer.php:208
+msgid "Choose your layout:"
+msgstr "Wählen Sie Ihr Layout:"
+
+#: inc/customizer.php:209
+msgid ""
+"Want more layouts? <a target=\"_blank\" href=\"%s\">Check out Unlimited Pro</"
+"a>."
+msgstr "rechte Seitenleiste"
+
+#: inc/customizer.php:214 inc/customizer.php:350
+msgid "Right sidebar"
+msgstr "rechte Seitenleiste"
+
+#: inc/customizer.php:215 inc/customizer.php:351
+msgid "Left sidebar"
+msgstr "linke Seitenleiste"
+
+#: inc/customizer.php:223
+msgid "Blog"
+msgstr "Blog"
+
+#: inc/customizer.php:233
+msgid "Show full posts on blog?"
+msgstr "Zeige vollständigen Inhalt der Beiträge im Blog?"
+
+#: inc/customizer.php:238 inc/customizer.php:367
+msgid "Yes"
+msgstr "Ja"
+
+#: inc/customizer.php:239 inc/customizer.php:368
+msgid "No"
+msgstr "Nein"
+
+#: inc/customizer.php:249
+msgid "Excerpt word count"
+msgstr "Anzahl Wörter pro Auszug"
+
+#: inc/customizer.php:261
+msgid "Read More button text"
+msgstr "Text des Read more Schalters"
+
+#: inc/customizer.php:271
+msgid "Comment Display"
+msgstr "Kommentar Anzeige"
+
+#: inc/customizer.php:282
+msgid "Show comments on:"
+msgstr "Zeige Kommentare auf:"
+
+#: inc/customizer.php:287 inc/customizer.php:377
+msgid "Posts"
+msgstr "Beiträgen"
+
+#: inc/customizer.php:288 inc/customizer.php:378
+msgid "Pages"
+msgstr "Seiten"
+
+#: inc/customizer.php:289 inc/customizer.php:379
+msgid "Attachments"
+msgstr "Anhängen"
+
+#: inc/customizer.php:290 inc/customizer.php:380
+msgid "Do not show"
+msgstr "Nicht anzeigen"
+
+#: inc/customizer.php:299
+msgid "Custom CSS"
+msgstr "Benutzerdefiniertes CSS"
+
+#: inc/customizer.php:310
+msgid "Add Custom CSS Here:"
+msgstr "Füge benutzerdefiniertes CSS hier hinzu:"
+
+#: inc/customizer.php:352
+msgid "No sidebar - Narrow"
+msgstr "Keine Seitenleiste - schmal"
+
+#: inc/customizer.php:353
+msgid "No sidebar - Wide"
+msgstr "Keine Seitenleiste - breit"
+
+#: inc/customizer.php:354
+msgid "Two column - Right sidebar"
+msgstr "Zwei Spalten - rechte Seitenleiste"
+
+#: inc/customizer.php:355
+msgid "Two column - Left sidebar"
+msgstr "Zwei Spalten - linke Seitenleiste"
+
+#: inc/customizer.php:356
+msgid "Two column - No Sidebar - Narrow"
+msgstr "Zwei Spalten - ohne Seitenleiste - schmal"
+
+#: inc/customizer.php:357
+msgid "Two column - No Sidebar - Wide"
+msgstr "Zwei Spalten - keine Seitenleiste - breit"
+
+#: inc/customizer.php:422
+msgid "View the Unlimited Pro Plugin"
+msgstr "Zeige das Unlimited Pro Plugin"
+
+#: inc/scripts.php:9
+msgid "close menu"
+msgstr "Menü schliessen"
+
+#: inc/user-profile.php:17
+msgid "Social Profiles"
+msgstr "Social Profile"
+
+#: inc/user-profile.php:61
+msgid "Email Address"
+msgstr "E-Mail Adresse"
+
+#: search.php:9
+msgid "%d search result for \"%s\""
+msgid_plural "%d search results for \"%s\""
+msgstr[0] "%d Suchresultat für \"%s\""
+msgstr[1] "%d Suchresultate für \"%s\""
+
+#: search.php:11
+msgid "No search results for \"%s\""
+msgstr "Keine Suchresultate für \"%s\""
+
+#: search.php:35
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr ""
+"Nicht gefunden, wonach Sie gesucht haben? Versuchen Sie die Suche anders zu "
+"formulieren:"
+
+#: searchform.php:7
+msgid "Go"
+msgstr "Los"
+
+#: theme-options.php:4 theme-options.php:19
+msgid "Unlimited Dashboard"
+msgstr "Unlimited Dashboard"
+
+#: theme-options.php:22
+msgid "Customization"
+msgstr "Unlimitted anpassen"
+
+#: theme-options.php:23
+msgid ""
+"Click the \"Customize\" link in your menu, or use the button below to get "
+"started customizing Unlimited."
+msgstr ""
+"Verwenden Sie den Link \"Anpassen\" des WordPress Menüs oder wählen Sie den "
+"untenstehenden Link, um Unlimitted zu konfigurieren."
+
+#: theme-options.php:26
+msgid "Use Customizer"
+msgstr "Customizer verwenden"
+
+#: theme-options.php:30
+msgid "Support"
+msgstr "Support"
+
+#: theme-options.php:31
+msgid ""
+"You can find the knowledgebase, changelog, support forum, and more in the "
+"Unlimited Support Center."
+msgstr ""
+"Im Unlimited Support Center finden Sie die Knowledge Base, das Changelog, "
+"das Support Forum und vieles mehr"
+
+#: theme-options.php:34
+msgid "Visit Support Center"
+msgstr "Besuchen Sie das Unlimited Support Center"
+
+#: theme-options.php:38
+msgid "Unlimited Pro Plugin"
+msgstr "Unlimited Pro Plugin"
+
+#: theme-options.php:39
+msgid ""
+"Download the Unlimited Pro plugin and unlock custom colors, new layouts, "
+"background images, and more..."
+msgstr ""
+"Laden Sie das Unlimited Pro Plugin herunter und verwenden Sie zusätzliche "
+"Features wie benutzerdefinierte Farben, weitere Layouts, Hintergrundbilder "
+"und vieles mehr"
+
+#: theme-options.php:42
+msgid "See Full Feature List"
+msgstr "Vollständige Featurelist anzeigen"
+
+#: theme-options.php:46
+msgid "WordPress Resources"
+msgstr "WordPress Ressourcen"
+
+#: theme-options.php:47
+msgid ""
+"Save time and money searching for WordPress products by following our "
+"recommendations."
+msgstr ""
+"Sparen Sie Zeit und Geld beim Suchen nach WordPress Produkten und schauen "
+"Sie sich unsere Empfehlungen an"
+
+#: theme-options.php:50
+msgid "View Resources"
+msgstr "Ressourcen anzeigen"
+
+#: theme-options.php:54 theme-options.php:56
+msgid "Leave a Review"
+msgstr "Schreiben Sie einen Review"
+
+#: theme-options.php:55
+msgid "Help others find unlimited by leaving a review on wordpress.org."
+msgstr ""
+"Helfen Sie anderen Unlimited zu finden durch das Schreiben eines Reviews auf "
+"WordPress.org"
+
+#: theme-options.php:59
+msgid "Reset Unlimited Settings"
+msgstr "Unlimitted Konfiguration auf Standardwerte zurücksetzen"
+
+#: theme-options.php:61
+msgid ""
+"<strong>Warning:</strong> Clicking this button will erase the Unlimited "
+"theme's current settings in the <a href='%s'>Customizer</a>."
+msgstr ""
+
+#: theme-options.php:67
+msgid "Reset Customizer Settings"
+msgstr "Customizer Einstellungen zurücksetzen"
+
+#. Description of the plugin/theme
+msgid ""
+"Fast, responsive, beautiful, and accessible. With Unlimited, your content "
+"will reach more people, on more devices, around the world. Unlimited's "
+"simple design puts the focus on your content, and supports it with clean, "
+"reliable code. See the fully setup live demo here: https://www.competethemes."
+"com/unlimited-live-demo/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full-width"
+msgstr "Full-Width"
+
+#: functions.php:65
+msgctxt "the commenter said the following:"
+msgid "said:"
+msgstr "gesagt: [ der Komentierende hat folgendes gesagt: ]"
+
