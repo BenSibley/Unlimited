@@ -28,8 +28,8 @@
 
 /* Tier 2 */
 .toggle-dropdown {
-  padding: 3px 5px 3px 5px;
-  margin: 0 -36px 0 12px;
+  padding: 2px 5px 2px 5px;
+  margin: 0 -30px 0 8px;
   border: solid 1px #fff;
   font-size: 1em;
   line-height: 1;
@@ -89,6 +89,15 @@
   .toggle-navigation {
     display: none;
   }
+  .toggle-dropdown {
+    position: absolute;
+    top: 10px;
+    right: 2px;
+    padding: 6px;
+    margin: 0;
+    border: none;
+    color: $gray-23;
+  }
   .menu-primary {
     position: relative;
     left: -3.333%;
@@ -103,7 +112,7 @@
 
     li {
       display: inline-block;
-      margin-right: -4px; // remove inline-block native 4px space
+      margin: 0 -4px 0 0; // remove inline-block native 4px space
 
       // so bg stays dark when hovering over children
       &:hover,
@@ -116,6 +125,7 @@
       }
     }
     a {
+      display: block;
       color: $gray-40;
       padding: 15px 12px;
       transition: background 0.15s ease-in-out;
@@ -140,7 +150,7 @@
     &:hover,
     &.focused {
 
-      > a:after {
+      > .toggle-dropdown {
         transform: translateY(3px);
       }
     }
@@ -151,10 +161,10 @@
       &:active,
       &:focus {
 
-        &:after {
+        + button {
           transform: translateY(3px);
         }
-        + ul {
+        ~ ul {
           opacity: 1;
           visibility: visible;
         }
@@ -185,7 +195,7 @@
         &:hover,
         &.focused {
 
-          > a:after {
+          > .toggle-dropdown {
             transform: translateX(3px);
           }
         }
@@ -202,7 +212,7 @@
         &:focus {
           color: $gray-23;
 
-          &:after {
+          + button {
             transform: translateX(3px);
           }
         }
@@ -225,7 +235,10 @@
 
         > a {
 
-          &:after {
+          + button {
+            right: 12px;
+          }
+          + button:after {
             content: '\f105';
           }
         }
@@ -266,14 +279,14 @@
 
         > a {
 
-          &:after {
+          + button:after {
             content: '\f104';
           }
           &:hover,
           &:active,
           &:focus {
 
-            &:after {
+            + button {
               transform: translateX(-3px);
             }
           }

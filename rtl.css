@@ -508,8 +508,8 @@ a img {
 
 /* Tier 2 */
 .toggle-dropdown {
-  padding: 3px 5px 3px 5px;
-  margin: 0 12px 0 -36px;
+  padding: 2px 5px 2px 5px;
+  margin: 0 8px 0 -30px;
   border: solid 1px #fff;
   font-size: 1em;
   line-height: 1;
@@ -569,6 +569,16 @@ a img {
     display: none;
   }
 
+  .toggle-dropdown {
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    padding: 6px;
+    margin: 0;
+    border: none;
+    color: #3a3a3a;
+  }
+
   .menu-primary {
     position: relative;
     right: -3.333%;
@@ -585,7 +595,7 @@ a img {
   .menu-primary-items li,
   .menu-unset > ul li {
     display: inline-block;
-    margin-left: -4px;
+    margin: 0 0 0 -4px;
   }
   .menu-primary-items li:hover > a, .menu-primary-items li.focused > a,
   .menu-unset > ul li:hover > a,
@@ -595,6 +605,7 @@ a img {
   }
   .menu-primary-items a,
   .menu-unset > ul a {
+    display: block;
     color: #666666;
     padding: 15px 12px;
     transition: background 0.15s ease-in-out;
@@ -618,9 +629,9 @@ a img {
   .menu-unset .page_item_has_children {
     /* tier 3 */
   }
-  .menu-item-has-children:hover > a:after, .menu-item-has-children.focused > a:after,
-  .menu-unset .page_item_has_children:hover > a:after,
-  .menu-unset .page_item_has_children.focused > a:after {
+  .menu-item-has-children:hover > .toggle-dropdown, .menu-item-has-children.focused > .toggle-dropdown,
+  .menu-unset .page_item_has_children:hover > .toggle-dropdown,
+  .menu-unset .page_item_has_children.focused > .toggle-dropdown {
     -webkit-transform: translateY(3px);
     transform: translateY(3px);
   }
@@ -628,17 +639,17 @@ a img {
   .menu-unset .page_item_has_children > a {
     padding-left: 24px;
   }
-  .menu-item-has-children > a:hover:after, .menu-item-has-children > a:active:after, .menu-item-has-children > a:focus:after,
-  .menu-unset .page_item_has_children > a:hover:after,
-  .menu-unset .page_item_has_children > a:active:after,
-  .menu-unset .page_item_has_children > a:focus:after {
+  .menu-item-has-children > a:hover + button, .menu-item-has-children > a:active + button, .menu-item-has-children > a:focus + button,
+  .menu-unset .page_item_has_children > a:hover + button,
+  .menu-unset .page_item_has_children > a:active + button,
+  .menu-unset .page_item_has_children > a:focus + button {
     -webkit-transform: translateY(3px);
     transform: translateY(3px);
   }
-  .menu-item-has-children > a:hover + ul, .menu-item-has-children > a:active + ul, .menu-item-has-children > a:focus + ul,
-  .menu-unset .page_item_has_children > a:hover + ul,
-  .menu-unset .page_item_has_children > a:active + ul,
-  .menu-unset .page_item_has_children > a:focus + ul {
+  .menu-item-has-children > a:hover ~ ul, .menu-item-has-children > a:active ~ ul, .menu-item-has-children > a:focus ~ ul,
+  .menu-unset .page_item_has_children > a:hover ~ ul,
+  .menu-unset .page_item_has_children > a:active ~ ul,
+  .menu-unset .page_item_has_children > a:focus ~ ul {
     opacity: 1;
     visibility: visible;
   }
@@ -668,9 +679,9 @@ a img {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
-  .menu-item-has-children ul li:hover > a:after, .menu-item-has-children ul li.focused > a:after,
-  .menu-unset .page_item_has_children ul li:hover > a:after,
-  .menu-unset .page_item_has_children ul li.focused > a:after {
+  .menu-item-has-children ul li:hover > .toggle-dropdown, .menu-item-has-children ul li.focused > .toggle-dropdown,
+  .menu-unset .page_item_has_children ul li:hover > .toggle-dropdown,
+  .menu-unset .page_item_has_children ul li.focused > .toggle-dropdown {
     -webkit-transform: translateX(3px);
     transform: translateX(3px);
   }
@@ -689,10 +700,10 @@ a img {
   .menu-unset .page_item_has_children ul a:focus {
     color: #3a3a3a;
   }
-  .menu-item-has-children ul a:active:after, .menu-item-has-children ul a:hover:after, .menu-item-has-children ul a:focus:after,
-  .menu-unset .page_item_has_children ul a:active:after,
-  .menu-unset .page_item_has_children ul a:hover:after,
-  .menu-unset .page_item_has_children ul a:focus:after {
+  .menu-item-has-children ul a:active + button, .menu-item-has-children ul a:hover + button, .menu-item-has-children ul a:focus + button,
+  .menu-unset .page_item_has_children ul a:active + button,
+  .menu-unset .page_item_has_children ul a:hover + button,
+  .menu-unset .page_item_has_children ul a:focus + button {
     -webkit-transform: translateX(3px);
     transform: translateX(3px);
   }
@@ -707,10 +718,16 @@ a img {
     top: -1px;
     right: 100%;
   }
-  .menu-item-has-children ul .menu-item-has-children > a:after,
-  .menu-item-has-children ul .page_item_has_children > a:after,
-  .menu-unset .page_item_has_children ul .menu-item-has-children > a:after,
-  .menu-unset .page_item_has_children ul .page_item_has_children > a:after {
+  .menu-item-has-children ul .menu-item-has-children > a + button,
+  .menu-item-has-children ul .page_item_has_children > a + button,
+  .menu-unset .page_item_has_children ul .menu-item-has-children > a + button,
+  .menu-unset .page_item_has_children ul .page_item_has_children > a + button {
+    left: 12px;
+  }
+  .menu-item-has-children ul .menu-item-has-children > a + button:after,
+  .menu-item-has-children ul .page_item_has_children > a + button:after,
+  .menu-unset .page_item_has_children ul .menu-item-has-children > a + button:after,
+  .menu-unset .page_item_has_children ul .page_item_has_children > a + button:after {
     content: '\f105';
   }
 
@@ -746,22 +763,22 @@ a img {
     background: #D9D9D9;
   }
 
-  .rtl .menu-primary-items ul .menu-item-has-children > a:after,
-  .rtl .menu-primary-items ul .menu-unset .page_item_has_children > a:after,
-  .rtl .menu-unset ul ul .menu-item-has-children > a:after,
-  .rtl .menu-unset ul ul .menu-unset .page_item_has_children > a:after {
+  .rtl .menu-primary-items ul .menu-item-has-children > a + button:after,
+  .rtl .menu-primary-items ul .menu-unset .page_item_has_children > a + button:after,
+  .rtl .menu-unset ul ul .menu-item-has-children > a + button:after,
+  .rtl .menu-unset ul ul .menu-unset .page_item_has_children > a + button:after {
     content: '\f104';
   }
-  .rtl .menu-primary-items ul .menu-item-has-children > a:hover:after, .rtl .menu-primary-items ul .menu-item-has-children > a:active:after, .rtl .menu-primary-items ul .menu-item-has-children > a:focus:after,
-  .rtl .menu-primary-items ul .menu-unset .page_item_has_children > a:hover:after,
-  .rtl .menu-primary-items ul .menu-unset .page_item_has_children > a:active:after,
-  .rtl .menu-primary-items ul .menu-unset .page_item_has_children > a:focus:after,
-  .rtl .menu-unset ul ul .menu-item-has-children > a:hover:after,
-  .rtl .menu-unset ul ul .menu-item-has-children > a:active:after,
-  .rtl .menu-unset ul ul .menu-item-has-children > a:focus:after,
-  .rtl .menu-unset ul ul .menu-unset .page_item_has_children > a:hover:after,
-  .rtl .menu-unset ul ul .menu-unset .page_item_has_children > a:active:after,
-  .rtl .menu-unset ul ul .menu-unset .page_item_has_children > a:focus:after {
+  .rtl .menu-primary-items ul .menu-item-has-children > a:hover + button, .rtl .menu-primary-items ul .menu-item-has-children > a:active + button, .rtl .menu-primary-items ul .menu-item-has-children > a:focus + button,
+  .rtl .menu-primary-items ul .menu-unset .page_item_has_children > a:hover + button,
+  .rtl .menu-primary-items ul .menu-unset .page_item_has_children > a:active + button,
+  .rtl .menu-primary-items ul .menu-unset .page_item_has_children > a:focus + button,
+  .rtl .menu-unset ul ul .menu-item-has-children > a:hover + button,
+  .rtl .menu-unset ul ul .menu-item-has-children > a:active + button,
+  .rtl .menu-unset ul ul .menu-item-has-children > a:focus + button,
+  .rtl .menu-unset ul ul .menu-unset .page_item_has_children > a:hover + button,
+  .rtl .menu-unset ul ul .menu-unset .page_item_has_children > a:active + button,
+  .rtl .menu-unset ul ul .menu-unset .page_item_has_children > a:focus + button {
     -webkit-transform: translateX(-3px);
     transform: translateX(-3px);
   }
