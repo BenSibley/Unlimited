@@ -148,10 +148,17 @@
   .menu-unset .page_item_has_children {
 
     &:hover,
-    &.focused {
+    &.focused,
+    &.open {
 
       > .toggle-dropdown {
         transform: translateY(3px);
+      }
+    }
+    &.open {
+      > ul {
+        opacity: 1;
+        visibility: visible;
       }
     }
     > a {
@@ -193,7 +200,8 @@
         backface-visibility: hidden; // fixed keyboard focus z-index issue
 
         &:hover,
-        &.focused {
+        &.focused,
+        &.open {
 
           > .toggle-dropdown {
             transform: translateX(3px);

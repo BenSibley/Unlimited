@@ -313,16 +313,18 @@ jQuery(document).ready(function($){
             // change aria text
             $(this).attr('aria-expanded', 'false');
 
-            // just needs long enough for the 0.15s animation fo play out
-            setTimeout(function () {
+            if( window.innerWidth < 800 ) {
+                // just needs long enough for the 0.15s animation fo play out
+                setTimeout(function () {
 
-                // adjust containing .menu-primary to fit newly expanded list
-                var menuHeight = calculateMenuHeight();
+                    // adjust containing .menu-primary to fit newly expanded list
+                    var menuHeight = calculateMenuHeight();
 
-                // adjust to the height
-                menuPrimary.css('max-height', menuHeight + 48);
+                    // adjust to the height
+                    menuPrimary.css('max-height', menuHeight + 48);
 
-            }, 200)
+                }, 200)
+            }
         } else {
 
             var ulHeight = 0;
@@ -343,16 +345,18 @@ jQuery(document).ready(function($){
             // change aria text
             $(this).attr('aria-expanded', 'true');
 
-            // just needs long enough for the 0.15s animation fo play out
-            setTimeout(function () {
+            if( window.innerWidth < 800 ) {
+                // just needs long enough for the 0.15s animation fo play out
+                setTimeout(function () {
 
-                // adjust containing .menu-primary to fit newly expanded list
-                var menuHeight = calculateMenuHeight();
+                    // adjust containing .menu-primary to fit newly expanded list
+                    var menuHeight = calculateMenuHeight();
 
-                // adjust to the height
-                menuPrimary.css('max-height', menuHeight + 48);
+                    // adjust to the height
+                    menuPrimary.css('max-height', menuHeight + 48);
 
-            }, 200)
+                }, 200)
+            }
         }
     }
 
