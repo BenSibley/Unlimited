@@ -584,6 +584,7 @@ if ( ! function_exists( 'unlimited_get_content_template' ) ) {
 // allow skype URIs to be used
 function ct_unlimited_allow_skype_protocol( $protocols ){
 	$protocols[] = 'skype';
+	$protocols[] = 'whatsapp';
 	return $protocols;
 }
 add_filter( 'kses_allowed_protocols' , 'ct_unlimited_allow_skype_protocol' );
