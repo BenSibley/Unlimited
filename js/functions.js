@@ -3,9 +3,11 @@ jQuery(document).ready(function($){
     var body = $('body');
     var siteHeader = $('#site-header');
     var toggleNav = $('#toggle-navigation');
+    var toggleDropdown = $('.toggle-dropdown');
     var menuPrimary = $('#menu-primary');
     var menuPrimaryItems = $('#menu-primary-items');
     var dropdownMenuItems = $('.menu-item').children('a').add( $('.page-item').children('a') );
+    // var menuParents = $('.menu-item-has-children, .page_item_has_children');
 
     objectFitAdjustment();
 
@@ -29,8 +31,11 @@ jQuery(document).ready(function($){
     // display the primary menu at mobile widths
     toggleNav.on('click', openPrimaryMenu);
 
+    // open dropdown menus
+    toggleDropdown.on('click', openDropdownMenu);
+
     // enforce double-click for parent menu items when a touch event is registered
-    $(window).on('touchstart', enableTouchDropdown );
+    // $(window).on('touchstart', enableTouchDropdown );
 
     /* allow keyboard access/visibility for dropdown menu items */
     dropdownMenuItems.focus(function(){
@@ -142,36 +147,31 @@ jQuery(document).ready(function($){
     }
 
     // require a second click to visit parent navigation items
-    function enableTouchDropdown(){
-
-        // Remove event listener once fired
-        $(window).off('touchstart', enableTouchDropdown);
-
-        // get all the parent menu items
-        var menuParents = $('.menu-item-has-children, .page_item_has_children');
-
-        // add a 'closed' class to each and add an event listener to them
-        menuParents.addClass('closed');
-        menuParents.on('click', openDropdown);
-    }
+    // function enableTouchDropdown(){
+    //
+    //     // Remove event listener once fired
+    //     $(window).off('touchstart', enableTouchDropdown);
+    //
+    //     // add a 'closed' class to each and add an event listener to them
+    //     menuParents.addClass('closed');
+    //     menuParents.on('click', openDropdown);
+    // }
 
     // open the dropdown without visiting parent link on first click
-    function openDropdown(e){
+    function openDropdown(){
 
-        // if the menu item is not showing children
-        if ($(this).hasClass('closed')) {
+        var menuItem = $(this).parent();
 
-            // prevent link from being visited
-            e.preventDefault();
+        if( menuItem.hasClass('open') ) {
 
-            // add an open class
-            $(this).addClass('open');
+            menuItem.removeClass('open');
 
-            // remove 'closed' class to enable link
-            $(this).removeClass('closed');
+
+        } else {
+            menuItem.addClass('open');
 
             // get the submenu
-            var submenu = $(this).children('ul');
+            var submenu = menuItem.children('ul');
 
             // set variable
             var submenuHeight = 0;
@@ -196,7 +196,7 @@ jQuery(document).ready(function($){
             parentList.css('max-height', parseInt(parentListHeight + submenuHeight));
 
             // only open the primary menu if clicked menu item is in primary menu
-            if( $(this).parents().hasClass('menu-primary-items') || $(this).parents().hasClass('menu-unset') ) {
+            if ($(this).parents().hasClass('menu-primary-items') || $(this).parents().hasClass('menu-unset')) {
 
                 // just needs long enough for the 0.15s animation fo play out
                 setTimeout(function () {
@@ -209,6 +209,67 @@ jQuery(document).ready(function($){
 
                 }, 200)
             }
+        }
+    }
+
+    function openDropdownMenu() {
+
+        // get the button's parent (li)
+        var menuItem = $(this).parent();
+
+        if( menuItem.hasClass('open') ) {
+
+            menuItem.removeClass('open');
+
+            // remove max-height added by JS when opened
+            $(this).siblings('ul').css('max-height', 0);
+
+            // change screen reader text
+            $(this).children('span').text(objectL10n.openChildMenu);
+
+            // change aria text
+            $(this).attr('aria-expanded', 'false');
+
+            // just needs long enough for the 0.15s animation fo play out
+            setTimeout(function () {
+
+                // adjust containing .menu-primary to fit newly expanded list
+                var menuHeight = calculateMenuHeight();
+
+                // adjust to the height
+                menuPrimary.css('max-height', menuHeight + 48);
+
+            }, 200)
+        } else {
+
+            var ulHeight = 0;
+
+            menuItem.addClass('open');
+
+            // get all dropdown children and use their height to set the new max height
+            $(this).siblings('ul').find('li').each(function () {
+                ulHeight = ulHeight + $(this).height() + ( $(this).height() * 1.5 );
+            });
+
+            // set the new max height (for smoother transitions)
+            $(this).siblings('ul').css('max-height', ulHeight);
+
+            // change screen reader text
+            $(this).children('span').text(objectL10n.closeChildMenu);
+
+            // change aria text
+            $(this).attr('aria-expanded', 'true');
+
+            // just needs long enough for the 0.15s animation fo play out
+            setTimeout(function () {
+
+                // adjust containing .menu-primary to fit newly expanded list
+                var menuHeight = calculateMenuHeight();
+
+                // adjust to the height
+                menuPrimary.css('max-height', menuHeight + 48);
+
+            }, 200)
         }
     }
 

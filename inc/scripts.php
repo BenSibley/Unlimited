@@ -6,7 +6,9 @@ function unlimited_load_scripts_styles() {
 	wp_enqueue_script( 'ct-unlimited-js', get_template_directory_uri() . '/js/build/production.min.js', array( 'jquery' ), '', true );
 	wp_localize_script( 'ct-unlimited-js', 'objectL10n', array(
 		'openMenu'  => __( 'open menu', 'unlimited' ),
-		'closeMenu' => __( 'close menu', 'unlimited' )
+		'closeMenu' => __( 'close menu', 'unlimited' ),
+		'openChildMenu'  => __( 'open dropdown menu', 'unlimited' ),
+		'closeChildMenu' => __( 'close dropdown menu', 'unlimited' )
 	) );
 
 	// Google Fonts (required to register outside scripts first)

@@ -588,3 +588,16 @@ function ct_unlimited_allow_skype_protocol( $protocols ){
 	return $protocols;
 }
 add_filter( 'kses_allowed_protocols' , 'ct_unlimited_allow_skype_protocol' );
+
+function ct_unlimited_nav_dropdown_buttons( $item_output, $item, $depth, $args ) {
+
+	if ( $args->theme_location == 'primary' ) {
+
+		if ( in_array( 'menu-item-has-children', $item->classes ) || in_array( 'page_item_has_children', $item->classes ) ) {
+			$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . __( "open menu", "unlimited" ) . '</span></button>', $item_output );
+		}
+	}
+
+	return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'ct_unlimited_nav_dropdown_buttons', 10, 4 );
