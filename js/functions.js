@@ -145,73 +145,7 @@ jQuery(document).ready(function($){
         }
         return menuHeight;
     }
-
-    // require a second click to visit parent navigation items
-    // function enableTouchDropdown(){
-    //
-    //     // Remove event listener once fired
-    //     $(window).off('touchstart', enableTouchDropdown);
-    //
-    //     // add a 'closed' class to each and add an event listener to them
-    //     menuParents.addClass('closed');
-    //     menuParents.on('click', openDropdown);
-    // }
-
-    // open the dropdown without visiting parent link on first click
-    function openDropdown(){
-
-        var menuItem = $(this).parent();
-
-        if( menuItem.hasClass('open') ) {
-
-            menuItem.removeClass('open');
-
-
-        } else {
-            menuItem.addClass('open');
-
-            // get the submenu
-            var submenu = menuItem.children('ul');
-
-            // set variable
-            var submenuHeight = 0;
-
-            // get height of all menu items in submenu combined
-            submenu.children('li').each(function () {
-                submenuHeight = submenuHeight + $(this).height();
-            });
-
-            // set ul max-height to the height of all it's children li
-            submenu.css('max-height', submenuHeight);
-
-            var listItem = $(this);
-
-            // get the containing ul if it exists
-            var parentList = listItem.parent('.sub-menu, .children');
-
-            // get the height
-            var parentListHeight = parentList.height();
-
-            // expand the height of the parent ul so that it's child can show
-            parentList.css('max-height', parseInt(parentListHeight + submenuHeight));
-
-            // only open the primary menu if clicked menu item is in primary menu
-            if ($(this).parents().hasClass('menu-primary-items') || $(this).parents().hasClass('menu-unset')) {
-
-                // just needs long enough for the 0.15s animation fo play out
-                setTimeout(function () {
-
-                    // adjust containing .menu-primary to fit newly expanded list
-                    var menuHeight = calculateMenuHeight();
-
-                    // adjust to the height
-                    menuPrimary.css('max-height', menuHeight + 48);
-
-                }, 200)
-            }
-        }
-    }
-
+    
     function openDropdownMenu() {
 
         // get the button's parent (li)
