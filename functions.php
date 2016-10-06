@@ -526,16 +526,6 @@ function unlimited_delete_settings_notice() {
 }
 add_action( 'admin_notices', 'unlimited_delete_settings_notice' );
 
-if ( ! function_exists( '_wp_render_title_tag' ) ) :
-	function unlimited_add_title_tag() {
-		?>
-		<title><?php wp_title( ' | ' ); ?></title>
-		<?php
-	}
-
-	add_action( 'wp_head', 'unlimited_add_title_tag' );
-endif;
-
 function unlimited_add_meta_elements() {
 
 	$meta_elements = '';
