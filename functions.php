@@ -1,8 +1,13 @@
 <?php
 
-if ( ! isset( $content_width ) ) {
-	$content_width = 655;
+if ( ! function_exists( ( 'ct_unlimited_set_content_width' ) ) ) {
+	function ct_unlimited_set_content_width() {
+		if ( ! isset( $content_width ) ) {
+			$content_width = 655;
+		}
+	}
 }
+add_action( 'after_setup_theme', 'ct_unlimited_set_content_width', 0 );
 
 if ( ! function_exists( 'unlimited_theme_setup' ) ) {
 	function unlimited_theme_setup() {
