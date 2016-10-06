@@ -12,7 +12,13 @@ function unlimited_load_scripts_styles() {
 	) );
 
 	// Google Fonts (required to register outside scripts first)
-	wp_register_style( 'ct-unlimited-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:400,300' );
+	$font_args = array(
+		'family' => urlencode( 'Open Sans:400,300' ),
+		'subset' => urlencode( 'latin,latin-ext' )
+	);
+	$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
+
+	wp_register_style( 'ct-unlimited-google-fonts', $fonts_url );
 	wp_enqueue_style( 'ct-unlimited-google-fonts' );
 
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css' );
