@@ -4,7 +4,7 @@
 function unlimited_load_scripts_styles() {
 
 	wp_enqueue_script( 'ct-unlimited-js', get_template_directory_uri() . '/js/build/production.min.js', array( 'jquery' ), '', true );
-	wp_localize_script( 'ct-unlimited-js', 'objectL10n', array(
+	wp_localize_script( 'ct-unlimited-js', 'ct_unlimited_objectL10n', array(
 		'openMenu'  => esc_html__( 'open menu', 'unlimited' ),
 		'closeMenu' => esc_html__( 'close menu', 'unlimited' ),
 		'openChildMenu'  => esc_html__( 'open dropdown menu', 'unlimited' ),
