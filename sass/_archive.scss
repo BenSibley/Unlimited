@@ -110,6 +110,10 @@
   padding: 6px 12px;
   color: white;
 }
+.search .sticky-status,
+.search .has-post-thumbnail .sticky-status {
+  display: none;
+}
 .has-post-thumbnail .sticky-status {
   position: absolute;
   display: inline-block;
