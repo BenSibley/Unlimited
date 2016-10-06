@@ -6,7 +6,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 
 	/***** Reorder default sections *****/
 
-	$wp_customize->get_section( 'title_tagline' )->priority = 1;
+	$wp_customize->get_section( 'title_tagline' )->priority = 2;
 
 	// check if exists in case user has no pages
 	if ( is_object( $wp_customize->get_section( 'static_front_page' ) ) ) {
@@ -42,6 +42,45 @@ function unlimited_add_customizer_content( $wp_customize ) {
 				</select>
 			</label>
 		<?php }
+	}
+
+	/***** Unlimited Pro Control *****/
+
+	class ct_unlimited_pro_ad extends WP_Customize_Control {
+		public function render_content() {
+			$link = 'https://www.competethemes.com/unlimited-pro/';
+			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Unlimited Pro</a> is the plugin that makes advanced customization simple - and fun too!', 'unlimited'), $link) . "</p>";
+			echo "<ul>
+					<li>" . __('6 New Layouts', 'unlimited') . "</li>
+					<li>" . __('Custom Colors', 'unlimited') . "</li>
+					<li>" . __('Flexible Header Image', 'unlimited') . "</li>
+					<li>" . __('+ 9 more features', 'unlimited') . "</li>
+				  </ul>";
+			echo "<p>" . __('View our gallery of screenshots and videos now to see if Unlimited Pro is right for your site.', 'unlimited') . "</p>";
+			echo "<p class='button-wrapper'><a target=\"_blank\" class='unlimited-pro-button' href='" . $link . "'>" . __('View Unlimited Pro', 'unlimited') . "</a></p>";
+		}
+	}
+
+	/***** Unlimited Pro Section *****/
+
+	// don't add if Unlimited Pro is active
+	if ( !function_exists( 'ct_unlimited_pro_init' ) ) {
+		// section
+		$wp_customize->add_section( 'ct_unlimited_pro', array(
+			'title'    => __( 'Unlimited Pro', 'unlimited' ),
+			'priority' => 1
+		) );
+		// Upload - setting
+		$wp_customize->add_setting( 'unlimited_pro', array(
+			'sanitize_callback' => 'absint'
+		) );
+		// Upload - control
+		$wp_customize->add_control( new ct_unlimited_pro_ad(
+			$wp_customize, 'unlimited_pro', array(
+				'section'  => 'ct_unlimited_pro',
+				'settings' => 'unlimited_pro'
+			)
+		) );
 	}
 
 	/***** Logo Upload *****/
@@ -417,12 +456,6 @@ function unlimited_ajaxurl() { ?>
 	<?php
 }
 add_action( 'wp_head', 'unlimited_ajaxurl' );
-
-function unlimited_customize_preview_js() {
-	$content = "<script>jQuery('#customize-info').append('<div class=\"upgrades-ad\"><a href=\"https://www.competethemes.com/unlimited-pro/\" class=\"button-primary\" target=\"_blank\">" . __( 'Get the Unlimited Pro Plugin', 'unlimited' ) . "</a></div>');</script>";
-	echo apply_filters( 'unlimited_customizer_ad', $content );
-}
-add_action( 'customize_controls_print_footer_scripts', 'unlimited_customize_preview_js' );
 
 function ct_unlimited_sanitize_css( $css ) {
 	$css = wp_kses( $css, array( '\'', '\"' ) );
