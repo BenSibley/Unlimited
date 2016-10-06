@@ -42,16 +42,18 @@ if ( ! function_exists( 'unlimited_theme_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'unlimited_theme_setup', 10 );
 
-function unlimited_register_widget_areas() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Primary Sidebar', 'unlimited' ),
-		'id'            => 'primary',
-		'description'   => esc_html__( 'Widgets in this area will be shown in the sidebar next to the main post content', 'unlimited' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>'
-	) );
+if ( ! function_exists( 'unlimited_register_widget_areas' ) ) {
+	function unlimited_register_widget_areas() {
+		register_sidebar( array(
+			'name'          => esc_html__( 'Primary Sidebar', 'unlimited' ),
+			'id'            => 'primary',
+			'description'   => esc_html__( 'Widgets in this area will be shown in the sidebar next to the main post content', 'unlimited' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>'
+		) );
+	}
 }
 add_action( 'widgets_init', 'unlimited_register_widget_areas' );
 
@@ -212,16 +214,18 @@ if ( ! function_exists( 'unlimited_remove_more_link_scroll' ) ) {
 }
 add_filter( 'the_content_more_link', 'unlimited_remove_more_link_scroll' );
 
-function unlimited_custom_excerpt_length( $length ) {
+if ( ! function_exists( 'unlimited_custom_excerpt_length' ) ) {
+	function unlimited_custom_excerpt_length( $length ) {
 
-	$new_excerpt_length = get_theme_mod( 'excerpt_length' );
+		$new_excerpt_length = get_theme_mod( 'excerpt_length' );
 
-	if ( ! empty( $new_excerpt_length ) && $new_excerpt_length != 25 ) {
-		return $new_excerpt_length;
-	} elseif ( $new_excerpt_length === 0 ) {
-		return 0;
-	} else {
-		return 25;
+		if ( ! empty( $new_excerpt_length ) && $new_excerpt_length != 25 ) {
+			return $new_excerpt_length;
+		} elseif ( $new_excerpt_length === 0 ) {
+			return 0;
+		} else {
+			return 25;
+		}
 	}
 }
 add_filter( 'excerpt_length', 'unlimited_custom_excerpt_length', 99 );
@@ -402,142 +406,159 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
  * WP will apply the ".menu-primary-items" class & id to the containing <div> instead of <ul>
  * making styling difficult and confusing. Using this wrapper to add a unique class to make styling easier.
  */
-function unlimited_wp_page_menu() {
-	wp_page_menu( array(
-			"menu_class" => "menu-unset"
-		)
-	);
+if ( ! function_exists( 'unlimited_wp_page_menu' ) ) {
+	function unlimited_wp_page_menu() {
+		wp_page_menu( array(
+				"menu_class" => "menu-unset"
+			)
+		);
+	}
 }
 
-function unlimited_body_class( $classes ) {
+if ( ! function_exists( 'unlimited_body_class' ) ) {
+	function unlimited_body_class( $classes ) {
 
-	global $post;
+		global $post;
 
-	$layout    = get_theme_mod( 'layout' );
-	$full_post = get_theme_mod( 'full_post' );
+		$layout    = get_theme_mod( 'layout' );
+		$full_post = get_theme_mod( 'full_post' );
 
-	if ( $layout == 'left' ) {
-		$classes[] = 'left-sidebar';
-	}
-	if ( $full_post == 'yes' ) {
-		$classes[] = 'full-post';
-	}
-
-	// add all historic singular classes
-	if ( is_singular() ) {
-		$classes[] = 'singular';
-		if ( is_singular( 'page' ) ) {
-			$classes[] = 'singular-page';
-			$classes[] = 'singular-page-' . $post->ID;
-		} elseif ( is_singular( 'post' ) ) {
-			$classes[] = 'singular-post';
-			$classes[] = 'singular-post-' . $post->ID;
-		} elseif ( is_singular( 'attachment' ) ) {
-			$classes[] = 'singular-attachment';
-			$classes[] = 'singular-attachment-' . $post->ID;
+		if ( $layout == 'left' ) {
+			$classes[] = 'left-sidebar';
 		}
-	}
+		if ( $full_post == 'yes' ) {
+			$classes[] = 'full-post';
+		}
 
-	return $classes;
+		// add all historic singular classes
+		if ( is_singular() ) {
+			$classes[] = 'singular';
+			if ( is_singular( 'page' ) ) {
+				$classes[] = 'singular-page';
+				$classes[] = 'singular-page-' . $post->ID;
+			} elseif ( is_singular( 'post' ) ) {
+				$classes[] = 'singular-post';
+				$classes[] = 'singular-post-' . $post->ID;
+			} elseif ( is_singular( 'attachment' ) ) {
+				$classes[] = 'singular-attachment';
+				$classes[] = 'singular-attachment-' . $post->ID;
+			}
+		}
+
+		return $classes;
+	}
 }
 add_filter( 'body_class', 'unlimited_body_class' );
 
-function unlimited_post_class( $classes ) {
-	$classes[] = 'entry';
-	return $classes;
+if ( ! function_exists( 'unlimited_post_class' ) ) {
+	function unlimited_post_class( $classes ) {
+		$classes[] = 'entry';
+
+		return $classes;
+	}
 }
 add_filter( 'post_class', 'unlimited_post_class' );
 
-function unlimited_custom_css_output() {
+if ( ! function_exists( 'unlimited_custom_css_output' ) ) {
+	function unlimited_custom_css_output() {
 
-	$custom_css = get_theme_mod( 'custom_css' );
+		$custom_css = get_theme_mod( 'custom_css' );
 
-	if ( $custom_css ) {
-		$custom_css = ct_unlimited_sanitize_css( $custom_css );
-		wp_add_inline_style( 'style', $custom_css );
+		if ( $custom_css ) {
+			$custom_css = ct_unlimited_sanitize_css( $custom_css );
+			wp_add_inline_style( 'style', $custom_css );
+		}
 	}
 }
 add_action( 'wp_enqueue_scripts', 'unlimited_custom_css_output', 20 );
 
-function unlimited_sticky_post_marker() {
+if ( ! function_exists( 'unlimited_sticky_post_marker' ) ) {
+	function unlimited_sticky_post_marker() {
 
-	if ( is_sticky() && ! is_archive() ) {
-		echo '<span class="sticky-status">Featured Post</span>';
+		if ( is_sticky() && ! is_archive() ) {
+			echo '<span class="sticky-status">Featured Post</span>';
+		}
 	}
 }
 add_action( 'archive_post_before', 'unlimited_sticky_post_marker' );
 
-function unlimited_reset_customizer_options() {
+if ( ! function_exists( 'unlimited_reset_customizer_options' ) ) {
+	function unlimited_reset_customizer_options() {
 
-	// validate name and value
-	if ( empty( $_POST['unlimited_reset_customizer'] ) || 'unlimited_reset_customizer_settings' !== $_POST['unlimited_reset_customizer'] ) {
-		return;
+		// validate name and value
+		if ( empty( $_POST['unlimited_reset_customizer'] ) || 'unlimited_reset_customizer_settings' !== $_POST['unlimited_reset_customizer'] ) {
+			return;
+		}
+		// validate nonce
+		if ( ! wp_verify_nonce( $_POST['unlimited_reset_customizer_nonce'], 'unlimited_reset_customizer_nonce' ) ) {
+			return;
+		}
+		// validate user permissions
+		if ( ! current_user_can( 'edit_theme_options' ) ) {
+			return;
+		}
+
+		$mods_array = array(
+			'logo_upload',
+			'search_bar',
+			'layout',
+			'full_post',
+			'excerpt_length',
+			'read_more_text',
+			'comments_display',
+			'custom_css'
+		);
+
+		$social_sites = unlimited_social_array();
+
+		// add social site settings to mods array
+		foreach ( $social_sites as $social_site => $value ) {
+			$mods_array[] = $social_site;
+		}
+
+		$mods_array = apply_filters( 'unlimited_mods_to_remove', $mods_array );
+
+		foreach ( $mods_array as $theme_mod ) {
+			remove_theme_mod( $theme_mod );
+		}
+
+		$redirect = admin_url( 'themes.php?page=unlimited-options' );
+		$redirect = add_query_arg( 'unlimited_status', 'deleted', $redirect );
+
+		wp_safe_redirect( $redirect );
+		exit;
 	}
-	// validate nonce
-	if ( ! wp_verify_nonce( $_POST['unlimited_reset_customizer_nonce'], 'unlimited_reset_customizer_nonce' ) ) {
-		return;
-	}
-	// validate user permissions
-	if ( ! current_user_can( 'edit_theme_options' ) ) {
-		return;
-	}
-
-	$mods_array = array(
-		'logo_upload',
-		'search_bar',
-		'layout',
-		'full_post',
-		'excerpt_length',
-		'read_more_text',
-		'comments_display',
-		'custom_css'
-	);
-
-	$social_sites = unlimited_social_array();
-
-	// add social site settings to mods array
-	foreach ( $social_sites as $social_site => $value ) {
-		$mods_array[] = $social_site;
-	}
-
-	$mods_array = apply_filters( 'unlimited_mods_to_remove', $mods_array );
-
-	foreach ( $mods_array as $theme_mod ) {
-		remove_theme_mod( $theme_mod );
-	}
-
-	$redirect = admin_url( 'themes.php?page=unlimited-options' );
-	$redirect = add_query_arg( 'unlimited_status', 'deleted', $redirect );
-
-	wp_safe_redirect( $redirect );
-	exit;
 }
 add_action( 'admin_init', 'unlimited_reset_customizer_options' );
 
-function unlimited_delete_settings_notice() {
+if ( ! function_exists( 'unlimited_delete_settings_notice' ) ) {
+	function unlimited_delete_settings_notice() {
 
-	if ( isset( $_GET['unlimited_status'] ) ) {
-		?>
-		<div class="updated">
-			<p><?php _e( 'Customizer settings deleted', 'unlimited' ); ?>.</p>
-		</div>
-		<?php
+		if ( isset( $_GET['unlimited_status'] ) ) {
+			?>
+			<div class="updated">
+				<p><?php _e( 'Customizer settings deleted', 'unlimited' ); ?>.</p>
+			</div>
+			<?php
+		}
 	}
 }
 add_action( 'admin_notices', 'unlimited_delete_settings_notice' );
 
-function unlimited_add_meta_elements() {
+if ( ! function_exists( 'unlimited_add_meta_elements' ) ) {
+	function unlimited_add_meta_elements() {
 
-	$meta_elements = '';
+		$meta_elements = '';
 
-	$meta_elements .= sprintf( '<meta charset="%s" />' . "\n", esc_attr( get_bloginfo( 'charset' ) ) );
-	$meta_elements .= '<meta name="viewport" content="width=device-width, initial-scale=1" />' . "\n";
+		$meta_elements .= sprintf( '<meta charset="%s" />' . "\n", esc_attr( get_bloginfo( 'charset' ) ) );
+		$meta_elements .= '<meta name="viewport" content="width=device-width, initial-scale=1" />' . "\n";
 
-	$theme    = wp_get_theme( get_template() );
-	$template = sprintf( '<meta name="template" content="%s %s" />' . "\n", esc_attr( $theme->get( 'Name' ) ), esc_attr( $theme->get( 'Version' ) ) );
-	$meta_elements .= $template;
+		$theme    = wp_get_theme( get_template() );
+		$template = sprintf( '<meta name="template" content="%s %s" />' . "\n", esc_attr( $theme->get( 'Name' ) ), esc_attr( $theme->get( 'Version' ) ) );
+		$meta_elements .= $template;
 
-	echo $meta_elements;
+		echo $meta_elements;
+	}
 }
 add_action( 'wp_head', 'unlimited_add_meta_elements', 1 );
 
@@ -545,12 +566,15 @@ add_action( 'wp_head', 'unlimited_add_meta_elements', 1 );
 remove_action( 'wp_head', 'wp_generator' );
 add_action( 'wp_head', 'wp_generator', 1 );
 
-function unlimited_infinite_scroll_render() {
-	while ( have_posts() ) {
-		the_post();
-		get_template_part( 'content', 'archive' );
+if ( ! function_exists( 'unlimited_infinite_scroll_render' ) ) {
+	function unlimited_infinite_scroll_render() {
+		while ( have_posts() ) {
+			the_post();
+			get_template_part( 'content', 'archive' );
+		}
 	}
 }
+
 if ( ! function_exists( 'unlimited_get_content_template' ) ) {
 	function unlimited_get_content_template() {
 
@@ -577,22 +601,27 @@ if ( ! function_exists( 'unlimited_get_content_template' ) ) {
 }
 
 // allow skype URIs to be used
-function ct_unlimited_allow_skype_protocol( $protocols ){
-	$protocols[] = 'skype';
-	$protocols[] = 'whatsapp';
-	return $protocols;
+if ( ! function_exists( 'ct_unlimited_allow_skype_protocol' ) ) {
+	function ct_unlimited_allow_skype_protocol( $protocols ) {
+		$protocols[] = 'skype';
+		$protocols[] = 'whatsapp';
+
+		return $protocols;
+	}
 }
 add_filter( 'kses_allowed_protocols' , 'ct_unlimited_allow_skype_protocol' );
 
-function ct_unlimited_nav_dropdown_buttons( $item_output, $item, $depth, $args ) {
+if ( ! function_exists( 'ct_unlimited_nav_dropdown_buttons' ) ) {
+	function ct_unlimited_nav_dropdown_buttons( $item_output, $item, $depth, $args ) {
 
-	if ( $args->theme_location == 'primary' ) {
+		if ( $args->theme_location == 'primary' ) {
 
-		if ( in_array( 'menu-item-has-children', $item->classes ) || in_array( 'page_item_has_children', $item->classes ) ) {
-			$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . __( "open dropdown menu", "unlimited" ) . '</span></button>', $item_output );
+			if ( in_array( 'menu-item-has-children', $item->classes ) || in_array( 'page_item_has_children', $item->classes ) ) {
+				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . __( "open dropdown menu", "unlimited" ) . '</span></button>', $item_output );
+			}
 		}
-	}
 
-	return $item_output;
+		return $item_output;
+	}
 }
 add_filter( 'walker_nav_menu_start_el', 'ct_unlimited_nav_dropdown_buttons', 10, 4 );
