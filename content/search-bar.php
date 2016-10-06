@@ -4,7 +4,7 @@
 	</button>
 	<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		<label class="screen-reader-text"><?php _e( 'Search', 'unlimited' ); ?></label>
-		<input type="search" class="search-field" placeholder="<?php _e( 'Search...', 'unlimited' ); ?>" value=""
-		       name="s" title="<?php _e( 'Search for:', 'unlimited' ); ?>" tabindex="-1"/>
+		<input type="search" class="search-field" placeholder="<?php esc_attr_e( 'Search...', 'unlimited' ); ?>" value=""
+		       name="s" title="<?php esc_attr_e( 'Search for:', 'unlimited' ); ?>" tabindex="-1"/>
 	</form>
 </div>

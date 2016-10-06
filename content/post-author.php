@@ -7,5 +7,5 @@
 	<p>
 		<?php the_author_meta( 'description' ); ?>
 	</p>
-	<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php _e( 'View more posts', 'unlimited' ); ?></a>
+	<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php _e( 'View more posts', 'unlimited' ); ?></a>
 </div>

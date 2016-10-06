@@ -5,10 +5,10 @@ function unlimited_load_scripts_styles() {
 
 	wp_enqueue_script( 'ct-unlimited-js', get_template_directory_uri() . '/js/build/production.min.js', array( 'jquery' ), '', true );
 	wp_localize_script( 'ct-unlimited-js', 'objectL10n', array(
-		'openMenu'  => __( 'open menu', 'unlimited' ),
-		'closeMenu' => __( 'close menu', 'unlimited' ),
-		'openChildMenu'  => __( 'open dropdown menu', 'unlimited' ),
-		'closeChildMenu' => __( 'close dropdown menu', 'unlimited' )
+		'openMenu'  => esc_html__( 'open menu', 'unlimited' ),
+		'closeMenu' => esc_html__( 'close menu', 'unlimited' ),
+		'openChildMenu'  => esc_html__( 'open dropdown menu', 'unlimited' ),
+		'closeChildMenu' => esc_html__( 'close dropdown menu', 'unlimited' )
 	) );
 
 	// Google Fonts (required to register outside scripts first)

@@ -36,7 +36,7 @@ if ( ! function_exists( 'unlimited_theme_setup' ) ) {
 		load_theme_textdomain( 'unlimited', get_template_directory() . '/languages' );
 
 		register_nav_menus( array(
-			'primary' => __( 'Primary', 'unlimited' )
+			'primary' => esc_html__( 'Primary', 'unlimited' )
 		) );
 	}
 }
@@ -44,9 +44,9 @@ add_action( 'after_setup_theme', 'unlimited_theme_setup', 10 );
 
 function unlimited_register_widget_areas() {
 	register_sidebar( array(
-		'name'          => __( 'Primary Sidebar', 'unlimited' ),
+		'name'          => esc_html__( 'Primary Sidebar', 'unlimited' ),
 		'id'            => 'primary',
-		'description'   => __( 'Widgets in this area will be shown in the sidebar next to the main post content', 'unlimited' ),
+		'description'   => esc_html__( 'Widgets in this area will be shown in the sidebar next to the main post content', 'unlimited' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -156,9 +156,9 @@ if ( ! function_exists( 'unlimited_excerpt' ) ) {
 			if ( $ismore ) {
 				// Has to be written this way because i18n text CANNOT be stored in a variable
 				if ( ! empty( $read_more_text ) ) {
-					the_content( $read_more_text . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+					the_content( esc_html( $read_more_text ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 				} else {
-					the_content( __( 'Read More', 'unlimited' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+					the_content( __( 'Read More', 'unlimited' ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 				}
 			} else {
 				the_content();
@@ -166,9 +166,9 @@ if ( ! function_exists( 'unlimited_excerpt' ) ) {
 		} // use the read more link if present
 		elseif ( $ismore ) {
 			if ( ! empty( $read_more_text ) ) {
-				the_content( $read_more_text . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				the_content( esc_html( $read_more_text ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 			} else {
-				the_content( __( 'Read More', 'unlimited' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				the_content( __( 'Read More', 'unlimited' ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 			}
 		} // otherwise the excerpt is automatic, so output it
 		else {
@@ -183,9 +183,9 @@ if ( ! function_exists( 'unlimited_excerpt_read_more_link' ) ) {
 		$read_more_text = get_theme_mod( 'read_more_text' );
 
 		if ( ! empty( $read_more_text ) ) {
-			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . $read_more_text . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . esc_html( $read_more_text ) . "<span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span></a></p>";
 		} else {
-			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Read More', 'unlimited' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Read More', 'unlimited' ) . "<span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span></a></p>";
 		}
 	}
 }
@@ -237,7 +237,7 @@ if ( ! function_exists( 'unlimited_featured_image' ) ) {
 			if ( is_singular() ) {
 				$featured_image = '<div class="featured-image">' . get_the_post_thumbnail( $post->ID, 'full' ) . '</div>';
 			} else {
-				$featured_image = '<div class="featured-image"><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . get_the_post_thumbnail( $post->ID, 'full' ) . '</a></div>';
+				$featured_image = '<div class="featured-image"><a href="' . esc_url( get_permalink() ) . '">' . esc_html( get_the_title() ) . get_the_post_thumbnail( $post->ID, 'full' ) . '</a></div>';
 			}
 		}
 
@@ -540,7 +540,7 @@ function unlimited_add_meta_elements() {
 
 	$meta_elements = '';
 
-	$meta_elements .= sprintf( '<meta charset="%s" />' . "\n", get_bloginfo( 'charset' ) );
+	$meta_elements .= sprintf( '<meta charset="%s" />' . "\n", esc_attr( get_bloginfo( 'charset' ) ) );
 	$meta_elements .= '<meta name="viewport" content="width=device-width, initial-scale=1" />' . "\n";
 
 	$theme    = wp_get_theme( get_template() );
