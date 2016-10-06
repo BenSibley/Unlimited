@@ -103,19 +103,19 @@ if ( ! function_exists( 'unlimited_update_fields' ) ) {
 		$fields['author'] =
 			'<p class="comment-form-author">
 	            <label for="author">' . __( "Name", "unlimited" ) . $label . '</label>
-	            <input placeholder="' . __( "John Doe", "unlimited" ) . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+	            <input placeholder="' . esc_attr__( "John Doe", "unlimited" ) . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 		$fields['email'] =
 			'<p class="comment-form-email">
 	            <label for="email">' . __( "Email", "unlimited" ) . $label . '</label>
-	            <input placeholder="' . __( "name@email.com", "unlimited" ) . '" id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) .
+	            <input placeholder="' . esc_attr__( "name@email.com", "unlimited" ) . '" id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 		$fields['url'] =
 			'<p class="comment-form-url">
 	            <label for="url">' . __( "Website", "unlimited" )  . '</label>
-	            <input placeholder="' . __( "http://example.com", "unlimited" ) . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
+	            <input placeholder="' . esc_attr__( "http://example.com", "unlimited" ) . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
 			'" size="30" />
 	            </p>';
 
@@ -130,7 +130,7 @@ if ( ! function_exists( 'unlimited_update_comment_field' ) ) {
 		$comment_field =
 			'<p class="comment-form-comment">
 	            <label for="comment">' . __( "Comment", "unlimited" ) . '</label>
-	            <textarea required placeholder="' . __( "Enter Your Comment", "unlimited" ) . '&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+	            <textarea required placeholder="' . esc_attr__( "Enter Your Comment", "unlimited" ) . '&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
 	        </p>';
 
 		return $comment_field;
