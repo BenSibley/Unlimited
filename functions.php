@@ -476,7 +476,7 @@ if ( ! function_exists( 'unlimited_sticky_post_marker' ) ) {
 	function unlimited_sticky_post_marker() {
 
 		if ( is_sticky() && ! is_archive() ) {
-			echo '<span class="sticky-status">Featured Post</span>';
+			echo '<span class="sticky-status">' . __( "Featured Post", "unlimited" ) . '</span>';
 		}
 	}
 }
