@@ -13,7 +13,7 @@ function unlimited_load_scripts_styles() {
 
 	// Google Fonts (required to register outside scripts first)
 	$font_args = array(
-		'family' => urlencode( 'Open Sans:400,300' ),
+		'family' => urlencode( 'Open Sans:600,400,300' ),
 		'subset' => urlencode( 'latin,latin-ext' )
 	);
 	$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
