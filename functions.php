@@ -470,7 +470,11 @@ add_filter( 'post_class', 'unlimited_post_class' );
 if ( ! function_exists( 'unlimited_custom_css_output' ) ) {
 	function unlimited_custom_css_output() {
 
-		$custom_css = get_theme_mod( 'custom_css' );
+		if ( function_exists( 'wp_get_custom_css' ) ) {
+			$custom_css = wp_get_custom_css();
+		} else {
+			$custom_css = get_theme_mod( 'custom_css' );
+		}
 
 		if ( $custom_css ) {
 			$custom_css = ct_unlimited_sanitize_css( $custom_css );

@@ -155,8 +155,13 @@
     // put custom CSS in its own style element
     body.append('<style id="style-inline-custom-css" type="text/css">' + customCSS + '</style>');
 
+    var setting = 'custom_css';
+    if ( panel.find('#sub-accordion-section-custom_css').length ) {
+        setting = 'custom_css[unlimited]';
+    }
+
     // Custom CSS
-    wp.customize( 'custom_css', function( value ) {
+    wp.customize( setting, function( value ) {
         value.bind( function( to ) {
             $('#style-inline-custom-css').remove();
             if ( to != '' ) {
