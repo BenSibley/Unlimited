@@ -4,6 +4,7 @@
   margin-bottom: 24px;
 }
 #unlimited-dashboard-wrap .content {
+  box-sizing: border-box;
   margin-top: 12px;
   padding: 12px 24px 24px;
   border: solid 1px #e5e5e5;
@@ -21,27 +22,30 @@
 /* 600px */
 @media all and (min-width: 37.5em) {
   #unlimited-dashboard-wrap .content {
-    width: 39%;
+    width: 49%;
     float: left;
     margin-right: 2%;
-    min-height: 192px;
+    min-height: 250px;
+  }
+  #unlimited-dashboard-wrap .content:nth-child(2n) {
+    margin-right: 0;
   }
   #unlimited-dashboard-wrap .content p {
     min-height: 57px;
-  }
-  #unlimited-dashboard-wrap .content-premium-upgrade,
-  #unlimited-dashboard-wrap .content-delete-settings {
-    margin-right: 0;
   }
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
   #unlimited-dashboard-wrap .content {
-    width: 26.5%;
+    width: 32%;
   }
-  #unlimited-dashboard-wrap .content-support,
-  #unlimited-dashboard-wrap .content-premium-upgrade,
-  #unlimited-dashboard-wrap .content-review {
-    margin-right: 1%;
+  #unlimited-dashboard-wrap .content:nth-child(2n) {
+    margin-right: 2%;
+  }
+  #unlimited-dashboard-wrap .content:nth-child(3n) {
+    margin-right: 0;
+  }
+  #unlimited-dashboard-wrap .content:nth-child(4n) {
+    clear: left;
   }
 }
