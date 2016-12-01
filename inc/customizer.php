@@ -49,14 +49,15 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	class ct_unlimited_pro_ad extends WP_Customize_Control {
 		public function render_content() {
 			$link = 'https://www.competethemes.com/unlimited-pro/';
+			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/unlimited-pro.png' srcset='" . get_template_directory_uri() . "/assets/images/unlimited-pro-2x.png 2x' /></a>";
 			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Unlimited Pro</a> is the plugin that makes advanced customization simple - and fun too!', 'unlimited'), $link) . "</p>";
+			echo "<p>" . __('Unlimited Pro adds the following features to Unlimited:', 'unlimited') . "</p>";
 			echo "<ul>
-					<li>" . __('6 New Layouts', 'unlimited') . "</li>
-					<li>" . __('Custom Colors', 'unlimited') . "</li>
-					<li>" . __('Flexible Header Image', 'unlimited') . "</li>
-					<li>" . __('+ 9 more features', 'unlimited') . "</li>
+					<li>" . __('6 new layouts', 'unlimited') . "</li>
+					<li>" . __('Custom colors', 'unlimited') . "</li>
+					<li>" . __('New fonts', 'unlimited') . "</li>
+					<li>" . __('+ 11 more features', 'unlimited') . "</li>
 				  </ul>";
-			echo "<p>" . __('View our gallery of screenshots and videos now to see if Unlimited Pro is right for your site.', 'unlimited') . "</p>";
 			echo "<p class='button-wrapper'><a target=\"_blank\" class='unlimited-pro-button' href='" . $link . "'>" . __('View Unlimited Pro', 'unlimited') . "</a></p>";
 		}
 	}
