@@ -79,7 +79,6 @@
                 var selector = panel.find('#sub-accordion-section-unlimited_social_media_icons').find('input');
 
                 if ( selector.length == false ) {
-                    console.log('false');
                     selector = panel.find('#accordion-section-unlimited_social_media_icons').find('input')
                 }
 
