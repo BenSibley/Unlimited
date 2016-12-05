@@ -547,11 +547,20 @@ if ( ! function_exists( 'unlimited_delete_settings_notice' ) ) {
 	function unlimited_delete_settings_notice() {
 
 		if ( isset( $_GET['unlimited_status'] ) ) {
-			?>
-			<div class="updated">
-				<p><?php _e( 'Customizer settings deleted', 'unlimited' ); ?>.</p>
-			</div>
-			<?php
+
+			if ( $_GET['unlimited_status'] == 'deleted' ) {
+				?>
+				<div class="updated">
+					<p><?php _e( 'Customizer settings deleted.', 'unlimited' ); ?></p>
+				</div>
+				<?php
+			} else if ( $_GET['unlimited_status'] == 'activated' ) {
+				?>
+				<div class="updated">
+					<p><?php _e( 'Unlimited successfully activated!', 'unlimited' ); ?></p>
+				</div>
+				<?php
+			}
 		}
 	}
 }
@@ -643,10 +652,11 @@ function ct_unlimited_welcome_redirect() {
 
 	$welcome_url = add_query_arg(
 		array(
-			'page' => 'unlimited-options'
+			'page'             => 'unlimited-options',
+			'unlimited_status' => 'activated',
 		),
 		admin_url( 'themes.php' )
 	);
-	wp_redirect( esc_url( $welcome_url ) );
+	wp_safe_redirect( esc_url_raw( $welcome_url ) );
 }
 add_action( 'after_switch_theme', 'ct_unlimited_welcome_redirect' );
