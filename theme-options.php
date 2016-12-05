@@ -40,7 +40,7 @@ function unlimited_options_content() {
 			<div class="content content-review">
 				<h3><?php _e( 'Leave a Review', 'unlimited' ); ?></h3>
 				<p><?php _e( 'Help others find Unlimited by leaving a review on wordpress.org.', 'unlimited' ); ?></p>
-				<a target="_blank" class="button-primary" href="https://wordpress.org/support/view/theme-reviews/unlimited"><?php _e( 'Leave a Review', 'unlimited' ); ?></a>
+				<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/unlimited/reviews/"><?php _e( 'Leave a Review', 'unlimited' ); ?></a>
 			</div>
 			<div class="content content-delete-settings">
 				<h3><?php _e( 'Reset Unlimited Settings', 'unlimited' ); ?></h3>
