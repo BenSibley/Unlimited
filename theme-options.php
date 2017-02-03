@@ -9,7 +9,7 @@ function unlimited_options_content() {
 
 	$customizer_url = add_query_arg(
 		array(
-			'url'    => site_url(),
+			'url'    => get_home_url(),
 			'return' => add_query_arg( 'page', 'unlimited-options', admin_url( 'themes.php' ) )
 		),
 		admin_url( 'customize.php' )
