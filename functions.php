@@ -146,73 +146,56 @@ if ( ! function_exists( 'unlimited_remove_comments_notes_after' ) ) {
 }
 add_action( 'comment_form_defaults', 'unlimited_remove_comments_notes_after' );
 
-if ( ! function_exists( 'unlimited_excerpt' ) ) {
-	function unlimited_excerpt() {
-
+if ( ! function_exists( 'ct_unlimited_filter_read_more_link' ) ) {
+	function ct_unlimited_filter_read_more_link() {
 		global $post;
-		$ismore         = strpos( $post->post_content, '<!--more-->' );
-		$show_full_post = get_theme_mod( 'full_post' );
-		$read_more_text = get_theme_mod( 'read_more_text' );
+		$ismore             = strpos( $post->post_content, '<!--more-->' );
+		$read_more_text     = get_theme_mod( 'read_more_text' );
+		$new_excerpt_length = get_theme_mod( 'excerpt_length' );
+		$excerpt_more       = ( $new_excerpt_length === 0 ) ? '' : '&#8230;';
+		$output = '';
 
-		if ( ( $show_full_post == 'yes' ) && ! is_search() ) {
-			if ( $ismore ) {
-				// Has to be written this way because i18n text CANNOT be stored in a variable
-				if ( ! empty( $read_more_text ) ) {
-					the_content( esc_html( $read_more_text ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
-				} else {
-					the_content( __( 'Read More', 'unlimited' ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
-				}
-			} else {
-				the_content();
-			}
-		} // use the read more link if present
-		elseif ( $ismore ) {
-			if ( ! empty( $read_more_text ) ) {
-				the_content( esc_html( $read_more_text ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
-			} else {
-				the_content( __( 'Read More', 'unlimited' ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
-			}
-		} // otherwise the excerpt is automatic, so output it
-		else {
+		// add ellipsis for automatic excerpts
+		if ( empty( $ismore ) ) {
+			$output .= $excerpt_more;
+		}
+		// Because i18n text cannot be stored in a variable
+		if ( empty( $read_more_text ) ) {
+			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . __( 'Read more', 'unlimited' ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
+		} else {
+			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( $read_more_text ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
+		}
+		return $output;
+	}
+}
+add_filter( 'the_content_more_link', 'ct_unlimited_filter_read_more_link' ); // more tags
+add_filter( 'excerpt_more', 'ct_unlimited_filter_read_more_link', 10 ); // automatic excerpts
+
+// handle manual excerpts 
+if ( ! function_exists( 'ct_unlimited_filter_manual_excerpts' ) ) {
+	function ct_unlimited_filter_manual_excerpts( $excerpt ) {
+		$excerpt_more = '';
+		if ( has_excerpt() ) {
+			$excerpt_more = ct_unlimited_filter_read_more_link();
+		}
+		return $excerpt . $excerpt_more;
+	}
+}
+add_filter( 'get_the_excerpt', 'ct_unlimited_filter_manual_excerpts' );
+
+if ( ! function_exists( 'ct_unlimited_excerpt' ) ) {
+	function ct_unlimited_excerpt() {
+		global $post;
+		$show_full_post = get_theme_mod( 'full_post' );
+		$ismore         = strpos( $post->post_content, '<!--more-->' );
+
+		if ( $show_full_post === 'yes' || $ismore ) {
+			the_content();
+		} else {
 			the_excerpt();
 		}
 	}
 }
-
-if ( ! function_exists( 'unlimited_excerpt_read_more_link' ) ) {
-	function unlimited_excerpt_read_more_link( $output ) {
-
-		$read_more_text = get_theme_mod( 'read_more_text' );
-
-		if ( ! empty( $read_more_text ) ) {
-			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . esc_html( $read_more_text ) . "<span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span></a></p>";
-		} else {
-			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Read More', 'unlimited' ) . "<span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span></a></p>";
-		}
-	}
-}
-add_filter( 'the_excerpt', 'unlimited_excerpt_read_more_link' );
-
-// switch [...] to ellipsis on automatic excerpt
-if ( ! function_exists( 'unlimited_new_excerpt_more' ) ) {
-	function unlimited_new_excerpt_more( $more ) {
-
-		$new_excerpt_length = get_theme_mod( 'excerpt_length' );
-		$excerpt_more       = ( $new_excerpt_length === 0 ) ? '' : '&#8230;';
-
-		return $excerpt_more;
-	}
-}
-add_filter( 'excerpt_more', 'unlimited_new_excerpt_more' );
-
-if ( ! function_exists( 'unlimited_remove_more_link_scroll' ) ) {
-	function unlimited_remove_more_link_scroll( $link ) {
-		$link = preg_replace( '|#more-[0-9]+|', '', $link );
-
-		return $link;
-	}
-}
-add_filter( 'the_content_more_link', 'unlimited_remove_more_link_scroll' );
 
 if ( ! function_exists( 'unlimited_custom_excerpt_length' ) ) {
 	function unlimited_custom_excerpt_length( $length ) {
@@ -229,6 +212,14 @@ if ( ! function_exists( 'unlimited_custom_excerpt_length' ) ) {
 	}
 }
 add_filter( 'excerpt_length', 'unlimited_custom_excerpt_length', 99 );
+
+if ( ! function_exists( 'unlimited_remove_more_link_scroll' ) ) {
+	function unlimited_remove_more_link_scroll( $link ) {
+		$link = preg_replace( '|#more-[0-9]+|', '', $link );
+		return $link;
+	}
+}
+add_filter( 'the_content_more_link', 'unlimited_remove_more_link_scroll' );
 
 if ( ! function_exists( 'unlimited_featured_image' ) ) {
 	function unlimited_featured_image() {
