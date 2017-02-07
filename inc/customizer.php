@@ -50,15 +50,15 @@ function unlimited_add_customizer_content( $wp_customize ) {
 		public function render_content() {
 			$link = 'https://www.competethemes.com/unlimited-pro/';
 			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/unlimited-pro.png' srcset='" . get_template_directory_uri() . "/assets/images/unlimited-pro-2x.png 2x' /></a>";
-			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Unlimited Pro</a> is the plugin that makes advanced customization simple - and fun too!', 'unlimited'), $link) . "</p>";
-			echo "<p>" . __('Unlimited Pro adds the following features to Unlimited:', 'unlimited') . "</p>";
+			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%1$s">%2$s Pro</a> is the plugin that makes advanced customization simple - and fun too!', 'unlimited'), $link, wp_get_theme( get_template() )) . "</p>";
+			echo "<p>" . sprintf( __('%1$s Pro adds the following features to %1$s:', 'unlimited'), wp_get_theme( get_template() ) ) . "</p>";
 			echo "<ul>
 					<li>" . __('6 new layouts', 'unlimited') . "</li>
 					<li>" . __('Custom colors', 'unlimited') . "</li>
 					<li>" . __('New fonts', 'unlimited') . "</li>
 					<li>" . __('+ 11 more features', 'unlimited') . "</li>
 				  </ul>";
-			echo "<p class='button-wrapper'><a target=\"_blank\" class='unlimited-pro-button' href='" . $link . "'>" . __('View Unlimited Pro', 'unlimited') . "</a></p>";
+			echo "<p class='button-wrapper'><a target=\"_blank\" class='unlimited-pro-button' href='" . $link . "'>" . sprintf( __('View %s Pro', 'unlimited'), wp_get_theme( get_template() ) ) . "</a></p>";
 		}
 	}
 
@@ -68,7 +68,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	if ( !function_exists( 'ct_unlimited_pro_init' ) ) {
 		// section
 		$wp_customize->add_section( 'ct_unlimited_pro', array(
-			'title'    => __( 'Unlimited Pro', 'unlimited' ),
+			'title'    => sprintf( __( '%s Pro', 'unlimited' ), wp_get_theme( get_template() ) ),
 			'priority' => 1
 		) );
 		// Upload - setting
@@ -246,7 +246,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 	// control
 	$wp_customize->add_control( 'layout', array(
 		'label'       => __( 'Choose your layout:', 'unlimited' ),
-		'description' => sprintf( __( 'Want more layouts? <a target="_blank" href="%s">Check out Unlimited Pro</a>.', 'unlimited' ), 'https://www.competethemes.com/unlimited-pro/' ),
+		'description' => sprintf( __( 'Want more layouts? <a target="_blank" href="%1$s">Check out %2$s Pro</a>.', 'unlimited' ), 'https://www.competethemes.com/unlimited-pro/', wp_get_theme( get_template() ) ),
 		'section'     => 'unlimited_layout',
 		'settings'    => 'layout',
 		'type'        => 'radio',
