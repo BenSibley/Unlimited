@@ -11,7 +11,7 @@
 			</div>
 			<?php do_action( 'archive_post_content_after' ); ?>
 			<div class="post-content">
-				<?php unlimited_excerpt(); ?>
+				<?php ct_unlimited_excerpt(); ?>
 			</div>
 			<?php do_action( 'archive_post_content_after' ); ?>
 		</div>
