@@ -548,7 +548,7 @@ if ( ! function_exists( 'unlimited_delete_settings_notice' ) ) {
 			} else if ( $_GET['unlimited_status'] == 'activated' ) {
 				?>
 				<div class="updated">
-					<p><?php _e( 'Unlimited successfully activated!', 'unlimited' ); ?></p>
+					<p><?php printf( __( '%s successfully activated!', 'unlimited' ), wp_get_theme( get_template() ) ); ?></p>
 				</div>
 				<?php
 			}
