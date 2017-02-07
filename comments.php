@@ -17,7 +17,7 @@ if ( comments_open() ) { ?>
 	<section id="comments" class="comments">
 		<div class="comments-number">
 			<h2>
-				<?php comments_number( __( 'Be First to Comment', 'unlimited' ), __( 'One Comment', 'unlimited' ), __( '% Comments', 'unlimited' ) ); ?>
+				<?php comments_number( __( 'Be First to Comment', 'unlimited' ), __( 'One Comment', 'unlimited' ), _x( '% Comments', 'noun: 5 comments', 'unlimited' ) ); ?>
 			</h2>
 		</div>
 		<ol class="comment-list">

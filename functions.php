@@ -80,12 +80,12 @@ if ( ! function_exists( 'unlimited_customize_comments' ) ) {
 				comment_text(); ?>
 				<div class="comment-date"><?php comment_date(); ?></div>
 				<?php comment_reply_link( array_merge( $args, array(
-					'reply_text' => __( 'Reply', 'unlimited' ),
+					'reply_text' => _x( 'Reply', 'verb', 'unlimited' ),
 					'depth'      => $depth,
 					'max_depth'  => $args['max_depth'],
 					'before'     => '|'
 				) ) ); ?>
-				<?php edit_comment_link( __( 'Edit', 'unlimited' ), '|' ); ?>
+				<?php edit_comment_link( _x( 'Edit', 'verb', 'unlimited' ), '|' ); ?>
 			</div>
 		</article>
 		<?php
@@ -102,13 +102,13 @@ if ( ! function_exists( 'unlimited_update_fields' ) ) {
 
 		$fields['author'] =
 			'<p class="comment-form-author">
-	            <label for="author">' . __( "Name", "unlimited" ) . $label . '</label>
+	            <label for="author">' . _x( "Name", "noun", "unlimited" ) . $label . '</label>
 	            <input placeholder="' . esc_attr__( "John Doe", "unlimited" ) . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 		$fields['email'] =
 			'<p class="comment-form-email">
-	            <label for="email">' . __( "Email", "unlimited" ) . $label . '</label>
+	            <label for="email">' . _x( "Email", "noun", "unlimited" ) . $label . '</label>
 	            <input placeholder="' . esc_attr__( "name@email.com", "unlimited" ) . '" id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
@@ -129,7 +129,7 @@ if ( ! function_exists( 'unlimited_update_comment_field' ) ) {
 
 		$comment_field =
 			'<p class="comment-form-comment">
-	            <label for="comment">' . __( "Comment", "unlimited" ) . '</label>
+	            <label for="comment">' . _x( "Comment", "noun", "unlimited" ) . '</label>
 	            <textarea required placeholder="' . esc_attr__( "Enter Your Comment", "unlimited" ) . '&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
 	        </p>';
 
@@ -363,8 +363,8 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 					<li>
 						<a class="email" target="_blank"
 						   href="mailto:<?php echo antispambot( is_email( $url ) ); ?>">
-							<i class="fa fa-envelope" title="<?php esc_attr_e( 'email', 'unlimited' ); ?>"></i>
-							<span class="screen-reader-text"><?php esc_html_e('email', 'unlimited'); ?></span>
+							<i class="fa fa-envelope" title="<?php echo esc_attr_x( 'email', 'noun', 'unlimited' ); ?>"></i>
+							<span class="screen-reader-text"><?php echo esc_html_x('email', 'noun', 'unlimited'); ?></span>
 						</a>
 					</li>
 				<?php

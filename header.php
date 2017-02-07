@@ -29,7 +29,7 @@
 			<?php do_action( 'primary_menu_before' ); ?>
 			<?php get_template_part( 'menu', 'primary' ); ?>
 			<button id="toggle-navigation" class="toggle-navigation" aria-expanded="false">
-				<span class="screen-reader-text"><?php _e( 'open menu', 'unlimited' ); ?></span>
+				<span class="screen-reader-text"><?php _ex( 'open menu', 'verb: open the menu', 'unlimited' ); ?></span>
 				<i class="fa fa-bars" title="<?php _e( 'primary menu icon', 'unlimited' ); ?>"></i>
 			</button>
 			<?php do_action( 'header_after' ); ?>

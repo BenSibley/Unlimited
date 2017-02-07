@@ -260,7 +260,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 
 	// section
 	$wp_customize->add_section( 'unlimited_blog', array(
-		'title'    => __( 'Blog', 'unlimited' ),
+		'title'    => _x( 'Blog', 'noun: the blog section', 'unlimited' ),
 		'priority' => 60
 	) );
 	// setting

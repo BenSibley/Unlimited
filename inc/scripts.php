@@ -5,10 +5,10 @@ function unlimited_load_scripts_styles() {
 
 	wp_enqueue_script( 'ct-unlimited-js', get_template_directory_uri() . '/js/build/production.min.js', array( 'jquery' ), '', true );
 	wp_localize_script( 'ct-unlimited-js', 'ct_unlimited_objectL10n', array(
-		'openMenu'  => esc_html__( 'open menu', 'unlimited' ),
-		'closeMenu' => esc_html__( 'close menu', 'unlimited' ),
-		'openChildMenu'  => esc_html__( 'open dropdown menu', 'unlimited' ),
-		'closeChildMenu' => esc_html__( 'close dropdown menu', 'unlimited' )
+		'openMenu'  => esc_html_x( 'open menu', 'verb: open the menu', 'unlimited' ),
+		'closeMenu' => esc_html_x( 'close menu', 'verb: close the menu', 'unlimited' ),
+		'openChildMenu'  => esc_html_x( 'open dropdown menu', 'verb: open the menu', 'unlimited' ),
+		'closeChildMenu' => esc_html_x( 'close dropdown menu', 'verb: close the menu', 'unlimited' )
 	) );
 
 	// Google Fonts (required to register outside scripts first)
