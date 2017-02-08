@@ -1,14 +1,14 @@
-# Copyright (C) 2016 Compete Themes
+# Copyright (C) 2017 Compete Themes
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Unlimited 1.22\n"
+"Project-Id-Version: Unlimited 1.23\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-12-05 12:51:40+00:00\n"
+"POT-Creation-Date: 2017-02-08 16:10:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.9\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "One Comment"
 msgstr ""
 
-#: comments.php:20 comments.php:40 comments.php:62 content/post-meta.php:22
+#: comments.php:40 comments.php:62 content/post-meta.php:22
 #: content/post-meta.php:24
 msgid "% Comments"
 msgstr ""
@@ -37,24 +37,8 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content/archive-header.php:4 inc/customizer.php:327 inc/customizer.php:430
-msgid "Posts"
-msgstr ""
-
 #: content/post-author.php:10
 msgid "View more posts"
-msgstr ""
-
-#: content/post-categories.php:5
-msgid "Posted in"
-msgstr ""
-
-#: content/post-categories.php:11
-msgid "and"
-msgstr ""
-
-#: content/post-categories.php:13
-msgid "View all posts in %s"
 msgstr ""
 
 #: content/post-meta.php:22
@@ -105,10 +89,6 @@ msgstr ""
 msgid "View all posts tagged %s"
 msgstr ""
 
-#: content/search-bar.php:6 searchform.php:3
-msgid "Search"
-msgstr ""
-
 #: content/search-bar.php:7 searchform.php:5
 msgid "Search..."
 msgstr ""
@@ -133,7 +113,7 @@ msgstr ""
 
 #: footer.php:21
 msgid ""
-"<a target=\"_blank\" href=\"%s\">Unlimited WordPress Theme</a> by Compete "
+"<a target=\"_blank\" href=\"%1$s\">%2$s WordPress Theme</a> by Compete "
 "Themes"
 msgstr ""
 
@@ -155,28 +135,12 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:83
-msgid "Reply"
-msgstr ""
-
-#: functions.php:88
-msgid "Edit"
-msgstr ""
-
 #: functions.php:100
 msgid "(optional)"
 msgstr ""
 
-#: functions.php:105
-msgid "Name"
-msgstr ""
-
 #: functions.php:106
 msgid "John Doe"
-msgstr ""
-
-#: functions.php:111
-msgid "Email"
 msgstr ""
 
 #: functions.php:112
@@ -191,48 +155,36 @@ msgstr ""
 msgid "http://example.com"
 msgstr ""
 
-#: functions.php:132
-msgid "Comment"
-msgstr ""
-
 #: functions.php:133
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:163 functions.php:173 functions.php:190 inc/customizer.php:296
-msgid "Read More"
+#: functions.php:164
+msgid "Read more"
 msgstr ""
 
-#: functions.php:375 functions.php:376
-msgid "email"
-msgstr ""
-
-#: functions.php:384
+#: functions.php:375
 msgid "contact form"
 msgstr ""
 
-#: functions.php:491
+#: functions.php:482
 msgid "Featured Post"
 msgstr ""
 
-#: functions.php:554
+#: functions.php:545
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:560
-msgid "Unlimited successfully activated!"
+#: functions.php:551
+msgid "%s successfully activated!"
 msgstr ""
 
-#: functions.php:641 inc/scripts.php:10
+#: functions.php:632
 msgid "open dropdown menu"
 msgstr ""
 
 #: header.php:13
 msgid "Skip to content"
-msgstr ""
-
-#: header.php:32 inc/scripts.php:8
-msgid "open menu"
 msgstr ""
 
 #: header.php:33
@@ -245,12 +197,12 @@ msgstr ""
 
 #: inc/customizer.php:53
 msgid ""
-"<a target=\"_blank\" href=\"%s\">Unlimited Pro</a> is the plugin that makes "
+"<a target=\"_blank\" href=\"%1$s\">%2$s Pro</a> is the plugin that makes "
 "advanced customization simple - and fun too!"
 msgstr ""
 
 #: inc/customizer.php:54
-msgid "Unlimited Pro adds the following features to Unlimited:"
+msgid "%1$s Pro adds the following features to %1$s:"
 msgstr ""
 
 #: inc/customizer.php:56
@@ -270,11 +222,11 @@ msgid "+ 11 more features"
 msgstr ""
 
 #: inc/customizer.php:61
-msgid "View Unlimited Pro"
+msgid "View %s Pro"
 msgstr ""
 
 #: inc/customizer.php:71
-msgid "Unlimited Pro"
+msgid "%s Pro"
 msgstr ""
 
 #: inc/customizer.php:91
@@ -329,7 +281,7 @@ msgstr ""
 
 #: inc/customizer.php:249
 msgid ""
-"Want more layouts? <a target=\"_blank\" href=\"%s\">Check out Unlimited "
+"Want more layouts? <a target=\"_blank\" href=\"%1$s\">Check out %2$s "
 "Pro</a>."
 msgstr ""
 
@@ -339,10 +291,6 @@ msgstr ""
 
 #: inc/customizer.php:255 inc/customizer.php:404
 msgid "Left sidebar"
-msgstr ""
-
-#: inc/customizer.php:263
-msgid "Blog"
 msgstr ""
 
 #: inc/customizer.php:273
@@ -361,6 +309,10 @@ msgstr ""
 msgid "Excerpt word count"
 msgstr ""
 
+#: inc/customizer.php:296
+msgid "Read More"
+msgstr ""
+
 #: inc/customizer.php:301
 msgid "Read More button text"
 msgstr ""
@@ -371,6 +323,10 @@ msgstr ""
 
 #: inc/customizer.php:322
 msgid "Show comments on:"
+msgstr ""
+
+#: inc/customizer.php:327 inc/customizer.php:430
+msgid "Posts"
 msgstr ""
 
 #: inc/customizer.php:328 inc/customizer.php:431
@@ -417,14 +373,6 @@ msgstr ""
 msgid "Two column - No Sidebar - Wide"
 msgstr ""
 
-#: inc/scripts.php:9
-msgid "close menu"
-msgstr ""
-
-#: inc/scripts.php:11
-msgid "close dropdown menu"
-msgstr ""
-
 #: inc/user-profile.php:17
 msgid "Social Profiles"
 msgstr ""
@@ -455,12 +403,16 @@ msgstr ""
 msgid "Can't find what you're looking for?  Try refining your search:"
 msgstr ""
 
+#: searchform.php:3
+msgid "Search"
+msgstr ""
+
 #: searchform.php:7
 msgid "Go"
 msgstr ""
 
 #: theme-options.php:4 theme-options.php:19
-msgid "Unlimited Dashboard"
+msgid "%s Dashboard"
 msgstr ""
 
 #: theme-options.php:23
@@ -469,9 +421,8 @@ msgstr ""
 
 #: theme-options.php:24
 msgid ""
-"Not sure where to start? The <strong>Unlimited Getting Started "
-"Guide</strong> will take you step-by-step through every feature in "
-"Unlimited."
+"Not sure where to start? The <strong>%1$s Getting Started Guide</strong> "
+"will take you step-by-step through every feature in %1$s."
 msgstr ""
 
 #: theme-options.php:27
@@ -479,12 +430,12 @@ msgid "View Guide"
 msgstr ""
 
 #: theme-options.php:32
-msgid "Unlimited Pro Plugin"
+msgid "%s Pro Plugin"
 msgstr ""
 
 #: theme-options.php:33
 msgid ""
-"Download the Unlimited Pro plugin and unlock custom colors, new layouts, "
+"Download the %s Pro plugin and unlock custom colors, new layouts, "
 "background images, and more..."
 msgstr ""
 
@@ -497,17 +448,17 @@ msgid "Leave a Review"
 msgstr ""
 
 #: theme-options.php:42
-msgid "Help others find Unlimited by leaving a review on wordpress.org."
+msgid "Help others find %s by leaving a review on wordpress.org."
 msgstr ""
 
 #: theme-options.php:46
-msgid "Reset Unlimited Settings"
+msgid "Reset %s Settings"
 msgstr ""
 
 #: theme-options.php:48
 msgid ""
-"<strong>Warning:</strong> Clicking this button will erase the Unlimited "
-"theme's current settings in the <a href='%s'>Customizer</a>."
+"<strong>Warning:</strong> Clicking this button will erase the %2$s theme's "
+"current settings in the <a href=\"%1$s\">Customizer</a>."
 msgstr ""
 
 #: theme-options.php:54
@@ -527,7 +478,92 @@ msgstr ""
 msgid "Full-width"
 msgstr ""
 
+#: comments.php:20
+msgctxt "noun: 5 comments"
+msgid "% Comments"
+msgstr ""
+
+#: content/archive-header.php:4
+msgctxt "noun: Site Title Posts"
+msgid "Posts"
+msgstr ""
+
+#: content/post-categories.php:5
+msgctxt "posted in category"
+msgid "Posted in"
+msgstr ""
+
+#: content/post-categories.php:11
+msgctxt "category 1, category 2, AND category 3"
+msgid "and"
+msgstr ""
+
+#: content/post-categories.php:13
+msgctxt "View all posts in category"
+msgid "View all posts in %s"
+msgstr ""
+
+#: content/search-bar.php:6
+msgctxt "verb"
+msgid "Search"
+msgstr ""
+
+#: functions.php:83
+msgctxt "verb"
+msgid "Reply"
+msgstr ""
+
+#: functions.php:88
+msgctxt "verb"
+msgid "Edit"
+msgstr ""
+
 #: functions.php:72
 msgctxt "the commenter said the following:"
 msgid "said:"
+msgstr ""
+
+#: functions.php:105
+msgctxt "noun"
+msgid "Name"
+msgstr ""
+
+#: functions.php:111
+msgctxt "noun"
+msgid "Email"
+msgstr ""
+
+#: functions.php:132
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: functions.php:366 functions.php:367
+msgctxt "noun"
+msgid "email"
+msgstr ""
+
+#: header.php:32 inc/scripts.php:8
+msgctxt "verb: open the menu"
+msgid "open menu"
+msgstr ""
+
+#: inc/scripts.php:10
+msgctxt "verb: open the menu"
+msgid "open dropdown menu"
+msgstr ""
+
+#: inc/customizer.php:263
+msgctxt "noun: the blog section"
+msgid "Blog"
+msgstr ""
+
+#: inc/scripts.php:9
+msgctxt "verb: close the menu"
+msgid "close menu"
+msgstr ""
+
+#: inc/scripts.php:11
+msgctxt "verb: close the menu"
+msgid "close dropdown menu"
 msgstr ""
