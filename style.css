@@ -1225,6 +1225,10 @@ li.bypostauthor {
   text-align: left;
 }
 
+.more-link-wrapper {
+  text-align: center;
+}
+
 .more-link {
   margin-top: 0.75em;
   font-weight: 300;
