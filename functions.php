@@ -147,7 +147,7 @@ if ( ! function_exists( 'unlimited_remove_comments_notes_after' ) ) {
 add_action( 'comment_form_defaults', 'unlimited_remove_comments_notes_after' );
 
 if ( ! function_exists( 'ct_unlimited_filter_read_more_link' ) ) {
-	function ct_unlimited_filter_read_more_link() {
+	function ct_unlimited_filter_read_more_link( $custom = false ) {
 		global $post;
 		$ismore             = strpos( $post->post_content, '<!--more-->' );
 		$read_more_text     = get_theme_mod( 'read_more_text' );
@@ -156,7 +156,7 @@ if ( ! function_exists( 'ct_unlimited_filter_read_more_link' ) ) {
 		$output = '';
 
 		// add ellipsis for automatic excerpts
-		if ( empty( $ismore ) ) {
+		if ( empty( $ismore ) && $custom !== true  ) {
 			$output .= $excerpt_more;
 		}
 		// Because i18n text cannot be stored in a variable
@@ -176,7 +176,7 @@ if ( ! function_exists( 'ct_unlimited_filter_manual_excerpts' ) ) {
 	function ct_unlimited_filter_manual_excerpts( $excerpt ) {
 		$excerpt_more = '';
 		if ( has_excerpt() ) {
-			$excerpt_more = ct_unlimited_filter_read_more_link();
+			$excerpt_more = ct_unlimited_filter_read_more_link( true );
 		}
 		return $excerpt . $excerpt_more;
 	}
