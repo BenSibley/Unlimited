@@ -503,7 +503,7 @@ add_action( 'wp_enqueue_scripts', 'unlimited_custom_css_output', 20 );
 if ( ! function_exists( 'unlimited_sticky_post_marker' ) ) {
 	function unlimited_sticky_post_marker() {
 
-		if ( is_sticky() && ! is_archive() ) {
+		if ( is_sticky() && !is_archive() && !is_search() ) {
 			echo '<span class="sticky-status">' . __( "Featured Post", "unlimited" ) . '</span>';
 		}
 	}
