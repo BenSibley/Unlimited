@@ -42,6 +42,11 @@ function unlimited_options_content() {
 				<p><?php printf( __( 'Help others find %s by leaving a review on wordpress.org.', 'unlimited' ), wp_get_theme( get_template() ) ); ?></p>
 				<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/unlimited/reviews/"><?php _e( 'Leave a Review', 'unlimited' ); ?></a>
 			</div>
+			<div class="content content-presspad">
+				<h3><?php esc_html_e( 'Turn Unlimited into a Mobile App', 'unlimited' ); ?></h3>
+				<p><?php printf( esc_html__( '%s can be converted into a mobile app and listed on the App Store and Google Play Store with the help of PressPad News. Read our tutorial to learn more.', 'unlimited' ), wp_get_theme( get_template() ) ); ?></p>
+				<a target="_blank" class="button-primary" href="https://www.competethemes.com/help/convert-mobile-app-unlimited/"><?php esc_html_e( 'Read Tutorial', 'unlimited' ); ?></a>
+			</div>
 			<div class="content content-delete-settings">
 				<h3><?php printf( __( 'Reset %s Settings', 'unlimited' ), wp_get_theme( get_template() ) ); ?></h3>
 				<p>
