@@ -662,3 +662,18 @@ function ct_unlimited_welcome_redirect() {
 	wp_safe_redirect( esc_url_raw( $welcome_url ) );
 }
 add_action( 'after_switch_theme', 'ct_unlimited_welcome_redirect' );
+
+//----------------------------------------------------------------------------------
+// Add paragraph tags for author bio displayed in content/archive-header.php.
+// the_archive_description includes paragraph tags for tag and category descriptions, but not the author bio. 
+//----------------------------------------------------------------------------------
+if ( ! function_exists( 'ct_unlimited_modify_archive_descriptions' ) ) {
+	function ct_unlimited_modify_archive_descriptions( $description ) {
+
+		if ( is_author() ) {
+			$description = wpautop( $description );
+		}
+		return $description;
+	}
+}
+add_filter( 'get_the_archive_description', 'ct_unlimited_modify_archive_descriptions' );
