@@ -9,7 +9,7 @@ Unlimited is fast, responsive, beautiful, and accessible.
 
 == Description ==
 
-Fast, responsive, beautiful, and accessible. With Unlimited, your content will reach more people, on more devices, around the world. Unlimited's simple design puts the focus on your content, and supports it with clean, reliable code.
+Fast, responsive, beautiful, and accessible. With Unlimited, your content will reach more people, on more devices, around the world. Unlimited's simple and dark design puts the focus on your content, and supports it with clean, reliable code. Use this minimalist blogging theme to setup a website for a magazine, school, or personal journal. As a free WP theme, you can use Unlimited for as many sites as you want.
 
 **Live Demo**
 
