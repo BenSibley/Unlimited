@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Unlimited 1.24\n"
+"Project-Id-Version: Unlimited 1.25\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-05-17 15:25:24+00:00\n"
+"POT-Creation-Date: 2017-08-11 17:40:19+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -112,69 +112,76 @@ msgid ""
 "Themes"
 msgstr ""
 
-#: functions.php:39
-msgid "Primary"
+#: functions.php:12
+msgid ""
+"Hey! Sorry to interrupt, but you've been using Unlimited for a little while "
+"now. If you're happy with this theme, could you take a minute to leave a "
+"review? <i>You won't see this notice again after closing it.</i>"
 msgstr ""
 
 #: functions.php:48
+msgid "Primary"
+msgstr ""
+
+#: functions.php:57
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:50
+#: functions.php:59
 msgid ""
 "Widgets in this area will be shown in the sidebar next to the main post "
 "content"
 msgstr ""
 
-#: functions.php:78
+#: functions.php:87
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:100
+#: functions.php:109
 msgid "(optional)"
 msgstr ""
 
-#: functions.php:106
+#: functions.php:115
 msgid "John Doe"
 msgstr ""
 
-#: functions.php:112
+#: functions.php:121
 msgid "name@email.com"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:126
 msgid "Website"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:127
 msgid "http://example.com"
 msgstr ""
 
-#: functions.php:133
+#: functions.php:142
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:164
+#: functions.php:173 functions.php:237
 msgid "Read more"
 msgstr ""
 
-#: functions.php:379
+#: functions.php:400
 msgid "contact form"
 msgstr ""
 
-#: functions.php:486
+#: functions.php:507
 msgid "Featured Post"
 msgstr ""
 
-#: functions.php:549
+#: functions.php:570
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:555
+#: functions.php:576
 msgid "%s successfully activated!"
 msgstr ""
 
-#: functions.php:622
+#: functions.php:643
 msgid "open dropdown menu"
 msgstr ""
 
@@ -368,6 +375,10 @@ msgstr ""
 msgid "Two column - No Sidebar - Wide"
 msgstr ""
 
+#: inc/review.php:113
+msgid "Click here to leave your review"
+msgstr ""
+
 #: inc/user-profile.php:17
 msgid "Social Profiles"
 msgstr ""
@@ -447,16 +458,31 @@ msgid "Help others find %s by leaving a review on wordpress.org."
 msgstr ""
 
 #: theme-options.php:46
-msgid "Reset %s Settings"
+msgid "Turn Unlimited into a Mobile App"
+msgstr ""
+
+#: theme-options.php:47
+msgid ""
+"%s can be converted into a mobile app and listed on the App Store and "
+"Google Play Store with the help of PressPad News. Read our tutorial to "
+"learn more."
 msgstr ""
 
 #: theme-options.php:48
+msgid "Read Tutorial"
+msgstr ""
+
+#: theme-options.php:51
+msgid "Reset %s Settings"
+msgstr ""
+
+#: theme-options.php:53
 msgid ""
 "<strong>Warning:</strong> Clicking this button will erase the %2$s theme's "
 "current settings in the <a href=\"%1$s\">Customizer</a>."
 msgstr ""
 
-#: theme-options.php:54
+#: theme-options.php:59
 msgid "Reset Customizer Settings"
 msgstr ""
 
@@ -464,9 +490,12 @@ msgstr ""
 msgid ""
 "Fast, responsive, beautiful, and accessible. With Unlimited, your content "
 "will reach more people, on more devices, around the world. Unlimited's "
-"simple design puts the focus on your content, and supports it with clean, "
-"reliable code. Preview on desktop, tablets, and mobile with our interactive "
-"live demo: https://www.competethemes.com/demos/?theme=unlimited"
+"simple and dark design puts the focus on your content, and supports it with "
+"clean, reliable code. Use this minimalist blogging theme to setup a website "
+"for a magazine, school, or personal journal. As a free WP theme, you can "
+"use Unlimited for as many sites as you want. Preview Unlimited now on "
+"desktop, tablets, and mobile devices with the interactive live demo: "
+"https://www.competethemes.com/demos/?theme=unlimited"
 msgstr ""
 
 #. Template Name of the plugin/theme
@@ -504,37 +533,37 @@ msgctxt "verb"
 msgid "Search"
 msgstr ""
 
-#: functions.php:83
+#: functions.php:92
 msgctxt "verb"
 msgid "Reply"
 msgstr ""
 
-#: functions.php:88
+#: functions.php:97
 msgctxt "verb"
 msgid "Edit"
 msgstr ""
 
-#: functions.php:72
+#: functions.php:81
 msgctxt "the commenter said the following:"
 msgid "said:"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:114
 msgctxt "noun"
 msgid "Name"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:120
 msgctxt "noun"
 msgid "Email"
 msgstr ""
 
-#: functions.php:132
+#: functions.php:141
 msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: functions.php:370 functions.php:371
+#: functions.php:391 functions.php:392
 msgctxt "noun"
 msgid "email"
 msgstr ""
