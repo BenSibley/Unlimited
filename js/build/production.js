@@ -98,7 +98,7 @@ jQuery(document).ready(function($){
     objectFitAdjustment();
     toggleDropdownAccessibility();
         
-    $(window).resize(function(){
+    $(window).on('resize', function(){
         objectFitAdjustment();
         toggleDropdownAccessibility();
     });
@@ -123,10 +123,10 @@ jQuery(document).ready(function($){
     toggleDropdown.on('click', openDropdownMenu);
 
     /* allow keyboard access/visibility for dropdown menu items */
-    dropdownMenuItems.focus(function(){
+    dropdownMenuItems.on('focus', function(){
         $(this).parents('ul, li').addClass('focused');
     });
-    dropdownMenuItems.focusout(function(){
+    dropdownMenuItems.on('focusout', function(){
         $(this).parents('ul, li').removeClass('focused');
     });
 
