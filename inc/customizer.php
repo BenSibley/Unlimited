@@ -140,37 +140,37 @@ function unlimited_add_customizer_content( $wp_customize ) {
 			$label = ucfirst( $social_site );
 
 			if ( $social_site == 'google-plus' ) {
-				$label = 'Google Plus';
+				$label = __('Google Plus', 'unlimited');
 			} elseif ( $social_site == 'rss' ) {
-				$label = 'RSS';
+				$label = __('RSS', 'unlimited');
 			} elseif ( $social_site == 'soundcloud' ) {
-				$label = 'SoundCloud';
+				$label = __('SoundCloud', 'unlimited');
 			} elseif ( $social_site == 'slideshare' ) {
-				$label = 'SlideShare';
+				$label = __('SlideShare', 'unlimited');
 			} elseif ( $social_site == 'codepen' ) {
-				$label = 'CodePen';
+				$label = __('CodePen', 'unlimited');
 			} elseif ( $social_site == 'stumbleupon' ) {
-				$label = 'StumbleUpon';
+				$label = __('StumbleUpon', 'unlimited');
 			} elseif ( $social_site == 'deviantart' ) {
-				$label = 'DeviantArt';
+				$label = __('DeviantArt', 'unlimited');
 			} elseif ( $social_site == 'hacker-news' ) {
-				$label = 'Hacker News';
+				$label = __('Hacker News', 'unlimited');
 			} elseif ( $social_site == 'google-wallet' ) {
-				$label = 'Google Wallet';
+				$label = __('Google Wallet', 'unlimited');
 			} elseif ( $social_site == 'whatsapp' ) {
-				$label = 'WhatsApp';
+				$label = __('WhatsApp', 'unlimited');
 			} elseif ( $social_site == 'qq' ) {
-				$label = 'QQ';
+				$label = __('QQ', 'unlimited');
 			} elseif ( $social_site == 'vk' ) {
-				$label = 'VK';
+				$label = __('VK', 'unlimited');
 			} elseif ( $social_site == 'wechat' ) {
-				$label = 'WeChat';
+				$label = __('WeChat', 'unlimited');
 			} elseif ( $social_site == 'tencent-weibo' ) {
-				$label = 'Tencent Weibo';
+				$label = __('Tencent Weibo', 'unlimited');
 			} elseif ( $social_site == 'paypal' ) {
-				$label = 'PayPal';
+				$label = __('PayPal', 'unlimited');
 			} elseif ( $social_site == 'email_form' ) {
-				$label = 'Contact Form';
+				$label = __('Contact Form', 'unlimited');
 			}
 
 			if ( $social_site == 'skype' ) {
