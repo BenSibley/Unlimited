@@ -86,23 +86,23 @@ if ( ! function_exists( 'unlimited_customize_comments' ) ) {
 				echo get_avatar( get_comment_author_email(), 48, '', get_comment_author() );
 				?>
 				<div class="author-name">
-					<span><?php comment_author_link(); ?></span> <?php _x( 'said:', 'the commenter said the following:', 'unlimited' ); ?>
+					<span><?php comment_author_link(); ?></span> <?php esc_html_x( 'said:', 'the commenter said the following:', 'unlimited' ); ?>
 				</div>
 			</div>
 			<div class="comment-content">
 				<?php
 				if ( $comment->comment_approved == '0' ) :
-					echo "<em>" . __( 'Your comment is awaiting moderation.', 'unlimited' ) . "</em><br />";
+					echo "<em>" . esc_html__( 'Your comment is awaiting moderation.', 'unlimited' ) . "</em><br />";
 				endif;
 				comment_text(); ?>
 				<div class="comment-date"><?php comment_date(); ?></div>
 				<?php comment_reply_link( array_merge( $args, array(
-					'reply_text' => _x( 'Reply', 'verb', 'unlimited' ),
+					'reply_text' => esc_html_x( 'Reply', 'verb', 'unlimited' ),
 					'depth'      => $depth,
 					'max_depth'  => $args['max_depth'],
 					'before'     => '|'
 				) ) ); ?>
-				<?php edit_comment_link( _x( 'Edit', 'verb', 'unlimited' ), '|' ); ?>
+				<?php edit_comment_link( esc_html_x( 'Edit', 'verb', 'unlimited' ), '|' ); ?>
 			</div>
 		</article>
 		<?php
@@ -114,24 +114,24 @@ if ( ! function_exists( 'unlimited_update_fields' ) ) {
 
 		$commenter = wp_get_current_commenter();
 		$req       = get_option( 'require_name_email' );
-		$label     = $req ? '*' : ' ' . __( '(optional)', 'unlimited' );
+		$label     = $req ? '*' : ' ' . esc_html__( '(optional)', 'unlimited' );
 		$aria_req  = $req ? "aria-required='true'" : '';
 
 		$fields['author'] =
 			'<p class="comment-form-author">
-	            <label for="author">' . _x( "Name", "noun", "unlimited" ) . $label . '</label>
+	            <label for="author">' . esc_html_x( "Name", "noun", "unlimited" ) . $label . '</label>
 	            <input placeholder="' . esc_attr__( "John Doe", "unlimited" ) . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 		$fields['email'] =
 			'<p class="comment-form-email">
-	            <label for="email">' . _x( "Email", "noun", "unlimited" ) . $label . '</label>
+	            <label for="email">' . esc_html_x( "Email", "noun", "unlimited" ) . $label . '</label>
 	            <input placeholder="' . esc_attr__( "name@email.com", "unlimited" ) . '" id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 		$fields['url'] =
 			'<p class="comment-form-url">
-	            <label for="url">' . __( "Website", "unlimited" )  . '</label>
+	            <label for="url">' . esc_html__( "Website", "unlimited" )  . '</label>
 	            <input placeholder="' . esc_attr__( "http://example.com", "unlimited" ) . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
 			'" size="30" />
 	            </p>';
@@ -146,7 +146,7 @@ if ( ! function_exists( 'unlimited_update_comment_field' ) ) {
 
 		$comment_field =
 			'<p class="comment-form-comment">
-	            <label for="comment">' . _x( "Comment", "noun", "unlimited" ) . '</label>
+	            <label for="comment">' . esc_html_x( "Comment", "noun", "unlimited" ) . '</label>
 	            <textarea required placeholder="' . esc_attr__( "Enter Your Comment", "unlimited" ) . '&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
 	        </p>';
 
@@ -178,7 +178,7 @@ if ( ! function_exists( 'ct_unlimited_filter_read_more_link' ) ) {
 		}
 		// Because i18n text cannot be stored in a variable
 		if ( empty( $read_more_text ) ) {
-			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . __( 'Read more', 'unlimited' ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
+			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Read more', 'unlimited' ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
 		} else {
 			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( $read_more_text ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
 		}
@@ -242,7 +242,7 @@ add_filter( 'the_content_more_link', 'unlimited_remove_more_link_scroll' );
 function ct_unlimited_update_yoast_og_description( $ogdesc ) {
 	$read_more_text = get_theme_mod( 'read_more_text' );
 	if ( empty( $read_more_text ) ) {
-		$read_more_text = __( 'Read more', 'unlimited' );
+		$read_more_text = esc_html__( 'Read more', 'unlimited' );
 	}
 	$ogdesc = substr( $ogdesc, 0, strpos( $ogdesc, $read_more_text ) );
 
@@ -517,7 +517,7 @@ if ( ! function_exists( 'unlimited_sticky_post_marker' ) ) {
 	function unlimited_sticky_post_marker() {
 
 		if ( is_sticky() && !is_archive() && !is_search() ) {
-			echo '<span class="sticky-status">' . __( "Featured Post", "unlimited" ) . '</span>';
+			echo '<span class="sticky-status">' . esc_html__( "Featured Post", "unlimited" ) . '</span>';
 		}
 	}
 }
@@ -580,13 +580,13 @@ if ( ! function_exists( 'unlimited_delete_settings_notice' ) ) {
 			if ( $_GET['unlimited_status'] == 'deleted' ) {
 				?>
 				<div class="updated">
-					<p><?php _e( 'Customizer settings deleted.', 'unlimited' ); ?></p>
+					<p><?php esc_html_e( 'Customizer settings deleted.', 'unlimited' ); ?></p>
 				</div>
 				<?php
 			} else if ( $_GET['unlimited_status'] == 'activated' ) {
 				?>
 				<div class="updated">
-					<p><?php printf( __( '%s successfully activated!', 'unlimited' ), wp_get_theme( get_template() ) ); ?></p>
+					<p><?php printf( esc_html__( '%s successfully activated!', 'unlimited' ), wp_get_theme( get_template() ) ); ?></p>
 				</div>
 				<?php
 			}
@@ -653,7 +653,7 @@ if ( ! function_exists( 'ct_unlimited_nav_dropdown_buttons' ) ) {
 		if ( $args->theme_location == 'primary' ) {
 
 			if ( in_array( 'menu-item-has-children', $item->classes ) || in_array( 'page_item_has_children', $item->classes ) ) {
-				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . __( "open dropdown menu", "unlimited" ) . '</span></button>', $item_output );
+				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . esc_html__( "open dropdown menu", "unlimited" ) . '</span></button>', $item_output );
 			}
 		}
 

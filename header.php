@@ -10,7 +10,7 @@
 
 <body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
 	<?php do_action( 'body_before' ); ?>
-	<a class="skip-content" id="skip-content" href="#main"><?php _e( 'Skip to content', 'unlimited' ); ?></a>
+	<a class="skip-content" id="skip-content" href="#main"><?php esc_html_e( 'Skip to content', 'unlimited' ); ?></a>
 	<div id="overflow-container" class="overflow-container">
 		<header class="site-header" id="site-header" role="banner">
 			<?php do_action( 'header_before' ); ?>
@@ -29,8 +29,8 @@
 			<?php do_action( 'primary_menu_before' ); ?>
 			<?php get_template_part( 'menu', 'primary' ); ?>
 			<button id="toggle-navigation" class="toggle-navigation" aria-expanded="false">
-				<span class="screen-reader-text"><?php _ex( 'open menu', 'verb: open the menu', 'unlimited' ); ?></span>
-				<i class="fa fa-bars" title="<?php _e( 'primary menu icon', 'unlimited' ); ?>"></i>
+				<span class="screen-reader-text"><?php echo esc_html_x( 'open menu', 'verb: open the menu', 'unlimited' ); ?></span>
+				<i class="fa fa-bars" title="<?php esc_html_e( 'primary menu icon', 'unlimited' ); ?>"></i>
 			</button>
 			<?php do_action( 'header_after' ); ?>
 		</header>
