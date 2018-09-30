@@ -303,6 +303,7 @@ if ( ! function_exists( 'unlimited_social_array' ) ) {
 			'google-wallet' => 'unlimited_google-wallet_profile',
 			'hacker-news'   => 'unlimited_hacker-news_profile',
 			'meetup'        => 'unlimited_meetup_profile',
+			'ok-ru'         => 'unlimited_ok_ru_profile',
 			'paypal'        => 'unlimited_paypal_profile',
 			'podcast'       => 'unlimited_podcast_profile',
 			'qq'            => 'unlimited_qq_profile',
@@ -389,6 +390,8 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 				// get the class (square OR plain)
 				if ( in_array( $active_site, $square_icons ) ) {
 					$class = 'fa fa-' . $active_site . '-square';
+				} elseif ( $active_site == 'ok-ru' ) {
+					$class = 'fa fa-odnoklassniki';
 				} else {
 					$class = 'fa fa-' . $active_site;
 				}

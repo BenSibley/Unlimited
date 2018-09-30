@@ -173,6 +173,8 @@ function unlimited_add_customizer_content( $wp_customize ) {
 				$label = __('Contact Form', 'unlimited');
 			} elseif ( $social_site == 'stack-overflow' ) {
 				$label = __('Stack Overflow', 'unlimited');
+			} elseif ( $social_site == 'ok-ru' ) {
+				$label = __('OK.ru', 'unlimited');
 			}
 
 			if ( $social_site == 'skype' ) {
