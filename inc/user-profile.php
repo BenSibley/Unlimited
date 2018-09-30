@@ -23,35 +23,41 @@ function unlimited_add_social_profile_settings( $user ) {
 			$label = ucfirst( $key );
 
 			if ( $key == 'google-plus' ) {
-				$label = 'Google Plus';
+				$label = __('Google Plus', 'unlimited');
 			} elseif ( $key == 'rss' ) {
-				$label = 'RSS';
+				$label = __('RSS', 'unlimited');
 			} elseif ( $key == 'soundcloud' ) {
-				$label = 'SoundCloud';
+				$label = __('SoundCloud', 'unlimited');
 			} elseif ( $key == 'slideshare' ) {
-				$label = 'SlideShare';
+				$label = __('SlideShare', 'unlimited');
 			} elseif ( $key == 'codepen' ) {
-				$label = 'CodePen';
+				$label = __('CodePen', 'unlimited');
 			} elseif ( $key == 'stumbleupon' ) {
-				$label = 'StumbleUpon';
+				$label = __('StumbleUpon', 'unlimited');
 			} elseif ( $key == 'deviantart' ) {
-				$label = 'DeviantArt';
+				$label = __('DeviantArt', 'unlimited');
 			} elseif ( $key == 'hacker-news' ) {
-				$label = 'Hacker News';
+				$label = __('Hacker News', 'unlimited');
+			} elseif ( $key == 'google-wallet' ) {
+				$label = __('Google Wallet', 'unlimited');
 			} elseif ( $key == 'whatsapp' ) {
-				$label = 'WhatsApp';
+				$label = __('WhatsApp', 'unlimited');
 			} elseif ( $key == 'qq' ) {
-				$label = 'QQ';
+				$label = __('QQ', 'unlimited');
 			} elseif ( $key == 'vk' ) {
-				$label = 'VK';
+				$label = __('VK', 'unlimited');
 			} elseif ( $key == 'wechat' ) {
-				$label = 'WeChat';
+				$label = __('WeChat', 'unlimited');
 			} elseif ( $key == 'tencent-weibo' ) {
-				$label = 'Tencent Weibo';
+				$label = __('Tencent Weibo', 'unlimited');
 			} elseif ( $key == 'paypal' ) {
-				$label = 'PayPal';
+				$label = __('PayPal', 'unlimited');
 			} elseif ( $key == 'email_form' ) {
-				$label = 'Contact Form';
+				$label = __('Contact Form', 'unlimited');
+			} elseif ( $key == 'stack-overflow' ) {
+				$label = __('Stack Overflow', 'unlimited');
+			} elseif ( $key == 'ok-ru' ) {
+				$label = __('OK.ru', 'unlimited');
 			}
 
 			?>
