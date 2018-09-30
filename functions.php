@@ -314,6 +314,7 @@ if ( ! function_exists( 'unlimited_social_array' ) ) {
 			'snapchat'      => 'unlimited_snapchat_profile',
 			'soundcloud'    => 'unlimited_soundcloud_profile',
 			'spotify'       => 'unlimited_spotify_profile',
+			'stack-overflow' => 'unlimited_stack_overflow_profile',
 			'steam'         => 'unlimited_steam_profile',
 			'stumbleupon'   => 'unlimited_stumbleupon_profile',
 			'telegram'      => 'unlimited_telegram_profile',

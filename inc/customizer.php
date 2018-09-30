@@ -171,6 +171,8 @@ function unlimited_add_customizer_content( $wp_customize ) {
 				$label = __('PayPal', 'unlimited');
 			} elseif ( $social_site == 'email_form' ) {
 				$label = __('Contact Form', 'unlimited');
+			} elseif ( $social_site == 'stack-overflow' ) {
+				$label = __('Stack Overflow', 'unlimited');
 			}
 
 			if ( $social_site == 'skype' ) {
