@@ -303,6 +303,7 @@ if ( ! function_exists( 'unlimited_social_array' ) ) {
 			'google-wallet' => 'unlimited_google-wallet_profile',
 			'hacker-news'   => 'unlimited_hacker-news_profile',
 			'meetup'        => 'unlimited_meetup_profile',
+			'mixcloud'      => 'unlimited_mixcloud_profile',
 			'ok-ru'         => 'unlimited_ok_ru_profile',
 			'paypal'        => 'unlimited_paypal_profile',
 			'podcast'       => 'unlimited_podcast_profile',
