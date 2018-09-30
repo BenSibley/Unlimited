@@ -131,7 +131,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 			) );
 			// control
 			$wp_customize->add_control( $social_site, array(
-				'label'    => __( 'Email Address:', 'unlimited' ),
+				'label'    => __( 'Email Address', 'unlimited' ),
 				'section'  => 'unlimited_social_media_icons',
 				'priority' => $priority,
 			) );
