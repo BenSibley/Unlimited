@@ -21,7 +21,7 @@ function unlimited_load_scripts_styles() {
 	wp_register_style( 'ct-unlimited-google-fonts', $fonts_url );
 	wp_enqueue_style( 'ct-unlimited-google-fonts' );
 
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/all.min.css' );
 
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 

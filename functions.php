@@ -344,12 +344,10 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 
 		$social_sites = unlimited_social_array();
 		$square_icons = array(
-			'linkedin',
 			'twitter',
 			'vimeo',
 			'youtube',
 			'pinterest',
-			'rss',
 			'reddit',
 			'tumblr',
 			'steam',
@@ -389,11 +387,21 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 
 				// get the class (square OR plain)
 				if ( in_array( $active_site, $square_icons ) ) {
-					$class = 'fa fa-' . $active_site . '-square';
+					$class = 'fab fa-' . $active_site . '-square';
+				} elseif ( $active_site == 'rss' ) {
+					$class = 'fas fa-rss';
+				} elseif ( $active_site == 'email_form' ) {
+					$class = 'far fa-envelope';
+				} elseif ( $active_site == 'podcast' ) {
+					$class = 'fas fa-podcast';
 				} elseif ( $active_site == 'ok-ru' ) {
-					$class = 'fa fa-odnoklassniki';
+					$class = 'fab fa-odnoklassniki';
+				} elseif ( $active_site == 'wechat' ) {
+					$class = 'fab fa-weixin';
+				} elseif ( $active_site == 'phone' ) {
+					$class = 'fas fa-phone';
 				} else {
-					$class = 'fa fa-' . $active_site;
+					$class = 'fab fa-' . $active_site;
 				}
 
 				if ( $active_site == 'email' ) {
@@ -401,17 +409,8 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 					<li>
 						<a class="email" target="_blank"
 						   href="mailto:<?php echo antispambot( is_email( $url ) ); ?>">
-							<i class="fa fa-envelope" title="<?php echo esc_attr_x( 'email', 'noun', 'unlimited' ); ?>"></i>
+							<i class="fas fa-envelope" title="<?php echo esc_attr_x( 'email', 'noun', 'unlimited' ); ?>"></i>
 							<span class="screen-reader-text"><?php echo esc_html_x('email', 'noun', 'unlimited'); ?></span>
-						</a>
-					</li>
-				<?php
-				} elseif ( $active_site == 'email_form' ) { ?>
-					<li>
-						<a class="contact-form" target="_blank"
-						   href="<?php echo esc_url( $url ); ?>">
-							<i class="fa fa-envelope-o" title="<?php esc_attr_e( 'contact form', 'unlimited' ); ?>"></i>
-							<span class="screen-reader-text"><?php echo esc_html( $active_site ); ?></span>
 						</a>
 					</li>
 				<?php

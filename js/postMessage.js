@@ -49,7 +49,7 @@
         } );
     } );
 
-    var socialSites = ['twitter', 'facebook', 'google-plus', 'pinterest', 'linkedin', 'youtube', 'vimeo', 'tumblr', 'instagram', 'flickr', 'dribbble', 'rss', 'reddit', 'soundcloud', 'spotify', 'vine', 'yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'github', 'hacker-news', 'snapchat', 'bandcamp', 'etsy', 'quora', 'ravelry', 'yelp', 'amazon', 'google-wallet', 'twitch', 'meetup', 'telegram', 'podcast', 'foursquare', 'slack', 'slideshare', 'skype', 'whatsapp', 'qq', 'wechat', 'xing', '500px', 'steam', 'vk', 'paypal', 'weibo', 'tencent-weibo', 'email', 'email_form' ];
+    var socialSites = ['twitter', 'facebook', 'google-plus', 'pinterest', 'linkedin', 'youtube', 'vimeo', 'tumblr', 'instagram', 'flickr', 'dribbble', 'rss', 'reddit', 'soundcloud', 'spotify', 'vine', 'yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'github', 'hacker-news', 'snapchat', 'bandcamp', 'etsy', 'quora', 'ravelry', 'yelp', 'amazon', 'google-wallet', 'twitch', 'meetup', 'telegram', 'podcast', 'foursquare', 'slack', 'slideshare', 'skype', 'whatsapp', 'qq', 'wechat', 'xing', '500px', 'steam', 'vk', 'paypal', 'weibo', 'tencent-weibo', 'email', 'email_form', 'bitbucket', 'ok-ru', 'stack-overflow' ];
 
     // for each social site setting
     for ( var site in socialSites ) {
@@ -74,7 +74,7 @@
                 socialMediaIcons.empty();
 
                 // icons that should use a special square icon
-                var squareIcons = ['linkedin', 'twitter', 'vimeo', 'youtube', 'pinterest', 'reddit', 'tumblr', 'steam', 'xing', 'github', 'google-plus', 'behance', 'facebook'];
+                var squareIcons = ['twitter', 'vimeo', 'youtube', 'pinterest', 'reddit', 'tumblr', 'steam', 'xing', 'github', 'google-plus', 'behance', 'facebook'];
 
                 var selector = panel.find('#sub-accordion-section-unlimited_social_media_icons').find('input');
 
@@ -90,16 +90,25 @@
                         var siteName = $(this).attr('data-customize-setting-link');
 
                         if ( $.inArray( siteName, squareIcons ) > -1 ) {
-                            var siteClass = 'fa fa-' + siteName + '-square';
+                            var siteClass = 'fab fa-' + siteName + '-square';
+                        } else if ( siteName == 'rss' ) {
+                            var siteClass = 'fas fa-rss';
+                        } else if ( siteName == 'email_form' ) {
+                            var siteClass = 'far fa-envelope';
+                        } else if ( siteName == 'podcast' ) {
+                            var siteClass = 'fas fa-podcast';
+                        } else if ( siteName == 'ok-ru' ) {
+                            var siteClass = 'fab fa-odnoklassniki';
+                        } else if ( siteName == 'wechat' ) {
+                            var siteClass = 'fab fa-weixin';
+                        } else if ( siteName == 'phone' ) {
+                            var siteClass = 'fas fa-phone';
                         } else {
-                            var siteClass = 'fa fa-' + siteName;
+                            var siteClass = 'fab fa-' + siteName;
                         }
 
                         if( siteName == 'email' ) {
-                            socialMediaIcons.append( '<li><a target="_blank" href="mailto:' + $(this).val() + '"><i class="fa fa-envelope"></i></a></li>' );
-                        }
-                        if ( siteName == 'email_form' ) {
-                            socialMediaIcons.append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="fa fa-envelope-o"></i></a></li>');
+                            socialMediaIcons.append( '<li><a target="_blank" href="mailto:' + $(this).val() + '"><i class="fas fa-envelope"></i></a></li>' );
                         }
                         else {
                             socialMediaIcons.append('<li><a class="' + siteName + '" target="_blank" href="' + $(this).val() + '"><i class="' + siteClass + '"></i></a></li>');
