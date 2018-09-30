@@ -19,9 +19,9 @@
 			<span>
 				<?php
 				if ( ! comments_open() && get_comments_number() < 1 ) :
-					comments_number( __( 'Comments closed', 'unlimited' ), __( 'One Comment', 'unlimited' ), _x( '% Comments', 'noun: 5 comments', 'unlimited' ) );
+					comments_number( esc_html__( 'Comments closed', 'unlimited' ), esc_html__( 'One Comment', 'unlimited' ), esc_html_x( '% Comments', 'noun: 5 comments', 'unlimited' ) );
 				else :
-					comments_number( __( 'Leave a Comment', 'unlimited' ), __( 'One Comment', 'unlimited' ), _x( '% Comments', 'noun: 5 comments', 'unlimited' ) );
+					comments_number( esc_html__( 'Leave a Comment', 'unlimited' ), esc_html__( 'One Comment', 'unlimited' ), esc_html_x( '% Comments', 'noun: 5 comments', 'unlimited' ) );
 				endif;
 				?>
 			</span>
