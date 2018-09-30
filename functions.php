@@ -289,6 +289,7 @@ if ( ! function_exists( 'unlimited_social_array' ) ) {
 			'amazon'        => 'unlimited_amazon_profile',
 			'bandcamp'      => 'unlimited_bandcamp_profile',
 			'behance'       => 'unlimited_behance_profile',
+			'bitbucket'     => 'unlimited_bitbucket_profile',
 			'codepen'       => 'unlimited_codepen_profile',
 			'delicious'     => 'unlimited_delicious_profile',
 			'deviantart'    => 'unlimited_deviantart_profile',
