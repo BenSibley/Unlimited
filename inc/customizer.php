@@ -138,7 +138,8 @@ function unlimited_add_customizer_content( $wp_customize ) {
 		} else if ( $social_site == 'phone' ) {
 			// setting
 			$wp_customize->add_setting( $social_site, array(
-				'sanitize_callback' => 'ct_unlimited_sanitize_phone'
+				'sanitize_callback' => 'ct_unlimited_sanitize_phone',
+				'transport'         => 'postMessage'
 			) );
 			// control
 			$wp_customize->add_control( $social_site, array(
