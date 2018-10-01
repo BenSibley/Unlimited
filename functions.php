@@ -285,6 +285,7 @@ if ( ! function_exists( 'unlimited_social_array' ) ) {
 			'youtube'       => 'unlimited_youtube_profile',
 			'rss'           => 'unlimited_rss_profile',
 			'email'         => 'unlimited_email_profile',
+			'phone'         => 'unlimited_phone_profile',
 			'email_form'    => 'unlimited_email_form',
 			'amazon'        => 'unlimited_amazon_profile',
 			'bandcamp'      => 'unlimited_bandcamp_profile',
@@ -422,6 +423,14 @@ if ( ! function_exists( 'unlimited_social_icons_output' ) ) {
 						   href="<?php echo esc_url( $url, array( 'http', 'https', 'skype') ); ?>">
 							<i class="<?php echo esc_attr( $class ); ?>" title="<?php echo esc_attr( $active_site ); ?>"></i>
 							<span class="screen-reader-text"><?php echo esc_html( $active_site ); ?></span>
+						</a>
+					</li>
+				<?php } elseif ( $active_site == 'phone' ) { ?>
+					<li>
+						<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
+								href="<?php echo esc_url( get_theme_mod( $active_site ), array( 'tel' ) ); ?>">
+							<i class="<?php echo esc_attr( $class ); ?>"></i>
+							<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
 						</a>
 					</li>
 				<?php } else { ?>
