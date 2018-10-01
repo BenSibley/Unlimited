@@ -52,6 +52,10 @@ if ( ! function_exists( 'unlimited_theme_setup' ) ) {
 
 		// Add WooCommerce support
 		add_theme_support( 'woocommerce' );
+		// Add support for WooCommerce image gallery features
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-slider' );
 
 		load_theme_textdomain( 'unlimited', get_template_directory() . '/languages' );
 
