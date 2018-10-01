@@ -29,9 +29,8 @@
 
 </div><!-- .overflow-container -->
 
-<?php wp_footer(); ?>
-
 <?php do_action( 'body_after' ); ?>
+<?php wp_footer(); ?>
 
 </body>
 

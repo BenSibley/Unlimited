@@ -1205,6 +1205,37 @@ li.bypostauthor {
   background: #2B2B2B;
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: -45px;
+  left: 0;
+  z-index: 9;
+  background: #2B2B2B;
+  border: none;
+  color: #fff;
+  padding: 9px 0;
+  width: 60px;
+  -webkit-transition: background 0.2s, -webkit-transform 0.3s;
+          transition: background 0.2s, transform 0.3s;
+}
+.scroll-to-top.visible {
+  -webkit-transform: translateY(-45px);
+          transform: translateY(-45px);
+}
+.scroll-to-top:hover {
+  cursor: pointer;
+  background: #545454;
+}
+.scroll-to-top:hover i {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+.scroll-to-top i {
+  font-size: 21px;
+  -webkit-transition: -webkit-transform 0.2s;
+          transition: transform 0.2s;
+}
+
 /* 800px */
 @media all and (min-width: 50em) {
   .site-footer {
