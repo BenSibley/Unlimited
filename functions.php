@@ -294,6 +294,7 @@ if ( ! function_exists( 'unlimited_social_array' ) ) {
 			'delicious'     => 'unlimited_delicious_profile',
 			'deviantart'    => 'unlimited_deviantart_profile',
 			'digg'          => 'unlimited_digg_profile',
+			'discord'       => 'unlimited_discord_profile',
 			'dribbble'      => 'unlimited_dribbble_profile',
 			'etsy'          => 'unlimited_etsy_profile',
 			'flickr'        => 'unlimited_flickr_profile',
