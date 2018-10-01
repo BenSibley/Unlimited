@@ -50,6 +50,9 @@ if ( ! function_exists( 'unlimited_theme_setup' ) ) {
 			'render'    => 'unlimited_infinite_scroll_render'
 		) );
 
+		// Add WooCommerce support
+		add_theme_support( 'woocommerce' );
+
 		load_theme_textdomain( 'unlimited', get_template_directory() . '/languages' );
 
 		register_nav_menus( array(
@@ -144,6 +147,13 @@ add_filter( 'comment_form_default_fields', 'unlimited_update_fields' );
 if ( ! function_exists( 'unlimited_update_comment_field' ) ) {
 	function unlimited_update_comment_field( $comment_field ) {
 
+		// don't filter the WooCommerce review form
+		if ( function_exists( 'is_woocommerce' ) ) {
+			if ( is_woocommerce() ) {
+				return $comment_field;
+			}
+		}
+		
 		$comment_field =
 			'<p class="comment-form-comment">
 	            <label for="comment">' . esc_html_x( "Comment", "noun", "unlimited" ) . '</label>

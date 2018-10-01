@@ -179,15 +179,20 @@ img,
 
 /* Form styles */
 
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
 textarea {
   @extend %thirteen-pixels;
   padding: 0.8em;
   width: 100%;
   max-width: $baseline-height * 10 * 1.85;
   color: $gray-40;
-  outline: solid 1px $gray-85;
-  border: none;
+  border: solid 1px $gray-85;
   font-family: $primary-font-stack;
   border-radius: 0;
   -webkit-appearance: none;
