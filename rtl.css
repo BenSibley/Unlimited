@@ -2091,7 +2091,8 @@ li.bypostauthor {
   text-decoration: none;
 }
 
-.post-type-archive-product.woocommerce .loop-container {
+.post-type-archive-product.woocommerce .loop-container,
+.archive.woocommerce .loop-container {
   padding: 24px 3.125%;
   background: #fff;
 }

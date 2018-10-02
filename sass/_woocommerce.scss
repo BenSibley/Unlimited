@@ -199,7 +199,8 @@
   text-decoration: none;
 }
 // Shop page
-.post-type-archive-product.woocommerce {
+.post-type-archive-product.woocommerce,
+.archive.woocommerce {
 
   .loop-container {
     padding: 24px $column;
