@@ -30,7 +30,7 @@
 			<?php get_template_part( 'menu', 'primary' ); ?>
 			<button id="toggle-navigation" class="toggle-navigation" aria-expanded="false">
 				<span class="screen-reader-text"><?php echo esc_html_x( 'open menu', 'verb: open the menu', 'unlimited' ); ?></span>
-				<i class="fa fa-bars" title="<?php esc_html_e( 'primary menu icon', 'unlimited' ); ?>"></i>
+				<i class="fas fa-bars" title="<?php esc_html_e( 'primary menu icon', 'unlimited' ); ?>"></i>
 			</button>
 			<?php do_action( 'header_after' ); ?>
 		</header>

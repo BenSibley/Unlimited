@@ -677,7 +677,7 @@ if ( ! function_exists( 'ct_unlimited_nav_dropdown_buttons' ) ) {
 		if ( $args->theme_location == 'primary' ) {
 
 			if ( in_array( 'menu-item-has-children', $item->classes ) || in_array( 'page_item_has_children', $item->classes ) ) {
-				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . esc_html__( "open dropdown menu", "unlimited" ) . '</span></button>', $item_output );
+				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . esc_html__( "open dropdown menu", "unlimited" ) . '</span><i class="fas fa-angle-down"></i></button>', $item_output );
 			}
 		}
 
@@ -722,7 +722,7 @@ function ct_unlimited_scroll_to_top_arrow() {
 	$setting = get_theme_mod('scroll_to_top');
 	
 	if ( $setting == 'yes' ) {
-		echo '<button id="scroll-to-top" class="scroll-to-top"><span class="screen-reader-text">'. __('Scroll to the top', 'unlimited') .'</span><i class="fa fa-arrow-up"></i></button>';
+		echo '<button id="scroll-to-top" class="scroll-to-top"><span class="screen-reader-text">'. __('Scroll to the top', 'unlimited') .'</span><i class="fas fa-arrow-up"></i></button>';
 	}
 }
 add_action( 'body_after', 'ct_unlimited_scroll_to_top_arrow');

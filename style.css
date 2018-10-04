@@ -541,10 +541,6 @@ a img {
 .toggle-dropdown:focus {
   outline: none;
 }
-.toggle-dropdown:after {
-  content: '\f107';
-  font-family: 'FontAwesome';
-}
 
 .menu-item-has-children,
 .page_item_has_children {
@@ -751,11 +747,12 @@ a img {
   .menu-unset .page_item_has_children ul .page_item_has_children > a + button {
     right: 12px;
   }
-  .menu-item-has-children ul .menu-item-has-children > a + button:after,
-  .menu-item-has-children ul .page_item_has_children > a + button:after,
-  .menu-unset .page_item_has_children ul .menu-item-has-children > a + button:after,
-  .menu-unset .page_item_has_children ul .page_item_has_children > a + button:after {
-    content: '\f105';
+  .menu-item-has-children ul .menu-item-has-children > a + button i,
+  .menu-item-has-children ul .page_item_has_children > a + button i,
+  .menu-unset .page_item_has_children ul .menu-item-has-children > a + button i,
+  .menu-unset .page_item_has_children ul .page_item_has_children > a + button i {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 
   /* Current Menu item */
@@ -790,11 +787,12 @@ a img {
     background: #D9D9D9;
   }
 
-  .rtl .menu-primary-items ul .menu-item-has-children > a + button:after,
-  .rtl .menu-primary-items ul .menu-unset .page_item_has_children > a + button:after,
-  .rtl .menu-unset ul ul .menu-item-has-children > a + button:after,
-  .rtl .menu-unset ul ul .menu-unset .page_item_has_children > a + button:after {
-    content: '\f104';
+  .rtl .menu-primary-items ul .menu-item-has-children > a + button i,
+  .rtl .menu-primary-items ul .menu-unset .page_item_has_children > a + button i,
+  .rtl .menu-unset ul ul .menu-item-has-children > a + button i,
+  .rtl .menu-unset ul ul .menu-unset .page_item_has_children > a + button i {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
   .rtl .menu-primary-items ul .menu-item-has-children > a:hover + button, .rtl .menu-primary-items ul .menu-item-has-children > a:active + button, .rtl .menu-primary-items ul .menu-item-has-children > a:focus + button,
   .rtl .menu-primary-items ul .menu-unset .page_item_has_children > a:hover + button,
