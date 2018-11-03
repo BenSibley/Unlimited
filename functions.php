@@ -322,6 +322,7 @@ if ( ! function_exists( 'unlimited_social_array' ) ) {
 			'meetup'        => 'unlimited_meetup_profile',
 			'mixcloud'      => 'unlimited_mixcloud_profile',
 			'ok-ru'         => 'unlimited_ok_ru_profile',
+			'patreon'       => 'unlimited_patreon_profile',
 			'paypal'        => 'unlimited_paypal_profile',
 			'podcast'       => 'unlimited_podcast_profile',
 			'qq'            => 'unlimited_qq_profile',
