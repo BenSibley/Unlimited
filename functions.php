@@ -318,6 +318,7 @@ if ( ! function_exists( 'unlimited_social_array' ) ) {
 			'google-plus'   => 'unlimited_google_plus_profile',
 			'google-wallet' => 'unlimited_google-wallet_profile',
 			'hacker-news'   => 'unlimited_hacker-news_profile',
+			'medium'        => 'unlimited_medium_profile',
 			'meetup'        => 'unlimited_meetup_profile',
 			'mixcloud'      => 'unlimited_mixcloud_profile',
 			'ok-ru'         => 'unlimited_ok_ru_profile',
