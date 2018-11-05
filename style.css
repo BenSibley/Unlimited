@@ -658,6 +658,7 @@ a img {
   }
   .menu-item-has-children > a,
   .menu-unset .page_item_has_children > a {
+    position: relative;
     padding-right: 24px;
   }
   .menu-item-has-children > a:hover + button, .menu-item-has-children > a:active + button, .menu-item-has-children > a:focus + button,
@@ -673,6 +674,16 @@ a img {
   .menu-unset .page_item_has_children > a:focus ~ ul {
     opacity: 1;
     visibility: visible;
+  }
+  .menu-item-has-children > a:after,
+  .menu-unset .page_item_has_children > a:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 24px;
   }
   .menu-item-has-children ul,
   .menu-unset .page_item_has_children ul {
@@ -705,8 +716,13 @@ a img {
   .menu-unset .page_item_has_children ul li:hover > .toggle-dropdown,
   .menu-unset .page_item_has_children ul li.focused > .toggle-dropdown,
   .menu-unset .page_item_has_children ul li.open > .toggle-dropdown {
-    -webkit-transform: translateX(3px);
-            transform: translateX(3px);
+    -webkit-transform: rotate(90deg) translateY(-3px);
+            transform: rotate(90deg) translateY(-3px);
+  }
+  .menu-item-has-children ul li .toggle-dropdown,
+  .menu-unset .page_item_has_children ul li .toggle-dropdown {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   .menu-item-has-children ul a,
   .menu-unset .page_item_has_children ul a {
@@ -727,8 +743,8 @@ a img {
   .menu-unset .page_item_has_children ul a:active + button,
   .menu-unset .page_item_has_children ul a:hover + button,
   .menu-unset .page_item_has_children ul a:focus + button {
-    -webkit-transform: translateX(3px);
-            transform: translateX(3px);
+    -webkit-transform: rotate(90deg) translateY(-3px);
+            transform: rotate(90deg) translateY(-3px);
   }
   .menu-item-has-children ul:hover, .menu-item-has-children ul.focused,
   .menu-unset .page_item_has_children ul:hover,
@@ -740,12 +756,6 @@ a img {
   .menu-unset .page_item_has_children ul ul {
     top: -1px;
     left: 100%;
-  }
-  .menu-item-has-children ul .menu-item-has-children > a + button,
-  .menu-item-has-children ul .page_item_has_children > a + button,
-  .menu-unset .page_item_has_children ul .menu-item-has-children > a + button,
-  .menu-unset .page_item_has_children ul .page_item_has_children > a + button {
-    right: 12px;
   }
   .menu-item-has-children ul .menu-item-has-children > a + button i,
   .menu-item-has-children ul .page_item_has_children > a + button i,

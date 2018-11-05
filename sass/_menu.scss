@@ -158,6 +158,7 @@
       }
     }
     > a {
+      position: relative;
       padding-right: 24px; // to make room for the dropdown icon
 
       &:hover,
@@ -171,6 +172,16 @@
           opacity: 1;
           visibility: visible;
         }
+      }
+      // So hover isn't interrupted by dropdown button
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 24px;
       }
     }
     ul {
@@ -200,8 +211,11 @@
         &.open {
 
           > .toggle-dropdown {
-            transform: translateX(3px);
+            transform: rotate(90deg) translateY(-3px);
           }
+        }
+        .toggle-dropdown {
+          transform: rotate(90deg);
         }
       }
       a {
@@ -217,7 +231,7 @@
           color: $gray-23;
 
           + button {
-            transform: translateX(3px);
+            transform: rotate(90deg) translateY(-3px);
           }
         }
       }
@@ -238,10 +252,6 @@
       .page_item_has_children {
 
         > a {
-
-          + button {
-            right: 12px;
-          }
 
           + button i {
             transform: rotate(180deg);
