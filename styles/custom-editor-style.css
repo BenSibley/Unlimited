@@ -1,53 +1,416 @@
-/* Custom Editor Styles */
 /*===== Variables =====*/
 /* Theme Colors */
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /***** Silent Classes *****/
-body#tinymce.wp-editor h1 {
+h1 {
   font-size: 1.75em;
   /* 28px / 16px */
   line-height: 1.321;
   /* 37px */
 }
 
-body#tinymce.wp-editor h2 {
+h2 {
   font-size: 1.3125em;
   /* 21px / 16px */
   line-height: 1.143;
   /* 24px */
 }
 
-body#tinymce.wp-editor a {
+.wp-caption-text, input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea, input[type="submit"] {
+  font-size: 0.8125em;
+  /* 13px / 16px */
+  line-height: 1.385;
+  /* 18px */
+}
+
+a {
   color: #3a3a3a;
 }
-body#tinymce.wp-editor a:link, body#tinymce.wp-editor a:visited, body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:active, body#tinymce.wp-editor a:focus {
+a:link, a:visited, a:hover, a:active, a:focus {
   color: #3a3a3a;
 }
 
-body#tinymce.wp-editor {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  font-size: 1em;
-  line-height: 1.5;
-  color: #666666;
-  margin: 0 24px 24px 24px;
-  -webkit-font-smoothing: subpixel-antialiased !important;
+/*===== Basic Styles =====*/
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  box-sizing: border-box;
 }
-body#tinymce.wp-editor h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor h6 {
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 100%;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  background: #EDEDED;
+  color: #666666;
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.overflow-container {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  min-height: 100%;
+}
+
+.max-width {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.max-width:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.main {
+  margin: 0 auto;
+  padding: 0 3.125%;
+}
+
+.loop-container:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+p {
+  margin: 1.5em 0;
+}
+
+a {
+  font-weight: 400;
+  text-decoration: none;
+  -webkit-transition: color 0.15s ease-in-out;
+          transition: color 0.15s ease-in-out;
+}
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   font-weight: 400;
   color: #3a3a3a;
 }
-body#tinymce.wp-editor h3,
-body#tinymce.wp-editor h4,
-body#tinymce.wp-editor h5,
-body#tinymce.wp-editor h6 {
+
+h3,
+h4,
+h5,
+h6 {
   font-size: 1em;
   line-height: 1.5;
 }
 
-body#tinymce.wp-editor a {
+ul,
+ol {
+  font-size: 1em;
+  padding: 0;
+  margin: 1.5em;
+}
+ul ul, ul ol,
+ol ul,
+ol ol {
+  margin: 0 1.5em;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul,
+li li {
+  font-size: 1em;
+}
+
+/* Markup styles */
+pre {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  background: #EDEDED;
+  padding: 0.75em;
+  color: #3a3a3a;
+}
+
+code {
+  background: #EDEDED;
+  padding: 0 0.375em;
+  color: #3a3a3a;
+}
+
+blockquote {
+  margin: 1.5em;
+  padding-left: 1.5em;
+  border-left: solid 3px #3a3a3a;
+}
+blockquote cite {
+  display: block;
+  text-align: right;
+}
+
+hr {
+  margin: 0.69em 0;
+}
+
+/* Table styles */
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+td {
+  padding: 0.5em 0.75em;
+  border: solid 1px #3a3a3a;
+}
+
+th {
+  padding: 0.5em 0.75em;
+  border: solid 1px #3a3a3a;
+}
+
+/* Images */
+.alignleft {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 1.5em 1.5em;
+}
+
+.aligncenter {
+  text-align: center;
+  margin: 1.5em auto;
+  display: block;
+}
+
+.alignnone {
+  margin: 1.5em 0;
+}
+
+img,
+.alignright,
+.alignleft,
+.aligncenter,
+.alignnone,
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.wp-caption-text {
+  margin: 0 0 1.8450184502em;
+  color: #666666;
+}
+
+/* Form styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  padding: 0.8em;
+  width: 100%;
+  max-width: 27.75em;
+  color: #666666;
+  border: solid 1px #D9D9D9;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-transition: outline-offset 0.15s ease-in-out;
+          transition: outline-offset 0.15s ease-in-out;
+}
+
+input[type="submit"] {
+  padding: 0.8em;
+  width: 100%;
+  max-width: 13.875em;
+  color: white;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  background: #3a3a3a;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background 0.15s ease-in-out;
+          transition: background 0.15s ease-in-out;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  background: #2B2B2B;
+}
+
+input[type="search"] {
+  padding-right: 5px !important;
+}
+input[type="search"]::-ms-clear, input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+textarea {
+  max-width: 41.625em;
+  overflow: auto;
+  /* to hide scrollbar in IE */
+  border-radius: 0px;
+  -webkit-transition: outline-offset 0.15s ease-in-out;
+          transition: outline-offset 0.15s ease-in-out;
+}
+
+::-webkit-input-placeholder {
+  color: #ABABAB;
+  font-weight: 300;
+}
+
+:-moz-placeholder {
+  color: #ABABAB;
+  font-weight: 300;
+}
+
+::-moz-placeholder {
+  color: #ABABAB;
+  font-weight: 300;
+}
+
+:-ms-input-placeholder {
+  color: #ABABAB;
+  font-weight: 300;
+}
+
+.ie8 .main input[type="search"], .ie8 .main input[type="text"], .ie8 .main input[type="password"], .ie8 .main input[type="email"], .ie8 .main input[type="url"],
+.ie8 .sidebar input[type="search"],
+.ie8 .sidebar input[type="text"],
+.ie8 .sidebar input[type="password"],
+.ie8 .sidebar input[type="email"],
+.ie8 .sidebar input[type="url"],
+.ie8 .site-footer input[type="search"],
+.ie8 .site-footer input[type="text"],
+.ie8 .site-footer input[type="password"],
+.ie8 .site-footer input[type="email"],
+.ie8 .site-footer input[type="url"] {
+  min-height: 36px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* remove ugly ie image border */
+a img {
+  border: none;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
+  html {
+    -webkit-text-size-adjust: none;
+    /* none for no scaling */
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  html {
+    -webkit-text-size-adjust: none;
+    /* none for no scaling */
+  }
+}
+.screen-reader-text {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+}
+
+.skip-content {
+  position: absolute;
+  top: -4.5em;
+  width: 100%;
+  left: 0;
+  display: block;
+  text-align: center;
+  color: white !important;
+  z-index: 99;
+  padding: 1.5em;
+  background: #2B2B2B;
+  -webkit-transition: top 0.2s ease;
+          transition: top 0.2s ease;
+}
+.skip-content:focus {
+  top: 0;
+  outline: none;
+}
+
+.admin-bar .skip-content:focus {
+  top: 32px;
+}
+
+.infinite-loader,
+#infinite-handle {
+  clear: both;
+}
+
+/* 800px */
+@media all and (min-width: 50em) {
+  .overflow-container:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+
+  .main {
+    width: 59.375%;
+    float: left;
+    padding: 0;
+    margin: 1.5em 3.125% 0;
+  }
+
+  .left-sidebar .main {
+    float: right;
+  }
+}
+.mce-content-body.wp-editor {
+  margin: 0 auto;
+  padding: 0 24px !important;
+  font-size: 16px;
+  line-height: 1.5;
   font-weight: 400;
+  color: #666666;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  background: #fff;
+  font-family: "Open Sans", sans-serif;
+  max-width: 702px;
 }

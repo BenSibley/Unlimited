@@ -13,7 +13,7 @@ function unlimited_load_scripts_styles() {
 
 	// Google Fonts (required to register outside scripts first)
 	$font_args = array(
-		'family' => urlencode( 'Open Sans:600,400,300,300italic' ),
+		'family' => urlencode( 'Open Sans:600,400,300,300i' ),
 		'subset' => urlencode( 'latin,latin-ext' )
 	);
 	$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
@@ -51,6 +51,16 @@ function unlimited_enqueue_admin_styles( $hook ) {
 
 	if ( 'appearance_page_unlimited-options' == $hook ) {
 		wp_enqueue_style( 'ct-unlimited-admin-styles', get_template_directory_uri() . '/styles/admin.min.css' );
+	}
+	if ( $hook == 'post.php' || $hook == 'post-new.php' ) {
+
+		$font_args = array(
+			'family' => urlencode( 'Open Sans:600,400,300,300i' ),
+			'subset' => urlencode( 'latin,latin-ext' )
+		);
+		$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
+	
+		wp_enqueue_style( 'ct-author-google-fonts', $fonts_url );
 	}
 }
 add_action( 'admin_enqueue_scripts', 'unlimited_enqueue_admin_styles' );
