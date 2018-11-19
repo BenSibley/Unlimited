@@ -13,3 +13,52 @@
   font-family: $primary-font-stack;
   max-width: 702px;
 }
+
+// Gutenberg
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+}
+.wp-block {
+  max-width: 688px;
+}
+.editor-post-title textarea {
+  @extend h1;
+  color: $gray-17;
+  outline: none;
+  padding: 19px;
+  font-family: $primary-font-stack;
+  text-align: center;
+}
+.wp-block[data-align="wide"],
+.wp-block[data-align="full"] {
+  max-width: none;
+}
+.wp-block-quote.is-large {
+  padding-left: 0;
+  border-left: none;
+}
+.wp-block-embed {
+  margin: $baseline-height 0;
+}
+.has-small-font-size {
+  font-size: 12px;
+}
+.has-regular-font-size {
+  font-size: 16px;
+}
+.has-large-font-size {
+  font-size: 21px;
+}
+.has-extra-large-font-size {
+  font-size: 37px;
+}
+
+@media all and (min-width: 600px) {
+
+  .editor-post-title textarea {
+    font-size: 1.75em; /* 28px / 16px */
+    line-height: 1.321;
+  }
+}
