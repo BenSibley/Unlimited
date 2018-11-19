@@ -448,7 +448,7 @@ body {
 }
 
 .has-small-font-size {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .has-regular-font-size {
@@ -460,7 +460,7 @@ body {
 }
 
 .has-extra-large-font-size {
-  font-size: 37px;
+  font-size: 28px;
 }
 
 @media all and (min-width: 600px) {
