@@ -60,7 +60,7 @@ function unlimited_enqueue_admin_styles( $hook ) {
 		);
 		$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
 	
-		wp_enqueue_style( 'ct-author-google-fonts', $fonts_url );
+		wp_enqueue_style( 'ct-unlimited-google-fonts', $fonts_url );
 	}
 }
 add_action( 'admin_enqueue_scripts', 'unlimited_enqueue_admin_styles' );
