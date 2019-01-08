@@ -10,6 +10,7 @@
 			</div>
 			<?php do_action( 'post_content_before' ); ?>
 			<div class="post-content">
+				<?php ct_unlimited_output_last_updated_date(); ?>
 				<?php the_content(); ?>
 				<?php wp_link_pages( array(
 					'before' => '<p class="singular-pagination">' . esc_html__( 'Pages:', 'unlimited' ),

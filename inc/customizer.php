@@ -335,6 +335,30 @@ function unlimited_add_customizer_content( $wp_customize ) {
 		)
 	) );
 
+	/***** Additional Options  *****/
+
+	// section
+	$wp_customize->add_section( 'ct_unlimited_additional_options', array(
+		'title'    => __( 'Additional Options', 'unlimited' ),
+		'priority' => 75
+	) );
+	// setting - last updated
+	$wp_customize->add_setting( 'last_updated', array(
+		'default'           => 'no',
+		'sanitize_callback' => 'unlimited_sanitize_yes_no_settings'
+	) );
+	// control - last updated
+	$wp_customize->add_control( 'last_updated', array(
+		'label'    => __( 'Display the date each post was last updated?', 'unlimited' ),
+		'section'  => 'ct_unlimited_additional_options',
+		'settings' => 'last_updated',
+		'type'     => 'radio',
+		'choices'  => array(
+			'yes' => __( 'Yes', 'unlimited' ),
+			'no'  => __( 'No', 'unlimited' )
+		)
+	) );
+
 	/***** Custom CSS *****/
 
 	if ( function_exists( 'wp_update_custom_css_post' ) ) {
