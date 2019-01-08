@@ -4,16 +4,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Unlimited 1.16\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-04-19 10:04+0200\n"
+"POT-Creation-Date: 2018-11-03 18:19:02+00:00\n"
+"PO-Revision-Date: 2019-01-05 13:34+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-04-19 11:23+0200\n"
-"Language-Team: \n"
-"X-Generator: Poedit 1.8.7\n"
-"Last-Translator: \n"
+"X-Generator: Poedit 2.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: de_DE\n"
 
 #: comments.php:20 comments.php:40 comments.php:62
 msgid "Be First to Comment"
@@ -24,36 +24,19 @@ msgstr "Schreibe den ersten Kommentar"
 msgid "One Comment"
 msgstr "Einen Kommentar"
 
-#: comments.php:20 comments.php:40 comments.php:62 content/post-meta.php:22
-#: content/post-meta.php:24
-msgid "% Comments"
-msgstr "% Kommentare"
-
 #: comments.php:54
 msgid ""
 "Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
 "\">trackbacks</a> and pingbacks are open."
 msgstr ""
 
-#: comments.php:76 comments.php:83
+#: comments.php:76 comments.php:93
 msgid "Comments are closed."
 msgstr "Die Kommentare wurden geschlossen"
 
 #: content/post-author.php:10
 msgid "View more posts"
 msgstr "Zeige weitere Beiträge"
-
-#: content/post-categories.php:5
-msgid "Posted in"
-msgstr "Gepostet in"
-
-#: content/post-categories.php:11
-msgid "and"
-msgstr "und"
-
-#: content/post-categories.php:13
-msgid "View all posts in %s"
-msgstr "Zeige alle Beiträge in %s"
 
 #: content/post-meta.php:22
 msgid "Comments closed"
@@ -103,10 +86,6 @@ msgstr "Keine neueren Beiträge"
 msgid "View all posts tagged %s"
 msgstr "Zeige alle Beiträge, die mit %s getagt sind"
 
-#: content/search-bar.php:6 searchform.php:3
-msgid "Search"
-msgstr "Suche"
-
 #: content/search-bar.php:7 searchform.php:5
 msgid "Search..."
 msgstr "Suche..."
@@ -133,19 +112,25 @@ msgstr "Seiten:"
 
 #: footer.php:21
 msgid ""
-"<a target=\"_blank\" href=\"%s\">Unlimited WordPress Theme</a> by Compete "
-"Themes"
+"<a target=\"_blank\" href=\"%1$s\">%2$s WordPress Theme</a> by Compete Themes"
 msgstr ""
 
-#: functions.php:34
+#: functions.php:20
+msgid ""
+"Hey! Sorry to interrupt, but you've been using Unlimited for a little while "
+"now. If you're happy with this theme, could you take a minute to leave a "
+"review? <i>You won't see this notice again after closing it.</i>"
+msgstr ""
+
+#: functions.php:63
 msgid "Primary"
 msgstr "Primäre"
 
-#: functions.php:42
+#: functions.php:72
 msgid "Primary Sidebar"
 msgstr "Primäre Seitenleiste"
 
-#: functions.php:44
+#: functions.php:74
 msgid ""
 "Widgets in this area will be shown in the sidebar next to the main post "
 "content"
@@ -153,77 +138,61 @@ msgstr ""
 "Widgets werden direkt neben dem Inhalt von Beiträgen in der Seitenleiste "
 "angezeigt."
 
-#: functions.php:71
+#: functions.php:102
 msgid "Your comment is awaiting moderation."
 msgstr "Ihr Kommentar ist für die Moderation bereit"
 
-#: functions.php:76
-msgid "Reply"
-msgstr "Antworten"
-
-#: functions.php:81
-msgid "Edit"
-msgstr "Bearbeiten"
-
-#: functions.php:93
+#: functions.php:124
 msgid "(optional)"
 msgstr "(optional)"
 
-#: functions.php:98
-msgid "Name"
-msgstr "Name"
-
-#: functions.php:99
+#: functions.php:130
 msgid "John Doe"
 msgstr "Angezeigter Name"
 
-#: functions.php:104
-msgid "Email"
-msgstr "E-Mail Adresse"
-
-#: functions.php:105
+#: functions.php:136
 msgid "name@email.com"
 msgstr "Name@example.com"
 
-#: functions.php:110
+#: functions.php:141
 msgid "Website"
 msgstr "Website"
 
-#: functions.php:111
+#: functions.php:142
 msgid "http://example.com"
 msgstr "http://example.com"
 
-#: functions.php:125
-msgid "Comment"
-msgstr "Kommentar"
-
-#: functions.php:126
+#: functions.php:164
 msgid "Enter Your Comment"
 msgstr "Kommentar hier eingeben"
 
-#: functions.php:156 functions.php:166 functions.php:183 inc/customizer.php:256
-msgid "Read More"
-msgstr "Weiterlesen"
+#: functions.php:195 functions.php:259
+msgid "Read more"
+msgstr "Mehr erfahren"
 
-#: functions.php:358
-msgid "email"
-msgstr "E-Mail"
+#: functions.php:546
+msgid "Featured Post"
+msgstr "Hervorgehobener Beitrag"
 
-#: functions.php:366
-msgid "contact form"
-msgstr "Kontakt Formular"
+#: functions.php:609
+msgid "Customizer settings deleted."
+msgstr "Eigene Einstellungen wurden gelöscht"
 
-#: functions.php:513
-msgid "Customizer settings deleted"
-msgstr "Customizer Einstellungen gelöscht"
+#: functions.php:615
+msgid "%s successfully activated!"
+msgstr "erfolgreich aktiviert"
+
+#: functions.php:682
+msgid "open dropdown menu"
+msgstr "Offene Drop-Down-Menü"
+
+#: functions.php:727
+msgid "Scroll to the top"
+msgstr "Gehe zum Anfang "
 
 #: header.php:13
 msgid "Skip to content"
 msgstr "Direkt zum Inhalt"
-
-#: header.php:32 inc/scripts.php:8
-msgid "open menu"
-msgstr "Öffne Menü"
 
 #: header.php:33
 msgid "primary menu icon"
@@ -249,152 +218,242 @@ msgstr "Social Media Icons"
 msgid "Add the URL for each of your social profiles."
 msgstr "Fügen Sie die URLs für Ihre Social Media Profile hinzu"
 
-#: inc/customizer.php:94
-msgid "Email Address:"
-msgstr "E-Mail Adresse:"
+#: inc/customizer.php:94 inc/user-profile.php:67
+msgid "Email Address"
+msgstr "E-Mail Adresse"
 
-#: inc/customizer.php:144
+#: inc/customizer.php:106
+msgid "Phone"
+msgstr "Telefon"
+
+#: inc/customizer.php:116 inc/user-profile.php:26
+msgid "Google Plus"
+msgstr ""
+
+#: inc/customizer.php:118 inc/user-profile.php:28
+msgid "RSS"
+msgstr ""
+
+#: inc/customizer.php:120 inc/user-profile.php:30
+msgid "SoundCloud"
+msgstr ""
+
+#: inc/customizer.php:122 inc/user-profile.php:32
+msgid "SlideShare"
+msgstr ""
+
+#: inc/customizer.php:124 inc/user-profile.php:34
+msgid "CodePen"
+msgstr ""
+
+#: inc/customizer.php:126 inc/user-profile.php:36
+msgid "StumbleUpon"
+msgstr ""
+
+#: inc/customizer.php:128 inc/user-profile.php:38
+msgid "DeviantArt"
+msgstr ""
+
+#: inc/customizer.php:130 inc/user-profile.php:40
+msgid "Hacker News"
+msgstr ""
+
+#: inc/customizer.php:132 inc/user-profile.php:42
+msgid "Google Wallet"
+msgstr ""
+
+#: inc/customizer.php:134 inc/user-profile.php:44
+msgid "WhatsApp"
+msgstr ""
+
+#: inc/customizer.php:136 inc/user-profile.php:46
+msgid "QQ"
+msgstr ""
+
+#: inc/customizer.php:138 inc/user-profile.php:48
+msgid "VK"
+msgstr ""
+
+#: inc/customizer.php:140 inc/user-profile.php:50
+msgid "WeChat"
+msgstr ""
+
+#: inc/customizer.php:142 inc/user-profile.php:52
+msgid "Tencent Weibo"
+msgstr ""
+
+#: inc/customizer.php:144 inc/user-profile.php:54
+msgid "PayPal"
+msgstr ""
+
+#: inc/customizer.php:146 inc/user-profile.php:56
+msgid "Contact Form"
+msgstr "Kontaktformular"
+
+#: inc/customizer.php:148 inc/user-profile.php:58
+msgid "Stack Overflow"
+msgstr ""
+
+#: inc/customizer.php:150 inc/user-profile.php:60
+msgid "OK.ru"
+msgstr ""
+
+#: inc/customizer.php:163
 msgid ""
 "Accepts Skype link protocol (<a href=\"%s\" target=\"_blank\">learn more</a>)"
 msgstr ""
 
-#: inc/customizer.php:171
+#: inc/customizer.php:190
 msgid "Search Bar"
 msgstr "Suchleiste"
 
-#: inc/customizer.php:183
+#: inc/customizer.php:202
 msgid "Show search bar at top of site?"
 msgstr "Suchleiste zuoberst auf der Seite anzeigen?"
 
-#: inc/customizer.php:187 inc/customizer.php:326
+#: inc/customizer.php:206 inc/customizer.php:382
 msgid "Show"
 msgstr "Anzeigen"
 
-#: inc/customizer.php:188 inc/customizer.php:327
+#: inc/customizer.php:207 inc/customizer.php:383
 msgid "Hide"
 msgstr "Ausblenden"
 
-#: inc/customizer.php:196
+#: inc/customizer.php:215
 msgid "Layouts"
 msgstr "Layouts"
 
-#: inc/customizer.php:208
+#: inc/customizer.php:227
 msgid "Choose your layout:"
 msgstr "Wählen Sie Ihr Layout:"
 
-#: inc/customizer.php:209
+#: inc/customizer.php:228
+#, fuzzy
+#| msgid ""
+#| "Want more layouts? <a target=\"_blank\" href=\"%s\">Check out Unlimited "
+#| "Pro</a>."
 msgid ""
-"Want more layouts? <a target=\"_blank\" href=\"%s\">Check out Unlimited Pro</"
-"a>."
+"Want more layouts? <a target=\"_blank\" href=\"%1$s\">Check out %2$s Pro</a>."
 msgstr "rechte Seitenleiste"
 
-#: inc/customizer.php:214 inc/customizer.php:350
+#: inc/customizer.php:233 inc/customizer.php:406
 msgid "Right sidebar"
 msgstr "rechte Seitenleiste"
 
-#: inc/customizer.php:215 inc/customizer.php:351
+#: inc/customizer.php:234 inc/customizer.php:407
 msgid "Left sidebar"
 msgstr "linke Seitenleiste"
 
-#: inc/customizer.php:223
-msgid "Blog"
-msgstr "Blog"
-
-#: inc/customizer.php:233
+#: inc/customizer.php:252
 msgid "Show full posts on blog?"
 msgstr "Zeige vollständigen Inhalt der Beiträge im Blog?"
 
-#: inc/customizer.php:238 inc/customizer.php:367
+#: inc/customizer.php:257 inc/customizer.php:333 inc/customizer.php:423
 msgid "Yes"
 msgstr "Ja"
 
-#: inc/customizer.php:239 inc/customizer.php:368
+#: inc/customizer.php:258 inc/customizer.php:334 inc/customizer.php:424
 msgid "No"
 msgstr "Nein"
 
-#: inc/customizer.php:249
+#: inc/customizer.php:268
 msgid "Excerpt word count"
 msgstr "Anzahl Wörter pro Auszug"
 
-#: inc/customizer.php:261
+#: inc/customizer.php:275
+msgid "Read More"
+msgstr "Weiterlesen"
+
+#: inc/customizer.php:280
 msgid "Read More button text"
 msgstr "Text des Read more Schalters"
 
-#: inc/customizer.php:271
+#: inc/customizer.php:290
 msgid "Comment Display"
 msgstr "Kommentar Anzeige"
 
-#: inc/customizer.php:282
+#: inc/customizer.php:301
 msgid "Show comments on:"
 msgstr "Zeige Kommentare auf:"
 
-#: inc/customizer.php:287 inc/customizer.php:377
+#: inc/customizer.php:306 inc/customizer.php:433
 msgid "Posts"
 msgstr "Beiträgen"
 
-#: inc/customizer.php:288 inc/customizer.php:378
+#: inc/customizer.php:307 inc/customizer.php:434
 msgid "Pages"
 msgstr "Seiten"
 
-#: inc/customizer.php:289 inc/customizer.php:379
+#: inc/customizer.php:308 inc/customizer.php:435
 msgid "Attachments"
 msgstr "Anhängen"
 
-#: inc/customizer.php:290 inc/customizer.php:380
+#: inc/customizer.php:309 inc/customizer.php:436
 msgid "Do not show"
 msgstr "Nicht anzeigen"
 
-#: inc/customizer.php:299
+#: inc/customizer.php:318
+msgid "Scroll-to-Top Arrow"
+msgstr "Pfeil nach oben"
+
+#: inc/customizer.php:328
+msgid "Display Scroll-to-top arrow?"
+msgstr "Anzeige Pfeil nach oben"
+
+#: inc/customizer.php:354
 msgid "Custom CSS"
 msgstr "Benutzerdefiniertes CSS"
 
-#: inc/customizer.php:310
+#: inc/customizer.php:365
 msgid "Add Custom CSS Here:"
 msgstr "Füge benutzerdefiniertes CSS hier hinzu:"
 
-#: inc/customizer.php:352
+#: inc/customizer.php:408
 msgid "No sidebar - Narrow"
 msgstr "Keine Seitenleiste - schmal"
 
-#: inc/customizer.php:353
+#: inc/customizer.php:409
 msgid "No sidebar - Wide"
 msgstr "Keine Seitenleiste - breit"
 
-#: inc/customizer.php:354
+#: inc/customizer.php:410
 msgid "Two column - Right sidebar"
 msgstr "Zwei Spalten - rechte Seitenleiste"
 
-#: inc/customizer.php:355
+#: inc/customizer.php:411
 msgid "Two column - Left sidebar"
 msgstr "Zwei Spalten - linke Seitenleiste"
 
-#: inc/customizer.php:356
+#: inc/customizer.php:412
 msgid "Two column - No Sidebar - Narrow"
 msgstr "Zwei Spalten - ohne Seitenleiste - schmal"
 
-#: inc/customizer.php:357
+#: inc/customizer.php:413
 msgid "Two column - No Sidebar - Wide"
 msgstr "Zwei Spalten - keine Seitenleiste - breit"
 
-#: inc/customizer.php:422
-msgid "View the Unlimited Pro Plugin"
-msgstr "Zeige das Unlimited Pro Plugin"
-
-#: inc/scripts.php:9
-msgid "close menu"
-msgstr "Menü schliessen"
+#: inc/review.php:113
+msgid "Click here to leave your review"
+msgstr ""
 
 #: inc/user-profile.php:17
 msgid "Social Profiles"
 msgstr "Social Profile"
 
-#: inc/user-profile.php:61
-msgid "Email Address"
-msgstr "E-Mail Adresse"
+#: index.php:19
+msgid "Previous"
+msgstr "Neuere Beiträge"
+
+#: index.php:20
+msgid "Next"
+msgstr "Ältere Beiträge"
 
 #: search.php:9
-msgid "%d search result for \"%s\""
-msgid_plural "%d search results for \"%s\""
+#, fuzzy
+#| msgid "%d search result for \"%s\""
+#| msgid_plural "%d search results for \"%s\""
+msgid "%1$d search result for \"%2$s\""
+msgid_plural "%1$d search results for \"%2$s\""
 msgstr[0] "%d Suchresultat für \"%s\""
 msgstr[1] "%d Suchresultate für \"%s\""
 
@@ -408,118 +467,236 @@ msgstr ""
 "Nicht gefunden, wonach Sie gesucht haben? Versuchen Sie die Suche anders zu "
 "formulieren:"
 
+#: searchform.php:3
+msgid "Search"
+msgstr "Suche"
+
 #: searchform.php:7
 msgid "Go"
 msgstr "Los"
 
-#: theme-options.php:4 theme-options.php:19
-msgid "Unlimited Dashboard"
+#: sidebar-primary.php:12
+#, fuzzy
+#| msgid "Primary Sidebar"
+msgid "Sidebar"
+msgstr "Primäre Seitenleiste"
+
+#: theme-options.php:4 theme-options.php:20
+#, fuzzy
+#| msgid "Unlimited Dashboard"
+msgid "%s Dashboard"
 msgstr "Unlimited Dashboard"
-
-#: theme-options.php:22
-msgid "Customization"
-msgstr "Unlimitted anpassen"
-
-#: theme-options.php:23
-msgid ""
-"Click the \"Customize\" link in your menu, or use the button below to get "
-"started customizing Unlimited."
-msgstr ""
-"Verwenden Sie den Link \"Anpassen\" des WordPress Menüs oder wählen Sie den "
-"untenstehenden Link, um Unlimitted zu konfigurieren."
-
-#: theme-options.php:26
-msgid "Use Customizer"
-msgstr "Customizer verwenden"
-
-#: theme-options.php:30
-msgid "Support"
-msgstr "Support"
-
-#: theme-options.php:31
-msgid ""
-"You can find the knowledgebase, changelog, support forum, and more in the "
-"Unlimited Support Center."
-msgstr ""
-"Im Unlimited Support Center finden Sie die Knowledge Base, das Changelog, "
-"das Support Forum und vieles mehr"
-
-#: theme-options.php:34
-msgid "Visit Support Center"
-msgstr "Besuchen Sie das Unlimited Support Center"
-
-#: theme-options.php:38
-msgid "Unlimited Pro Plugin"
-msgstr "Unlimited Pro Plugin"
-
-#: theme-options.php:39
-msgid ""
-"Download the Unlimited Pro plugin and unlock custom colors, new layouts, "
-"background images, and more..."
-msgstr ""
-"Laden Sie das Unlimited Pro Plugin herunter und verwenden Sie zusätzliche "
-"Features wie benutzerdefinierte Farben, weitere Layouts, Hintergrundbilder "
-"und vieles mehr"
-
-#: theme-options.php:42
-msgid "See Full Feature List"
-msgstr "Vollständige Featurelist anzeigen"
-
-#: theme-options.php:46
-msgid "WordPress Resources"
-msgstr "WordPress Ressourcen"
-
-#: theme-options.php:47
-msgid ""
-"Save time and money searching for WordPress products by following our "
-"recommendations."
-msgstr ""
-"Sparen Sie Zeit und Geld beim Suchen nach WordPress Produkten und schauen "
-"Sie sich unsere Empfehlungen an"
-
-#: theme-options.php:50
-msgid "View Resources"
-msgstr "Ressourcen anzeigen"
-
-#: theme-options.php:54 theme-options.php:56
-msgid "Leave a Review"
-msgstr "Schreiben Sie einen Review"
-
-#: theme-options.php:55
-msgid "Help others find unlimited by leaving a review on wordpress.org."
-msgstr ""
-"Helfen Sie anderen Unlimited zu finden durch das Schreiben eines Reviews auf "
-"WordPress.org"
-
-#: theme-options.php:59
-msgid "Reset Unlimited Settings"
-msgstr "Unlimitted Konfiguration auf Standardwerte zurücksetzen"
-
-#: theme-options.php:61
-msgid ""
-"<strong>Warning:</strong> Clicking this button will erase the Unlimited "
-"theme's current settings in the <a href='%s'>Customizer</a>."
-msgstr ""
-
-#: theme-options.php:67
-msgid "Reset Customizer Settings"
-msgstr "Customizer Einstellungen zurücksetzen"
 
 #. Description of the plugin/theme
 msgid ""
 "Fast, responsive, beautiful, and accessible. With Unlimited, your content "
 "will reach more people, on more devices, around the world. Unlimited's "
-"simple design puts the focus on your content, and supports it with clean, "
-"reliable code. See the fully setup live demo here: https://www.competethemes."
-"com/unlimited-live-demo/"
+"simple and dark design puts the focus on your content, and supports it with "
+"clean, reliable code. Use this minimalist blogging theme to setup a website "
+"for a magazine, school, or personal journal. As a free WP theme, you can use "
+"Unlimited for as many sites as you want. Preview Unlimited now on desktop, "
+"tablets, and mobile devices with the interactive live demo: https://www."
+"competethemes.com/demos/?theme=unlimited"
 msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Full-width"
 msgstr "Full-Width"
 
-#: functions.php:65
+#: comments.php:20 comments.php:40 comments.php:62 content/post-meta.php:22
+#: content/post-meta.php:24
+#, fuzzy
+#| msgid "% Comments"
+msgctxt "noun: 5 comments"
+msgid "% Comments"
+msgstr "% Kommentare"
+
+#: content/archive-header.php:4
+#, fuzzy
+#| msgid "Posts"
+msgctxt "noun: Site Title Posts"
+msgid "Posts"
+msgstr "Beiträgen"
+
+#: content/post-categories.php:5
+#, fuzzy
+#| msgid "Posted in"
+msgctxt "posted in category"
+msgid "Posted in"
+msgstr "Gepostet in"
+
+#: content/post-categories.php:11
+#, fuzzy
+#| msgid "and"
+msgctxt "category 1, category 2, AND category 3"
+msgid "and"
+msgstr "und"
+
+#: content/post-categories.php:13
+#, fuzzy
+#| msgid "View all posts in %s"
+msgctxt "View all posts in category"
+msgid "View all posts in %s"
+msgstr "Zeige alle Beiträge in %s"
+
+#: content/search-bar.php:6
+#, fuzzy
+#| msgid "Search"
+msgctxt "verb"
+msgid "Search"
+msgstr "Suche"
+
+#: functions.php:107
+#, fuzzy
+#| msgid "Reply"
+msgctxt "verb"
+msgid "Reply"
+msgstr "Antworten"
+
+#: functions.php:112
+#, fuzzy
+#| msgid "Edit"
+msgctxt "verb"
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: functions.php:96
 msgctxt "the commenter said the following:"
 msgid "said:"
 msgstr "gesagt: [ der Komentierende hat folgendes gesagt: ]"
 
+#: functions.php:129
+#, fuzzy
+#| msgid "Name"
+msgctxt "noun"
+msgid "Name"
+msgstr "Name"
+
+#: functions.php:135
+#, fuzzy
+#| msgid "Email"
+msgctxt "noun"
+msgid "Email"
+msgstr "E-Mail Adresse"
+
+#: functions.php:163
+#, fuzzy
+#| msgid "Comment"
+msgctxt "noun"
+msgid "Comment"
+msgstr "Kommentar"
+
+#: functions.php:431 functions.php:432
+#, fuzzy
+#| msgid "email"
+msgctxt "noun"
+msgid "email"
+msgstr "E-Mail"
+
+#: header.php:32 inc/scripts.php:8
+#, fuzzy
+#| msgid "open menu"
+msgctxt "verb: open the menu"
+msgid "open menu"
+msgstr "Öffne Menü"
+
+#: inc/scripts.php:10
+#, fuzzy
+#| msgid "open menu"
+msgctxt "verb: open the menu"
+msgid "open dropdown menu"
+msgstr "Öffne Menü"
+
+#: inc/customizer.php:242
+#, fuzzy
+#| msgid "Blog"
+msgctxt "noun: the blog section"
+msgid "Blog"
+msgstr "Blog"
+
+#: inc/scripts.php:9
+#, fuzzy
+#| msgid "close menu"
+msgctxt "verb: close the menu"
+msgid "close menu"
+msgstr "Menü schliessen"
+
+#: inc/scripts.php:11
+#, fuzzy
+#| msgid "close menu"
+msgctxt "verb: close the menu"
+msgid "close dropdown menu"
+msgstr "Menü schliessen"
+
+#~ msgid "Email Address:"
+#~ msgstr "E-Mail Adresse:"
+
+#~ msgid "View the Unlimited Pro Plugin"
+#~ msgstr "Zeige das Unlimited Pro Plugin"
+
+#~ msgid "Customization"
+#~ msgstr "Unlimitted anpassen"
+
+#~ msgid ""
+#~ "Click the \"Customize\" link in your menu, or use the button below to get "
+#~ "started customizing Unlimited."
+#~ msgstr ""
+#~ "Verwenden Sie den Link \"Anpassen\" des WordPress Menüs oder wählen Sie "
+#~ "den untenstehenden Link, um Unlimitted zu konfigurieren."
+
+#~ msgid "Use Customizer"
+#~ msgstr "Customizer verwenden"
+
+#~ msgid "Support"
+#~ msgstr "Support"
+
+#~ msgid ""
+#~ "You can find the knowledgebase, changelog, support forum, and more in the "
+#~ "Unlimited Support Center."
+#~ msgstr ""
+#~ "Im Unlimited Support Center finden Sie die Knowledge Base, das Changelog, "
+#~ "das Support Forum und vieles mehr"
+
+#~ msgid "Visit Support Center"
+#~ msgstr "Besuchen Sie das Unlimited Support Center"
+
+#~ msgid "Unlimited Pro Plugin"
+#~ msgstr "Unlimited Pro Plugin"
+
+#~ msgid ""
+#~ "Download the Unlimited Pro plugin and unlock custom colors, new layouts, "
+#~ "background images, and more..."
+#~ msgstr ""
+#~ "Laden Sie das Unlimited Pro Plugin herunter und verwenden Sie zusätzliche "
+#~ "Features wie benutzerdefinierte Farben, weitere Layouts, "
+#~ "Hintergrundbilder und vieles mehr"
+
+#~ msgid "See Full Feature List"
+#~ msgstr "Vollständige Featurelist anzeigen"
+
+#~ msgid "WordPress Resources"
+#~ msgstr "WordPress Ressourcen"
+
+#~ msgid ""
+#~ "Save time and money searching for WordPress products by following our "
+#~ "recommendations."
+#~ msgstr ""
+#~ "Sparen Sie Zeit und Geld beim Suchen nach WordPress Produkten und schauen "
+#~ "Sie sich unsere Empfehlungen an"
+
+#~ msgid "View Resources"
+#~ msgstr "Ressourcen anzeigen"
+
+#~ msgid "Leave a Review"
+#~ msgstr "Schreiben Sie einen Review"
+
+#~ msgid "Help others find unlimited by leaving a review on wordpress.org."
+#~ msgstr ""
+#~ "Helfen Sie anderen Unlimited zu finden durch das Schreiben eines Reviews "
+#~ "auf WordPress.org"
+
+#~ msgid "Reset Unlimited Settings"
+#~ msgstr "Unlimitted Konfiguration auf Standardwerte zurücksetzen"
+
+#~ msgid "Reset Customizer Settings"
+#~ msgstr "Customizer Einstellungen zurücksetzen"
