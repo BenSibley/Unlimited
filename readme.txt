@@ -3,7 +3,7 @@ Contributors: bensibley
 Tags: two-columns, left-sidebar, right-sidebar, accessibility-ready, custom-logo, custom-menu, editor-style, featured-images, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, news
 Requires at least: 4.5
 Tested up to: 4.9
-Stable tag: 1.27
+Stable tag: 1.35
 
 Unlimited is fast, responsive, beautiful, and accessible.
 
