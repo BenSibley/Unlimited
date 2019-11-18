@@ -58,6 +58,8 @@ function unlimited_add_social_profile_settings( $user ) {
 				$label = esc_html__('Stack Overflow', 'unlimited');
 			} elseif ( $key == 'ok-ru' ) {
 				$label = esc_html__('OK.ru', 'unlimited');
+			} elseif ( $key == 'artstation' ) {
+				$label = esc_html__('ArtStation', 'unlimited');
 			}
 
 			?>

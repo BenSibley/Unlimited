@@ -338,6 +338,7 @@ if ( ! function_exists( 'unlimited_social_array' ) ) {
 			'phone'         => 'unlimited_phone_profile',
 			'email_form'    => 'unlimited_email_form',
 			'amazon'        => 'unlimited_amazon_profile',
+			'artstation'    => 'unlimited_artstation_profile',
 			'bandcamp'      => 'unlimited_bandcamp_profile',
 			'behance'       => 'unlimited_behance_profile',
 			'bitbucket'     => 'unlimited_bitbucket_profile',

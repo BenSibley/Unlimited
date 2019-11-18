@@ -148,6 +148,8 @@ function unlimited_add_customizer_content( $wp_customize ) {
 				$label = __('Stack Overflow', 'unlimited');
 			} elseif ( $social_site == 'ok-ru' ) {
 				$label = __('OK.ru', 'unlimited');
+			} elseif ( $social_site == 'artstation' ) {
+				$label = __('ArtStation', 'unlimited');
 			}
 
 			if ( $social_site == 'skype' ) {
