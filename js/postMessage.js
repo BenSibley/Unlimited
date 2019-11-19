@@ -49,7 +49,7 @@
         } );
     } );
 
-    var socialSites = ['twitter', 'facebook', 'google-plus', 'pinterest', 'linkedin', 'youtube', 'vimeo', 'tumblr', 'instagram', 'flickr', 'dribbble', 'rss', 'reddit', 'soundcloud', 'spotify', 'vine', 'yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'github', 'hacker-news', 'snapchat', 'bandcamp', 'etsy', 'quora', 'ravelry', 'yelp', 'amazon', 'google-wallet', 'twitch', 'meetup', 'telegram', 'podcast', 'foursquare', 'slack', 'slideshare', 'skype', 'whatsapp', 'qq', 'wechat', 'xing', '500px', 'steam', 'vk', 'paypal', 'weibo', 'tencent-weibo', 'email', 'email_form', 'bitbucket', 'ok-ru', 'stack-overflow', 'mixcloud', 'phone', 'discord', 'medium', 'patreon', 'goodreads' ];
+    var socialSites = ['twitter', 'facebook', 'google-plus', 'pinterest', 'linkedin', 'youtube', 'vimeo', 'tumblr', 'instagram', 'flickr', 'dribbble', 'rss', 'reddit', 'soundcloud', 'spotify', 'vine', 'yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'github', 'hacker-news', 'snapchat', 'bandcamp', 'etsy', 'quora', 'ravelry', 'yelp', 'amazon', 'google-wallet', 'twitch', 'meetup', 'telegram', 'podcast', 'foursquare', 'slack', 'slideshare', 'skype', 'whatsapp', 'qq', 'wechat', 'xing', '500px', 'steam', 'vk', 'paypal', 'weibo', 'tencent-weibo', 'email', 'email_form', 'bitbucket', 'ok-ru', 'stack-overflow', 'mixcloud', 'phone', 'discord', 'medium', 'patreon', 'goodreads', 'pocket', 'artstation' ];
 
     // for each social site setting
     for ( var site in socialSites ) {
@@ -101,6 +101,8 @@
                             var siteClass = 'fab fa-odnoklassniki';
                         } else if ( siteName == 'wechat' ) {
                             var siteClass = 'fab fa-weixin';
+                        } else if ( siteName == 'pocket' ) {
+                            var siteClass = 'fab fa-get-pocket';
                         } else if ( siteName == 'phone' ) {
                             var siteClass = 'fas fa-phone';
                         } else {
