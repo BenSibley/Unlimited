@@ -150,7 +150,7 @@ th {
     @extend %thirteen-pixels;
     line-height: 1.5;
     margin: 3px 0 0 0;
-    color: $gray-67;
+    color: $gray-40;
     text-align: center;
   }
 }
@@ -162,7 +162,7 @@ th {
   @extend %thirteen-pixels;
   line-height: 1.5;
   margin: 3px 0 0 0;
-  color: $gray-67;
+  color: $gray-40;
 }
 .alignleft {
   float: left;
@@ -195,7 +195,7 @@ img {
 .wp-caption-dd {
   margin: 3px 0 0 0;
   @extend %thirteen-pixels;
-  color: $gray-67;
+  color: $gray-40;
 }
 
 .wp-block {

@@ -203,7 +203,7 @@ th {
 .size-thumbnail figcaption {
   line-height: 1.5;
   margin: 3px 0 0 0;
-  color: #ABABAB;
+  color: #666666;
   text-align: center;
 }
 
@@ -215,7 +215,7 @@ th {
 .wp-block-image figcaption {
   line-height: 1.5;
   margin: 3px 0 0 0;
-  color: #ABABAB;
+  color: #666666;
 }
 
 .alignleft {
@@ -251,7 +251,7 @@ img {
 .wp-caption-text,
 .wp-caption-dd {
   margin: 3px 0 0 0;
-  color: #ABABAB;
+  color: #666666;
 }
 
 .wp-block {
