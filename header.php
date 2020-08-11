@@ -23,7 +23,7 @@
 				?>
 				<div id="title-container" class="title-container">
 					<?php get_template_part( 'logo' ); ?>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+					<p class="site-description tagline"><?php bloginfo( 'description' ); ?></p>
 				</div>
 			</div>
 			<?php do_action( 'primary_menu_before' ); ?>
