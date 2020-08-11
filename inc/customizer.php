@@ -515,7 +515,7 @@ function ct_unlimited_sanitize_phone( $input ) {
 }
 
 function ct_unlimited_customize_preview_js() {
-	if ( !function_exists( 'ct_unlimited_pro_init' ) ) {
+	if ( !function_exists( 'ct_unlimited_pro_init' ) && !(isset($_GET['mailoptin_optin_campaign_id']) || isset($_GET['mailoptin_email_campaign_id'])) ) {
 		$url = 'https://www.competethemes.com/unlimited-pro/?utm_source=wp-dashboard&utm_medium=Customizer&utm_campaign=Unlimited%20Pro%20-%20Customizer';
 		$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"". $url ."\" target=\"_blank\">Customize Colors with Unlimited Pro <span>&rarr;</span></a></div>')</script>";
 		echo apply_filters('ct_unlimited_customizer_ad', $content);
