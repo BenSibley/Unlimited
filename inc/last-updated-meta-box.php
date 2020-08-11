@@ -25,7 +25,7 @@ function ct_unlimited_last_updated_callback( $post ) {
 
   ?>
 	<p>
-		<select name="unlimited-last-updated" id="unlimited-last-updated" class="widefat">
+		<select name="unlimited-last-updated" id="unlimited-last-updated" style="box-sizing: border-box; width: 100%;">
 			<option value="default"><?php esc_html_e( 'Use Customizer setting', 'unlimited' ); ?></option>
 			<option value="yes" <?php if ( $display == 'yes' ) {
 				echo 'selected';
