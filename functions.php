@@ -352,7 +352,6 @@ if ( ! function_exists( 'unlimited_social_array' ) ) {
 			'foursquare'    => 'unlimited_foursquare_profile',
 			'github'        => 'unlimited_github_profile',
 			'goodreads'			=> 'unlimited_goodreads_profile',
-			'google-plus'   => 'unlimited_google_plus_profile',
 			'google-wallet' => 'unlimited_google-wallet_profile',
 			'hacker-news'   => 'unlimited_hacker-news_profile',
 			'medium'        => 'unlimited_medium_profile',

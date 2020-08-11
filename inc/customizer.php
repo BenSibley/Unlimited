@@ -111,9 +111,7 @@ function unlimited_add_customizer_content( $wp_customize ) {
 
 			$label = ucfirst( $social_site );
 
-			if ( $social_site == 'google-plus' ) {
-				$label = __('Google Plus', 'unlimited');
-			} elseif ( $social_site == 'rss' ) {
+			if ( $social_site == 'rss' ) {
 				$label = __('RSS', 'unlimited');
 			} elseif ( $social_site == 'soundcloud' ) {
 				$label = __('SoundCloud', 'unlimited');

@@ -22,9 +22,7 @@ function unlimited_add_social_profile_settings( $user ) {
 
 			$label = ucfirst( $key );
 
-			if ( $key == 'google-plus' ) {
-				$label = esc_html__('Google Plus', 'unlimited');
-			} elseif ( $key == 'rss' ) {
+			if ( $key == 'rss' ) {
 				$label = esc_html__('RSS', 'unlimited');
 			} elseif ( $key == 'soundcloud' ) {
 				$label = esc_html__('SoundCloud', 'unlimited');
