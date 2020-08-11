@@ -26,7 +26,6 @@
 .customize-control-description {
   margin-top: 12px;
 }
-
 /* Multiple select styles (for comments dropdown */
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
@@ -169,7 +168,7 @@
 }
 
 .ms-drop ul > li .disabled {
-  opacity: .35;
+  opacity: 0.35;
   filter: Alpha(Opacity=35);
 }
 
@@ -200,7 +199,7 @@
   font-weight: bold;
 }
 
-.ms-drop input[type="checkbox"] {
+.ms-drop input[type=checkbox] {
   vertical-align: middle;
 }
 
