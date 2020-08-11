@@ -2270,6 +2270,102 @@ li.bypostauthor {
     padding: 0 9.375%;
   }
 }
+.bbpress .post-padding-container {
+  padding: 0 1.5em;
+}
+
+#subscription-toggle {
+  font-weight: 400;
+  margin-left: 6px;
+  text-decoration: underline;
+}
+
+span.bbp-admin-links,
+span.bbp-admin-links a,
+.bbp-reply-header a.bbp-reply-permalink {
+  color: #666666;
+}
+
+#bbpress-forums p.bbp-topic-meta img.avatar,
+#bbpress-forums ul.bbp-reply-revision-log img.avatar,
+#bbpress-forums ul.bbp-topic-revision-log img.avatar,
+#bbpress-forums div.bbp-template-notice img.avatar,
+#bbpress-forums .widget_display_topics img.avatar,
+#bbpress-forums .widget_display_replies img.avatar {
+  margin: 0 0 -3px;
+  display: inline-block;
+}
+
+.bbp-form textarea {
+  max-width: none;
+}
+
+#bbpress-forums, #bbpress-forums ul.bbp-forums,
+#bbpress-forums ul.bbp-lead-topic,
+#bbpress-forums ul.bbp-replies,
+#bbpress-forums ul.bbp-search-results,
+#bbpress-forums ul.bbp-topics {
+  font-size: 16px;
+}
+
+#bbpress-forums p.bbp-topic-meta img.avatar,
+#bbpress-forums ul.bbp-reply-revision-log img.avatar,
+#bbpress-forums ul.bbp-topic-revision-log img.avatar,
+#bbpress-forums div.bbp-template-notice img.avatar,
+#bbpress-forums .widget_display_topics img.avatar,
+#bbpress-forums .widget_display_replies img.avatar {
+  border-radius: 50%;
+  border: none;
+  margin-right: 4px;
+  vertical-align: initial;
+}
+
+#bbpress-forums div.bbp-reply-author img.avatar,
+#bbpress-forums #bbp-single-user-details #bbp-user-avatar img.avatar {
+  border-radius: 50%;
+}
+
+.bbp-search-form {
+  margin-bottom: 12px;
+}
+
+.bbp-search-form div {
+  display: -webkit-box;
+  display: flex;
+}
+
+#bbp_reply_submit,
+#bbp_topic_submit {
+  font-family: "Open Sans", sans-serif;
+  padding: 12px 18px;
+  color: white;
+  background: #3a3a3a;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background 0.1s ease-in-out;
+          transition: background 0.1s ease-in-out;
+}
+#bbp_reply_submit:hover,
+#bbp_topic_submit:hover {
+  cursor: pointer;
+}
+#bbp_reply_submit:hover, #bbp_reply_submit:active, #bbp_reply_submit:focus,
+#bbp_topic_submit:hover,
+#bbp_topic_submit:active,
+#bbp_topic_submit:focus {
+  background: #666666;
+}
+
+#bbpress-forums .bbp-forums-list {
+  border-left: none;
+}
+
+#bbpress-forums #subscription-toggle {
+  text-decoration: none;
+  margin-left: 0;
+}
+
 /* Other stuff */
 .post-password-form input[type=password] {
   display: block;

@@ -15,9 +15,6 @@ get_template_part( 'content/archive-header' ); ?>
 
 <?php
 
-the_posts_pagination( array(
-	'prev_text' => esc_html__( 'Previous', 'unlimited' ),
-	'next_text' => esc_html__( 'Next', 'unlimited' )
-) );
+ct_unlimited_pagination();
 
 get_footer();
