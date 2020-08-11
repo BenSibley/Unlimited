@@ -12,6 +12,10 @@
 	<?php do_action( 'body_before' ); ?>
 	<a class="skip-content" id="skip-content" href="#main"><?php esc_html_e( 'Skip to content', 'unlimited' ); ?></a>
 	<div id="overflow-container" class="overflow-container">
+		<?php
+		// Elementor `header` location
+		if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) :
+		?>
 		<header class="site-header" id="site-header" role="banner">
 			<?php do_action( 'header_before' ); ?>
 			<div id="header-inner" class="header-inner">
@@ -34,6 +38,7 @@
 			</button>
 			<?php do_action( 'header_after' ); ?>
 		</header>
+		<?php endif; ?>
 		<?php do_action( 'before_main' ); ?>
 		<div class="max-width">
 			<?php if ( function_exists('yoast_breadcrumb') ) {

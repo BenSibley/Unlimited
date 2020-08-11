@@ -5,7 +5,10 @@
 <?php get_sidebar( 'primary' ); ?>
 
 </div><!-- .max-width -->
-
+<?php 
+// Elementor `footer` location
+if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'footer' ) ) :
+?>
 <footer id="site-footer" class="site-footer" role="contentinfo">
 	<?php do_action( 'footer_before' ); ?>
 	<div class="footer-content">
@@ -26,7 +29,7 @@
 	</div>
 	<?php do_action( 'footer_after' ); ?>
 </footer>
-
+<?php endif; ?>
 </div><!-- .overflow-container -->
 
 <?php do_action( 'body_after' ); ?>
