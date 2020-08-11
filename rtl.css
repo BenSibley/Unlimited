@@ -219,6 +219,10 @@ code {
   color: #3a3a3a;
 }
 
+pre code {
+  padding: 0;
+}
+
 blockquote {
   margin: 1.5em;
   padding-right: 1.5em;
