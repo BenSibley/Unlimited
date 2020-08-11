@@ -144,7 +144,7 @@ module.exports = function(grunt) {
                 colors: true
             }
         },
-        excludeFiles: '--exclude "*.gitignore" --exclude ".sass-cache/" --exclude "*.DS_Store" --exclude ".git/" --exclude ".idea/" --exclude "gruntfile.js" --exclude "node_modules/" --exclude "package.json" --exclude "sass/"',
+        excludeFiles: '--exclude "*.gitignore" --exclude ".sass-cache/" --exclude "*.DS_Store" --exclude ".git/" --exclude ".idea/" --exclude "gruntfile.js" --exclude "node_modules/" --exclude "package.json" --exclude "sass/" --exclude "style.css.map" --exclude "styles/admin.css.map" --exclude "styles/custom-editor-style.css.map" --exclude "styles/customizer.css.map"',
         shell: {
             zip: {
                 command: [
