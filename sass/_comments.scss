@@ -79,6 +79,13 @@ li.bypostauthor {
 }
 .comment-respond {
   margin-top: $baseline-height;
+
+  .comment-form-cookies-consent {
+
+    label {
+      display: inline-block;
+    }
+  } 
 }
 .comment-notes {
   @extend %thirteen-pixels;
