@@ -13,8 +13,9 @@ function unlimited_load_scripts_styles() {
 
 	// Google Fonts (required to register outside scripts first)
 	$font_args = array(
-		'family' => urlencode( 'Open Sans:600,400,300,300i' ),
-		'subset' => urlencode( 'latin,latin-ext' )
+		'family'  => urlencode( 'Open Sans:600,400,300,300i' ),
+		'subset'  => urlencode( 'latin,latin-ext' ),
+		'display' => 'swap'
 	);
 	$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
 
