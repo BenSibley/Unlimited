@@ -240,6 +240,11 @@ img {
   @extend %thirteen-pixels;
   color: $gray-40;
 }
+.wp-block-button a:hover,
+.wp-block-button a:active,
+.wp-block-button a:focus {
+  text-decoration: none;
+}
 
 /* Form styles */
 

@@ -369,6 +369,12 @@ img {
   color: #666666;
 }
 
+.wp-block-button a:hover,
+.wp-block-button a:active,
+.wp-block-button a:focus {
+  text-decoration: none;
+}
+
 /* Form styles */
 input[type=text],
 input[type=email],
