@@ -169,10 +169,6 @@ th {
   line-height: 0;
   max-width: 100%;
 
-  // in case there is a containing div given the class
-  img {
-    // max-width: 100%;
-  }
   figcaption {
     @extend %thirteen-pixels;
     line-height: 1.5;
