@@ -10,6 +10,12 @@
 
 <body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
 	<?php do_action( 'body_before' ); ?>
+	<?php 
+	if ( function_exists( 'wp_body_open' ) ) {
+				wp_body_open();
+		} else {
+				do_action( 'wp_body_open' );
+	} ?>
 	<a class="skip-content" id="skip-content" href="#main"><?php esc_html_e( 'Skip to content', 'unlimited' ); ?></a>
 	<div id="overflow-container" class="overflow-container">
 		<?php
