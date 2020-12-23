@@ -113,6 +113,8 @@ function unlimited_add_customizer_content( $wp_customize ) {
 
 			if ( $social_site == 'rss' ) {
 				$label = __('RSS', 'unlimited');
+			} elseif ( $social_site == 'researchgate' ) {
+				$label = __('ResearchGate', 'unlimited');
 			} elseif ( $social_site == 'soundcloud' ) {
 				$label = __('SoundCloud', 'unlimited');
 			} elseif ( $social_site == 'slideshare' ) {

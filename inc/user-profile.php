@@ -24,6 +24,8 @@ function unlimited_add_social_profile_settings( $user ) {
 
 			if ( $key == 'rss' ) {
 				$label = esc_html__('RSS', 'unlimited');
+			} elseif ( $key == 'researchgate' ) {
+				$label = esc_html__('ResearchGate', 'unlimited');
 			} elseif ( $key == 'soundcloud' ) {
 				$label = esc_html__('SoundCloud', 'unlimited');
 			} elseif ( $key == 'slideshare' ) {
