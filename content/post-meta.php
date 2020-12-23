@@ -1,7 +1,7 @@
 <div class="post-meta">
 	<div class="date-meta">
 		<a href="<?php echo esc_url( get_month_link( get_the_date( 'Y' ), get_the_date( 'n' ) ) ); ?>"
-		   title="<?php echo esc_html__( 'Posts from', 'unlimited' ); ?> <?php echo get_the_date( 'F' ); ?>">
+		   title="<?php echo esc_attr__( 'Posts from', 'unlimited' ); ?> <?php echo get_the_date( 'F' ); ?>">
 			<i class="fas fa-calendar" aria-hidden="true"></i>
 			<span><?php echo date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'c' ) ) ); ?></span>
 		</a>
