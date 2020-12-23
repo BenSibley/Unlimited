@@ -8,7 +8,7 @@
 	</div>
 	<div class="author-meta">
 		<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"
-		   title="<?php echo esc_html__( 'Posts by', 'unlimited' ); ?> <?php the_author(); ?>">
+		   title="<?php echo esc_attr__( 'Posts by', 'unlimited' ); ?> <?php the_author(); ?>">
 			<i class="fas fa-user" aria-hidden="true"></i>
 			<span><?php the_author(); ?></span>
 		</a>
