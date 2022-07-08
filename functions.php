@@ -9,6 +9,44 @@ require_once(trailingslashit(get_template_directory()) . 'inc/last-updated-meta-
 require_once(trailingslashit(get_template_directory()) . 'inc/review.php');
 require_once(trailingslashit(get_template_directory()) . 'inc/scripts.php');
 require_once(trailingslashit(get_template_directory()) . 'inc/user-profile.php');
+// TGMP
+require_once(trailingslashit(get_template_directory()) . 'tgm/class-tgm-plugin-activation.php');
+
+function ct_unlimited_register_required_plugins()
+{
+    $plugins = array(
+
+        array(
+            'name'      => 'Independent Analytics',
+            'slug'      => 'independent-analytics',
+            'required'  => false,
+        ),
+    );
+    
+    $config = array(
+        'id'           => 'ct-unlimited',
+        'default_path' => '',
+        'menu'         => 'tgmpa-install-plugins',
+        'has_notices'  => true,
+        'dismissable'  => true,
+        'dismiss_msg'  => '',
+        'is_automatic' => false,
+        'message'      => '',
+        'strings'      => array(
+            'page_title'                      => __('Install Recommended Plugins', 'unlimited'),
+            'menu_title'                      => __('Recommended Plugins', 'unlimited'),
+            'notice_can_install_recommended'     => _n_noop(
+                'The makers of the Unlimited theme now recommend installing Independent Analytics, their new plugin for visitor tracking: %1$s.',
+                'The makers of the Unlimited theme now recommend installing Independent Analytics, their new plugin for visitor tracking: %1$s.',
+                'unlimited'
+            ),
+        )
+    );
+
+    tgmpa($plugins, $config);
+}
+add_action('tgmpa_register', 'ct_unlimited_register_required_plugins');
+
 
 //----------------------------------------------------------------------------------
 //	Include review request
