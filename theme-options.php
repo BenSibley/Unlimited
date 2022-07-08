@@ -1,31 +1,31 @@
 <?php
 
-function ct_unlimited_register_theme_page() {
-	add_theme_page( 
-		sprintf( esc_html__( '%s Dashboard', 'unlimited' ), wp_get_theme() ), 
-		sprintf( esc_html__( '%s Dashboard', 'unlimited' ), wp_get_theme() ), 
-		'edit_theme_options', 
-		'unlimited-options', 
-		'ct_unlimited_options_content'
-	);
+function ct_unlimited_register_theme_page()
+{
+    add_theme_page(
+        sprintf(esc_html__('%s Dashboard', 'unlimited'), wp_get_theme()),
+        sprintf(esc_html__('%s Dashboard', 'unlimited'), wp_get_theme()),
+        'edit_theme_options',
+        'unlimited-options',
+        'ct_unlimited_options_content'
+    );
 }
-add_action( 'admin_menu', 'ct_unlimited_register_theme_page' );
+add_action('admin_menu', 'ct_unlimited_register_theme_page');
 
-function ct_unlimited_options_content() {
-
-	$pro_url = 'https://www.competethemes.com/unlimited-pro/?utm_source=wp-dashboard&utm_medium=Dashboard&utm_campaign=Unlimited%20Pro%20-%20Dashboard';
-	?>
+function ct_unlimited_options_content()
+{
+    $pro_url = 'https://www.competethemes.com/unlimited-pro/?utm_source=wp-dashboard&utm_medium=Dashboard&utm_campaign=Unlimited%20Pro%20-%20Dashboard'; ?>
 	<div id="unlimited-dashboard-wrap" class="wrap unlimited-dashboard-wrap">
-		<h2><?php printf( esc_html__( '%s Dashboard', 'unlimited' ), wp_get_theme() ); ?></h2>
-		<?php do_action( 'theme_options_before' ); ?>
+		<h2><?php printf(esc_html__('%s Dashboard', 'unlimited'), wp_get_theme()); ?></h2>
+		<?php do_action('theme_options_before'); ?>
 		<div class="main">
-			<?php if ( function_exists( 'ct_unlimited_pro_init' ) ) : ?>
+			<?php if (function_exists('ct_unlimited_pro_init')) : ?>
 			<div class="thanks-upgrading" style="background-image: url(<?php echo trailingslashit(get_template_directory_uri()) . 'assets/images/bg-texture.png'; ?>)">
 				<h3>Thanks for upgrading!</h3>
 				<p>You can find the new features in the Customizer</p>
 			</div>
 			<?php endif; ?>
-			<?php if ( !function_exists( 'ct_unlimited_pro_init' ) ) : ?>
+			<?php if (!function_exists('ct_unlimited_pro_init')) : ?>
 			<div class="getting-started">
 				<h3>Get Started with Unlimited</h3>
 				<p>Follow this step-by-step guide to customize your website with Unlimited:</p>
@@ -208,12 +208,13 @@ function ct_unlimited_options_content() {
 				<form method="post">
 					<input type="hidden" name="unlimited_reset_customizer" value="unlimited_reset_customizer_settings"/>
 					<p>
-						<?php wp_nonce_field( 'unlimited_reset_customizer_nonce', 'unlimited_reset_customizer_nonce' ); ?>
-						<?php submit_button( 'Reset Customizer Settings', 'delete', 'delete', false ); ?>
+						<?php wp_nonce_field('unlimited_reset_customizer_nonce', 'unlimited_reset_customizer_nonce'); ?>
+						<?php submit_button('Reset Customizer Settings', 'delete', 'delete', false); ?>
 					</p>
 				</form>
 			</div>
 		</div>
-		<?php do_action( 'theme_options_after' ); ?>
+		<?php do_action('theme_options_after'); ?>
 	</div>
-<?php }
+<?php
+}
