@@ -282,7 +282,7 @@ jQuery(document).ready(function($){
             $('body,html').animate({
                 scrollTop : 0                       // Scroll to top of body
             }, 600);
-            $(this).blur();
+            $('#skip-content').focus();
         });
     }
 });
