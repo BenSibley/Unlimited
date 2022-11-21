@@ -22,7 +22,7 @@ function ct_unlimited_register_required_plugins()
             'required'  => false,
         ),
     );
-    
+
     $config = array(
         'id'           => 'ct-unlimited',
         'default_path' => '',
@@ -175,7 +175,7 @@ if (! function_exists('unlimited_customize_comments')) {
 				<?php
                 if ($comment->comment_approved == '0') :
                     echo "<em>" . esc_html__('Your comment is awaiting moderation.', 'unlimited') . "</em><br />";
-        endif;
+                endif;
         comment_text(); ?>
 				<div class="comment-date"><?php comment_date(); ?></div>
 				<?php comment_reply_link(array_merge($args, array(
@@ -226,14 +226,13 @@ add_filter('comment_form_default_fields', 'unlimited_update_fields');
 if (! function_exists('unlimited_update_comment_field')) {
     function unlimited_update_comment_field($comment_field)
     {
-
         // don't filter the WooCommerce review form
         if (function_exists('is_woocommerce')) {
             if (is_woocommerce()) {
                 return $comment_field;
             }
         }
-        
+
         $comment_field =
             '<p class="comment-form-comment">
 	            <label for="comment">' . esc_html_x("Comment", "noun", "unlimited") . '</label>
@@ -403,6 +402,7 @@ if (! function_exists('unlimited_social_array')) {
             'goodreads'			=> 'unlimited_goodreads_profile',
             'google-wallet' => 'unlimited_google-wallet_profile',
             'hacker-news'   => 'unlimited_hacker-news_profile',
+            'mastodon'      => 'unlimited_mastodon_profile',
             'medium'        => 'unlimited_medium_profile',
             'meetup'        => 'unlimited_meetup_profile',
             'mixcloud'      => 'unlimited_mixcloud_profile',
@@ -484,7 +484,6 @@ if (! function_exists('unlimited_social_icons_output')) {
             echo "<ul class='social-media-icons'>";
 
             foreach ($active_sites as $key => $active_site) {
-
                 // get the URL
                 if ($source == 'author') {
                     $url = get_the_author_meta($key);
@@ -542,13 +541,17 @@ if (! function_exists('unlimited_social_icons_output')) {
 				<?php } else { ?>
 					<li>
 						<a class="<?php echo esc_attr($active_site); ?>" target="_blank"
-						   href="<?php echo esc_url($url); ?>">
+						   href="<?php echo esc_url($url); ?>"
+                           <?php if ($active_site == 'mastodon') {
+                               echo 'rel="me"';
+                           } ?>
+                           >
 							<i class="<?php echo esc_attr($class); ?>" title="<?php echo esc_attr($active_site); ?>"></i>
 							<span class="screen-reader-text"><?php echo esc_html($active_site); ?></span>
 						</a>
 					</li>
 					<?php
-                }
+				}
             }
             echo "</ul>";
         }
@@ -645,7 +648,6 @@ add_action('archive_post_before', 'unlimited_sticky_post_marker');
 if (! function_exists('unlimited_reset_customizer_options')) {
     function unlimited_reset_customizer_options()
     {
-
         // validate name and value
         if (empty($_POST['unlimited_reset_customizer']) || 'unlimited_reset_customizer_settings' !== $_POST['unlimited_reset_customizer']) {
             return;
@@ -738,7 +740,6 @@ if (! function_exists('unlimited_infinite_scroll_render')) {
 if (! function_exists('unlimited_get_content_template')) {
     function unlimited_get_content_template()
     {
-
         // Get bbpress.php for all bbpress pages
         if (function_exists('is_bbpress')) {
             if (is_bbpress()) {
@@ -801,7 +802,7 @@ add_filter('get_the_archive_description', 'ct_unlimited_modify_archive_descripti
 function ct_unlimited_scroll_to_top_arrow()
 {
     $setting = get_theme_mod('scroll_to_top');
-    
+
     if ($setting == 'yes') {
         echo '<button id="scroll-to-top" class="scroll-to-top"><span class="screen-reader-text">'. __('Scroll to the top', 'unlimited') .'</span><i class="fas fa-arrow-up"></i></button>';
     }
@@ -821,7 +822,7 @@ function ct_unlimited_output_last_updated_date()
         if (
             ($updated_customizer == 'yes' && ($updated_post != 'no'))
             || $updated_post == 'yes'
-            ) {
+        ) {
             echo '<p class="last-updated">'. __("Last updated on", "unlimited") . ' ' . get_the_modified_date() . ' </p>';
         }
     }
