@@ -62,17 +62,17 @@ new WP_Review_Me(
 );
 
 
-if (! function_exists(('ct_unlimited_set_content_width'))) {
+if (!function_exists(('ct_unlimited_set_content_width'))) {
     function ct_unlimited_set_content_width()
     {
-        if (! isset($content_width)) {
+        if (!isset($content_width)) {
             $content_width = 655;
         }
     }
 }
 add_action('after_setup_theme', 'ct_unlimited_set_content_width', 0);
 
-if (! function_exists('unlimited_theme_setup')) {
+if (!function_exists('unlimited_theme_setup')) {
     function unlimited_theme_setup()
     {
         add_theme_support('post-thumbnails');
@@ -141,7 +141,7 @@ if (! function_exists('unlimited_theme_setup')) {
 }
 add_action('after_setup_theme', 'unlimited_theme_setup', 10);
 
-if (! function_exists('unlimited_register_widget_areas')) {
+if (!function_exists('unlimited_register_widget_areas')) {
     function unlimited_register_widget_areas()
     {
         register_sidebar(array(
@@ -157,7 +157,7 @@ if (! function_exists('unlimited_register_widget_areas')) {
 }
 add_action('widgets_init', 'unlimited_register_widget_areas');
 
-if (! function_exists('unlimited_customize_comments')) {
+if (!function_exists('unlimited_customize_comments')) {
     function unlimited_customize_comments($comment, $args, $depth)
     {
         $GLOBALS['comment'] = $comment;
@@ -191,7 +191,7 @@ if (! function_exists('unlimited_customize_comments')) {
     }
 }
 
-if (! function_exists('unlimited_update_fields')) {
+if (!function_exists('unlimited_update_fields')) {
     function unlimited_update_fields($fields)
     {
         $commenter = wp_get_current_commenter();
@@ -213,7 +213,7 @@ if (! function_exists('unlimited_update_fields')) {
 	        </p>';
         $fields['url'] =
             '<p class="comment-form-url">
-	            <label for="url">' . esc_html__("Website", "unlimited")  . '</label>
+	            <label for="url">' . esc_html__("Website", "unlimited") . '</label>
 	            <input placeholder="' . esc_attr__("http://example.com", "unlimited") . '" id="url" name="url" type="url" value="' . esc_attr($commenter['comment_author_url']) .
             '" size="30" />
 	            </p>';
@@ -223,7 +223,7 @@ if (! function_exists('unlimited_update_fields')) {
 }
 add_filter('comment_form_default_fields', 'unlimited_update_fields');
 
-if (! function_exists('unlimited_update_comment_field')) {
+if (!function_exists('unlimited_update_comment_field')) {
     function unlimited_update_comment_field($comment_field)
     {
         // don't filter the WooCommerce review form
@@ -244,7 +244,7 @@ if (! function_exists('unlimited_update_comment_field')) {
 }
 add_filter('comment_form_field_comment', 'unlimited_update_comment_field', 7);
 
-if (! function_exists('unlimited_remove_comments_notes_after')) {
+if (!function_exists('unlimited_remove_comments_notes_after')) {
     function unlimited_remove_comments_notes_after($defaults)
     {
         $defaults['comment_notes_after'] = '';
@@ -253,7 +253,7 @@ if (! function_exists('unlimited_remove_comments_notes_after')) {
 }
 add_action('comment_form_defaults', 'unlimited_remove_comments_notes_after');
 
-if (! function_exists('ct_unlimited_filter_read_more_link')) {
+if (!function_exists('ct_unlimited_filter_read_more_link')) {
     function ct_unlimited_filter_read_more_link($custom = false)
     {
         if (is_feed()) {
@@ -283,7 +283,7 @@ add_filter('the_content_more_link', 'ct_unlimited_filter_read_more_link'); // mo
 add_filter('excerpt_more', 'ct_unlimited_filter_read_more_link', 10); // automatic excerpts
 
 // handle manual excerpts
-if (! function_exists('ct_unlimited_filter_manual_excerpts')) {
+if (!function_exists('ct_unlimited_filter_manual_excerpts')) {
     function ct_unlimited_filter_manual_excerpts($excerpt)
     {
         $excerpt_more = '';
@@ -295,7 +295,7 @@ if (! function_exists('ct_unlimited_filter_manual_excerpts')) {
 }
 add_filter('get_the_excerpt', 'ct_unlimited_filter_manual_excerpts');
 
-if (! function_exists('ct_unlimited_excerpt')) {
+if (!function_exists('ct_unlimited_excerpt')) {
     function ct_unlimited_excerpt()
     {
         global $post;
@@ -310,12 +310,12 @@ if (! function_exists('ct_unlimited_excerpt')) {
     }
 }
 
-if (! function_exists('unlimited_custom_excerpt_length')) {
+if (!function_exists('unlimited_custom_excerpt_length')) {
     function unlimited_custom_excerpt_length($length)
     {
         $new_excerpt_length = get_theme_mod('excerpt_length');
 
-        if (! empty($new_excerpt_length) && $new_excerpt_length != 25) {
+        if (!empty($new_excerpt_length) && $new_excerpt_length != 25) {
             return $new_excerpt_length;
         } elseif ($new_excerpt_length === 0) {
             return 0;
@@ -326,7 +326,7 @@ if (! function_exists('unlimited_custom_excerpt_length')) {
 }
 add_filter('excerpt_length', 'unlimited_custom_excerpt_length', 99);
 
-if (! function_exists('unlimited_remove_more_link_scroll')) {
+if (!function_exists('unlimited_remove_more_link_scroll')) {
     function unlimited_remove_more_link_scroll($link)
     {
         $link = preg_replace('|#more-[0-9]+|', '', $link);
@@ -348,7 +348,7 @@ function ct_unlimited_update_yoast_og_description($ogdesc)
 }
 add_filter('wpseo_opengraph_desc', 'ct_unlimited_update_yoast_og_description');
 
-if (! function_exists('unlimited_featured_image')) {
+if (!function_exists('unlimited_featured_image')) {
     function unlimited_featured_image()
     {
         global $post;
@@ -370,7 +370,7 @@ if (! function_exists('unlimited_featured_image')) {
     }
 }
 
-if (! function_exists('unlimited_social_array')) {
+if (!function_exists('unlimited_social_array')) {
     function unlimited_social_array()
     {
         $social_sites = array(
@@ -429,6 +429,7 @@ if (! function_exists('unlimited_social_array')) {
             'stumbleupon'   => 'unlimited_stumbleupon_profile',
             'telegram'      => 'unlimited_telegram_profile',
             'tencent-weibo' => 'unlimited_tencent_weibo_profile',
+            'threads'       => 'unlimited_threads_profile',
             'tumblr'        => 'unlimited_tumblr_profile',
             'twitch'        => 'unlimited_twitch_profile',
             'untappd'       => 'unlimited_untappd_profile',
@@ -448,7 +449,7 @@ if (! function_exists('unlimited_social_array')) {
     }
 }
 
-if (! function_exists('unlimited_social_icons_output')) {
+if (!function_exists('unlimited_social_icons_output')) {
     function unlimited_social_icons_output($source)
     {
         $social_sites = unlimited_social_array();
@@ -480,7 +481,7 @@ if (! function_exists('unlimited_social_icons_output')) {
             }
         }
 
-        if (! empty($active_sites)) {
+        if (!empty($active_sites)) {
             echo "<ul class='social-media-icons'>";
 
             foreach ($active_sites as $key => $active_site) {
@@ -562,7 +563,7 @@ if (! function_exists('unlimited_social_icons_output')) {
  * WP will apply the ".menu-primary-items" class & id to the containing <div> instead of <ul>
  * making styling difficult and confusing. Using this wrapper to add a unique class to make styling easier.
  */
-if (! function_exists('unlimited_wp_page_menu')) {
+if (!function_exists('unlimited_wp_page_menu')) {
     function unlimited_wp_page_menu()
     {
         wp_page_menu(
@@ -573,7 +574,7 @@ if (! function_exists('unlimited_wp_page_menu')) {
     }
 }
 
-if (! function_exists('unlimited_body_class')) {
+if (!function_exists('unlimited_body_class')) {
     function unlimited_body_class($classes)
     {
         global $post;
@@ -608,7 +609,7 @@ if (! function_exists('unlimited_body_class')) {
 }
 add_filter('body_class', 'unlimited_body_class');
 
-if (! function_exists('unlimited_post_class')) {
+if (!function_exists('unlimited_post_class')) {
     function unlimited_post_class($classes)
     {
         $classes[] = 'entry';
@@ -618,7 +619,7 @@ if (! function_exists('unlimited_post_class')) {
 }
 add_filter('post_class', 'unlimited_post_class');
 
-if (! function_exists('unlimited_custom_css_output')) {
+if (!function_exists('unlimited_custom_css_output')) {
     function unlimited_custom_css_output()
     {
         if (function_exists('wp_get_custom_css')) {
@@ -635,7 +636,7 @@ if (! function_exists('unlimited_custom_css_output')) {
 }
 add_action('wp_enqueue_scripts', 'unlimited_custom_css_output', 20);
 
-if (! function_exists('unlimited_sticky_post_marker')) {
+if (!function_exists('unlimited_sticky_post_marker')) {
     function unlimited_sticky_post_marker()
     {
         if (is_sticky() && !is_archive() && !is_search()) {
@@ -645,7 +646,7 @@ if (! function_exists('unlimited_sticky_post_marker')) {
 }
 add_action('archive_post_before', 'unlimited_sticky_post_marker');
 
-if (! function_exists('unlimited_reset_customizer_options')) {
+if (!function_exists('unlimited_reset_customizer_options')) {
     function unlimited_reset_customizer_options()
     {
         // validate name and value
@@ -653,11 +654,11 @@ if (! function_exists('unlimited_reset_customizer_options')) {
             return;
         }
         // validate nonce
-        if (! wp_verify_nonce($_POST['unlimited_reset_customizer_nonce'], 'unlimited_reset_customizer_nonce')) {
+        if (!wp_verify_nonce($_POST['unlimited_reset_customizer_nonce'], 'unlimited_reset_customizer_nonce')) {
             return;
         }
         // validate user permissions
-        if (! current_user_can('edit_theme_options')) {
+        if (!current_user_can('edit_theme_options')) {
             return;
         }
 
@@ -694,7 +695,7 @@ if (! function_exists('unlimited_reset_customizer_options')) {
 }
 add_action('admin_init', 'unlimited_reset_customizer_options');
 
-if (! function_exists('unlimited_delete_settings_notice')) {
+if (!function_exists('unlimited_delete_settings_notice')) {
     function unlimited_delete_settings_notice()
     {
         if (isset($_GET['unlimited_status'])) {
@@ -710,7 +711,7 @@ if (! function_exists('unlimited_delete_settings_notice')) {
 }
 add_action('admin_notices', 'unlimited_delete_settings_notice');
 
-if (! function_exists('unlimited_add_meta_elements')) {
+if (!function_exists('unlimited_add_meta_elements')) {
     function unlimited_add_meta_elements()
     {
         $meta_elements = '';
@@ -727,7 +728,7 @@ if (! function_exists('unlimited_add_meta_elements')) {
 }
 add_action('wp_head', 'unlimited_add_meta_elements', 1);
 
-if (! function_exists('unlimited_infinite_scroll_render')) {
+if (!function_exists('unlimited_infinite_scroll_render')) {
     function unlimited_infinite_scroll_render()
     {
         while (have_posts()) {
@@ -737,7 +738,7 @@ if (! function_exists('unlimited_infinite_scroll_render')) {
     }
 }
 
-if (! function_exists('unlimited_get_content_template')) {
+if (!function_exists('unlimited_get_content_template')) {
     function unlimited_get_content_template()
     {
         // Get bbpress.php for all bbpress pages
@@ -756,7 +757,7 @@ if (! function_exists('unlimited_get_content_template')) {
 }
 
 // allow skype URIs to be used
-if (! function_exists('ct_unlimited_allow_skype_protocol')) {
+if (!function_exists('ct_unlimited_allow_skype_protocol')) {
     function ct_unlimited_allow_skype_protocol($protocols)
     {
         $protocols[] = 'skype';
@@ -767,7 +768,7 @@ if (! function_exists('ct_unlimited_allow_skype_protocol')) {
 }
 add_filter('kses_allowed_protocols', 'ct_unlimited_allow_skype_protocol');
 
-if (! function_exists('ct_unlimited_nav_dropdown_buttons')) {
+if (!function_exists('ct_unlimited_nav_dropdown_buttons')) {
     function ct_unlimited_nav_dropdown_buttons($item_output, $item, $depth, $args)
     {
         if ($args->theme_location == 'primary') {
@@ -785,7 +786,7 @@ add_filter('walker_nav_menu_start_el', 'ct_unlimited_nav_dropdown_buttons', 10, 
 // Add paragraph tags for author bio displayed in content/archive-header.php.
 // the_archive_description includes paragraph tags for tag and category descriptions, but not the author bio.
 //----------------------------------------------------------------------------------
-if (! function_exists('ct_unlimited_modify_archive_descriptions')) {
+if (!function_exists('ct_unlimited_modify_archive_descriptions')) {
     function ct_unlimited_modify_archive_descriptions($description)
     {
         if (is_author()) {
@@ -804,7 +805,7 @@ function ct_unlimited_scroll_to_top_arrow()
     $setting = get_theme_mod('scroll_to_top');
 
     if ($setting == 'yes') {
-        echo '<button id="scroll-to-top" class="scroll-to-top"><span class="screen-reader-text">'. __('Scroll to the top', 'unlimited') .'</span><i class="fas fa-arrow-up"></i></button>';
+        echo '<button id="scroll-to-top" class="scroll-to-top"><span class="screen-reader-text">' . __('Scroll to the top', 'unlimited') . '</span><i class="fas fa-arrow-up"></i></button>';
     }
 }
 add_action('body_after', 'ct_unlimited_scroll_to_top_arrow');
@@ -823,7 +824,7 @@ function ct_unlimited_output_last_updated_date()
             ($updated_customizer == 'yes' && ($updated_post != 'no'))
             || $updated_post == 'yes'
         ) {
-            echo '<p class="last-updated">'. __("Last updated on", "unlimited") . ' ' . get_the_modified_date() . ' </p>';
+            echo '<p class="last-updated">' . __("Last updated on", "unlimited") . ' ' . get_the_modified_date() . ' </p>';
         }
     }
 }
@@ -841,7 +842,7 @@ add_action('elementor/theme/register_locations', 'ct_unlimited_register_elemento
 //----------------------------------------------------------------------------------
 // Output standard post pagination
 //----------------------------------------------------------------------------------
-if (! function_exists(('ct_unlimited_pagination'))) {
+if (!function_exists(('ct_unlimited_pagination'))) {
     function ct_unlimited_pagination()
     {
         // Never output pagination on bbpress pages
