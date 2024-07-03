@@ -152,7 +152,7 @@ module.exports = function(grunt) {
                     'rm -R "/Users/bensibley/Dropbox/Compete Themes/Distribution/unlimited" || true',
                     'rm -R "/Users/bensibley/Dropbox/Compete Themes/Distribution/unlimited.zip" || true',
                     // copy theme folder without any project/meta files
-                    'rsync -r "/Users/bensibley/Sites/unlimited/wp-content/themes/unlimited" "/Users/bensibley/Dropbox/Compete Themes/Distribution/" <%= excludeFiles %>',
+                    'rsync -r "/Users/bensibley/Sites/Compete Themes/unlimited/wp-content/themes/unlimited" "/Users/bensibley/Dropbox/Compete Themes/Distribution/" <%= excludeFiles %>',
                     // open dist folder
                     'cd "/Users/bensibley/Dropbox/Compete Themes/Distribution/"',
                     // zip the unlimited folder
