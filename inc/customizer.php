@@ -149,6 +149,8 @@ function unlimited_add_customizer_content( $wp_customize ) {
 				$label = __('OK.ru', 'unlimited');
 			} elseif ( $social_site == 'artstation' ) {
 				$label = __('ArtStation', 'unlimited');
+			} elseif ( $social_site == 'twitter' ) {
+				$label = __('X (Twitter)', 'unlimited');
 			}
 
 			if ( $social_site == 'skype' ) {

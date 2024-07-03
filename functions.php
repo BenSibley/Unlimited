@@ -438,7 +438,6 @@ if (!function_exists('unlimited_social_icons_output')) {
     {
         $social_sites = unlimited_social_array();
         $square_icons = array(
-            'twitter',
             'vimeo',
             'youtube',
             'pinterest',
@@ -493,6 +492,8 @@ if (!function_exists('unlimited_social_icons_output')) {
                     $class = 'fab fa-get-pocket';
                 } elseif ($active_site == 'phone') {
                     $class = 'fas fa-phone';
+                } elseif ($active_site == 'twitter') {
+                    $class = 'fab fa-square-x-twitter';
                 } else {
                     $class = 'fab fa-' . $active_site;
                 }
