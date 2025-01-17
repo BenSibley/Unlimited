@@ -1,9 +1,16 @@
 /* Styles for the social icons, search bar, title, and general header layout */
 .site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   background: $gray-23;
-  padding: $baseline-height / 2 $column 0;
   color: white;
   overflow: hidden;
+}
+.header-inner {
+  width: 100%;
+  padding: $baseline-height / 2 $column 0;
+  order: 1;
 }
 .title-container {
   margin: $baseline-height * 1 0 $baseline-height * 1.5;
@@ -27,6 +34,7 @@
 }
 .toggle-navigation {
   position: relative;
+  width: 100%;
   font-size: 1em;
   border: none;
   border-bottom: solid 1px $gray-87;
@@ -34,12 +42,12 @@
   padding: $baseline-height / 2;
   background: white;
   text-align: center;
-  width: 106.667%;
-  left: -3.334%;
+  cursor: pointer;
+  order: 3;
 
-  &:focus {
-    outline: none;
-  }
+  // &:focus {
+  //   color: #0000EE;
+  // }
   i {
     font-size: 24px;
   }

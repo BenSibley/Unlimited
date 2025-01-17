@@ -1,9 +1,11 @@
 /* Styles for the primary menu */
 
 .menu-primary {
+  width: 100%;
   max-height: 0;
   text-align: center;
   transition: max-height 0.25s ease-in-out;
+  order: 2;
 }
 .menu-primary-items,
 .menu-unset > ul {
@@ -96,8 +98,6 @@
   }
   .menu-primary {
     position: relative;
-    left: -3.333%;
-    width: 106.667%;
     max-height: none; // allow menu items to be seen w/o toggling
     background: white;
     border-bottom: solid 1px $gray-87;

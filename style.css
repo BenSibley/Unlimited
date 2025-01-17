@@ -564,10 +564,21 @@ a img {
 }
 /* Styles for the social icons, search bar, title, and general header layout */
 .site-header {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
   background: #3a3a3a;
-  padding: 0.75em 3.125% 0;
   color: white;
   overflow: hidden;
+}
+
+.header-inner {
+  width: 100%;
+  padding: 0.75em 3.125% 0;
+  -webkit-box-ordinal-group: 2;
+          order: 1;
 }
 
 .title-container {
@@ -584,6 +595,7 @@ a img {
 
 .toggle-navigation {
   position: relative;
+  width: 100%;
   font-size: 1em;
   border: none;
   border-bottom: solid 1px #DEDEDE;
@@ -591,11 +603,9 @@ a img {
   padding: 0.75em;
   background: white;
   text-align: center;
-  width: 106.667%;
-  left: -3.334%;
-}
-.toggle-navigation:focus {
-  outline: none;
+  cursor: pointer;
+  -webkit-box-ordinal-group: 4;
+          order: 3;
 }
 .toggle-navigation i {
   font-size: 24px;
@@ -614,10 +624,13 @@ a img {
 }
 /* Styles for the primary menu */
 .menu-primary {
+  width: 100%;
   max-height: 0;
   text-align: center;
   -webkit-transition: max-height 0.25s ease-in-out;
           transition: max-height 0.25s ease-in-out;
+  -webkit-box-ordinal-group: 3;
+          order: 2;
 }
 
 .menu-primary-items,
@@ -707,8 +720,6 @@ a img {
 
   .menu-primary {
     position: relative;
-    left: -3.333%;
-    width: 106.667%;
     max-height: none;
     background: white;
     border-bottom: solid 1px #DEDEDE;
