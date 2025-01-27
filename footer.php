@@ -12,9 +12,9 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 <footer id="site-footer" class="site-footer" role="contentinfo">
 	<?php do_action( 'footer_before' ); ?>
 	<div class="footer-content">
-		<h1 class="site-title">
+		<div class="site-title">
 			<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'title' ); ?></a>
-		</h1>
+		</div>
 		<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 	</div>
 	<?php do_action( 'footer_widgets' ); ?>
