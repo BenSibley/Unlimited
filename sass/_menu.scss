@@ -160,7 +160,6 @@
   .menu-unset .page_item_has_children {
 
     &:hover,
-    &.focused,
     &.open {
 
       > .toggle-dropdown {
@@ -178,8 +177,7 @@
       padding-right: 24px; // to make room for the dropdown icon
 
       &:hover,
-      &:active,
-      &:focus {
+      &:active {
 
         + button {
           transform: translateY(3px);

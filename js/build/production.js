@@ -96,11 +96,9 @@ jQuery(document).ready(function($){
     var dropdownMenuItems = $('.menu-item').children('a').add( $('.page-item').children('a') );
 
     objectFitAdjustment();
-    toggleDropdownAccessibility();
         
     $(window).on('resize', function(){
         objectFitAdjustment();
-        toggleDropdownAccessibility();
     });
 
     // add fitvids to all vids in posts/pages
@@ -121,14 +119,6 @@ jQuery(document).ready(function($){
 
     // open dropdown menus
     toggleDropdown.on('click', openDropdownMenu);
-
-    /* allow keyboard access/visibility for dropdown menu items */
-    dropdownMenuItems.on('focus', function(){
-        $(this).parents('ul, li').addClass('focused');
-    });
-    dropdownMenuItems.on('focusout', function(){
-        $(this).parents('ul, li').removeClass('focused');
-    });
 
     function openSearchBar(){
 
@@ -255,7 +245,6 @@ jQuery(document).ready(function($){
             setTimeout(function() {
                 menuItem.removeClass('open');
             }, 150);
-            
 
             // remove max-height added by JS when opened
             $(this).siblings('ul').css('max-height', 0);
@@ -362,13 +351,6 @@ jQuery(document).ready(function($){
                     }
                 }
             });
-        }
-    }
-    function toggleDropdownAccessibility() {
-        if ( window.innerWidth >= 800 ) {
-            toggleDropdown.attr('tabindex', -1);
-        } else {
-            toggleDropdown.attr('tabindex', 0);
         }
     }
 

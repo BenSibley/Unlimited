@@ -777,9 +777,8 @@ a img {
 .menu-unset .page_item_has_children {
     /* tier 3 */
   }
-  .menu-item-has-children:hover > .toggle-dropdown, .menu-item-has-children.focused > .toggle-dropdown, .menu-item-has-children.open > .toggle-dropdown,
+  .menu-item-has-children:hover > .toggle-dropdown, .menu-item-has-children.open > .toggle-dropdown,
 .menu-unset .page_item_has_children:hover > .toggle-dropdown,
-.menu-unset .page_item_has_children.focused > .toggle-dropdown,
 .menu-unset .page_item_has_children.open > .toggle-dropdown {
     -webkit-transform: translateY(3px);
             transform: translateY(3px);
@@ -794,17 +793,15 @@ a img {
     position: relative;
     padding-right: 24px;
   }
-  .menu-item-has-children > a:hover + button, .menu-item-has-children > a:active + button, .menu-item-has-children > a:focus + button,
+  .menu-item-has-children > a:hover + button, .menu-item-has-children > a:active + button,
 .menu-unset .page_item_has_children > a:hover + button,
-.menu-unset .page_item_has_children > a:active + button,
-.menu-unset .page_item_has_children > a:focus + button {
+.menu-unset .page_item_has_children > a:active + button {
     -webkit-transform: translateY(3px);
             transform: translateY(3px);
   }
-  .menu-item-has-children > a:hover ~ ul, .menu-item-has-children > a:active ~ ul, .menu-item-has-children > a:focus ~ ul,
+  .menu-item-has-children > a:hover ~ ul, .menu-item-has-children > a:active ~ ul,
 .menu-unset .page_item_has_children > a:hover ~ ul,
-.menu-unset .page_item_has_children > a:active ~ ul,
-.menu-unset .page_item_has_children > a:focus ~ ul {
+.menu-unset .page_item_has_children > a:active ~ ul {
     opacity: 1;
     visibility: visible;
   }
