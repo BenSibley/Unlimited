@@ -82,7 +82,7 @@ jQuery(document).ready(function($){
 
             // Put keyboard focus on the input
             $(this).siblings('form').find('input').focus();
-            
+
             // handle mobile width search bar sizing
             if( window.innerWidth < 600 ) {
 
@@ -106,6 +106,10 @@ jQuery(document).ready(function($){
             // remove styling class
             $(this).removeClass('open');
 
+            setTimeout(function() {
+                menuPrimary.removeClass('open');
+            }, 250);
+              
             // close all ULs by removing increased max-height
             $('#menu-primary, #menu-primary-items ul, .menu-unset ul').removeAttr('style');
 
@@ -127,6 +131,8 @@ jQuery(document).ready(function($){
 
             // add styling class to reveal primary menu
             $(this).addClass('open');
+
+            menuPrimary.addClass('open');
 
             // open to show whole menu plus 48px of padding for style
             menuPrimary.css('max-height', menuHeight + 48);

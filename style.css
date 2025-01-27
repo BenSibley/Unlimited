@@ -632,12 +632,17 @@ a img {
   -webkit-box-ordinal-group: 3;
           order: 2;
 }
+.menu-primary.open .menu-primary-items,
+.menu-primary.open .menu-unset > ul {
+  display: block;
+}
 
 .menu-primary-items,
 .menu-unset > ul {
   list-style: none;
   margin: 0;
   padding-bottom: 2.25em;
+  display: none;
 }
 .menu-primary-items li,
 .menu-unset > ul li {
@@ -727,6 +732,7 @@ a img {
 
   .menu-primary-items,
 .menu-unset > ul {
+    display: block;
     padding-bottom: 0;
   }
   .menu-primary-items li,
