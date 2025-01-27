@@ -8,7 +8,9 @@ function unlimited_load_scripts_styles() {
 		'openMenu'  => esc_html_x( 'open menu', 'verb: open the menu', 'unlimited' ),
 		'closeMenu' => esc_html_x( 'close menu', 'verb: close the menu', 'unlimited' ),
 		'openChildMenu'  => esc_html_x( 'open dropdown menu', 'verb: open the menu', 'unlimited' ),
-		'closeChildMenu' => esc_html_x( 'close dropdown menu', 'verb: close the menu', 'unlimited' )
+		'closeChildMenu' => esc_html_x( 'close dropdown menu', 'verb: close the menu', 'unlimited' ),
+		'openSearchBar'  => esc_html_x( 'Open search bar', 'verb: open the search bar', 'unlimited' ),
+		'closeSearchBar' => esc_html_x( 'Close search bar', 'verb: close the search bar', 'unlimited' ),
 	) );
 
 	// Google Fonts (required to register outside scripts first)

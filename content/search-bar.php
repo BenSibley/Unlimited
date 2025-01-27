@@ -1,5 +1,6 @@
 <div class='search-form-container'>
 	<button id="search-icon" class="search-icon">
+		<span class="screen-reader-text"><?php esc_html_e( 'Open search bar', 'unlimited' ); ?></span>
 		<i class="fas fa-search"></i>
 	</button>
 	<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">

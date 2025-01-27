@@ -146,6 +146,8 @@ jQuery(document).ready(function($){
                 socialIcons.removeClass('fade');
             }
 
+            $(this).find('.screen-reader-text').text(ct_unlimited_objectL10n.openSearchBar);
+
             // make search input inaccessible to keyboards
             siteHeader.find('.search-field').attr('tabindex', -1);
 
@@ -161,6 +163,9 @@ jQuery(document).ready(function($){
 
             // make search input keyboard accessible
             siteHeader.find('.search-field').attr('tabindex', 0);
+
+            // Update screen reader text
+            $(this).find('.screen-reader-text').text(ct_unlimited_objectL10n.closeSearchBar);
 
             // handle mobile width search bar sizing
             if( window.innerWidth < 600 ) {
