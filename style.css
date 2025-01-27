@@ -668,10 +668,6 @@ a img {
 .toggle-dropdown:hover {
   cursor: pointer;
 }
-.toggle-dropdown:focus {
-  outline: none;
-}
-
 .menu-item-has-children,
 .page_item_has_children {
   position: relative;
@@ -681,12 +677,20 @@ a img {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+.menu-item-has-children.open > ul > li,
+.page_item_has_children.open > ul > li {
+  display: block;
+}
 .menu-item-has-children ul,
 .page_item_has_children ul {
   max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height 0.15s ease-in-out;
           transition: max-height 0.15s ease-in-out;
+}
+.menu-item-has-children ul li,
+.page_item_has_children ul li {
+  display: none;
 }
 .menu-item-has-children ul a,
 .page_item_has_children ul a {

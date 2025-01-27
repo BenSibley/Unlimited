@@ -252,7 +252,10 @@ jQuery(document).ready(function($){
 
         if( menuItem.hasClass('open') ) {
 
-            menuItem.removeClass('open');
+            setTimeout(function() {
+                menuItem.removeClass('open');
+            }, 150);
+            
 
             // remove max-height added by JS when opened
             $(this).siblings('ul').css('max-height', 0);

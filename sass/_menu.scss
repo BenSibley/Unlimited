@@ -52,7 +52,7 @@
     cursor: pointer;
   }
   &:focus {
-    outline: none;
+    // outline: none;
   }
 }
 .menu-item-has-children,
@@ -64,12 +64,18 @@
     > .toggle-dropdown {
       transform: rotate(180deg);
     }
+    > ul > li {
+      display: block;
+    }
   }
   ul {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.15s ease-in-out;
 
+    li {
+      display: none;
+    }
     a {
       color: $gray-70;
 
