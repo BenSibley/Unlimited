@@ -167,6 +167,9 @@ jQuery(document).ready(function($){
             // Update screen reader text
             $(this).find('.screen-reader-text').text(ct_unlimited_objectL10n.closeSearchBar);
 
+            // Put keyboard focus on the input
+            $(this).siblings('form').find('input').focus();
+            
             // handle mobile width search bar sizing
             if( window.innerWidth < 600 ) {
 
