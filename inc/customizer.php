@@ -151,6 +151,8 @@ function unlimited_add_customizer_content( $wp_customize ) {
 				$label = __('ArtStation', 'unlimited');
 			} elseif ( $social_site == 'twitter' ) {
 				$label = __('X (Twitter)', 'unlimited');
+			} elseif ( $social_site == 'tiktok' ) {
+				$label = __('TikTok', 'unlimited');
 			}
 
 			if ( $social_site == 'skype' ) {
