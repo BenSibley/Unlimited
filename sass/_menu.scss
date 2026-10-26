@@ -316,7 +316,7 @@
           &:focus {
 
             + button {
-              transform: translateX(-3px);
+              /* @noflip */ transform: translateX(-3px);
             }
           }
         }
