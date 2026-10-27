@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Unlimited 1.48\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/unlimited\n"
-"POT-Creation-Date: 2026-10-26 17:07:42+00:00\n"
+"POT-Creation-Date: 2026-10-27 12:36:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -133,15 +133,13 @@ msgid ""
 msgstr ""
 
 #: functions.php:22
-msgid ""
-"Simple, privacy-friendly visitor stats right in your WordPress dashboard. A "
-"Google Analytics alternative."
+msgid "a simple, privacy-friendly alternative to Google Analytics."
 msgstr ""
 
 #: functions.php:27
 msgid ""
-"An AI chatbot that answers your visitors' questions using your site's "
-"content."
+"an AI-powered chatbot that trains on your website's content and answers "
+"visitor questions intelligently."
 msgstr ""
 
 #: functions.php:79
@@ -222,31 +220,31 @@ msgstr ""
 msgid "Read more"
 msgstr ""
 
-#: functions.php:613
+#: functions.php:614
 msgid "Featured Post"
 msgstr ""
 
-#: functions.php:675
+#: functions.php:676
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:746
+#: functions.php:747
 msgid "open dropdown menu"
 msgstr ""
 
-#: functions.php:778
+#: functions.php:779
 msgid "Scroll to the top"
 msgstr ""
 
-#: functions.php:797
+#: functions.php:798
 msgid "Last updated on"
 msgstr ""
 
-#: functions.php:827 functions.php:832
+#: functions.php:828 functions.php:833
 msgid "Previous"
 msgstr ""
 
-#: functions.php:828 functions.php:833
+#: functions.php:829 functions.php:834
 msgid "Next"
 msgstr ""
 
@@ -258,50 +256,62 @@ msgstr ""
 msgid "primary menu icon"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:61
-#: inc/class-ct-recommended-plugins.php:62
-#: inc/class-ct-recommended-plugins.php:73
+#: inc/class-ct-recommended-plugins.php:78
+#: inc/class-ct-recommended-plugins.php:79
+#: inc/class-ct-recommended-plugins.php:91
 msgid "Recommended Plugins"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:77
+#: inc/class-ct-recommended-plugins.php:95
 #. translators: %s: theme name
 msgid "Free plugins from the makers of the %s theme."
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:83
+#: inc/class-ct-recommended-plugins.php:101
 msgid "Plugin"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:84
+#: inc/class-ct-recommended-plugins.php:102
 msgid "Description"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:119
-msgid "See all recommended plugins"
-msgstr ""
-
-#: inc/class-ct-recommended-plugins.php:126
+#: inc/class-ct-recommended-plugins.php:155
 #. translators: %s: theme name
 msgid "The makers of the %s theme recommend these free plugins:"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:177
+#: inc/class-ct-recommended-plugins.php:171
+msgid "New"
+msgstr ""
+
+#: inc/class-ct-recommended-plugins.php:183
+msgid "More Details"
+msgstr ""
+
+#: inc/class-ct-recommended-plugins.php:231
 msgid "Active"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:179
+#: inc/class-ct-recommended-plugins.php:234
 msgid "Coming soon"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:187
+#: inc/class-ct-recommended-plugins.php:243
 #. translators: %s: plugin name
 msgid "Activate %s"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:195
+#: inc/class-ct-recommended-plugins.php:245
 #. translators: %s: plugin name
 msgid "Install %s"
+msgstr ""
+
+#: inc/class-ct-recommended-plugins.php:258
+msgid "Activate Now"
+msgstr ""
+
+#: inc/class-ct-recommended-plugins.php:258
+msgid "Install Now"
 msgstr ""
 
 #: inc/customizer.php:50
@@ -408,145 +418,149 @@ msgstr ""
 msgid "X (Twitter)"
 msgstr ""
 
-#: inc/customizer.php:166
+#: inc/customizer.php:155
+msgid "TikTok"
+msgstr ""
+
+#: inc/customizer.php:168
 msgid ""
 "Accepts Skype link protocol (<a href=\"%s\" target=\"_blank\">learn "
 "more</a>)"
 msgstr ""
 
-#: inc/customizer.php:193
+#: inc/customizer.php:195
 msgid "Search Bar"
 msgstr ""
 
-#: inc/customizer.php:205
+#: inc/customizer.php:207
 msgid "Show search bar at top of site?"
 msgstr ""
 
-#: inc/customizer.php:209 inc/customizer.php:409
+#: inc/customizer.php:211 inc/customizer.php:411
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:210 inc/customizer.php:410
+#: inc/customizer.php:212 inc/customizer.php:412
 msgid "Hide"
 msgstr ""
 
-#: inc/customizer.php:218
+#: inc/customizer.php:220
 msgid "Layouts"
 msgstr ""
 
-#: inc/customizer.php:230
+#: inc/customizer.php:232
 msgid "Choose your layout:"
 msgstr ""
 
-#: inc/customizer.php:231
+#: inc/customizer.php:233
 msgid ""
 "Want more layouts? <a target=\"_blank\" href=\"%1$s\">Check out %2$s "
 "Pro</a>."
 msgstr ""
 
-#: inc/customizer.php:236 inc/customizer.php:433
+#: inc/customizer.php:238 inc/customizer.php:435
 msgid "Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:237 inc/customizer.php:434
+#: inc/customizer.php:239 inc/customizer.php:436
 msgid "Left sidebar"
 msgstr ""
 
-#: inc/customizer.php:255
+#: inc/customizer.php:257
 msgid "Show full posts on blog?"
 msgstr ""
 
-#: inc/customizer.php:260 inc/customizer.php:336 inc/customizer.php:360
-#: inc/customizer.php:450
+#: inc/customizer.php:262 inc/customizer.php:338 inc/customizer.php:362
+#: inc/customizer.php:452
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:261 inc/customizer.php:337 inc/customizer.php:361
-#: inc/customizer.php:451
+#: inc/customizer.php:263 inc/customizer.php:339 inc/customizer.php:363
+#: inc/customizer.php:453
 msgid "No"
 msgstr ""
 
-#: inc/customizer.php:271
+#: inc/customizer.php:273
 msgid "Excerpt word count"
 msgstr ""
 
-#: inc/customizer.php:278
+#: inc/customizer.php:280
 msgid "Read More"
 msgstr ""
 
-#: inc/customizer.php:283
+#: inc/customizer.php:285
 msgid "Read More button text"
 msgstr ""
 
-#: inc/customizer.php:293
+#: inc/customizer.php:295
 msgid "Comment Display"
 msgstr ""
 
-#: inc/customizer.php:304
+#: inc/customizer.php:306
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:309 inc/customizer.php:460
+#: inc/customizer.php:311 inc/customizer.php:462
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:310 inc/customizer.php:461
+#: inc/customizer.php:312 inc/customizer.php:463
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:311 inc/customizer.php:462
+#: inc/customizer.php:313 inc/customizer.php:464
 msgid "Attachments"
 msgstr ""
 
-#: inc/customizer.php:312 inc/customizer.php:463
+#: inc/customizer.php:314 inc/customizer.php:465
 msgid "Do not show"
 msgstr ""
 
-#: inc/customizer.php:321
+#: inc/customizer.php:323
 msgid "Scroll-to-Top Arrow"
 msgstr ""
 
-#: inc/customizer.php:331
+#: inc/customizer.php:333
 msgid "Display Scroll-to-top arrow?"
 msgstr ""
 
-#: inc/customizer.php:345
+#: inc/customizer.php:347
 msgid "Additional Options"
 msgstr ""
 
-#: inc/customizer.php:355
+#: inc/customizer.php:357
 msgid "Display the date each post was last updated?"
 msgstr ""
 
-#: inc/customizer.php:381
+#: inc/customizer.php:383
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:392
+#: inc/customizer.php:394
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: inc/customizer.php:435
+#: inc/customizer.php:437
 msgid "No sidebar - Narrow"
 msgstr ""
 
-#: inc/customizer.php:436
+#: inc/customizer.php:438
 msgid "No sidebar - Wide"
 msgstr ""
 
-#: inc/customizer.php:437
+#: inc/customizer.php:439
 msgid "Two column - Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:438
+#: inc/customizer.php:440
 msgid "Two column - Left sidebar"
 msgstr ""
 
-#: inc/customizer.php:439
+#: inc/customizer.php:441
 msgid "Two column - No Sidebar - Narrow"
 msgstr ""
 
-#: inc/customizer.php:440
+#: inc/customizer.php:442
 msgid "Two column - No Sidebar - Wide"
 msgstr ""
 
@@ -669,7 +683,7 @@ msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: functions.php:491 functions.php:492
+#: functions.php:492 functions.php:493
 msgctxt "noun"
 msgid "email"
 msgstr ""
@@ -684,7 +698,7 @@ msgctxt "verb: open the menu"
 msgid "open dropdown menu"
 msgstr ""
 
-#: inc/customizer.php:245
+#: inc/customizer.php:247
 msgctxt "noun: the blog section"
 msgid "Blog"
 msgstr ""
